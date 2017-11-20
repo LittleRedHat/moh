@@ -9,6 +9,15 @@ import tinycss
 import re
 import time
 from crawl.items import ResourceItem
+from summa import keywords
+import sys
+try:
+    reload(sys)
+    sys.setdefaultencoding('utf-8')
+except:
+    pass
+from textrank4zh import TextRank4Keyword
+import html2text
 
 
 def ae_time_sub(text):
@@ -35,7 +44,8 @@ def cz_time_sub(text):
     if len(groups) >= 2:
         return groups[1]
     return None
-        
+
+
 
 
 configure = {
@@ -183,7 +193,8 @@ configure = {
         'allowed_domains':[''],
         'site_url':'http://www.health.gov.ws',
         'start_urls':'',
-        'rules':[]
+        'rules':[],
+        'publish':[]
     }
 }
 
@@ -238,6 +249,8 @@ class MohSpider(scrapy.Spider):
             resource['language'] = self.language_inference(response)
             resource['publish'] = self.publish_time_inference(response)
             resource['nation'] = self.nation
+            text = self.h2t(response)
+            resource['keywords'] = self.text2keywords(text,resource['language'],keywords_num=5)
 
             print response.url
             if response.meta.get('title'):
@@ -418,6 +431,30 @@ class MohSpider(scrapy.Spider):
         else:
             return urljoin(source_url,dest_url)
 
+
+
+    def h2t(self,response):
+        try:
+            html = response.text
+            h = html2text.HTML2Text()
+            return h.handle(html)
+        except:
+            pass
+    def text2keywords(self,text,language,keywords_num=5):
+        try:
+            # 中文网页关键词提取,用textrank4zh
+            if 'zh' in language:
+                tr4w = TextRank4Keyword()
+                tr4w.analyze(text=text, lower=True, window=2)
+                return tr4w.get_keywords(keywords_num=keywords_num, word_min_len=1):
+            # 其他网页关键词提取，用summa textrank
+            else:
+                k = keywords.keywords(text,scores=True)
+                return k[0:keywords_num]
+        except Exception,e:
+            pass
+
+        
 
 if __name__ == '__main__':
     iq_time_sub("أرسلت بواسطة: أدارة الموقع | التاريخ: 2017-10-05 | الوقـت: 10:56:19 صباحا  | قراءة : 13")
