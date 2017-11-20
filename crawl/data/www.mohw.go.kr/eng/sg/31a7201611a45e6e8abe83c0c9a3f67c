@@ -1,0 +1,689 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Ministry of Health &amp; Welfare : ABOUT MOHW &gt; Press Release View Content</title>
+<link href="../../css/eng/mwf_eng.css" rel="stylesheet" type="text/css"/>
+<script src="../../js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="../../js/common.js" type="text/javascript"></script>
+<script src="../../js/mw_eng.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+//<![CDATA[
+
+
+
+	// 리스트로 이동
+
+	function jsList()
+
+	{
+
+		var form = document.fmList;
+
+		form.action = "ssg0111ls.jsp";
+
+		form.submit();
+
+	}
+
+
+
+	//내용 보기
+
+	function goView(seq)
+
+	{
+
+		var form = document.fmView;
+
+		form.CONT_SEQ.value = seq;
+
+		form.action = "ssg0111vw.jsp";
+
+		form.submit();
+
+	}
+
+
+
+	//하단 리스트 페이지 이동
+
+	function goPage( page)
+
+	{
+
+		var form = document.fmList;
+
+		form.page.value = page;
+
+		form.submit();
+
+	}
+
+
+
+	//파일 다운로드.
+
+	function fileDownLoad(fileSeq)
+
+	{
+
+		if( confirm( "Do you wish to download now?") == true ) {
+
+			var form = document.fmView;
+
+			form.FILE_SEQ.value = fileSeq;
+
+			form.action = "/front_new/modules/download.jsp";
+
+			form.submit();
+
+		}
+
+	}
+
+//]]>
+
+</script>
+</head>
+<body>
+<!-- 바로가기 링크 -->
+<p id="skip-navi">
+<a href="#contents">go to the contents</a>
+<a href="#snb">go to the menu</a>
+</p>
+<!-- //바로가기 링크 -->
+<!-- header -->
+<div id="wrap">
+<!-- head -->
+<div class="sbHead" id="head">
+<!-- header -->
+<div id="header">
+<!-- 로고 -->
+<h1 class="logo"><a href="../261f58801c1da21d0b6f7021b30b648b"><img alt="ministry of health and welfare" src="../../images/eng/common/logo.gif"/></a></h1>
+<div class="kor_sym">
+<a href="../../../moi.go.kr/eng/sub/a03/nationalSymbol/d5a2e22490af7d4414516807b47a6064" target="_blank" title="new browser"><img alt="National Symbols of the Republic of Korea" src="../../images/eng/common/kor_sym_eng.gif"/></a>
+</div>
+<!-- function -->
+<div class="function">
+<!-- [Funciton] - 폰트사이즈 -->
+<div class="unit">
+<div class="ft_size">
+<button class="plus" onclick="fontSizeWrap.btnPlus();" type="button"><span class="hide">expand</span></button>
+<button class="minus" onclick="fontSizeWrap.btnMinus();" type="button"><span class="hide">reduce</span></button>
+<span class="Font_Size"><span class="hide">Font Size</span></span>
+</div>
+<script type="text/javascript">var fontSizeWrap = new fontSize();</script>
+<!-- //[Funciton] - 폰트사이즈 -->
+<!-- 언어별 링크 -->
+<ul class="global_language">
+<li class="mobile"><a href="../../m_eng/50b06ecdc2a14f90913d780c3460fca4" target="_blank" title="new browser"><span class="hide">Mobile</span></a></li>
+<li class="Korean"><a href="../../front_new/647a6a76a15a5a8bfc6d5f73d0d9d4d1" target="_blank" title="new browser"><span class="hide">Korean</span></a></li>
+<li class="sitemap"><a href="../cs/38f03257ef34df8e601ed2e794b4f84f"><span class="hide">sitemap</span></a></li>
+<li class="a-z"><a href="../cs/1001c96bb6754f09ed925f7b6d593bf7"><span class="hide">A-Z Index</span></a></li>
+</ul>
+<!-- //언어별 링크 -->
+<!-- 메뉴설정 -->
+<div class="mnsetup">
+<div class="btnsetup"><a class="btnms" href="#msetup_layer" id="svcmore_h"><span class="hide">my menu</span></a></div>
+<div class="msetup_layer" id="msetup_layer">
+<h2>
+<img alt="Menu setup" src="../../images/eng/main/musetup.gif"/>
+</h2>
+<div class="mnsetup_cont">
+<ul class="list" id="fmenu"><li>My menu list</li></ul>
+</div>
+<div class="cg_contwrap">
+<div class="cg_cont">
+<!-- 전체목록 -->
+<ul class="ms_category">
+<li>
+<input class="input-check" id="mw_100103" name="setmenu" type="checkbox" value="/eng/sg/ssg0103mn.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100103|100103|Organization"/>
+<label for="mw_100103">Organization</label>
+</li>
+<li>
+<input class="input-check" id="mw_100113" name="setmenu" type="checkbox" value="/eng/sg/ssg0101mn.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100113|100113|Contact Us"/>
+<label for="mw_100113">Contact Us</label>
+</li>
+<li>
+<input class="input-check" id="mw_100105" name="setmenu" type="checkbox" value="/eng/sg/ssg0105mn.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100105|100105|Minister's Profile"/>
+<label for="mw_100105">Minister's Profile</label>
+</li>
+<li>
+<input class="input-check" id="mw_100111" name="setmenu" type="checkbox" value="/eng/sg/ssg0111ls.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100111|100111|Press Release"/>
+<label for="mw_100111">Press Release</label>
+</li>
+<li>
+<input class="input-check" id="mw_10031801" name="setmenu" type="checkbox" value="/eng/jc/sjc0101mn.jsp?PAR_MENU_ID=1003&amp;MENU_ID=10031801|10031801|Policies"/>
+<label for="mw_10031801">Policies</label>
+</li>
+<li>
+<input class="input-check" id="mw_100408" name="setmenu" type="checkbox" value="/eng/cs/scs0301mn.jsp?PAR_MENU_ID=1004&amp;MENU_ID=100408|100408|RSS"/>
+<label for="mw_100408">RSS</label>
+</li>
+<li>
+<input class="input-check" id="mw_100410" name="setmenu" type="checkbox" value="/eng/cs/scs0301mn.jsp?PAR_MENU_ID=1004&amp;MENU_ID=100410|100410|Privacy Guideline"/>
+<label for="mw_100410">Privacy Guideline</label>
+</li>
+<li>
+<input class="input-check" id="mw_100404" name="setmenu" type="checkbox" value="/eng/cs/scs0301mn.jsp?PAR_MENU_ID=1004&amp;MENU_ID=100404|100404|Users Guide"/>
+<label for="mw_100404">Users Guide</label>
+</li>
+</ul>
+<!-- //전체목록 -->
+</div>
+<!-- 버튼 정렬 -->
+<div class="btn_msetup">
+<p class="left"><input alt="default" class="input-image" id="mymenu_default" src="/images/eng/btn/btn_base.gif" type="image"/></p>
+<span class="cg_msg">User can personalize the website</span>
+<p class="center">
+<input alt="confirm" class="input-image" id="mymenu_set" src="/images/eng/btn/btn_confirm.gif" type="image"/>
+<!--a href="#" id="mymenu_set" ><img src="/images/front/btn/btn_confirm.gif" alt="확인" /></a-->
+<input alt="cancel" class="input-image" id="mymenu_cancel" src="/images/eng/btn/btn_cancel.gif" type="image"/>
+</p>
+<p class="right"><a href="../cs/38f03257ef34df8e601ed2e794b4f84f">sitemap</a></p>
+</div>
+<!-- //버튼 정렬 -->
+</div>
+<p class="btn-more"><button class="msbtn_close" id="msbtn_close" type="button"><span class="hide">close</span></button></p>
+</div>
+</div>
+<!-- //메뉴설정 -->
+<!-- 검색 -->
+<!-- 
+
+					<div class="search">
+
+						<form method="post" name="fmSearch" action="/eng/cs/scs0401ls.jsp" onsubmit="return searchCommon(this)" >
+
+							<input type="hidden" name="PAR_MENU_ID" value="1004" />
+
+							<input type="hidden" name="MENU_ID" value="100406" />
+
+							<input type="hidden" name="SEARCHKEY" value="TITLE" />				
+
+							<fieldset>
+
+								<legend>search</legend>
+
+								<label for="SEARCHVALUE" class="hide">search value</label>
+
+								<input type="text" id="SEARCHVALUE" name="SEARCHVALUE" class="input-text" />
+
+								<input type="image" class="input-image" src="/images/eng/common/tl_btnsearch.gif" alt="search" />
+
+							</fieldset>
+
+						</form>
+
+					</div>
+
+					 -->
+<!-- //검색 -->
+</div><!-- //unit -->
+</div>
+<!-- //function -->
+</div>
+<!-- //header -->
+</div>
+<!-- //head -->
+<hr/>
+<!-- spot main -->
+<div id="spot-sub">
+<img alt="A life-long friend who stands by the public" src="../../images/front_eng/sg/img_head_sg.jpg"/>
+</div>
+<!-- //spot main -->
+<hr/>
+<!-- container -->
+<div class="clear" id="container">
+<div id="subwrap">
+<!-- snb -->
+<div id="snb">
+<h2><a href="616feca8de871f8a1f1e040342b5d550"><img alt="About MW" src="../../images/front_eng/title/h2_am.gif"/></a></h2>
+<ul id="snbMenu1">
+<li><a href="616feca8de871f8a1f1e040342b5d550"><img alt="Vision &amp; Mission" src="../../images/front_eng/title/left_am01.gif"/></a>
+</li>
+<li><a href="93dae7d73a99735630654fc2fb46a9eb"><img alt="Organization" src="../../images/front_eng/title/left_am02.gif"/></a>
+</li>
+<li><a href="482124899dc6a43227599ea28a921fea"><img alt="Contact Us" src="../../images/front_eng/title/left_am03.gif"/></a>
+</li>
+<li><a href="2d75b746f82cbae41316bd3da4ceb30d"><img alt="Minister’s Profile" src="../../images/front_eng/title/left_am04.gif"/></a>
+</li>
+<li><a href="a2fde158a68020769e116fe2815d95aa"><img alt="Vice Minister’s Profile" src="../../images/front_eng/title/left_am05.gif"/></a>
+</li>
+<li><a href="8c6914a853d28a0cf2ce417c6d5fe3ce"><img alt="Past Ministers &amp; Vice Ministers" src="../../images/front_eng/title/left_am06.gif"/></a>
+</li>
+<li><a href="a79fdae6ffae612a0b5f784645afb1db"><img alt="Location" src="../../images/front_eng/title/left_am07.gif"/></a>
+</li>
+<li class="on"><a href="76b19fd6a92fcb216e55a4e9dea9a4c8"><img alt="Press Release" src="../../images/front_eng/title/left_am08_over.gif"/></a>
+</li>
+<li><a href="ea8a1ea6f8dcdcb2b03b8ebc89df5ef6"><img alt="129 Call Center" src="../../images/front_eng/title/left_am09.gif"/></a>
+</li>
+<li><a href="../../../www.epeople.go.kr/jsp/user/on/eng/ebb342dee28c17242d927d0b1019800f" target="_blank"><img alt="Online Petition" src="../../images/front_eng/title/left_am10.gif"/></a>
+</li>
+</ul>
+<h2><a href="../jc/f397eab66fb162470b191bcc18dfac4f"><img alt="Policies" src="../../images/front_eng/title/h2_pl.gif"/></a></h2>
+<ul id="snbMenu2">
+<li class="submenu"><img alt="Enhancement of Customized Welfare Services by Life-Cycle Phase" src="../../images/front_new/title/left_pl100321.gif"/>
+<ul>
+<li><a href="../jc/f397eab66fb162470b191bcc18dfac4f"><img alt="Reinforcement of support for income growth and work opportunities of low-income people" src="../../images/front_new/title/left_pl10032101.gif"/></a></li>
+<li><a href="../jc/6d963af417c35f2c3575a2f47d93315d"><img alt="Welfare services reaching out to people and improvement of public perception" src="../../images/front_new/title/left_pl10032102.gif"/></a></li>
+<li><a href="../jc/7c117d987132de318dd869c7e15cd6d1"><img alt="Promotion of rights and interests of children, the disabled, the elderly, etc." src="../../images/front_new/title/left_pl10032103.gif"/></a></li>
+<li><a href="../jc/3cd7dc5b01d534d90eba055e35cdf386"><img alt="Reduction of burden of medical expenses, and the reorganization of the system for determining health insurance premiums" src="../../images/front_new/title/left_pl10032104.gif"/></a></li>
+</ul>
+</li>
+<li class="submenu"><img alt="Establishment of Health Insurance System centered on People" src="../../images/front_new/title/left_pl100322.gif"/>
+<ul>
+<li><a href="../jc/6698fa46cb8d35f0f8aeb6f289ab2ce9"><img alt="Reinforcement of patient-oriented medical services" src="../../images/front_new/title/left_pl10032201.gif"/></a></li>
+<li><a href="../jc/6194a5e0555dab84754814c541f09b27"><img alt="Strengthening of essential and public health care services and systematic response to infectious diseases" src="../../images/front_new/title/left_pl10032202.gif"/></a></li>
+<li><a href="../jc/7603054a50c83c708da6d6702afe3d14"><img alt="Reinforcement of Preventive Health Care" src="../../images/front_new/title/left_pl10032203.gif"/></a></li>
+<li><a href="../jc/5975190b9def38149afd3ad48132162f"><img alt="Enhancement of healthcare industry performance and job creation" src="../../images/front_new/title/left_pl10032204.gif"/></a></li>
+</ul>
+</li>
+<li class="submenu"><img alt="Strengthening Responses to Demographic Crisis" src="../../images/front_new/title/left_pl100323.gif"/>
+<ul>
+<li><a href="../jc/8334fe91b7312eb840b99581e90bc297"><img alt="Establishment of a response system for coping with low birthrate" src="../../images/front_new/title/left_pl10032301.gif"/></a></li>
+<li><a href="../jc/687f9bcd11741aea5264c8392dc17ffc"><img alt="Improvement of a system for supporting childbirth and parenting" src="../../images/front_new/title/left_pl10032302.gif"/></a></li>
+<li><a href="../jc/d59e41ec8156d3ed1193b5f64629cf85"><img alt="Enhancement of preparation for aging society" src="../../images/front_new/title/left_pl10032303.gif"/></a></li>
+</ul>
+</li>
+</ul>
+<h2><a href="../cs/b64cc4894874ba0eb4af154d245908a9"><img alt="Help" src="../../images/front_eng/title/h2_hp.gif"/></a></h2>
+<ul id="snbMenu3">
+<li><a href="../cs/b64cc4894874ba0eb4af154d245908a9"><img alt="Users Guide" src="../../images/front_eng/title/left_hp01.gif"/></a>
+</li>
+<li><a href="../cs/81e6dbd0ed113665170a29b899ab0c21"><img alt="Privacy Guideline" src="../../images/front_eng/title/left_hp04.gif"/></a>
+</li>
+<li><a href="../cs/bab2f9d80d5980695b6081cb22ceb64b"><img alt="RSS" src="../../images/front_eng/title/left_hp03.gif"/></a>
+</li>
+<li><a href="../cs/38f03257ef34df8e601ed2e794b4f84f"><img alt="Sitemap" src="../../images/front_eng/title/left_hp05.gif"/></a>
+</li>
+<li><a href="../cs/1001c96bb6754f09ed925f7b6d593bf7"><img alt="A-Z Index" src="../../images/front_eng/title/left_hp06.gif"/></a>
+</li>
+</ul>
+</div>
+<script src="../../js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+			$('.submenu').last().find('ul').attr('class', 'noline');
+			imgMenuOver("snb");
+			
+			$(function(){
+				$(".on").parents('ul').slideDown();
+			});	
+			
+			$(".submenu").click(function(){
+				$(".submenu").not($(this)).children('ul').slideUp();
+				$(this).children('ul').slideToggle();
+			});
+		</script>
+<!-- //snb -->
+<!-- contents -->
+<div id="contents">
+<!-- mnvisual - 컨텐츠 타이틀 -->
+<div class="mnvisual">
+<!-- h2 - 타이틀 -->
+<!-- //h2 - 타이틀 -->
+<!-- location - 주소 -->
+<div id="location"> <a class="home" href="../261f58801c1da21d0b6f7021b30b648b">HOME</a> &gt; <a href="616feca8de871f8a1f1e040342b5d550">ABOUT MOHW</a> &gt; <span class="here">Press Release</span></div>
+<!-- //location - 주소 -->
+</div>
+<!-- //mnvisual - 컨텐츠 타이틀 -->
+<!-- content-area -->
+<div class="content-area">
+<!-- DB 에서 contents 데이터를 가져와서 뿌려준다. -->
+<!-- board -->
+<form action="ssg0111vw.jsp" method="post" name="fmView">
+<input name="PAR_MENU_ID" type="hidden" value="1001"/>
+<input name="MENU_ID" type="hidden" value="100111"/>
+<input name="page" type="hidden" value="13"/>
+<input name="CONT_SEQ" type="hidden" value="317929"/>
+<input name="MENU_ID" type="hidden" value="100111"/>
+<input name="FILE_SEQ" type="hidden" value=""/>
+<input name="SEARCHKEY" type="hidden" value=""/>
+<input name="SEARCHVALUE" type="hidden" value=""/>
+<!-- table:view -->
+<table class="view" summary="ABOUT MOHW &gt; Press Release detail.">
+<caption>ABOUT MOHW &gt; Press Release</caption>
+<colgroup>
+<col width="12%"/><col width="38%"/><col width="12%"/><col width="38%"/>
+</colgroup>
+<tbody>
+<tr>
+<th scope="row">Subject</th>
+<td colspan="3">Creating Results through Enhanced Medical Cooperation between Korea and the UAE</td>
+</tr>
+<tr>
+<th scope="row">Date</th>
+<td>2015-03-24</td>
+<th scope="row">Hit</th>
+<td>2463</td>
+</tr>
+<tr>
+<th scope="row">Contents</th>
+<td class="view" colspan="3"><p align="center" class="a" style="text-align: center; line-height: 107%; margin: 0cm 0cm 8pt; word-break: keep-all">
+<b style="mso-bidi-font-weight: normal"><u><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; font-size: 14pt; mso-fareast-font-family: hy헤드라인m"><font color="#000000"><font face="Times New Roman">Creating Results through Enhanced Medical Cooperation <o:p></o:p></font></font></span></u></b></p>
+<p align="center" class="a" style="text-align: center; line-height: 107%; margin: 0cm 0cm 8pt; word-break: keep-all">
+<font color="#000000"><font face="Times New Roman"><b style="mso-bidi-font-weight: normal"><u><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; font-size: 14pt; mso-fareast-font-family: hy헤드라인m">between Korea and the UAE </span></u></b><b style="mso-bidi-font-weight: normal"><u><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; font-size: 14pt"><o:p></o:p></span></u></b></font></font></p>
+<p align="center" class="MsoNormal" style="text-align: center; margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<b><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.5pt; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt"><font face="Times New Roman">- Korea Signed a Cooperative Arrangement with the Sharjah Health Authority;<o:p></o:p></font></span></b></p>
+<p align="center" class="MsoNormal" style="text-align: center; margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<b><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.5pt; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt"><font face="Times New Roman"><span style="mso-spacerun: yes"> </span>The 1<sup>st</sup> Korean-type Health Promotion Center opened in Abu Dhabi;<o:p></o:p></font></span></b></p>
+<p align="center" class="MsoNormal" style="text-align: center; margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<font face="Times New Roman"><b><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.5pt; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt"><span style="mso-spacerun: yes"> </span>A Cooperative Agreement was si</span></b><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.5pt; color: black; font-size: 12pt; mso-bidi-font-weight: bold; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt">g<b>ned to establish the 2<sup>nd</sup> Korean-type Health Center in Dubai; and Korea will set up the 1<sup>st</sup> Pre-Post Care Center in the UMAE -</b></span><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p><font face="Times New Roman"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; font-size: 12pt"><font color="#000000"><font face="Times New Roman">Continuous efforts to strengthen the medical cooperation between Korea and the UAE is producing results, including the opening of the first Korean-type health promotion center in the Middle East. <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; font-size: 12pt"><font color="#000000"><font face="Times New Roman">The Minister Health and Welfare Moon Hyung-pyo who had been accompanying President Park on her state visit to the UAE, attended the opening ceremony of the ‘Marina Health Promotion Center’ on March 6th after participating in the ‘Meeting with Korean Medical Personnel in the UAE’ presided over by President Park. <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="text-indent: -6pt; margin: 0cm 0cm 8pt 6pt; background: white; vertical-align: baseline; word-break: keep-all; mso-char-indent-count: -.5">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: 휴먼명조; mso-font-kerning: 0pt">- The ‘Marina Health Promotion Center’ opening in Abu Dhabi carries significance as it is the first Korean-type health center in the Middle East set up by VPS Health Group and whose operation is commissioned to ST. Mary’s Hospital for five years. </span><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p>
+	 </p>
+<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-bottom: medium none; border-left: medium none; border-collapse: collapse; border-top: medium none; border-right: medium none; mso-border-alt: solid black .25pt; mso-table-overlap: never; mso-yfti-tbllook: 1184">
+<tbody>
+<tr style="height: 87.4pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-yfti-lastrow: yes">
+<td style="border-bottom: black 1pt dotted; border-left: black 1pt dotted; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 16cm; padding-right: 5.1pt; height: 87.4pt; border-top: black 1pt dotted; border-right: black 1pt dotted; padding-top: 1.4pt; mso-border-alt: dotted black .25pt" width="605">
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<font face="Times New Roman"><b><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt">&lt;General Information of Marina Health Promotion Center &gt;</span></b><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -1.2pt; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt">○ </span><b><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.2pt; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt">(Location</span></b></font><b><span lang="EN-US" style="line-height: 107%; font-family: 'ms mincho'; background: white; letter-spacing: -0.2pt; color: black; font-size: 12pt; mso-bidi-font-family: 'ms mincho'; mso-font-kerning: 0pt"> </span></b><font face="Times New Roman"><b><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.2pt; color: black; font-size: 12pt; mso-fareast-font-family: 'ms mincho'; mso-font-kerning: 0pt">&amp; Scale</span></b><b><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.2pt; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt">)</span></b><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.2pt; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt"> 800 pyeong in size located in Marina Mall in downtown Abu Dhabi </span><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="text-indent: -9.6pt; margin: 0cm 0cm 8pt 9.6pt; background: white; vertical-align: baseline; word-break: keep-all; mso-char-indent-count: -1.0">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -1.2pt; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt">○ </span><b><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.4pt; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt">(Foundation &amp; Operation)</span></b><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.4pt; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt"> Established by </span><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.7pt; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt">VPS Healthcare Group and Operated by St. Mary’s Hospital under the Consignment Agreement (5 years) </span><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -1.2pt; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt">○ </span><b><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.2pt; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt">(Staff)</span></b><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.2pt; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt"> 22 Korean staff (16 medical staff), and some 50 local staff </span><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p><font face="Times New Roman"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt 30pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 3.0gd">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.2pt; color: black; font-size: 12pt; mso-fareast-font-family: 휴먼명조; mso-font-kerning: 0pt">Not only Director Seung Ki-bae of St. Mary’s Hospital and Chairman Shamsheer of VPS Healthcare Group but also Chairman Mugheer and Director General Maha of the Health Authority Abu Dhabi (HAAD) attended the opening ceremony, indicating the strong interest of the UAE health authority. </span><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoListParagraph" style="text-indent: -20pt; margin: 0cm 0cm 10pt 20pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 0gd; mso-list: l1 level1 lfo1">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 'times new roman'; mso-font-kerning: 0pt"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">           </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.3pt; color: black; font-size: 12pt; mso-fareast-font-family: 휴먼명조; mso-font-kerning: 0pt">Marina Health Promotion Center adopts the Korean-type health check-up model which regularly runs health screening programs focusing on major illnesses in each stage of life cycle. It operates four medical clinics including internal medicine and has separate check-up rooms for male and female patients. </span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt 20pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 2.0gd">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt">St. Mary’s Hospital is expected to be paid 10 percent of the revenue generated from the operation as well as a part of the net profit earned for the next five years as incentive</span><b><sup><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.4pt; color: black; font-size: 12pt; mso-fareast-font-family: 휴먼명조; mso-font-kerning: 0pt">* </span></sup></b><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.4pt; color: black; font-size: 12pt; mso-fareast-font-family: 휴먼명조; mso-font-kerning: 0pt">and it is expected to bring local patients with serious conditions to Korea for treatment</span><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: 휴먼명조; mso-font-kerning: 0pt">.</span><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt 20pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 2.0gd">
+<span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 11pt; mso-fareast-font-family: 한양중고딕; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">* St. Mary’s Hospital is expected to receive over 40 billion won in total for the next five years, out of which 10 billion won will be the operation commission and the remaining 30 billion won wages for Korean staff. <o:p></o:p></font></span></p>
+<p class="MsoListParagraph" style="text-indent: -20pt; margin: 0cm 0cm 10pt 20pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 0gd; mso-list: l1 level1 lfo1">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 'times new roman'; mso-font-kerning: 0pt"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">           </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: 휴먼명조; mso-font-kerning: 0pt">After the ceremony, the Seoul St. Mary’s Hospital and the VPS Healthcare Group signed a cooperative agreement, in the presence of the Minister of the Health and Welfare Moon Hyung-pyo and Chairman Mugheer of HAAD to set up 2<sup>nd</sup> Korean-type health promotion center in Dubai, brightening the prospect of exporting Korean medical service to the Middle East. </span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt">* </span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoListParagraph" style="margin: 0cm 0cm 10pt 20pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 0gd">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 11pt; mso-fareast-font-family: 한양중고딕; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt">With the opening of the 2<sup>nd</sup> Korean-type health promotion center, St. Mary’s Hospital is expected to be paid additional 40 billion won for the next five years as operating income and wage. </span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.5pt; color: black; font-size: 12pt; mso-fareast-font-family: 휴먼명조; mso-font-kerning: 0pt">On Thursday March 5th, the Sharjah Health Authority and the Ministry of Health and Welfare of Korea signed a cooperative arrangement outlining the cooperation for insurance training programs and the operation of a pediatric oncology center. </span><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoListParagraph" style="text-indent: -20pt; margin: 0cm 0cm 10pt 20pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 0gd; mso-list: l1 level1 lfo1">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 'times new roman'; mso-font-kerning: 0pt"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">           </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: 휴먼명조; mso-font-kerning: 0pt">The Ministry of Health and Welfare signed an MOU on healthcare cooperation with the Sharjah Health Authority in February 2014, based on which the two parties identified areas of mutual interest. The two parties agreed to cooperate on health insurance-related training programs and operation of pediatric oncology centers.</span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoListParagraph" style="text-indent: -20pt; margin: 0cm 0cm 10pt 20pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 0gd; mso-list: l1 level1 lfo1">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 'times new roman'; mso-font-kerning: 0pt"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">           </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: 휴먼명조; mso-font-kerning: 0pt">The agreement will offer the staff of Sharjah Health Authority with an opportunity to learn the excellent health insurance system of Korea <sup>* </sup></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoListParagraph" style="margin: 0cm 0cm 10pt 20pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 2.0gd">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 11pt; mso-fareast-font-family: 한양중고딕; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt">* In the area of health insurance, the Sharjah Health Authority requested Korea to plan paid training programs for its staff</span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 11pt; mso-fareast-font-family: 굴림; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoListParagraph" style="text-indent: -20pt; margin: 0cm 0cm 10pt 20pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo2">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 'times new roman'; mso-font-kerning: 0pt"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">           </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: 휴먼명조; mso-font-kerning: 0pt">In addition, the agreement paved the way for Korea to offer consulting service (technology transfer) for building a pediatric oncology center (30 beds) in Sharjah University Hospital, promote medical personal exchanges through training and visiting scholar programs, and transfer medical expertise of Korea in the areas such as consignment operation.</span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-bidi-font-weight: bold; mso-fareast-font-family: 휴먼명조; mso-font-kerning: 0pt">The UAE has sent the largest number of patients to Korea at government expense and in 2014 alone 806 patients were sent to Korea for treatment</span><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: 휴먼명조; mso-font-kerning: 0pt">. (Expected Revenues: 36 billion won)</span><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt 10pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 1.0gd">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 107%; layout-grid-mode: line; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt; mso-font-width: 87%">* UAE patients sent to Korea at government expense: (2011) 1 → (2012) 89 → (2013) 351 → (2014) 806</span><span lang="EN-US" style="line-height: 107%; layout-grid-mode: line; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt; mso-font-width: 87%"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt 10pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 1.0gd">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt; mso-font-width: 90%">* <span style="letter-spacing: -0.4pt">Generated Revenue (won): (2011) 5.6 million → (2012) 3.6 billion → (2013) 21 billion → (2014) 35 billion </span></span><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt; mso-font-width: 90%"><o:p></o:p></span></font></p>
+<h1 style="margin: 0cm 0cm 8pt 10pt; mso-para-margin-left: 1.0gd">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt; mso-font-width: 90%">* UAE patients sent to Korea: (2011) 158 → (2012) 342 → (2013) 1,151 (2014) under compilation </span><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt; mso-font-width: 90%"><o:p></o:p></span></font></h1>
+<p class="MsoListParagraph" style="text-indent: -20pt; margin: 0cm 0cm 10pt 20pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo2">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 'times new roman'; mso-font-kerning: 0pt"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">           </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: 휴먼명조; mso-font-kerning: 0pt">For the purpose of effectively serving the increasing number of UAE patients coming to Korea at government expense, Korea will set up a Pre-Post Care Centers (PPCC) in Abu Dhabi first and then in other regions in partnership with the UAE so as to offer a one-stop service to patients, ranging from counseling, preliminary check-up, treatment to follow-up treatment. </span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 140%; margin: 0cm 0cm 0pt; background: white; vertical-align: baseline; word-break: keep-all">
+<span lang="EN-US" style="line-height: 140%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: 1pt; color: black; font-size: 12pt; mso-bidi-font-weight: bold; mso-fareast-font-family: 한양중고딕; mso-bidi-font-size: 13.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">&lt;PPCC Diagram&gt;</font></span><font size="2"><span lang="EN-US" style="line-height: 140%; font-family: '바탕', 'serif'; color: black; mso-fareast-font-family: 굴림; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 굴림; mso-bidi-font-family: 굴림; mso-font-kerning: 0pt; mso-no-proof: yes"><v:shapetype coordsize="21600,21600" filled="f" id="_x0000_t75" o:preferrelative="t" o:spt="75" path="m@4@5l@4@11@9@11@9@5xe" stroked="f"> <v:stroke joinstyle="miter"></v:stroke><v:formulas><v:f eqn="if lineDrawn pixelLineWidth 0"></v:f><v:f eqn="sum @0 1 0"></v:f><v:f eqn="sum 0 0 @1"></v:f><v:f eqn="prod @2 1 2"></v:f><v:f eqn="prod @3 21600 pixelWidth"></v:f><v:f eqn="prod @3 21600 pixelHeight"></v:f><v:f eqn="sum @0 0 1"></v:f><v:f eqn="prod @6 1 2"></v:f><v:f eqn="prod @7 21600 pixelWidth"></v:f><v:f eqn="sum @8 21600 0"></v:f><v:f eqn="prod @7 21600 pixelHeight"></v:f><v:f eqn="sum @10 21600 0"></v:f></v:formulas><v:path gradientshapeok="t" o:connecttype="rect" o:extrusionok="f"></v:path><o:lock aspectratio="t" v:ext="edit"></o:lock></v:shapetype><v:shape alt="EMB000017105bbf" id="그림_x0020_1" o:spid="_x0000_i1025" style="width: 423pt; height: 237pt; visibility: visible; mso-wrap-style: square" type="#_x0000_t75"><v:imagedata o:title="EMB000017105bbf" src="file:///C:\Users\Mohw-UP\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png"></v:imagedata></v:shape></span><span lang="EN-US" style="line-height: 140%; font-family: '바탕', 'serif'; color: black; mso-fareast-font-family: 굴림; mso-bidi-font-size: 10.0pt; mso-hansi-font-family: 굴림; mso-bidi-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 11pt; mso-fareast-font-family: 굴림; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">UAE: UAE Military, HAAD, SEHA, Others <o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 11pt; mso-fareast-font-family: 굴림; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">Korea: Medical Institution, Medical Institution, Medical Institution, Medical Institution. <o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 11pt; mso-fareast-font-family: 굴림; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">1. Preliminary Check-up 2.Patient Transfer to Korea 3. Patient Treatment 4. Patient Returning Home <o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 11pt; mso-fareast-font-family: 굴림; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">UAE (function) Managing the information of transferring patient, offering pre and post check-up, appointment scheduling, and processing medical payment etc. <o:p></o:p></font></span></p>
+<p align="left" class="MsoNormal" style="text-align: left; margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 11pt; mso-fareast-font-family: 굴림; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt"><font face="Times New Roman">Korea (function) offering treatment support, managing the information of transferred patients and their guardians, addressing complaints, and offering concierge service etc.<span style="mso-spacerun: yes">  </span><o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all">
+<span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p><font face="Times New Roman"> </font></o:p></span></p>
+<p class="MsoListParagraph" style="text-indent: -20pt; margin: 0cm 0cm 10pt 20pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo2; tab-stops: 70.9pt">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 'times new roman'; mso-font-kerning: 0pt"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">           </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt">Accordingly, the 1<sup>st</sup> PPCC signboard hanging ceremony was held at Mafraq Hospital (750 beds) under the Health Authority of Abu Dhabi on Friday March 6<sup>th</sup>. The PPCC will open for full operation in the first half of 2015 after hiring doctors stationed in the UAE (at HAAD’s expense) and developing appropriate programs. <o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all; tab-stops: 70.9pt">
+<span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><font face="Times New Roman">* PPCC programs which currently are being developed will be applied to UAE system and run in earnest (in the first half of 2015)<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all; tab-stops: 70.9pt">
+<span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p><font face="Times New Roman"> </font></o:p></span></p>
+<p class="MsoListParagraph" style="text-indent: -20pt; margin: 0cm 0cm 10pt 20pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo2; tab-stops: 70.9pt">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 'times new roman'; mso-font-kerning: 0pt"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">           </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt">For the smooth operation of government paid UAE patient transfers between Abu Dhabi and Korea, two Korean staff equipped with relevant expertise have been stationed in the International Patient Center of the HAAD. <o:p></o:p></span></font></p>
+<p class="MsoListParagraph" style="margin: 0cm 0cm 10pt 20pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 0gd; tab-stops: 70.9pt">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 11pt; mso-fareast-font-family: 굴림; mso-bidi-font-size: 12.0pt; mso-font-kerning: 0pt">* This initiative was agreed with the HAAD in September 2014, and was carried out accordingly. As a part of staff exchange program, Korea will hire 2 HAAD staff who will be stationed in Korea..</span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoListParagraph" style="text-indent: -20pt; margin: 0cm 0cm 10pt 20pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo2; tab-stops: 70.9pt">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 'times new roman'; mso-font-kerning: 0pt"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">           </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt">The establishment and operation of PPCC and the joint operation of IPC will improve the management of UAE patients transferred to Korea at government expense, ultimately increasing the preference for Korean medical service. <o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 8pt; background: white; vertical-align: baseline; word-break: keep-all; tab-stops: 70.9pt">
+<span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><font face="Times New Roman">Minister of Health and Welfare Moon Hyung-pyo said, “The UAE is the first Middle East country to form a comprehensive strategic partnership with Korea in 2009 when Korea won its first nuclear power plant contract and at the same time it is the No. 1 Middle East country in the area of medical cooperation with Korea*<o:p></o:p></font></span></p>
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 120%; text-indent: -37.1pt; margin: 0cm 0cm 0pt; background: white; vertical-align: baseline; word-break: keep-all">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 120%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt">&lt; Healthcare Cooperation between Korea and the UAE &gt;</span><span lang="EN-US" style="line-height: 120%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p>
+	 </p>
+<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-bottom: medium none; border-left: medium none; border-collapse: collapse; border-top: medium none; border-right: medium none; mso-border-alt: solid black .25pt; mso-table-overlap: never; mso-yfti-tbllook: 1184">
+<tbody>
+<tr style="height: 73.35pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-yfti-lastrow: yes">
+<td style="border-bottom: black 1pt dotted; border-left: black 1pt dotted; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 16cm; padding-right: 5.1pt; height: 73.35pt; border-top: black 1pt dotted; border-right: black 1pt dotted; padding-top: 1.4pt; mso-border-alt: dotted black .25pt" width="605">
+<p class="MsoNormal" style="line-height: 130%; margin: 0cm 0cm 0pt; background: white; vertical-align: baseline">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 130%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt">○ MOU: Signed with UAE Health Ministry </span><span lang="EN-US" style="line-height: 130%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: '맑은 고딕'; mso-font-kerning: 0pt">· </span><span lang="EN-US" style="line-height: 130%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt">HAAD · Health Authority of Dubai in March 2011 and with Sharjah Health Authority in Feb. 2014 </span><span lang="EN-US" style="line-height: 130%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="line-height: 130%; margin: 0cm 0cm 0pt; background: white; vertical-align: baseline">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 130%; font-family: 'times new roman', 'serif'; background: white; color: black; font-size: 12pt; mso-fareast-font-family: 한양중고딕; mso-font-kerning: 0pt">○ Patient Transfer Arrangement: HAAD (since 2011), integrated group of the UAE (since 2013) have been sending patients to 10 and 12 medical institutions respectively. </span><span lang="EN-US" style="line-height: 130%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoListParagraph" style="margin: 0cm 0cm 10pt 20pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 0gd; tab-stops: 70.9pt">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt"><o:p><font face="Times New Roman"> </font></o:p></span></p>
+<p class="MsoListParagraph" style="text-indent: -20pt; margin: 0cm 0cm 10pt 20pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo2; tab-stops: 70.9pt">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 'times new roman'; mso-font-kerning: 0pt"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">           </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; color: black; font-size: 12pt; mso-fareast-font-family: 굴림; mso-font-kerning: 0pt">Minister Moon also stated “Just as the UAE served as the gateway for Korea to make inroads into the Middle East countries in the past, we hope that the progress made during President Park’s visit to the UAE would spread to other nations in the Middle East and create more success stories.”<span style="mso-spacerun: yes">  </span><o:p></o:p></span></font></p></td>
+</tr>
+<tr>
+<th scope="row">File</th>
+<td colspan="3">
+<p><img alt="" src="../../images/common/file/icon_file.gif"/> <a href="../../../download.mohw.go.kr/front_new/modules/8870e133a2b60c182a45634d180d606b">Creating_Results_through_Enhanced_Medical_Cooperation_between_Korea_and_the_UAE.docx (151 KB / Download : 234)</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- /table:view -->
+<!-- 하단 버튼 영역 -->
+<div class="btn btm">
+<!--  오른 쪽 영역 버튼 -->
+<a href="2711dbddb6de0a13625580768c3557fa"><img alt="list" class="right" src="../../images/eng/common/btn_list.gif"/></a>
+<!--  /오른 쪽 영역 버튼 -->
+</div>
+<!-- /하단 버튼 영역 -->
+</form>
+<br/>
+<br/>
+<div class="view_list">
+<form action="ssg0111ls.jsp" method="post" name="fmList">
+<input name="PAR_MENU_ID" type="hidden" value="1001"/>
+<input name="MENU_ID" type="hidden" value="100111"/>
+<input name="page" type="hidden" value="13"/>
+<input name="SEARCHKEY" type="hidden" value=""/>
+<input name="SEARCHVALUE" type="hidden" value=""/>
+<input name="CONT_SEQ" type="hidden" value=""/>
+<!-- table head above list -->
+<div id="tablehead">
+<p>Total <strong>345</strong> Articles</p>
+</div>
+<!-- /table head above list -->
+<table class="list" summary="Publication list.">
+<caption>Publication</caption>
+<colgroup>
+<col width="8%"/><col width="60%"/>
+<col width="16%"/><col width="8%"/><col width="8%"/>
+</colgroup>
+<thead>
+<tr>
+<th class="first" scope="col">No</th>
+<th scope="col">Subject</th>
+<th scope="col">Date</th>
+<th scope="col">File</th>
+<th scope="col">Hit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>225</td>
+<td class="left"><a href="df858c6dc42815ed13c845d327ca4100">Press Release (June 30)</a></td>
+<td>2015-06-30</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1598</td>
+</tr>
+<tr>
+<td>224</td>
+<td class="left"><a href="d12a1665c499c986beb89d4d19f9abde">MERS Statistics (June 30)</a></td>
+<td>2015-06-30</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1677</td>
+</tr>
+<tr>
+<td>223</td>
+<td class="left"><a href="06a1ca96afe227c19a96e2431fd1c708">Press Release (June 29)</a></td>
+<td>2015-06-29</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1577</td>
+</tr>
+<tr>
+<td>222</td>
+<td class="left"><a href="5a1ee8d5ecea9db8418ff014f7b66950">MERS Statistics (June 29)</a></td>
+<td>2015-06-29</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1828</td>
+</tr>
+<tr>
+<td>221</td>
+<td class="left"><a href="b5d78d50072dd5c036be8aaa9d69d8d6">Press Release  (June 28)</a></td>
+<td>2015-06-28</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1583</td>
+</tr>
+<tr>
+<td>220</td>
+<td class="left"><a href="a77f94d4d39118411b5b462c83fd3b6e">MERS Statistics (June 28)</a></td>
+<td>2015-06-28</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1631</td>
+</tr>
+<tr>
+<td>219</td>
+<td class="left"><a href="c81bf50381d133e775f4ef9db1b31f8c">Press Release  (June 27)</a></td>
+<td>2015-06-27</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1528</td>
+</tr>
+<tr>
+<td>218</td>
+<td class="left"><a href="7e80b9ee90cb3fda33cf5c96c0a5bbe7">MERS Statistics (June 27)</a></td>
+<td>2015-06-27</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1681</td>
+</tr>
+<tr>
+<td>217</td>
+<td class="left"><a href="52d81024d41ca5d36aa5d12d48eeab9d">Press Release  (June 26)</a></td>
+<td>2015-06-26</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1556</td>
+</tr>
+<tr>
+<td>216</td>
+<td class="left"><a href="d3acdec4b34cef8bfc319fa1032ebd17">MERS-Free ‘National Safe Hospital’ to Be Operated</a></td>
+<td>2015-06-26</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1688</td>
+</tr>
+</tbody>
+</table>
+<!-- /table:list -->
+<!-- paging -->
+<!-- paging -->
+<div id="paging">
+<a class="btn" href="ebfb6bc3f850eb20122e1021c6e4c0d1"><img alt="first page" src="../../images/eng/common/btn_firstpage.gif"/></a>
+<a class="btn" href="ffdc4366d327476f2a2bdd61bea75d3f"><img alt="pre page" src="../../images/eng/common/btn_prepage.gif"/></a>
+<a href="b5ac7ead72941feddd2152cd97408423" title="11page">11</a> 
+
+				<a href="43305223367df6986d635c77763975b3" title="12page">12</a> 
+
+				<span title="present">13</span> 
+
+				<a href="291c7b2c06ad0f481977e50fbd85795e" title="14page">14</a> 
+
+				<a href="69279edea38f89c531ee92dcc558f429" title="15page">15</a> 
+
+				<a href="3d5e6982b8cfbd3ae4834a4e77e21144" title="16page">16</a> 
+
+				<a href="32fde42f13158f6b4f430ac227830ad3" title="17page">17</a> 
+
+				<a href="e9a17658ff68b1011b3bf38b014eea17" title="18page">18</a> 
+
+				<a href="3fbff7a5c45a170ce3270ba839fff4fb" title="19page">19</a> 
+
+				<a href="095823f82b64fc9c0ab92d552e48e0b3" title="20page">20</a> 
+
+				<a class="btn" href="6c8765ade6af448afd7277d09046c33a"><img alt="next page" src="../../images/eng/common/btn_nextpage.gif"/></a>
+<a class="btn" href="2d7e34ab1d5e2a71b1530de73fd24299"><img alt="last page" src="../../images/eng/common/btn_lastpage.gif"/></a>
+</div>
+<!-- /paging -->
+<!-- /paging -->
+</form>
+<!-- DB 에서 contents 데이터를 가져와서 뿌려준다. -->
+</div>
+</div>
+<!-- /contents -->
+</div>
+</div>
+<!-- footer -->
+<!-- footer -->
+<div id="footer">
+<div class="foot">
+<p class="flogo"><img alt="ministry of health and welfare" src="../../images/eng/common/flogo.gif"/></p>
+<div class="finfo">
+<address><img alt="13, Doum 4-ro, Sejong, (30113) Korea ㅣCALL CENTER 82-129" src="../../images/eng/common/foot_address.gif"/></address>
+<p class="copyright"><img alt="Copyright(C) By MOHW. All rights reserved." src="../../images/eng/common/foot_copyright.gif"/></p>
+</div>
+<!-- 일일방문자수 추가 -->
+<p class="visits">Daily visits : <strong>198</strong></p>
+<!--// 일일방문자수 추가 -->
+</div>
+</div>
+<!-- //footer -->
+</div>
+<div id="returntotop"><a href="#skip-navi">go to the top</a></div>
+<script type="text/javascript">
+//<![CDATA[
+function jsOpenSite(formEl) {	
+	var errorMessage = null;
+	var objFocus = null;
+	if (formEl.sitelink.value.length == 0) {
+		errorMessage = "please! select a site to move!";
+		objFocus = formEl.sitelink;
+	} 
+	if(errorMessage != null) {
+		alert(errorMessage);
+		objFocus.focus();
+		return false;
+	}
+	return true;
+}
+//]]>	
+</script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101800795-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- /footer -->
+</div>
+</body>
+</html>

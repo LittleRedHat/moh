@@ -1,0 +1,784 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Ministry of Health &amp; Welfare : ABOUT MOHW &gt; Press Release View Content</title>
+<link href="../../css/eng/mwf_eng.css" rel="stylesheet" type="text/css"/>
+<script src="../../js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="../../js/common.js" type="text/javascript"></script>
+<script src="../../js/mw_eng.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+//<![CDATA[
+
+
+
+	// ¸®½ºÆ®·Î ÀÌµ¿
+
+	function jsList()
+
+	{
+
+		var form = document.fmList;
+
+		form.action = "ssg0111ls.jsp";
+
+		form.submit();
+
+	}
+
+
+
+	//³»¿ë º¸±â
+
+	function goView(seq)
+
+	{
+
+		var form = document.fmView;
+
+		form.CONT_SEQ.value = seq;
+
+		form.action = "ssg0111vw.jsp";
+
+		form.submit();
+
+	}
+
+
+
+	//ÇÏ´Ü ¸®½ºÆ® ÆäÀÌÁö ÀÌµ¿
+
+	function goPage( page)
+
+	{
+
+		var form = document.fmList;
+
+		form.page.value = page;
+
+		form.submit();
+
+	}
+
+
+
+	//ÆÄÀÏ ´Ù¿î·Îµå.
+
+	function fileDownLoad(fileSeq)
+
+	{
+
+		if( confirm( "Do you wish to download now?") == true ) {
+
+			var form = document.fmView;
+
+			form.FILE_SEQ.value = fileSeq;
+
+			form.action = "/front_new/modules/download.jsp";
+
+			form.submit();
+
+		}
+
+	}
+
+//]]>
+
+</script>
+</head>
+<body>
+<!-- ¹Ù·Î°¡±â ¸µÅ© -->
+<p id="skip-navi">
+<a href="#contents">go to the contents</a>
+<a href="#snb">go to the menu</a>
+</p>
+<!-- //¹Ù·Î°¡±â ¸µÅ© -->
+<!-- header -->
+<div id="wrap">
+<!-- head -->
+<div class="sbHead" id="head">
+<!-- header -->
+<div id="header">
+<!-- ·Î°í -->
+<h1 class="logo"><a href="../261f58801c1da21d0b6f7021b30b648b"><img alt="ministry of health and welfare" src="../../images/eng/common/logo.gif"/></a></h1>
+<div class="kor_sym">
+<a href="../../../moi.go.kr/eng/sub/a03/nationalSymbol/d5a2e22490af7d4414516807b47a6064" target="_blank" title="new browser"><img alt="National Symbols of the Republic of Korea" src="../../images/eng/common/kor_sym_eng.gif"/></a>
+</div>
+<!-- function -->
+<div class="function">
+<!-- [Funciton] - ÆùÆ®»çÀÌÁî -->
+<div class="unit">
+<div class="ft_size">
+<button class="plus" onclick="fontSizeWrap.btnPlus();" type="button"><span class="hide">expand</span></button>
+<button class="minus" onclick="fontSizeWrap.btnMinus();" type="button"><span class="hide">reduce</span></button>
+<span class="Font_Size"><span class="hide">Font Size</span></span>
+</div>
+<script type="text/javascript">var fontSizeWrap = new fontSize();</script>
+<!-- //[Funciton] - ÆùÆ®»çÀÌÁî -->
+<!-- ¾ð¾îº° ¸µÅ© -->
+<ul class="global_language">
+<li class="mobile"><a href="../../m_eng/50b06ecdc2a14f90913d780c3460fca4" target="_blank" title="new browser"><span class="hide">Mobile</span></a></li>
+<li class="Korean"><a href="../../front_new/647a6a76a15a5a8bfc6d5f73d0d9d4d1" target="_blank" title="new browser"><span class="hide">Korean</span></a></li>
+<li class="sitemap"><a href="../cs/38f03257ef34df8e601ed2e794b4f84f"><span class="hide">sitemap</span></a></li>
+<li class="a-z"><a href="../cs/1001c96bb6754f09ed925f7b6d593bf7"><span class="hide">A-Z Index</span></a></li>
+</ul>
+<!-- //¾ð¾îº° ¸µÅ© -->
+<!-- ¸Þ´º¼³Á¤ -->
+<div class="mnsetup">
+<div class="btnsetup"><a class="btnms" href="#msetup_layer" id="svcmore_h"><span class="hide">my menu</span></a></div>
+<div class="msetup_layer" id="msetup_layer">
+<h2>
+<img alt="Menu setup" src="../../images/eng/main/musetup.gif"/>
+</h2>
+<div class="mnsetup_cont">
+<ul class="list" id="fmenu"><li>My menu list</li></ul>
+</div>
+<div class="cg_contwrap">
+<div class="cg_cont">
+<!-- ÀüÃ¼¸ñ·Ï -->
+<ul class="ms_category">
+<li>
+<input class="input-check" id="mw_100103" name="setmenu" type="checkbox" value="/eng/sg/ssg0103mn.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100103|100103|Organization"/>
+<label for="mw_100103">Organization</label>
+</li>
+<li>
+<input class="input-check" id="mw_100113" name="setmenu" type="checkbox" value="/eng/sg/ssg0101mn.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100113|100113|Contact Us"/>
+<label for="mw_100113">Contact Us</label>
+</li>
+<li>
+<input class="input-check" id="mw_100105" name="setmenu" type="checkbox" value="/eng/sg/ssg0105mn.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100105|100105|Minister's Profile"/>
+<label for="mw_100105">Minister's Profile</label>
+</li>
+<li>
+<input class="input-check" id="mw_100111" name="setmenu" type="checkbox" value="/eng/sg/ssg0111ls.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100111|100111|Press Release"/>
+<label for="mw_100111">Press Release</label>
+</li>
+<li>
+<input class="input-check" id="mw_10031801" name="setmenu" type="checkbox" value="/eng/jc/sjc0101mn.jsp?PAR_MENU_ID=1003&amp;MENU_ID=10031801|10031801|Policies"/>
+<label for="mw_10031801">Policies</label>
+</li>
+<li>
+<input class="input-check" id="mw_100408" name="setmenu" type="checkbox" value="/eng/cs/scs0301mn.jsp?PAR_MENU_ID=1004&amp;MENU_ID=100408|100408|RSS"/>
+<label for="mw_100408">RSS</label>
+</li>
+<li>
+<input class="input-check" id="mw_100410" name="setmenu" type="checkbox" value="/eng/cs/scs0301mn.jsp?PAR_MENU_ID=1004&amp;MENU_ID=100410|100410|Privacy Guideline"/>
+<label for="mw_100410">Privacy Guideline</label>
+</li>
+<li>
+<input class="input-check" id="mw_100404" name="setmenu" type="checkbox" value="/eng/cs/scs0301mn.jsp?PAR_MENU_ID=1004&amp;MENU_ID=100404|100404|Users Guide"/>
+<label for="mw_100404">Users Guide</label>
+</li>
+</ul>
+<!-- //ÀüÃ¼¸ñ·Ï -->
+</div>
+<!-- ¹öÆ° Á¤·Ä -->
+<div class="btn_msetup">
+<p class="left"><input alt="default" class="input-image" id="mymenu_default" src="/images/eng/btn/btn_base.gif" type="image"/></p>
+<span class="cg_msg">User can personalize the website</span>
+<p class="center">
+<input alt="confirm" class="input-image" id="mymenu_set" src="/images/eng/btn/btn_confirm.gif" type="image"/>
+<!--a href="#" id="mymenu_set" ><img src="/images/front/btn/btn_confirm.gif" alt="È®ÀÎ" /></a-->
+<input alt="cancel" class="input-image" id="mymenu_cancel" src="/images/eng/btn/btn_cancel.gif" type="image"/>
+</p>
+<p class="right"><a href="../cs/38f03257ef34df8e601ed2e794b4f84f">sitemap</a></p>
+</div>
+<!-- //¹öÆ° Á¤·Ä -->
+</div>
+<p class="btn-more"><button class="msbtn_close" id="msbtn_close" type="button"><span class="hide">close</span></button></p>
+</div>
+</div>
+<!-- //¸Þ´º¼³Á¤ -->
+<!-- °Ë»ö -->
+<!-- 
+
+					<div class="search">
+
+						<form method="post" name="fmSearch" action="/eng/cs/scs0401ls.jsp" onsubmit="return searchCommon(this)" >
+
+							<input type="hidden" name="PAR_MENU_ID" value="1004" />
+
+							<input type="hidden" name="MENU_ID" value="100406" />
+
+							<input type="hidden" name="SEARCHKEY" value="TITLE" />				
+
+							<fieldset>
+
+								<legend>search</legend>
+
+								<label for="SEARCHVALUE" class="hide">search value</label>
+
+								<input type="text" id="SEARCHVALUE" name="SEARCHVALUE" class="input-text" />
+
+								<input type="image" class="input-image" src="/images/eng/common/tl_btnsearch.gif" alt="search" />
+
+							</fieldset>
+
+						</form>
+
+					</div>
+
+					 -->
+<!-- //°Ë»ö -->
+</div><!-- //unit -->
+</div>
+<!-- //function -->
+</div>
+<!-- //header -->
+</div>
+<!-- //head -->
+<hr/>
+<!-- spot main -->
+<div id="spot-sub">
+<img alt="A life-long friend who stands by the public" src="../../images/front_eng/sg/img_head_sg.jpg"/>
+</div>
+<!-- //spot main -->
+<hr/>
+<!-- container -->
+<div class="clear" id="container">
+<div id="subwrap">
+<!-- snb -->
+<div id="snb">
+<h2><a href="616feca8de871f8a1f1e040342b5d550"><img alt="About MW" src="../../images/front_eng/title/h2_am.gif"/></a></h2>
+<ul id="snbMenu1">
+<li><a href="616feca8de871f8a1f1e040342b5d550"><img alt="Vision &amp; Mission" src="../../images/front_eng/title/left_am01.gif"/></a>
+</li>
+<li><a href="93dae7d73a99735630654fc2fb46a9eb"><img alt="Organization" src="../../images/front_eng/title/left_am02.gif"/></a>
+</li>
+<li><a href="482124899dc6a43227599ea28a921fea"><img alt="Contact Us" src="../../images/front_eng/title/left_am03.gif"/></a>
+</li>
+<li><a href="2d75b746f82cbae41316bd3da4ceb30d"><img alt="Minister¡¯s Profile" src="../../images/front_eng/title/left_am04.gif"/></a>
+</li>
+<li><a href="a2fde158a68020769e116fe2815d95aa"><img alt="Vice Minister¡¯s Profile" src="../../images/front_eng/title/left_am05.gif"/></a>
+</li>
+<li><a href="8c6914a853d28a0cf2ce417c6d5fe3ce"><img alt="Past Ministers &amp; Vice Ministers" src="../../images/front_eng/title/left_am06.gif"/></a>
+</li>
+<li><a href="a79fdae6ffae612a0b5f784645afb1db"><img alt="Location" src="../../images/front_eng/title/left_am07.gif"/></a>
+</li>
+<li class="on"><a href="76b19fd6a92fcb216e55a4e9dea9a4c8"><img alt="Press Release" src="../../images/front_eng/title/left_am08_over.gif"/></a>
+</li>
+<li><a href="ea8a1ea6f8dcdcb2b03b8ebc89df5ef6"><img alt="129 Call Center" src="../../images/front_eng/title/left_am09.gif"/></a>
+</li>
+<li><a href="../../../www.epeople.go.kr/jsp/user/on/eng/ebb342dee28c17242d927d0b1019800f" target="_blank"><img alt="Online Petition" src="../../images/front_eng/title/left_am10.gif"/></a>
+</li>
+</ul>
+<h2><a href="../jc/f397eab66fb162470b191bcc18dfac4f"><img alt="Policies" src="../../images/front_eng/title/h2_pl.gif"/></a></h2>
+<ul id="snbMenu2">
+<li class="submenu"><img alt="Enhancement of Customized Welfare Services by Life-Cycle Phase" src="../../images/front_new/title/left_pl100321.gif"/>
+<ul>
+<li><a href="../jc/f397eab66fb162470b191bcc18dfac4f"><img alt="Reinforcement of support for income growth and work opportunities of low-income people" src="../../images/front_new/title/left_pl10032101.gif"/></a></li>
+<li><a href="../jc/6d963af417c35f2c3575a2f47d93315d"><img alt="Welfare services reaching out to people and improvement of public perception" src="../../images/front_new/title/left_pl10032102.gif"/></a></li>
+<li><a href="../jc/7c117d987132de318dd869c7e15cd6d1"><img alt="Promotion of rights and interests of children, the disabled, the elderly, etc." src="../../images/front_new/title/left_pl10032103.gif"/></a></li>
+<li><a href="../jc/3cd7dc5b01d534d90eba055e35cdf386"><img alt="Reduction of burden of medical expenses, and the reorganization of the system for determining health insurance premiums" src="../../images/front_new/title/left_pl10032104.gif"/></a></li>
+</ul>
+</li>
+<li class="submenu"><img alt="Establishment of Health Insurance System centered on People" src="../../images/front_new/title/left_pl100322.gif"/>
+<ul>
+<li><a href="../jc/6698fa46cb8d35f0f8aeb6f289ab2ce9"><img alt="Reinforcement of patient-oriented medical services" src="../../images/front_new/title/left_pl10032201.gif"/></a></li>
+<li><a href="../jc/6194a5e0555dab84754814c541f09b27"><img alt="Strengthening of essential and public health care services and systematic response to infectious diseases" src="../../images/front_new/title/left_pl10032202.gif"/></a></li>
+<li><a href="../jc/7603054a50c83c708da6d6702afe3d14"><img alt="Reinforcement of Preventive Health Care" src="../../images/front_new/title/left_pl10032203.gif"/></a></li>
+<li><a href="../jc/5975190b9def38149afd3ad48132162f"><img alt="Enhancement of healthcare industry performance and job creation" src="../../images/front_new/title/left_pl10032204.gif"/></a></li>
+</ul>
+</li>
+<li class="submenu"><img alt="Strengthening Responses to Demographic Crisis" src="../../images/front_new/title/left_pl100323.gif"/>
+<ul>
+<li><a href="../jc/8334fe91b7312eb840b99581e90bc297"><img alt="Establishment of a response system for coping with low birthrate" src="../../images/front_new/title/left_pl10032301.gif"/></a></li>
+<li><a href="../jc/687f9bcd11741aea5264c8392dc17ffc"><img alt="Improvement of a system for supporting childbirth and parenting" src="../../images/front_new/title/left_pl10032302.gif"/></a></li>
+<li><a href="../jc/d59e41ec8156d3ed1193b5f64629cf85"><img alt="Enhancement of preparation for aging society" src="../../images/front_new/title/left_pl10032303.gif"/></a></li>
+</ul>
+</li>
+</ul>
+<h2><a href="../cs/b64cc4894874ba0eb4af154d245908a9"><img alt="Help" src="../../images/front_eng/title/h2_hp.gif"/></a></h2>
+<ul id="snbMenu3">
+<li><a href="../cs/b64cc4894874ba0eb4af154d245908a9"><img alt="Users Guide" src="../../images/front_eng/title/left_hp01.gif"/></a>
+</li>
+<li><a href="../cs/81e6dbd0ed113665170a29b899ab0c21"><img alt="Privacy Guideline" src="../../images/front_eng/title/left_hp04.gif"/></a>
+</li>
+<li><a href="../cs/bab2f9d80d5980695b6081cb22ceb64b"><img alt="RSS" src="../../images/front_eng/title/left_hp03.gif"/></a>
+</li>
+<li><a href="../cs/38f03257ef34df8e601ed2e794b4f84f"><img alt="Sitemap" src="../../images/front_eng/title/left_hp05.gif"/></a>
+</li>
+<li><a href="../cs/1001c96bb6754f09ed925f7b6d593bf7"><img alt="A-Z Index" src="../../images/front_eng/title/left_hp06.gif"/></a>
+</li>
+</ul>
+</div>
+<script src="../../js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+			$('.submenu').last().find('ul').attr('class', 'noline');
+			imgMenuOver("snb");
+			
+			$(function(){
+				$(".on").parents('ul').slideDown();
+			});	
+			
+			$(".submenu").click(function(){
+				$(".submenu").not($(this)).children('ul').slideUp();
+				$(this).children('ul').slideToggle();
+			});
+		</script>
+<!-- //snb -->
+<!-- contents -->
+<div id="contents">
+<!-- mnvisual - ÄÁÅÙÃ÷ Å¸ÀÌÆ² -->
+<div class="mnvisual">
+<!-- h2 - Å¸ÀÌÆ² -->
+<!-- //h2 - Å¸ÀÌÆ² -->
+<!-- location - ÁÖ¼Ò -->
+<div id="location"> <a class="home" href="../261f58801c1da21d0b6f7021b30b648b">HOME</a> &gt; <a href="616feca8de871f8a1f1e040342b5d550">ABOUT MOHW</a> &gt; <span class="here">Press Release</span></div>
+<!-- //location - ÁÖ¼Ò -->
+</div>
+<!-- //mnvisual - ÄÁÅÙÃ÷ Å¸ÀÌÆ² -->
+<!-- content-area -->
+<div class="content-area">
+<!-- DB ¿¡¼­ contents µ¥ÀÌÅÍ¸¦ °¡Á®¿Í¼­ »Ñ·ÁÁØ´Ù. -->
+<!-- board -->
+<form action="ssg0111vw.jsp" method="post" name="fmView">
+<input name="PAR_MENU_ID" type="hidden" value="1001"/>
+<input name="MENU_ID" type="hidden" value="100111"/>
+<input name="page" type="hidden" value="17"/>
+<input name="CONT_SEQ" type="hidden" value="272525"/>
+<input name="MENU_ID" type="hidden" value="100111"/>
+<input name="FILE_SEQ" type="hidden" value=""/>
+<input name="SEARCHKEY" type="hidden" value=""/>
+<input name="SEARCHVALUE" type="hidden" value=""/>
+<!-- table:view -->
+<table class="view" summary="ABOUT MOHW &gt; Press Release detail.">
+<caption>ABOUT MOHW &gt; Press Release</caption>
+<colgroup>
+<col width="12%"/><col width="38%"/><col width="12%"/><col width="38%"/>
+</colgroup>
+<tbody>
+<tr>
+<th scope="row">Subject</th>
+<td colspan="3">Child abuse mostly takes place at home (86%), inflicted mostly by parents (83%)</td>
+</tr>
+<tr>
+<th scope="row">Date</th>
+<td>2012-06-05</td>
+<th scope="row">Hit</th>
+<td>5009</td>
+</tr>
+<tr>
+<th scope="row">Contents</th>
+<td class="view" colspan="3"><p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; vertical-align: baseline; word-break: keep-all; line-height: normal; text-align: center">
+<b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 12pt; color: black; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt">Child abuse mostly takes place at home (86%), inflicted mostly by parents (83%)<o:p></o:p></span></b></p>
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; vertical-align: baseline; word-break: keep-all; line-height: normal; text-align: center">
+<b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 12pt; color: black; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt"><o:p> </o:p></span></b></p>
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt 15.6pt; vertical-align: baseline; word-break: keep-all; text-indent: -15.6pt; line-height: 140%; text-align: center">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">- Child abuse is rapidly increasing especially among infants, mostly inflicted by those in 20s and 30s (69.7%), parents (86.5%) and women (66.7%).</span><b><span lang="EN-US" style="color: black; line-height: 140%; font-family: 'arial','sans-serif'; letter-spacing: -0.5pt; mso-fareast-font-family: ÇÑ¾çÁß°íµñ; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"> -</span></b></font><span lang="EN-US" style="color: black; line-height: 140%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></p>
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: center">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">- Efforts to be made to prevent child abuse caused by parents at home through the strengthening of education for parents, etc -</span><span lang="EN-US" style="font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²"><o:p></o:p></span></font></font></p>
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 10pt; text-align: center">
+<b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-family: 'arial','sans-serif'"><font size="2"><font color="#000000">- The presentation of the report on the 2011 national status of child abuse and seminar regarding child abuse were held –<o:p></o:p></font></font></span></b></p>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 550px; height: 65px">
+<tbody>
+<tr>
+<td>
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 3pt 31.9pt; vertical-align: baseline; text-indent: -31.9pt; line-height: 150%; text-align: center">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; position: relative; top: -2.5pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt; mso-text-raise: 2.5pt"><font size="2"><main contents=""><o:p></o:p></main></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 3pt 31.9pt; vertical-align: baseline; text-indent: -31.9pt; line-height: 150%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; position: relative; top: -2.5pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt; mso-text-raise: 2.5pt">¡Û </span></font><font size="2"><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; position: relative; top: -2.5pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt; mso-text-raise: 2.5pt">Out of 10,146 child abuse cases reported to the National Child Protection Agency in 2011, </span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 3pt 31.9pt; vertical-align: baseline; text-indent: -31.9pt; line-height: 150%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; position: relative; top: -2.5pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt; mso-text-raise: 2.5pt">   8,325 cases were suspected cases and 6,058 cases were confirmed as child abuse cases. </span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="letter-spacing: -0.2pt"><font face="¸¼Àº °íµñ">  * </font></span><span lang="EN-US" style="font-family: 'arial','sans-serif'; letter-spacing: -0.2pt">suspected child abuse case</span><span lang="EN-US" style="font-family: 'arial','sans-serif'">: Cases that are suspected as child abuse when reported  </span></font></font><font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">to  </span></font></font><font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">the agency, therefore requiring the field investigation</span><font face="¸¼Àº °íµñ"><span lang="EN-US"> </span><span lang="EN-US" style="mso-fareast-font-family: ±¼¸²"><o:p></o:p></span></font></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 3pt 10pt; vertical-align: baseline; text-indent: -10pt; line-height: 150%; mso-char-indent-count: -1.0">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; position: relative; top: -2.5pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt; mso-text-raise: 2.5pt">¡Û 86.6% (5,426 cases) of child abuse cases take place in families. 83.1% of them are inflicted by parents (5,309 cases) and 44% of the cases (2,666 cases) happen in single parent families.<span style="mso-spacerun: yes">  </span></span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 3pt 0cm 0pt 34.9pt; vertical-align: baseline; text-indent: -34.9pt; line-height: 160%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 160%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">  * Single parent family</span><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">: Single father family, single mother family, unwed single father family, </span></font></font></p>
+<p class="MsoNormal" style="margin: 3pt 0cm 0pt 34.9pt; vertical-align: baseline; text-indent: -34.9pt; line-height: 160%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">    and unmarried single mother family</span><font face="¸¼Àº °íµñ"><span lang="EN-US"> </span><span lang="EN-US" style="color: black; line-height: 160%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></font></p>
+<p class="MsoNormal" style="margin: 3pt 0cm 0pt 34.1pt; vertical-align: baseline; text-indent: -34.1pt; line-height: 160%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 160%; font-family: 'arial','sans-serif'; position: relative; top: -2.5pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt; mso-text-raise: 2.5pt">¡Û</span><span lang="EN-US" style="color: black; line-height: 160%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><span style="mso-spacerun: yes"> </span>Abuse against infants aged below 3 is mostly inflicted by those in 20s and 30s (69.7%),</span></font></p>
+<p class="MsoNormal" style="margin: 3pt 0cm 0pt 34.1pt; vertical-align: baseline; text-indent: -34.1pt; line-height: 160%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 160%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">   parents (86.5%) and women (66.7%). Parenting stress seems to be the main cause. </span><span lang="EN-US" style="color: black; line-height: 160%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 3pt 0cm 0pt 30pt; vertical-align: baseline; text-indent: -30pt; line-height: 160%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 160%; font-family: 'arial','sans-serif'; position: relative; top: -2.5pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt; mso-text-raise: 2.5pt">¡Û</span><span lang="EN-US" style="color: black; line-height: 160%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><span style="mso-spacerun: yes"> </span>There is a 19% increase in child abuse in child-related facilities (from 227 cases in 2010 to </span></font></p>
+<p class="MsoNormal" style="margin: 3pt 0cm 0pt 30pt; vertical-align: baseline; text-indent: -30pt; line-height: 160%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 160%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">   270 cases in 2011) <span style="mso-spacerun: yes"> </span></span><span lang="EN-US" style="color: black; line-height: 160%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 3pt 0cm 0pt 31.6pt; vertical-align: baseline; text-indent: -31.6pt; line-height: 160%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 160%; font-family: 'arial','sans-serif'; position: relative; top: -2.5pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt; mso-text-raise: 2.5pt">¡Û</span><span lang="EN-US" style="color: black; line-height: 160%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><span style="mso-spacerun: yes"> </span>For types of child abuse, there were 2,621 redundant abuse cases (43.3%), followed by </span></font></p>
+<p class="MsoNormal" style="margin: 3pt 0cm 0pt 31.6pt; vertical-align: baseline; text-indent: -31.6pt; line-height: 160%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 160%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">   negligence cases (1,783 cases and 29.4%), emotional abuse (909 cases and 15.0%), </span></font></p>
+<p class="MsoNormal" style="margin: 3pt 0cm 0pt 31.6pt; vertical-align: baseline; text-indent: -31.6pt; line-height: 160%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 160%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">   physical abuse (466 cases and 3.7%) and abandonment (53 cases and 0.9%). <o:p></o:p></span></font></p>
+<p>
+<span lang="EN-US" style="font-size: 10pt; color: black; line-height: 115%; font-family: 'arial','sans-serif'; position: relative; top: -2.5pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-text-raise: 2.5pt; mso-ansi-language: en-us; mso-fareast-language: ko; mso-bidi-language: ar-sa">¡Û</span><span lang="EN-US" style="font-size: 10pt; color: black; line-height: 115%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-ansi-language: en-us; mso-fareast-language: ko; mso-bidi-language: ar-sa"><span style="mso-spacerun: yes"> </span>Out of total child abuse cases (6,058 cases), 563 cases were re-occurring cases </span><span lang="EN-US" style="font-size: 10pt; color: black; line-height: 115%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-ansi-language: en-us; mso-fareast-language: ko; mso-bidi-language: ar-sa">and </span><span lang="EN-US" style="font-size: 10pt; color: black; line-height: 115%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-ansi-language: en-us; mso-fareast-language: ko; mso-bidi-language: ar-sa"> </span><span lang="EN-US" style="font-size: 10pt; color: black; line-height: 115%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-ansi-language: en-us; mso-fareast-language: ko; mso-bidi-language: ar-sa">between 6 months and 2 years, re-occurring child abuse takes place the most (247 cases and 44%)</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+<main contents="">
+<p>
+		 <font size="2"><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">5,246 cases took place at home in 2011 (86.6%) and 5,039 cases were committed by parents </span></font><font size="2"><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">(83.1%), taking up the most of the cases. </span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 5pt 5pt; vertical-align: baseline; text-indent: -5pt; line-height: 180%; mso-char-indent-count: -.5">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">When it comes to types of child victims’ families, 44% (2,666 cases) were caused in single</span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 5pt 5pt; vertical-align: baseline; text-indent: -5pt; line-height: 180%; mso-char-indent-count: -.5">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">parent families such as single father family, single mother family, and unmarried single parent </span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 5pt 5pt; vertical-align: baseline; text-indent: -5pt; line-height: 180%; mso-char-indent-count: -.5">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">family. Given that single parent families account for 8.7% of all types of families, when a child is </span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 5pt 5pt; vertical-align: baseline; text-indent: -5pt; line-height: 180%; mso-char-indent-count: -.5">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">raised by one parent, there is high possibility of child abuse taking place due to parenting burden </span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 5pt 5pt; vertical-align: baseline; text-indent: -5pt; line-height: 180%; mso-char-indent-count: -.5">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">and stress.<span style="mso-spacerun: yes">  </span></span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 115%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÇÑ¾çÁß°íµñ; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">* The percentage of single parent families</span><span lang="EN-US" style="font-family: 'arial','sans-serif'"><font color="#000000">: Number of households estimated by the make-up of families and the number of family members (National Statistical Office, 2010) </font></span><span lang="EN-US" style="color: black; line-height: 115%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÇÑ¾çÁß°íµñ; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><span style="mso-spacerun: yes"> </span></span><span lang="EN-US" style="color: black; line-height: 115%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 22.7pt; vertical-align: baseline; text-indent: -22.7pt; line-height: 180%">
+<span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 22.7pt; vertical-align: baseline; text-indent: -22.7pt; line-height: 180%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">Child abuse in child-related facilities such as nursery has increased by 19% compared to 2010. </span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 23pt; vertical-align: baseline; text-indent: -23pt; line-height: 180%">
+<span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt 10pt; text-indent: -10pt; mso-char-indent-count: -1.0">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">Among types of facilities, particularly, the number of child abuse cases at nursery has greatly </span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt 10pt; text-indent: -10pt; mso-char-indent-count: -1.0">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">increased from 100 in 2010 to 159 in 2011, by 59%.</span><font face="¸¼Àº °íµñ"><span lang="EN-US"> </span><span lang="EN-US" style="mso-fareast-font-family: ±¼¸²"><o:p></o:p></span></font></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">Child abuse was committed by women (76.3%) more than by men (76.3%) at facilities and </span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">45.4% of those who have committed child abuse turned out to have problems with their attitude </span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">and ways of taking care of children and by type of child abuse, physical abuse takes up the </span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">highest percentage of 24.4%. </span><span lang="EN-US" style="font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 5pt 36pt; vertical-align: baseline; text-indent: -22.7pt; line-height: 60%">
+<span lang="EN-US" style="color: black; line-height: 60%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 22.5pt; vertical-align: baseline; text-indent: -22.5pt; line-height: 180%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">Abuse against infants aged below 3 has been rapidly increasing from 455 in 2009, to 530 in 2010 </span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 22.5pt; vertical-align: baseline; text-indent: -22.5pt; line-height: 180%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">and to 708 cases in 2011. Among types of child abuse, negligence accounts for the most part </span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 22.5pt; vertical-align: baseline; text-indent: -22.5pt; line-height: 180%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">(48.1%, 454 cases). <span style="mso-spacerun: yes"> </span><span style="mso-spacerun: yes"> </span></span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 23pt; vertical-align: baseline; text-indent: -23pt; line-height: 180%">
+<span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 23pt; vertical-align: baseline; text-indent: -23pt; line-height: 180%">
+<span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span><font size="2"><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">When it comes to child abuser, there were more women (66.7%) than men (32.3). Younger </span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 23pt; vertical-align: baseline; text-indent: -23pt; line-height: 180%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">people in their 20s and 30s (69.7%) have abused children more than middle aged people and </span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 23pt; vertical-align: baseline; text-indent: -23pt; line-height: 180%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">86.5% of child abuse have been committed by parents. Given this, it can be assumed that child </span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 23pt; vertical-align: baseline; text-indent: -23pt; line-height: 180%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">abuse such as negligence takes place due to young mothers’ parenting stress, etc.<span style="mso-spacerun: yes">    </span></span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 23pt; vertical-align: baseline; text-indent: -23pt; line-height: 130%">
+<span lang="EN-US" style="color: black; line-height: 130%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 5pt 24.6pt; vertical-align: baseline; text-indent: -24.6pt; line-height: 180%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">The number of re-occurred abuse cases that were re-reported and confirmed as child abuse after </span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 5pt 24.6pt; vertical-align: baseline; text-indent: -24.6pt; line-height: 180%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">the intervention by a child protection agency was over when it was reported at first was 563 in </span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 5pt 24.6pt; vertical-align: baseline; text-indent: -24.6pt; line-height: 180%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">2011, accounting for 9.3% of the total child abuse cases. <span style="mso-spacerun: yes"> </span></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 5pt 24.6pt; vertical-align: baseline; text-indent: -24.6pt; line-height: 180%">
+		 </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 5pt 24.6pt; vertical-align: baseline; text-indent: -24.6pt; line-height: 180%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">While the number of child abuse cases reoccurred within 6 months after the first case took</span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 5pt 24.6pt; vertical-align: baseline; text-indent: -24.6pt; line-height: 180%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">place was 100 (17.8%), the number of reoccurred cases between 6 months and less than 2 </span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 5pt 24.6pt; vertical-align: baseline; text-indent: -24.6pt; line-height: 180%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">years after the first case was 247 (43.9%) and the number of cases that reoccurred more than 2 </span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 5pt 24.6pt; vertical-align: baseline; text-indent: -24.6pt; line-height: 180%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">years after the first case was 216 (38.3%), indicating that long-term care by a child protection </span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 5pt 24.6pt; vertical-align: baseline; text-indent: -24.6pt; line-height: 180%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">agency is needed for abusers and abused children.<span style="mso-spacerun: yes">  </span><span style="mso-spacerun: yes"> </span></span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 5pt 22.9pt; vertical-align: baseline; text-indent: -22.9pt; line-height: 180%">
+<span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt 5pt; text-indent: -5pt; line-height: 150%; mso-char-indent-count: -.5">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">Ministry of Health and Welfare plans to make efforts to prevent child abuse inflicted by parents </span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt 5pt; text-indent: -5pt; line-height: 150%; mso-char-indent-count: -.5">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">such as reinforcing parents’ education, etc. by paying attention to the pattern of child abuse </span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt 5pt; text-indent: -5pt; line-height: 150%; mso-char-indent-count: -.5">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">increasing at home each year.<span style="mso-spacerun: yes">  </span></span><span lang="EN-US" style="font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+		 </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'; mso-bidi-font-weight: bold">While encouraging and supporting parents to complete the education when providing support for pregnancy, child birth and nurturing, the ministry will strengthen the “itinerant education on child nurturing and education by district and area” for expecting parents and parents with infants and babies.</span><span lang="EN-US" style="font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<span lang="EN-US" style="font-family: 'arial','sans-serif'"><font size="2"><font color="#000000">The ministry will operate the parents’ classroom program in cooperation with the Healthy Family Support Center (139 offices) and promote the parents’ education linked to the support program* for pregnant mothers and children run by community health centers. <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<span lang="EN-US" style="font-family: 'arial','sans-serif'; mso-fareast-font-family: ÇÑ¾çÁß°íµñ"><font size="2"><font color="#000000">* Nutrition plus for pregnant mothers and infants and babies, the iron supplement support program for pregnant mothers and the mother breast milk feeding clinic, etc. <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<span lang="EN-US" style="font-family: 'arial','sans-serif'"><font size="2"><font color="#000000">In addition, the itinerant education will be carried out in 16 cities and counties through the Korean Human Resource Development Institute for Health and Welfare and the child protection agency. <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">For the prevention of reoccurring child abuse at home and restoration of the functions of families, “the abused child healing and protection shelter (one under test-operation)*” and the “family healing service” which have been run starting from this year will be expanded<o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">* Emotional healing, family relation improvement and affection enhancement program, etc. are provided for children who are suffering serious trauma due to abuse at residential healing and protection facilities</span><span lang="EN-US" style="font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 31.4pt; vertical-align: baseline; text-indent: -31.4pt; line-height: 180%">
+<span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 30.3pt; vertical-align: baseline; text-indent: -30.3pt; line-height: 180%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">The ministry will establish the “system for early discovery of child abuse” to discover a high risk </span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 30.3pt; vertical-align: baseline; text-indent: -30.3pt; line-height: 180%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">group exposed to re-occurring child abuse with the discovery of a child abuse risk group and </span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 30.3pt; vertical-align: baseline; text-indent: -30.3pt; line-height: 180%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">case management as well as the monitoring of re-occurring abuse through regional child centers </span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 30.3pt; vertical-align: baseline; text-indent: -30.3pt; line-height: 180%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">(3,802 centers) and dream start centers (181 centers).<span style="mso-spacerun: yes">  </span></span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 22.5pt; vertical-align: baseline; text-indent: -23.5pt; line-height: 180%">
+<span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">In order to eradicate child abuse at facilities such as nursery, etc. and create a safe environment, the ministry is strengthening actions to uproot child abuse and will be facilitating the operation of regional monitoring groups, etc.<a name="_GoBack"></a> and participation by communities.</span><span lang="EN-US"><font face="¸¼Àº °íµñ"> </font></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">For the eradication of child abuse at facilities such as nursery and the creation of a safe environment, the ministry prepared the guideline for the suspension of aid to nurseries where child abuse has taken place (Feb. 2011) and strengthened the requirements for nursery directors’ qualification such as mandatory occupational education, etc. (Dec. 2011) in 2011.</span><span lang="EN-US"><font face="¸¼Àº °íµñ"> </font></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<span lang="EN-US" style="font-family: 'arial','sans-serif'"><font size="2"><font color="#000000">This year, the ministry will steadily carry out the child abuse prevention training* for all childcare teachers and workers around the nation and facilitate the participation by local communities such as the operation of parents’ monitoring groups and local monitoring groups participated by the private sector and the government. <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US"><o:p><font color="#000000" face="¸¼Àº °íµñ" size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'; mso-fareast-font-family: ÇÑ¾çÁß°íµñ">*Trained 19,000 persons (2010)-&gt; 40,000 persons (2011) -&gt; will train around 40,000 persons (the plan for 2012)</span><span lang="EN-US" style="font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 31.4pt; vertical-align: baseline; text-indent: -31.4pt; line-height: 180%">
+<span lang="EN-US" style="color: black; line-height: 180%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">Along with such measures above, the government will press ahead with the revision of child-</span></font></font><font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">related laws that will include stricter limit to employment of child abusers, temporary actions for abused children and protection measures, etc. </span><span lang="EN-US" style="font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="mso-fareast-font-family: ±¼¸²"><o:p><font color="#000000" face="¸¼Àº °íµñ" size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt 10pt; text-indent: -10pt; line-height: 150%; mso-char-indent-count: -1.0">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">Act on Child Welfare will be revised that will limit the employment and operation of child facilities </span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt 10pt; text-indent: -10pt; line-height: 150%; mso-char-indent-count: -1.0">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">by those who have received sentence or protective disposition due to child abuse for 10 years </span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt 10pt; text-indent: -10pt; line-height: 150%; mso-char-indent-count: -1.0">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">from the day of the closure of sentence, grace, or exemption and if it is violated, they will be </span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt 10pt; text-indent: -10pt; line-height: 150%; mso-char-indent-count: -1.0">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">sentenced to less than one year of imprisonment or the penalty of less than 10 million won.</span><font face="¸¼Àº °íµñ"><span lang="EN-US"> <span style="mso-spacerun: yes"> </span></span><span lang="EN-US" style="mso-fareast-font-family: ±¼¸²"><o:p></o:p></span></font></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="mso-fareast-font-family: ±¼¸²"><o:p><font color="#000000" face="¸¼Àº °íµñ" size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">Furthermore, Ministry of Justice is working to enact the Special Act on Procedures of Handling of Child Abuse Cases (tentatively named)* regarding the punishment and protective disposition procedures for abusers.</span><font face="¸¼Àº °íµñ"><span lang="EN-US"> </span><span lang="EN-US" style="mso-fareast-font-family: ±¼¸²"><o:p></o:p></span></font></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt 10pt; text-indent: -10pt; line-height: 150%; mso-char-indent-count: -1.0">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'; mso-fareast-font-family: ÇÑ¾çÁß°íµñ">* It defines the child abuse crime, the protective disposition of abusers, the temporary action for abused children, the child abuse investigation system, the dispatch of a case by prosecutor and court, etc. </span><span lang="EN-US" style="font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'">An advance notice for the enforcement regulation of the Infant Care Act that includes the prohibition on child abuse and sexual violence acts at nursery was made.</span><span lang="EN-US" style="mso-fareast-font-family: ±¼¸²"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="mso-fareast-font-family: ±¼¸²"><o:p><font color="#000000" face="¸¼Àº °íµñ" size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="mso-fareast-font-family: ÇÑ¾çÁß°íµñ"><font face="¸¼Àº °íµñ">* </font></span><span lang="EN-US" style="font-family: 'arial','sans-serif'">(Advance notice of legislation on 17 Apr. 2012) Suspension and shut down of facilities when child abuse or sexual violence takes place </span><span lang="EN-US" style="font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial','sans-serif'"><span style="letter-spacing: -0.1pt">The revision of the Infant Care Act that requires the disclosure of the list of nurseries that have received administrative punishment due to child abuse, etc. and the list and history of nursery owners and teachers that have committed child abuse will be also carried out (end of Dec.). </span></span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">Ministry of Health and Welfare (Minister Rim, Chae Min) held a seminar at an office #421 of the </span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">National Assembly Library from 14:00 pm on 4 June (Mon.) under the theme of “Today and </span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">Tomorrow of Korean Children based on the status of child abuse” while presenting the 2011 </span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt">report of the national child abuse status. </span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt; line-height: 150%">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt 10pt; text-indent: -10pt; line-height: 150%; mso-char-indent-count: -1.0">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><font size="2">Ministry of Health and Welfare will reinforce legal and institutional tools by sharing roles with </font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt 10pt; text-indent: -10pt; line-height: 150%; mso-char-indent-count: -1.0">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><font size="2">Ministry of Justice to put an end to child abuse and prevent reoccurring of child abuse and carry </font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt 10pt; text-indent: -10pt; line-height: 150%; mso-char-indent-count: -1.0">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><font size="2">out various policy measures such as the strengthening of parents’ education to prevent child </font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt 10pt; text-indent: -10pt; line-height: 150%; mso-char-indent-count: -1.0">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><font size="2">abuse, the improvement of public notion of child abuse and promotion as well as the preparation </font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt 10pt; text-indent: -10pt; line-height: 150%; mso-char-indent-count: -1.0">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><font size="2">of programs to prevent reoccurring child abuse cases. </font></span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-fareast-font-family: ±¼¸²; mso-font-kerning: 0pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+</main></p></td>
+</tr>
+<tr>
+<th scope="row">File</th>
+<td colspan="3">
+<p><img alt="" src="../../images/common/file/icon_file.gif"/> <a href="../../../download.mohw.go.kr/front_new/modules/be7f14b804c7a5cba0db667bd90c95c6">[ENG][6.1]Child_abuse_mostly_takes_place_at_home_(86%),_inflicted_mostly_by_parents_(83%).docx (34 KB / Download : 539)</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- /table:view -->
+<!-- ÇÏ´Ü ¹öÆ° ¿µ¿ª -->
+<div class="btn btm">
+<!--  ¿À¸¥ ÂÊ ¿µ¿ª ¹öÆ° -->
+<a href="32fde42f13158f6b4f430ac227830ad3"><img alt="list" class="right" src="../../images/eng/common/btn_list.gif"/></a>
+<!--  /¿À¸¥ ÂÊ ¿µ¿ª ¹öÆ° -->
+</div>
+<!-- /ÇÏ´Ü ¹öÆ° ¿µ¿ª -->
+</form>
+<br/>
+<br/>
+<div class="view_list">
+<form action="ssg0111ls.jsp" method="post" name="fmList">
+<input name="PAR_MENU_ID" type="hidden" value="1001"/>
+<input name="MENU_ID" type="hidden" value="100111"/>
+<input name="page" type="hidden" value="17"/>
+<input name="SEARCHKEY" type="hidden" value=""/>
+<input name="SEARCHVALUE" type="hidden" value=""/>
+<input name="CONT_SEQ" type="hidden" value=""/>
+<!-- table head above list -->
+<div id="tablehead">
+<p>Total <strong>345</strong> Articles</p>
+</div>
+<!-- /table head above list -->
+<table class="list" summary="Publication list.">
+<caption>Publication</caption>
+<colgroup>
+<col width="8%"/><col width="60%"/>
+<col width="16%"/><col width="8%"/><col width="8%"/>
+</colgroup>
+<thead>
+<tr>
+<th class="first" scope="col">No</th>
+<th scope="col">Subject</th>
+<th scope="col">Date</th>
+<th scope="col">File</th>
+<th scope="col">Hit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>185</td>
+<td class="left"><a href="252a84b1cf81b32d64fa10204abdd93a">Hospitals with Known MERS Exposure (6.16)</a></td>
+<td>2015-06-16</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1930</td>
+</tr>
+<tr>
+<td>184</td>
+<td class="left"><a href="60b9ae968bb2342c6a0127ef3cf9f78a">Press Release Summary (6.16)</a></td>
+<td>2015-06-16</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1967</td>
+</tr>
+<tr>
+<td>183</td>
+<td class="left"><a href="208bbceffa77228682046d999414a8c4">MERS Hotline Expands Services</a></td>
+<td>2015-06-16</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>2087</td>
+</tr>
+<tr>
+<td>182</td>
+<td class="left"><a href="9f13c07b28238ca7948660ed1d388b40">Intensively Managed Hospitals</a></td>
+<td>2015-06-16</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1255</td>
+</tr>
+<tr>
+<td>181</td>
+<td class="left"><a href="0203bc11ae97b32694ca267a25d5ecfc">Press Release Summary (6.15)</a></td>
+<td>2015-06-15</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1990</td>
+</tr>
+<tr>
+<td>180</td>
+<td class="left"><a href="c292c657f320411229516a22f0a6089e">Press Release Summary (6.14)</a></td>
+<td>2015-06-15</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1619</td>
+</tr>
+<tr>
+<td>179</td>
+<td class="left"><a href="037fe3df3d00ee49dade8c0f32971290">High-level messages, Korea-WHO Joint Mission on ME...</a></td>
+<td>2015-06-15</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1590</td>
+</tr>
+<tr>
+<td>178</td>
+<td class="left"><a href="3c62787f4937e42422c952e0048177f5">WHO Press Release(Korea-WHO Joint Mission on MERS-...</a></td>
+<td>2015-06-13</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>2270</td>
+</tr>
+<tr>
+<td>177</td>
+<td class="left"><a href="ace0713d42493a3cbc684fcadb9c6423">Press Release Summary - Anshim Hospital</a></td>
+<td>2015-06-12</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1961</td>
+</tr>
+<tr>
+<td>176</td>
+<td class="left"><a href="da01e6bd952a68904a46f3d3dc474594">Press Release Summary (6.12)</a></td>
+<td>2015-06-12</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1819</td>
+</tr>
+</tbody>
+</table>
+<!-- /table:list -->
+<!-- paging -->
+<!-- paging -->
+<div id="paging">
+<a class="btn" href="ebfb6bc3f850eb20122e1021c6e4c0d1"><img alt="first page" src="../../images/eng/common/btn_firstpage.gif"/></a>
+<a class="btn" href="ffdc4366d327476f2a2bdd61bea75d3f"><img alt="pre page" src="../../images/eng/common/btn_prepage.gif"/></a>
+<a href="b5ac7ead72941feddd2152cd97408423" title="11page">11</a> 
+
+				<a href="43305223367df6986d635c77763975b3" title="12page">12</a> 
+
+				<a href="2711dbddb6de0a13625580768c3557fa" title="13page">13</a> 
+
+				<a href="291c7b2c06ad0f481977e50fbd85795e" title="14page">14</a> 
+
+				<a href="69279edea38f89c531ee92dcc558f429" title="15page">15</a> 
+
+				<a href="3d5e6982b8cfbd3ae4834a4e77e21144" title="16page">16</a> 
+
+				<span title="present">17</span> 
+
+				<a href="e9a17658ff68b1011b3bf38b014eea17" title="18page">18</a> 
+
+				<a href="3fbff7a5c45a170ce3270ba839fff4fb" title="19page">19</a> 
+
+				<a href="095823f82b64fc9c0ab92d552e48e0b3" title="20page">20</a> 
+
+				<a class="btn" href="6c8765ade6af448afd7277d09046c33a"><img alt="next page" src="../../images/eng/common/btn_nextpage.gif"/></a>
+<a class="btn" href="2d7e34ab1d5e2a71b1530de73fd24299"><img alt="last page" src="../../images/eng/common/btn_lastpage.gif"/></a>
+</div>
+<!-- /paging -->
+<!-- /paging -->
+</form>
+<!-- DB ¿¡¼­ contents µ¥ÀÌÅÍ¸¦ °¡Á®¿Í¼­ »Ñ·ÁÁØ´Ù. -->
+</div>
+</div>
+<!-- /contents -->
+</div>
+</div>
+<!-- footer -->
+<!-- footer -->
+<div id="footer">
+<div class="foot">
+<p class="flogo"><img alt="ministry of health and welfare" src="../../images/eng/common/flogo.gif"/></p>
+<div class="finfo">
+<address><img alt="13, Doum 4-ro, Sejong, (30113) Korea ¤ÓCALL CENTER 82-129" src="../../images/eng/common/foot_address.gif"/></address>
+<p class="copyright"><img alt="Copyright(C) By MOHW. All rights reserved." src="../../images/eng/common/foot_copyright.gif"/></p>
+</div>
+<!-- ÀÏÀÏ¹æ¹®ÀÚ¼ö Ãß°¡ -->
+<p class="visits">Daily visits : <strong>198</strong></p>
+<!--// ÀÏÀÏ¹æ¹®ÀÚ¼ö Ãß°¡ -->
+</div>
+</div>
+<!-- //footer -->
+</div>
+<div id="returntotop"><a href="#skip-navi">go to the top</a></div>
+<script type="text/javascript">
+//<![CDATA[
+function jsOpenSite(formEl) {	
+	var errorMessage = null;
+	var objFocus = null;
+	if (formEl.sitelink.value.length == 0) {
+		errorMessage = "please! select a site to move!";
+		objFocus = formEl.sitelink;
+	} 
+	if(errorMessage != null) {
+		alert(errorMessage);
+		objFocus.focus();
+		return false;
+	}
+	return true;
+}
+//]]>	
+</script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101800795-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- /footer -->
+</div>
+</body>
+</html>

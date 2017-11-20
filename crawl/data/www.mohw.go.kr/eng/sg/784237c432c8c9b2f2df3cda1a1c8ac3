@@ -1,0 +1,1176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Ministry of Health &amp; Welfare : ABOUT MOHW &gt; Press Release View Content</title>
+<link href="../../css/eng/mwf_eng.css" rel="stylesheet" type="text/css"/>
+<script src="../../js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="../../js/common.js" type="text/javascript"></script>
+<script src="../../js/mw_eng.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+//<![CDATA[
+
+
+
+	// ¸®½ºÆ®·Î ÀÌµ¿
+
+	function jsList()
+
+	{
+
+		var form = document.fmList;
+
+		form.action = "ssg0111ls.jsp";
+
+		form.submit();
+
+	}
+
+
+
+	//³»¿ë º¸±â
+
+	function goView(seq)
+
+	{
+
+		var form = document.fmView;
+
+		form.CONT_SEQ.value = seq;
+
+		form.action = "ssg0111vw.jsp";
+
+		form.submit();
+
+	}
+
+
+
+	//ÇÏ´Ü ¸®½ºÆ® ÆäÀÌÁö ÀÌµ¿
+
+	function goPage( page)
+
+	{
+
+		var form = document.fmList;
+
+		form.page.value = page;
+
+		form.submit();
+
+	}
+
+
+
+	//ÆÄÀÏ ´Ù¿î·Îµå.
+
+	function fileDownLoad(fileSeq)
+
+	{
+
+		if( confirm( "Do you wish to download now?") == true ) {
+
+			var form = document.fmView;
+
+			form.FILE_SEQ.value = fileSeq;
+
+			form.action = "/front_new/modules/download.jsp";
+
+			form.submit();
+
+		}
+
+	}
+
+//]]>
+
+</script>
+</head>
+<body>
+<!-- ¹Ù·Î°¡±â ¸µÅ© -->
+<p id="skip-navi">
+<a href="#contents">go to the contents</a>
+<a href="#snb">go to the menu</a>
+</p>
+<!-- //¹Ù·Î°¡±â ¸µÅ© -->
+<!-- header -->
+<div id="wrap">
+<!-- head -->
+<div class="sbHead" id="head">
+<!-- header -->
+<div id="header">
+<!-- ·Î°í -->
+<h1 class="logo"><a href="../261f58801c1da21d0b6f7021b30b648b"><img alt="ministry of health and welfare" src="../../images/eng/common/logo.gif"/></a></h1>
+<div class="kor_sym">
+<a href="../../../moi.go.kr/eng/sub/a03/nationalSymbol/d5a2e22490af7d4414516807b47a6064" target="_blank" title="new browser"><img alt="National Symbols of the Republic of Korea" src="../../images/eng/common/kor_sym_eng.gif"/></a>
+</div>
+<!-- function -->
+<div class="function">
+<!-- [Funciton] - ÆùÆ®»çÀÌÁî -->
+<div class="unit">
+<div class="ft_size">
+<button class="plus" onclick="fontSizeWrap.btnPlus();" type="button"><span class="hide">expand</span></button>
+<button class="minus" onclick="fontSizeWrap.btnMinus();" type="button"><span class="hide">reduce</span></button>
+<span class="Font_Size"><span class="hide">Font Size</span></span>
+</div>
+<script type="text/javascript">var fontSizeWrap = new fontSize();</script>
+<!-- //[Funciton] - ÆùÆ®»çÀÌÁî -->
+<!-- ¾ð¾îº° ¸µÅ© -->
+<ul class="global_language">
+<li class="mobile"><a href="../../m_eng/50b06ecdc2a14f90913d780c3460fca4" target="_blank" title="new browser"><span class="hide">Mobile</span></a></li>
+<li class="Korean"><a href="../../front_new/647a6a76a15a5a8bfc6d5f73d0d9d4d1" target="_blank" title="new browser"><span class="hide">Korean</span></a></li>
+<li class="sitemap"><a href="../cs/38f03257ef34df8e601ed2e794b4f84f"><span class="hide">sitemap</span></a></li>
+<li class="a-z"><a href="../cs/1001c96bb6754f09ed925f7b6d593bf7"><span class="hide">A-Z Index</span></a></li>
+</ul>
+<!-- //¾ð¾îº° ¸µÅ© -->
+<!-- ¸Þ´º¼³Á¤ -->
+<div class="mnsetup">
+<div class="btnsetup"><a class="btnms" href="#msetup_layer" id="svcmore_h"><span class="hide">my menu</span></a></div>
+<div class="msetup_layer" id="msetup_layer">
+<h2>
+<img alt="Menu setup" src="../../images/eng/main/musetup.gif"/>
+</h2>
+<div class="mnsetup_cont">
+<ul class="list" id="fmenu"><li>My menu list</li></ul>
+</div>
+<div class="cg_contwrap">
+<div class="cg_cont">
+<!-- ÀüÃ¼¸ñ·Ï -->
+<ul class="ms_category">
+<li>
+<input class="input-check" id="mw_100103" name="setmenu" type="checkbox" value="/eng/sg/ssg0103mn.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100103|100103|Organization"/>
+<label for="mw_100103">Organization</label>
+</li>
+<li>
+<input class="input-check" id="mw_100113" name="setmenu" type="checkbox" value="/eng/sg/ssg0101mn.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100113|100113|Contact Us"/>
+<label for="mw_100113">Contact Us</label>
+</li>
+<li>
+<input class="input-check" id="mw_100105" name="setmenu" type="checkbox" value="/eng/sg/ssg0105mn.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100105|100105|Minister's Profile"/>
+<label for="mw_100105">Minister's Profile</label>
+</li>
+<li>
+<input class="input-check" id="mw_100111" name="setmenu" type="checkbox" value="/eng/sg/ssg0111ls.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100111|100111|Press Release"/>
+<label for="mw_100111">Press Release</label>
+</li>
+<li>
+<input class="input-check" id="mw_10031801" name="setmenu" type="checkbox" value="/eng/jc/sjc0101mn.jsp?PAR_MENU_ID=1003&amp;MENU_ID=10031801|10031801|Policies"/>
+<label for="mw_10031801">Policies</label>
+</li>
+<li>
+<input class="input-check" id="mw_100408" name="setmenu" type="checkbox" value="/eng/cs/scs0301mn.jsp?PAR_MENU_ID=1004&amp;MENU_ID=100408|100408|RSS"/>
+<label for="mw_100408">RSS</label>
+</li>
+<li>
+<input class="input-check" id="mw_100410" name="setmenu" type="checkbox" value="/eng/cs/scs0301mn.jsp?PAR_MENU_ID=1004&amp;MENU_ID=100410|100410|Privacy Guideline"/>
+<label for="mw_100410">Privacy Guideline</label>
+</li>
+<li>
+<input class="input-check" id="mw_100404" name="setmenu" type="checkbox" value="/eng/cs/scs0301mn.jsp?PAR_MENU_ID=1004&amp;MENU_ID=100404|100404|Users Guide"/>
+<label for="mw_100404">Users Guide</label>
+</li>
+</ul>
+<!-- //ÀüÃ¼¸ñ·Ï -->
+</div>
+<!-- ¹öÆ° Á¤·Ä -->
+<div class="btn_msetup">
+<p class="left"><input alt="default" class="input-image" id="mymenu_default" src="/images/eng/btn/btn_base.gif" type="image"/></p>
+<span class="cg_msg">User can personalize the website</span>
+<p class="center">
+<input alt="confirm" class="input-image" id="mymenu_set" src="/images/eng/btn/btn_confirm.gif" type="image"/>
+<!--a href="#" id="mymenu_set" ><img src="/images/front/btn/btn_confirm.gif" alt="È®ÀÎ" /></a-->
+<input alt="cancel" class="input-image" id="mymenu_cancel" src="/images/eng/btn/btn_cancel.gif" type="image"/>
+</p>
+<p class="right"><a href="../cs/38f03257ef34df8e601ed2e794b4f84f">sitemap</a></p>
+</div>
+<!-- //¹öÆ° Á¤·Ä -->
+</div>
+<p class="btn-more"><button class="msbtn_close" id="msbtn_close" type="button"><span class="hide">close</span></button></p>
+</div>
+</div>
+<!-- //¸Þ´º¼³Á¤ -->
+<!-- °Ë»ö -->
+<!-- 
+
+					<div class="search">
+
+						<form method="post" name="fmSearch" action="/eng/cs/scs0401ls.jsp" onsubmit="return searchCommon(this)" >
+
+							<input type="hidden" name="PAR_MENU_ID" value="1004" />
+
+							<input type="hidden" name="MENU_ID" value="100406" />
+
+							<input type="hidden" name="SEARCHKEY" value="TITLE" />				
+
+							<fieldset>
+
+								<legend>search</legend>
+
+								<label for="SEARCHVALUE" class="hide">search value</label>
+
+								<input type="text" id="SEARCHVALUE" name="SEARCHVALUE" class="input-text" />
+
+								<input type="image" class="input-image" src="/images/eng/common/tl_btnsearch.gif" alt="search" />
+
+							</fieldset>
+
+						</form>
+
+					</div>
+
+					 -->
+<!-- //°Ë»ö -->
+</div><!-- //unit -->
+</div>
+<!-- //function -->
+</div>
+<!-- //header -->
+</div>
+<!-- //head -->
+<hr/>
+<!-- spot main -->
+<div id="spot-sub">
+<img alt="A life-long friend who stands by the public" src="../../images/front_eng/sg/img_head_sg.jpg"/>
+</div>
+<!-- //spot main -->
+<hr/>
+<!-- container -->
+<div class="clear" id="container">
+<div id="subwrap">
+<!-- snb -->
+<div id="snb">
+<h2><a href="616feca8de871f8a1f1e040342b5d550"><img alt="About MW" src="../../images/front_eng/title/h2_am.gif"/></a></h2>
+<ul id="snbMenu1">
+<li><a href="616feca8de871f8a1f1e040342b5d550"><img alt="Vision &amp; Mission" src="../../images/front_eng/title/left_am01.gif"/></a>
+</li>
+<li><a href="93dae7d73a99735630654fc2fb46a9eb"><img alt="Organization" src="../../images/front_eng/title/left_am02.gif"/></a>
+</li>
+<li><a href="482124899dc6a43227599ea28a921fea"><img alt="Contact Us" src="../../images/front_eng/title/left_am03.gif"/></a>
+</li>
+<li><a href="2d75b746f82cbae41316bd3da4ceb30d"><img alt="Minister¡¯s Profile" src="../../images/front_eng/title/left_am04.gif"/></a>
+</li>
+<li><a href="a2fde158a68020769e116fe2815d95aa"><img alt="Vice Minister¡¯s Profile" src="../../images/front_eng/title/left_am05.gif"/></a>
+</li>
+<li><a href="8c6914a853d28a0cf2ce417c6d5fe3ce"><img alt="Past Ministers &amp; Vice Ministers" src="../../images/front_eng/title/left_am06.gif"/></a>
+</li>
+<li><a href="a79fdae6ffae612a0b5f784645afb1db"><img alt="Location" src="../../images/front_eng/title/left_am07.gif"/></a>
+</li>
+<li class="on"><a href="76b19fd6a92fcb216e55a4e9dea9a4c8"><img alt="Press Release" src="../../images/front_eng/title/left_am08_over.gif"/></a>
+</li>
+<li><a href="ea8a1ea6f8dcdcb2b03b8ebc89df5ef6"><img alt="129 Call Center" src="../../images/front_eng/title/left_am09.gif"/></a>
+</li>
+<li><a href="../../../www.epeople.go.kr/jsp/user/on/eng/ebb342dee28c17242d927d0b1019800f" target="_blank"><img alt="Online Petition" src="../../images/front_eng/title/left_am10.gif"/></a>
+</li>
+</ul>
+<h2><a href="../jc/f397eab66fb162470b191bcc18dfac4f"><img alt="Policies" src="../../images/front_eng/title/h2_pl.gif"/></a></h2>
+<ul id="snbMenu2">
+<li class="submenu"><img alt="Enhancement of Customized Welfare Services by Life-Cycle Phase" src="../../images/front_new/title/left_pl100321.gif"/>
+<ul>
+<li><a href="../jc/f397eab66fb162470b191bcc18dfac4f"><img alt="Reinforcement of support for income growth and work opportunities of low-income people" src="../../images/front_new/title/left_pl10032101.gif"/></a></li>
+<li><a href="../jc/6d963af417c35f2c3575a2f47d93315d"><img alt="Welfare services reaching out to people and improvement of public perception" src="../../images/front_new/title/left_pl10032102.gif"/></a></li>
+<li><a href="../jc/7c117d987132de318dd869c7e15cd6d1"><img alt="Promotion of rights and interests of children, the disabled, the elderly, etc." src="../../images/front_new/title/left_pl10032103.gif"/></a></li>
+<li><a href="../jc/3cd7dc5b01d534d90eba055e35cdf386"><img alt="Reduction of burden of medical expenses, and the reorganization of the system for determining health insurance premiums" src="../../images/front_new/title/left_pl10032104.gif"/></a></li>
+</ul>
+</li>
+<li class="submenu"><img alt="Establishment of Health Insurance System centered on People" src="../../images/front_new/title/left_pl100322.gif"/>
+<ul>
+<li><a href="../jc/6698fa46cb8d35f0f8aeb6f289ab2ce9"><img alt="Reinforcement of patient-oriented medical services" src="../../images/front_new/title/left_pl10032201.gif"/></a></li>
+<li><a href="../jc/6194a5e0555dab84754814c541f09b27"><img alt="Strengthening of essential and public health care services and systematic response to infectious diseases" src="../../images/front_new/title/left_pl10032202.gif"/></a></li>
+<li><a href="../jc/7603054a50c83c708da6d6702afe3d14"><img alt="Reinforcement of Preventive Health Care" src="../../images/front_new/title/left_pl10032203.gif"/></a></li>
+<li><a href="../jc/5975190b9def38149afd3ad48132162f"><img alt="Enhancement of healthcare industry performance and job creation" src="../../images/front_new/title/left_pl10032204.gif"/></a></li>
+</ul>
+</li>
+<li class="submenu"><img alt="Strengthening Responses to Demographic Crisis" src="../../images/front_new/title/left_pl100323.gif"/>
+<ul>
+<li><a href="../jc/8334fe91b7312eb840b99581e90bc297"><img alt="Establishment of a response system for coping with low birthrate" src="../../images/front_new/title/left_pl10032301.gif"/></a></li>
+<li><a href="../jc/687f9bcd11741aea5264c8392dc17ffc"><img alt="Improvement of a system for supporting childbirth and parenting" src="../../images/front_new/title/left_pl10032302.gif"/></a></li>
+<li><a href="../jc/d59e41ec8156d3ed1193b5f64629cf85"><img alt="Enhancement of preparation for aging society" src="../../images/front_new/title/left_pl10032303.gif"/></a></li>
+</ul>
+</li>
+</ul>
+<h2><a href="../cs/b64cc4894874ba0eb4af154d245908a9"><img alt="Help" src="../../images/front_eng/title/h2_hp.gif"/></a></h2>
+<ul id="snbMenu3">
+<li><a href="../cs/b64cc4894874ba0eb4af154d245908a9"><img alt="Users Guide" src="../../images/front_eng/title/left_hp01.gif"/></a>
+</li>
+<li><a href="../cs/81e6dbd0ed113665170a29b899ab0c21"><img alt="Privacy Guideline" src="../../images/front_eng/title/left_hp04.gif"/></a>
+</li>
+<li><a href="../cs/bab2f9d80d5980695b6081cb22ceb64b"><img alt="RSS" src="../../images/front_eng/title/left_hp03.gif"/></a>
+</li>
+<li><a href="../cs/38f03257ef34df8e601ed2e794b4f84f"><img alt="Sitemap" src="../../images/front_eng/title/left_hp05.gif"/></a>
+</li>
+<li><a href="../cs/1001c96bb6754f09ed925f7b6d593bf7"><img alt="A-Z Index" src="../../images/front_eng/title/left_hp06.gif"/></a>
+</li>
+</ul>
+</div>
+<script src="../../js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+			$('.submenu').last().find('ul').attr('class', 'noline');
+			imgMenuOver("snb");
+			
+			$(function(){
+				$(".on").parents('ul').slideDown();
+			});	
+			
+			$(".submenu").click(function(){
+				$(".submenu").not($(this)).children('ul').slideUp();
+				$(this).children('ul').slideToggle();
+			});
+		</script>
+<!-- //snb -->
+<!-- contents -->
+<div id="contents">
+<!-- mnvisual - ÄÁÅÙÃ÷ Å¸ÀÌÆ² -->
+<div class="mnvisual">
+<!-- h2 - Å¸ÀÌÆ² -->
+<!-- //h2 - Å¸ÀÌÆ² -->
+<!-- location - ÁÖ¼Ò -->
+<div id="location"> <a class="home" href="../261f58801c1da21d0b6f7021b30b648b">HOME</a> &gt; <a href="616feca8de871f8a1f1e040342b5d550">ABOUT MOHW</a> &gt; <span class="here">Press Release</span></div>
+<!-- //location - ÁÖ¼Ò -->
+</div>
+<!-- //mnvisual - ÄÁÅÙÃ÷ Å¸ÀÌÆ² -->
+<!-- content-area -->
+<div class="content-area">
+<!-- DB ¿¡¼­ contents µ¥ÀÌÅÍ¸¦ °¡Á®¿Í¼­ »Ñ·ÁÁØ´Ù. -->
+<!-- board -->
+<form action="ssg0111vw.jsp" method="post" name="fmView">
+<input name="PAR_MENU_ID" type="hidden" value="1001"/>
+<input name="MENU_ID" type="hidden" value="100111"/>
+<input name="page" type="hidden" value="18"/>
+<input name="CONT_SEQ" type="hidden" value="266997"/>
+<input name="MENU_ID" type="hidden" value="100111"/>
+<input name="FILE_SEQ" type="hidden" value=""/>
+<input name="SEARCHKEY" type="hidden" value=""/>
+<input name="SEARCHVALUE" type="hidden" value=""/>
+<!-- table:view -->
+<table class="view" summary="ABOUT MOHW &gt; Press Release detail.">
+<caption>ABOUT MOHW &gt; Press Release</caption>
+<colgroup>
+<col width="12%"/><col width="38%"/><col width="12%"/><col width="38%"/>
+</colgroup>
+<tbody>
+<tr>
+<th scope="row">Subject</th>
+<td colspan="3">Expansion of the mandatory application of DRG payment system for seven disease groups to more hospitals and clinics as of this July</td>
+</tr>
+<tr>
+<th scope="row">Date</th>
+<td>2012-02-20</td>
+<th scope="row">Hit</th>
+<td>4534</td>
+</tr>
+<tr>
+<th scope="row">Contents</th>
+<td class="view" colspan="3"><p align="center" class="MsoNormal" style="text-align: center; margin: 0cm 0cm 10pt">
+<b style="mso-bidi-font-weight: normal"><u><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; font-size: 12pt"><font color="#000000">Expansion of the mandatory application of DRG payment system for seven disease groups to more hospitals and clinics as of this July<o:p></o:p></font></span></u></b></p>
+<p align="center" class="a" style="text-align: center; text-indent: -27.1pt; margin: 0cm 0cm 3pt 27.1pt; word-break: keep-all">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Resolution on the date of the implementation of the DRG payment system improvement plan, etc finalized by the Health Insurance Policy Review Committee<o:p></o:p></font></font></span></p>
+<p>
+	 </p>
+<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-bottom: medium none; border-left: medium none; border-collapse: collapse; border-top: medium none; border-right: medium none; mso-border-alt: solid black .25pt; mso-table-overlap: never; mso-yfti-tbllook: 1184; mso-table-layout-alt: fixed">
+<tbody>
+<tr style="height: 119.05pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-yfti-lastrow: yes">
+<td style="border-bottom: black 1pt dotted; border-left: black 1pt dotted; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 461.5pt; padding-right: 5.1pt; height: 119.05pt; border-top: black 1pt dotted; border-right: black 1pt dotted; padding-top: 1.4pt; mso-border-alt: dotted black .25pt" valign="top" width="615">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">&lt; Caesarean section~~I want to go to hospital that has adopted the DRG payment system!! &gt;<o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Ms. Lee gave birth to a child through Caesarean section at A hospital. 1.70 million won of expenses were incurred including hospitalization, meals, anesthesia and surgery, etc and she paid 750 thousand won. In the case of her friend, Ms. Kim, who was hospitalized in B hospital for a week, 1.50 million won of expenses were charged and only 270 thousand won was paid by her. <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000"><span style="mso-spacerun: yes"> </span><o:p></o:p></font></font></span></p>
+<div align="center">
+<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-bottom: medium none; border-left: medium none; margin: auto auto auto 3pt; border-collapse: collapse; border-top: medium none; border-right: medium none; mso-border-alt: solid black .25pt; mso-table-overlap: never; mso-yfti-tbllook: 1184; mso-table-layout-alt: fixed">
+<tbody>
+<tr style="height: 2.8pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+<td colspan="2" style="border-bottom: black 1pt solid; border-left: black 1pt solid; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 123.95pt; padding-right: 1.4pt; height: 2.8pt; border-top: black 1pt solid; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt" width="165">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000"><span style="mso-spacerun: yes"> </span>Category <o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 146.9pt; padding-right: 1.4pt; height: 2.8pt; border-top: black 1pt solid; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="196">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Ms. Lee <u style="text-underline: black">(fee for service)</u><o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 146.9pt; padding-right: 1.4pt; height: 2.8pt; border-top: black 1pt solid; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="196">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Lee’s friend, Ms. Kim <u style="text-underline: black">(DRG payment system)</u><o:p></o:p></font></font></span></p>
+</td>
+</tr>
+<tr style="height: 14.8pt; mso-yfti-irow: 1">
+<td colspan="2" style="border-bottom: black 1pt solid; border-left: black 1pt solid; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 123.95pt; padding-right: 1.4pt; height: 14.8pt; border-top: #ece9d8; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt" width="165">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Total medical cost (A+B)<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 146.9pt; padding-right: 1.4pt; height: 14.8pt; border-top: #ece9d8; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="196">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">1,746,610 won <o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 146.9pt; padding-right: 1.4pt; height: 14.8pt; border-top: #ece9d8; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="196">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">1,501,180 won <o:p></o:p></font></font></span></p>
+</td>
+</tr>
+<tr style="height: 27.2pt; mso-yfti-irow: 2">
+<td colspan="2" style="border-bottom: black 1pt solid; border-left: black 1pt solid; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 123.95pt; padding-right: 1.4pt; height: 27.2pt; border-top: #ece9d8; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt" width="165">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Portion born by individual <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial unicode ms'; letter-spacing: -0.6pt">(benefit 20% + non-benefit 100%)</span><span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p></o:p></span></font></font></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 146.9pt; padding-right: 1.4pt; height: 27.2pt; border-top: #ece9d8; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="196">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">746,570 won <o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 146.9pt; padding-right: 1.4pt; height: 27.2pt; border-top: #ece9d8; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="196">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">270,920 won <o:p></o:p></font></font></span></p>
+</td>
+</tr>
+<tr style="height: 14.8pt; mso-yfti-irow: 3">
+<td colspan="2" style="border-bottom: black 1pt solid; border-left: black 1pt solid; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 123.95pt; padding-right: 1.4pt; height: 14.8pt; border-top: #ece9d8; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt" width="165">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Portion covered by insurance<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 146.9pt; padding-right: 1.4pt; height: 14.8pt; border-top: #ece9d8; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="196">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">1,000,040 won <o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 146.9pt; padding-right: 1.4pt; height: 14.8pt; border-top: #ece9d8; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="196">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">1,230,260 won <o:p></o:p></font></font></span></p>
+</td>
+</tr>
+<tr style="height: 14.8pt; mso-yfti-irow: 4">
+<td rowspan="2" style="border-bottom: black 1pt solid; border-left: black 1pt solid; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 53.5pt; padding-right: 1.4pt; height: 14.8pt; border-top: #ece9d8; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt" width="71">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Medical expenses<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 70.45pt; padding-right: 1.4pt; height: 14.8pt; border-top: #ece9d8; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="94">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Benefit (A)<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 146.9pt; padding-right: 1.4pt; height: 14.8pt; border-top: #ece9d8; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="196">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">1,276,610 won <o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 146.9pt; padding-right: 1.4pt; height: 14.8pt; border-top: #ece9d8; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="196">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">1,501,180 won <o:p></o:p></font></font></span></p>
+</td>
+</tr>
+<tr style="height: 14.8pt; mso-yfti-irow: 5; mso-yfti-lastrow: yes">
+<td style="border-bottom: black 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 70.45pt; padding-right: 1.4pt; height: 14.8pt; border-top: #ece9d8; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="94">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Non-benefit (B)<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 146.9pt; padding-right: 1.4pt; height: 14.8pt; border-top: #ece9d8; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="196">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">470,000 won <o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 146.9pt; padding-right: 1.4pt; height: 14.8pt; border-top: #ece9d8; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="196">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">-<o:p></o:p></font></font></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">* The costs applied as non-benefit to both hospitals such as different amount for a higher level hospital room, selective medical treatment expenses, ultrasonic wave cost, etc are excluded. <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Ms. Lee checked the receipt to see where the difference between two hospitals is in terms of expenses incurred and found that in her receipt, nutritional supplements, anemia medicine, etc were listed as non-benefit items while they were not in her friend’s receipt. She sought why they were charged as non-benefit items at her hospital but not at her friend’s hospital. <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">It was because the hospital where her friend was admitted was under DRG payment system. When DRG payment system was applied, most non-benefit items are covered by the insurance benefit. Therefore, a patient only has to pay a small portion of medical expenses and even before hospitalized, he/she can get a rough estimation of medical costs to be incurred. <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Ms. Lee thought that if she had known the system in advance and gone to a DRG payment system-applied hospital instead, she would have been able to know how much it would cost and forecast her household expenses for the following month as well as could have lessened the burden of medical expenditure. She also wondered why the government is not applying this system to all medical institutions. <o:p></o:p></font></font></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p align="center" class="MsoNoSpacing" style="text-align: center; margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><font size="2"><font color="#000000"><drg improvement="" payment="" plan="" system=""><o:p></o:p></drg></font></font></span></p>
+<p>
+<drg improvement="" payment="" plan="" system="">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Ministry of Health and Welfare (Minister Rim, Chae Min) passed a resolution of the DRG payment system improvement plan by convening the Health Insurance Policy Review Committee at 15:00 on 15 Feb. <o:p></o:p></font></font></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">DRG Payment System will be mandatorily applied to all hospital and clinic –level medical institutions as of July this year and to all levels including general hospitals starting from Jul. next year for patients subject to the seven disease groups. <o:p></o:p></font></font></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">* The implementation schedule of the expanded application of DRG payment system to general hospitals may be sooner than Jul. next year if the revised payment system is ready sooner.<span style="mso-spacerun: yes">  </span><o:p></o:p></font></font></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">- (Application subjects) patients hospitalized to receive appendectomy, herniotomy surgery, hemorrhoids surgery, cataract surgery, tonsillectomy, caesarean section, and adnexa operation <o:p></o:p></font></font></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">- (Participation) selective participation → mandatory participation (mandatory application)<o:p></o:p></font></font></span></p>
+<p class="a" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p>
+		 </p>
+<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-bottom: medium none; border-left: medium none; border-collapse: collapse; border-top: medium none; border-right: medium none; mso-border-alt: solid black .25pt; mso-yfti-tbllook: 1184">
+<tbody>
+<tr style="height: 2.8pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+<td style="border-bottom: gray 1.5pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 163.45pt; padding-right: 1.4pt; height: 2.8pt; border-top: #ece9d8; border-right: #ece9d8; padding-top: 1.4pt" width="218">
+					 </td>
+<td rowspan="2" style="border-bottom: #ece9d8; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 143.65pt; padding-right: 1.4pt; height: 2.8pt; border-top: #ece9d8; border-right: #ece9d8; padding-top: 1.4pt" width="192">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">¡¼<span lang="EN-US">DRG Payment System-applied Hospitals and Clinics</span>¡½<span lang="EN-US"><o:p></o:p></span></font></font></span></p>
+</td>
+<td style="border-bottom: gray 1.5pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 169.1pt; padding-right: 1.4pt; height: 2.8pt; border-top: #ece9d8; border-right: #ece9d8; padding-top: 1.4pt" width="225">
+					 </td>
+</tr>
+<tr style="height: 20.8pt; mso-yfti-irow: 1">
+<td style="border-bottom: #ece9d8; border-left: gray 1.5pt solid; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 163.45pt; padding-right: 1.4pt; height: 20.8pt; border-top: #ece9d8; border-right: #ece9d8; padding-top: 1.4pt; mso-border-top-alt: solid gray 1.5pt" width="218">
+					 </td>
+<td style="border-bottom: #ece9d8; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 169.1pt; padding-right: 1.4pt; height: 20.8pt; border-top: #ece9d8; border-right: gray 1.5pt solid; padding-top: 1.4pt; mso-border-top-alt: solid gray 1.5pt" width="225">
+					 </td>
+</tr>
+<tr style="height: 41.35pt; mso-yfti-irow: 2; mso-yfti-lastrow: yes">
+<td colspan="3" style="border-bottom: gray 1.5pt solid; border-left: gray 1.5pt solid; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 476.15pt; padding-right: 1.4pt; height: 41.35pt; border-top: #ece9d8; border-right: gray 1.5pt solid; padding-top: 1.4pt" width="635">
+<p class="MsoNormal" style="line-height: 160%; margin: 0cm 0cm 0pt; vertical-align: baseline">
+<font size="2"><span lang="EN-US" style="line-height: 160%; font-family: 'arial unicode ms'; letter-spacing: -0.1pt; color: black; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt; mso-font-width: 95%">(Unit: thousand case, %)</span><span lang="EN-US" style="line-height: 160%; font-family: 'arial unicode ms'; color: black; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-bottom: medium none; border-left: medium none; border-collapse: collapse; border-top: medium none; border-right: medium none; mso-border-alt: solid black .25pt; mso-table-overlap: never; mso-yfti-tbllook: 1184">
+<tbody>
+<tr style="height: 14.8pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+<td colspan="3" style="border-bottom: gray 1.5pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 180.85pt; padding-right: 1.4pt; background: #eaeaea; height: 14.8pt; border-top: gray 2.25pt solid; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: solid gray 2.25pt; mso-border-bottom-alt: solid gray 1.5pt; mso-border-right-alt: solid gray .25pt" width="241">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 140%; text-indent: -28pt; margin: 0cm 0cm 0pt 28pt; vertical-align: baseline; word-break: keep-all">
+<font size="2"><span lang="EN-US" style="line-height: 140%; font-family: 'arial unicode ms'; letter-spacing: -0.3pt; color: black; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt">Selective application</span><span lang="EN-US" style="line-height: 140%; font-family: 'arial unicode ms'; color: black; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td colspan="2" style="border-bottom: gray 1.5pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 132.75pt; padding-right: 1.4pt; background: #eaeaea; height: 14.8pt; border-top: gray 2.25pt solid; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: 2.25pt; mso-border-left-alt: .25pt; mso-border-bottom-alt: 1.5pt; mso-border-right-alt: .25pt; mso-border-color-alt: gray; mso-border-style-alt: solid" width="177">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 140%; text-indent: -28pt; margin: 0cm 0cm 0pt 28pt; vertical-align: baseline; word-break: keep-all">
+<font size="2"><span lang="EN-US" style="line-height: 140%; font-family: 'arial unicode ms'; letter-spacing: -0.3pt; color: black; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt">Mandatory application</span><span lang="EN-US" style="line-height: 140%; font-family: 'arial unicode ms'; color: black; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td colspan="2" style="border-bottom: gray 1.5pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 141.25pt; padding-right: 1.4pt; background: silver; height: 14.8pt; border-top: gray 2.25pt solid; border-right: #ece9d8; padding-top: 1.4pt; mso-border-left-alt: solid gray .25pt" width="188">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 160%; margin: 0cm 5pt 0pt; vertical-align: baseline; word-break: keep-all">
+<font size="2"><span lang="EN-US" style="line-height: 160%; font-family: 'arial unicode ms'; letter-spacing: -0.3pt; color: black; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt">Additional application</span><span lang="EN-US" style="line-height: 160%; font-family: 'arial unicode ms'; color: black; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+<tr style="height: 14.8pt; mso-yfti-irow: 1">
+<td style="border-bottom: gray 2.25pt double; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 43.35pt; padding-right: 1.4pt; background: #eaeaea; height: 14.8pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: solid gray 1.5pt; mso-border-bottom-alt: double gray 2.25pt; mso-border-right-alt: solid gray .25pt" width="58">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Category<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 2.25pt double; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 68.75pt; padding-right: 1.4pt; background: #eaeaea; height: 14.8pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: solid 1.5pt; mso-border-left-alt: solid .25pt; mso-border-bottom-alt: double 2.25pt; mso-border-right-alt: solid .25pt; mso-border-color-alt: gray" width="92">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000"><span style="mso-spacerun: yes"> </span>No. of institutions<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 2.25pt double; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 68.75pt; padding-right: 1.4pt; background: #eaeaea; height: 14.8pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: solid 1.5pt; mso-border-left-alt: solid .25pt; mso-border-bottom-alt: double 2.25pt; mso-border-right-alt: solid .25pt; mso-border-color-alt: gray" width="92">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000"><span style="mso-spacerun: yes"> </span>No. of cases<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 2.25pt double; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 66.4pt; padding-right: 1.4pt; background: #eaeaea; height: 14.8pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: solid 1.5pt; mso-border-left-alt: solid .25pt; mso-border-bottom-alt: double 2.25pt; mso-border-right-alt: solid .25pt; mso-border-color-alt: gray" width="89">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">No. of institutions<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 2.25pt double; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 66.4pt; padding-right: 1.4pt; background: #eaeaea; height: 14.8pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: solid 1.5pt; mso-border-left-alt: solid .25pt; mso-border-bottom-alt: double 2.25pt; mso-border-right-alt: solid .25pt; mso-border-color-alt: gray" width="89">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">No. of cases<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 2.25pt double; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 70.6pt; padding-right: 1.4pt; background: silver; height: 14.8pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: solid 1.5pt; mso-border-left-alt: solid .25pt; mso-border-bottom-alt: double 2.25pt; mso-border-right-alt: solid .25pt; mso-border-color-alt: gray" width="94">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">No. of institutions<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 2.25pt double; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 70.6pt; padding-right: 1.4pt; background: silver; height: 14.8pt; border-top: #ece9d8; border-right: #ece9d8; padding-top: 1.4pt; mso-border-top-alt: solid gray 1.5pt; mso-border-left-alt: solid gray .25pt" width="94">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">No. of cases<o:p></o:p></font></font></span></p>
+</td>
+</tr>
+<tr style="height: 30.4pt; mso-yfti-irow: 2">
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 43.35pt; padding-right: 1.4pt; background: #eaeaea; height: 30.4pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: double gray 2.25pt; mso-border-bottom-alt: solid gray .25pt; mso-border-right-alt: solid gray .25pt" width="58">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Total<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 68.75pt; padding-right: 1.4pt; height: 30.4pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: double gray 2.25pt; mso-border-left-alt: solid gray .25pt" width="92">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">2,291<o:p></o:p></font></font></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">(78.8)<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 68.75pt; padding-right: 1.4pt; height: 30.4pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: double gray 2.25pt; mso-border-left-alt: solid gray .25pt" width="92">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">681<o:p></o:p></font></font></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">(86.6)<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 66.4pt; padding-right: 1.4pt; height: 30.4pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: double gray 2.25pt; mso-border-left-alt: solid gray .25pt" width="89">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">2,909<o:p></o:p></font></font></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">(100)<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 66.4pt; padding-right: 1.4pt; height: 30.4pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: double gray 2.25pt; mso-border-left-alt: solid gray .25pt" width="89">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">786<o:p></o:p></font></font></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">(100)<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 70.6pt; padding-right: 1.4pt; background: silver; height: 30.4pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: double gray 2.25pt; mso-border-left-alt: solid gray .25pt" width="94">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">618<o:p></o:p></font></font></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">(21.2)<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 70.6pt; padding-right: 1.4pt; background: silver; height: 30.4pt; border-top: #ece9d8; border-right: #ece9d8; padding-top: 1.4pt; mso-border-top-alt: double gray 2.25pt; mso-border-left-alt: solid gray .25pt; mso-border-bottom-alt: solid gray .25pt" width="94">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">105<o:p></o:p></font></font></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">(13.4) <o:p></o:p></font></font></span></p>
+</td>
+</tr>
+<tr style="height: 20.5pt; mso-yfti-irow: 3">
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 43.35pt; padding-right: 1.4pt; background: #eaeaea; height: 20.5pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: solid gray .25pt; mso-border-bottom-alt: solid gray .25pt; mso-border-right-alt: solid gray .25pt" width="58">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Hospital<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 68.75pt; padding-right: 1.4pt; height: 20.5pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt" width="92">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">183<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 68.75pt; padding-right: 1.4pt; height: 20.5pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt" width="92">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">154<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 66.4pt; padding-right: 1.4pt; height: 20.5pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt" width="89">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">452<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 66.4pt; padding-right: 1.4pt; height: 20.5pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt" width="89">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">205<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 70.6pt; padding-right: 1.4pt; background: silver; height: 20.5pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt" width="94">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">269<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 70.6pt; padding-right: 1.4pt; background: silver; height: 20.5pt; border-top: #ece9d8; border-right: #ece9d8; padding-top: 1.4pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt; mso-border-bottom-alt: solid gray .25pt" width="94">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">51<o:p></o:p></font></font></span></p>
+</td>
+</tr>
+<tr style="height: 20.5pt; mso-yfti-irow: 4; mso-yfti-lastrow: yes">
+<td style="border-bottom: gray 2.25pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 43.35pt; padding-right: 1.4pt; background: #eaeaea; height: 20.5pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: solid gray .25pt; mso-border-bottom-alt: solid gray 2.25pt; mso-border-right-alt: solid gray .25pt" width="58">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Clinic<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 2.25pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 68.75pt; padding-right: 1.4pt; height: 20.5pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt; mso-border-bottom-alt: solid gray 2.25pt" width="92">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">2,108<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 2.25pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 68.75pt; padding-right: 1.4pt; height: 20.5pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt; mso-border-bottom-alt: solid gray 2.25pt" width="92">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">527<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 2.25pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 66.4pt; padding-right: 1.4pt; height: 20.5pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt; mso-border-bottom-alt: solid gray 2.25pt" width="89">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">2,457<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 2.25pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 66.4pt; padding-right: 1.4pt; height: 20.5pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt; mso-border-bottom-alt: solid gray 2.25pt" width="89">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">581<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 2.25pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 70.6pt; padding-right: 1.4pt; background: silver; height: 20.5pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt; mso-border-bottom-alt: solid gray 2.25pt" width="94">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">349<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 2.25pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 70.6pt; padding-right: 1.4pt; background: silver; height: 20.5pt; border-top: #ece9d8; border-right: #ece9d8; padding-top: 1.4pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt" width="94">
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">54<o:p></o:p></font></font></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">* From Jan. 2011 to Nov. 2011 based on medical institutions to which seven disease groups are charged <o:p></o:p></font></font></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">The DRG payment system applied institutions will be rewarded with fixed amounts regardless of quantity of benefit or non-benefit services they provide and patients are less burdened with non-benefit costs. <o:p></o:p></font></font></span></p>
+<p class="a" style="line-height: 170%; text-indent: -25.4pt; margin: 0cm 0cm 0pt 25.4pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; letter-spacing: -0.5pt; mso-bidi-font-size: 10.0pt">- </span><b><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt">(</span></b><b><span lang="EN-US" style="font-family: 'arial unicode ms'">Payment Reward Method</span></b><b><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt">)</span></b><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"> </span><span lang="EN-US" style="font-family: 'arial unicode ms'">Non-participating medical institutions will be rewarded individually for its service activities according to frequency and amount of service, medical treatment material and drug items. </span><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt">→ </span><span lang="EN-US" style="font-family: 'arial unicode ms'">Rewarded in a bundle with fixed DRG payment amounts (including service, treatment material and drug costs) according to names of diseases diagnosed, names of surgeries and treatments, accompanied diseases, etc </span><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+<p class="a" style="line-height: 170%; text-indent: -37.1pt; margin: 0cm 0cm 0pt 37.1pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; letter-spacing: -0.5pt; mso-bidi-font-size: 10.0pt">- </span><b><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt">(</span></b><b><span lang="EN-US" style="font-family: 'arial unicode ms'">To be burdened by patient</span></b><b><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt">)</span></b><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"> </span><span lang="EN-US" style="font-family: 'arial unicode ms'">Benefit item </span><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt">(</span><span lang="EN-US" style="font-family: 'arial unicode ms'">some to be paid by individual:</span><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"> 20%, </span><span lang="EN-US" style="font-family: 'arial unicode ms'">whole amount to be paid by individual</span><b><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"> 100%</span></b><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt">), </span><span lang="EN-US" style="font-family: 'arial unicode ms'">non-benefit item </span><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt">(</span><b><span lang="EN-US" style="font-family: 'arial unicode ms'">whole amount to be paid by individual</span></b><b><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"> 100%</span></b><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt">)<o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt">→ </span><span lang="EN-US" style="font-family: 'arial unicode ms'">Non-benefit and benefit items to be paid by individual are changed to benefit items the cost of which only 20% is to be covered by individual <o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNoSpacing" style="margin: 0cm 0cm 0pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">In the meantime, the rationalization of the DRG payment level, and the adjustment mechanism rule for the DRG payment system, the patient categorization system improvement and the quality evaluation method <o:p></o:p></font></font></span></p>
+<p class="a" style="line-height: 180%; text-indent: -25.4pt; margin: 0cm 0cm 0pt 25.4pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt">- </span><span lang="EN-US" style="font-family: 'arial unicode ms'">will be swiftly discussed with the “DRG Payment System Improvement Discussion Body”* including items decided by the Health Insurance Policy Review Committee. </span><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt">* </span><span lang="EN-US" style="font-family: 'arial unicode ms'">The body consists of experts from various areas including the academia, the medical field, etc (13 persons) and has been run since Nov. </span><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+<p align="center" class="a" style="text-align: center; margin: 0cm 0cm 0pt; word-break: keep-all">
+<font size="2"><font color="#000000"><b><span lang="EN-US" style="font-family: 'arial unicode ms'">[Major Tasks in Detail]</span></b><span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p></o:p></span></font></font></p>
+<p>
+		 </p>
+<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-bottom: medium none; border-left: medium none; border-collapse: collapse; border-top: medium none; border-right: medium none; mso-border-alt: solid black .25pt; mso-yfti-tbllook: 1184">
+<tbody>
+<tr style="height: 24.3pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+<td style="border-bottom: gray 2.25pt double; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 80.1pt; padding-right: 1.4pt; background: #eaeaea; height: 24.3pt; border-top: gray 1.5pt solid; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: solid gray 1.5pt; mso-border-bottom-alt: double gray 2.25pt; mso-border-right-alt: solid gray .25pt" width="107">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><font size="2"><font color="#000000">Category <o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 2.25pt double; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 48.55pt; padding-right: 1.4pt; background: #eaeaea; height: 24.3pt; border-top: gray 1.5pt solid; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: solid 1.5pt; mso-border-left-alt: solid .25pt; mso-border-bottom-alt: double 2.25pt; mso-border-right-alt: solid .25pt; mso-border-color-alt: gray" width="65">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><font size="2"><font color="#000000">Due<o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 2.25pt double; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 325.45pt; padding-right: 1.4pt; background: #eaeaea; height: 24.3pt; border-top: gray 1.5pt solid; border-right: #ece9d8; padding-top: 1.4pt; mso-border-left-alt: solid gray .25pt" width="434">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><font size="2"><font color="#000000">Detail<o:p></o:p></font></font></span></p>
+</td>
+</tr>
+<tr style="height: 70.9pt; mso-yfti-irow: 1">
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 80.1pt; padding-right: 1.4pt; background: #eaeaea; height: 70.9pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: double gray 2.25pt; mso-border-bottom-alt: solid gray .25pt; mso-border-right-alt: solid gray .25pt" width="107">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; letter-spacing: -0.4pt; mso-bidi-font-size: 10.0pt">Rationalization of DRG Payment System</span><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 48.55pt; padding-right: 1.4pt; height: 70.9pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: double gray 2.25pt; mso-border-left-alt: solid gray .25pt" width="65">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; letter-spacing: -0.4pt; mso-bidi-font-size: 10.0pt">May 2012</span><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 325.45pt; padding-right: 1.4pt; height: 70.9pt; border-top: #ece9d8; border-right: #ece9d8; padding-top: 1.4pt; mso-border-top-alt: double gray 2.25pt; mso-border-left-alt: solid gray .25pt; mso-border-bottom-alt: solid gray .25pt" width="434">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><font size="2"><font color="#000000">Revision of the case payment compared to the “fee for service,” and financial requirement, etc <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><font size="2"><font color="#000000">* DRG Payment System revision to be notified<o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; letter-spacing: -0.3pt; mso-bidi-font-size: 10.0pt">(Decided by the Health Insurance Policy Review Committee after going through the disease group –specific assessment committee)</span><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+</td>
+</tr>
+<tr style="height: 54.1pt; mso-yfti-irow: 2">
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 80.1pt; padding-right: 1.4pt; background: #eaeaea; height: 54.1pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: solid gray .25pt; mso-border-bottom-alt: solid gray .25pt; mso-border-right-alt: solid gray .25pt" width="107">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; letter-spacing: -0.8pt; mso-bidi-font-size: 10.0pt">Streamlining of the patient categorization system for seven disease groups</span><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 48.55pt; padding-right: 1.4pt; height: 54.1pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt" width="65">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; letter-spacing: -0.4pt; mso-bidi-font-size: 10.0pt">May 2012</span><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 325.45pt; padding-right: 1.4pt; height: 54.1pt; border-top: #ece9d8; border-right: #ece9d8; padding-top: 1.4pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt; mso-border-bottom-alt: solid gray .25pt" width="434">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Improvement to be prepared considering severity level, variety of treatments, medical development, etc <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">* To be applied when the DRG payment system revision is notified. <o:p></o:p></font></font></span></p>
+</td>
+</tr>
+<tr style="height: 37.3pt; mso-yfti-irow: 3">
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 80.1pt; padding-right: 1.4pt; background: #eaeaea; height: 37.3pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: solid gray .25pt; mso-border-bottom-alt: solid gray .25pt; mso-border-right-alt: solid gray .25pt" width="107">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Introduction of pilot assessment of benefit appropriateness <o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 48.55pt; padding-right: 1.4pt; height: 37.3pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt" width="65">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 140%; text-indent: -41.6pt; margin: 0cm 0cm 0pt 41.6pt; vertical-align: baseline; word-break: keep-all; tab-stops: center middot 476.5pt">
+<font size="2"><span lang="EN-US" style="line-height: 140%; font-family: 'arial unicode ms'; letter-spacing: -0.4pt; color: black; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt">May 2012</span><span lang="EN-US" style="line-height: 140%; font-family: 'arial unicode ms'; color: black; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 325.45pt; padding-right: 1.4pt; height: 37.3pt; border-top: #ece9d8; border-right: #ece9d8; padding-top: 1.4pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt; mso-border-bottom-alt: solid gray .25pt" width="434">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Quality indicator development and assessment plan to be prepared such as the occurrence rate of complications and the re-hospitalization rate, etc jointly by the medical community and the Health Insurance Review and Assessment Service <o:p></o:p></font></font></span></p>
+</td>
+</tr>
+<tr style="height: 37.3pt; mso-yfti-irow: 4">
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 80.1pt; padding-right: 1.4pt; background: #eaeaea; height: 37.3pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: solid gray .25pt; mso-border-bottom-alt: solid gray .25pt; mso-border-right-alt: solid gray .25pt" width="107">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Review of the expansion of applied disease groups <o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 48.55pt; padding-right: 1.4pt; height: 37.3pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt" width="65">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 140%; text-indent: -33.2pt; margin: 0cm 0cm 0pt 33.2pt; vertical-align: baseline; word-break: keep-all; tab-stops: center middot 476.5pt">
+<font size="2"><span lang="EN-US" style="line-height: 140%; font-family: 'arial unicode ms'; letter-spacing: -0.4pt; color: black; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt">Jul. 2012</span><span lang="EN-US" style="line-height: 140%; font-family: 'arial unicode ms'; color: black; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 325.45pt; padding-right: 1.4pt; height: 37.3pt; border-top: #ece9d8; border-right: #ece9d8; padding-top: 1.4pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt; mso-border-bottom-alt: solid gray .25pt" width="434">
+<p align="left" class="MsoNormal" style="text-align: left; line-height: 140%; margin: 0cm 0cm 0pt; vertical-align: baseline; word-break: keep-all; tab-stops: center middot 476.5pt">
+<span lang="EN-US" style="line-height: 140%; font-family: 'arial unicode ms'; color: black; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt"><font size="2">Review the possibility of application based on the expansion of demand for applicable disease groups <o:p></o:p></font></span></p>
+</td>
+</tr>
+<tr style="height: 70.9pt; mso-yfti-irow: 5">
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 80.1pt; padding-right: 1.4pt; background: #eaeaea; height: 70.9pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: solid gray .25pt; mso-border-bottom-alt: solid gray .25pt; mso-border-right-alt: solid gray .25pt" width="107">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Implementation of objective policy evaluation <o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 48.55pt; padding-right: 1.4pt; height: 70.9pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt" width="65">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 140%; text-indent: -33.2pt; margin: 0cm 0cm 0pt 33.2pt; vertical-align: baseline; word-break: keep-all; tab-stops: center middot 476.5pt">
+<font size="2"><span lang="EN-US" style="line-height: 140%; font-family: 'arial unicode ms'; letter-spacing: -0.4pt; color: black; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt">Jul. 2012</span><span lang="EN-US" style="line-height: 140%; font-family: 'arial unicode ms'; color: black; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: gray 1pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 325.45pt; padding-right: 1.4pt; height: 70.9pt; border-top: #ece9d8; border-right: #ece9d8; padding-top: 1.4pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt; mso-border-bottom-alt: solid gray .25pt" width="434">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Analysis of costs including selective treatment expense, etc and the analysis of quality level and conversion of costs to outpatient expenses, and study of foreign countries’ cases and lessons from them <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">* Outside experts hired by the National Health Insurance Corporation <o:p></o:p></font></font></span></p>
+</td>
+</tr>
+<tr style="height: 54.1pt; mso-yfti-irow: 6; mso-yfti-lastrow: yes">
+<td style="border-bottom: gray 1.5pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; padding-left: 1.4pt; width: 80.1pt; padding-right: 1.4pt; background: #eaeaea; height: 54.1pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-top-alt: solid gray .25pt; mso-border-bottom-alt: solid gray 1.5pt; mso-border-right-alt: solid gray .25pt" width="107">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Regulation of the adjustment mechanism for the DRG payment system <o:p></o:p></font></font></span></p>
+</td>
+<td style="border-bottom: gray 1.5pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 48.55pt; padding-right: 1.4pt; height: 54.1pt; border-top: #ece9d8; border-right: gray 1pt solid; padding-top: 1.4pt; mso-border-alt: solid gray .25pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt; mso-border-bottom-alt: solid gray 1.5pt" width="65">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 140%; text-indent: -41.1pt; margin: 0cm 0cm 0pt 41.1pt; vertical-align: baseline; word-break: keep-all; tab-stops: center middot 476.5pt">
+<font size="2"><span lang="EN-US" style="line-height: 140%; font-family: 'arial unicode ms'; letter-spacing: -0.4pt; color: black; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt">Dec. 2012</span><span lang="EN-US" style="line-height: 140%; font-family: 'arial unicode ms'; color: black; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: gray 1.5pt solid; border-left: #ece9d8; padding-bottom: 1.4pt; background-color: transparent; padding-left: 1.4pt; width: 325.45pt; padding-right: 1.4pt; height: 54.1pt; border-top: #ece9d8; border-right: #ece9d8; padding-top: 1.4pt; mso-border-top-alt: solid gray .25pt; mso-border-left-alt: solid gray .25pt" width="434">
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Detailed methods such as adjustment principles, methods, frequency, procedures, etc to be prepared <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">* The Health Insurance Review and Assessment Service regulates a related rule by preparing a draft through hiring outside experts for study and research <span style="letter-spacing: -0.7pt"><span style="mso-spacerun: yes"> </span></span><o:p></o:p></font></font></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="a" style="line-height: 180%; text-indent: -25.4pt; margin: 0cm 0cm 0pt 25.4pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial unicode ms'">In addition, related tasks such as the trial clinic guideline development support (from 2012) and the establishment of the prime cost data collection system (2013) will be examined and studied with the medical field in order to prepare mid and long-term development plans. </span><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="line-height: 150%; margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="line-height: 150%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt">- </span><span lang="EN-US" style="font-family: 'arial unicode ms'">The plans will be prepared with sufficient time investment and the cooperation* system will be reinforced such as related financial support from the government so that the medical field may participate with more sense of responsibility.<span style="mso-spacerun: yes">  </span></span><span lang="EN-US" style="line-height: 150%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+<p class="a" style="line-height: 150%; text-indent: -34pt; margin: 0cm 0cm 0pt 34pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial unicode ms'; letter-spacing: -0.2pt">* The matching fund of 10~20 % to ensure greater sense of responsibility for the medical field’s participation in policy development </span><span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p></o:p></span></font></font></p>
+<p class="a" style="line-height: 150%; text-indent: -5pt; margin: 0cm 0cm 0pt 5pt; mso-char-indent-count: -.5">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">The DRG payment system expansion by phase was recommended by the committee of vision for health care (Aug. 2011) and it was reported to the Health Insurance Policy Review Committee (Aug. and Dec. 2011). <o:p></o:p></font></font></span></p>
+<p class="a" style="line-height: 150%; text-indent: -25.4pt; margin: 0cm 0cm 0pt 25.4pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="line-height: 150%; margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial unicode ms'">Korean Hospital Association included the expansion of the DRG Payment system for the seven disease groups for 2012 as a condition for the case payment contract. (Health Insurance Policy Review Committee in Nov. 2011) </span><span lang="EN-US" style="line-height: 150%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+<p class="a" style="line-height: 150%; text-indent: -25.4pt; margin: 0cm 0cm 0pt 25.4pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="line-height: 150%; margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial unicode ms'">Ministry of Health and Welfare said that it would soon revise the enforcement decree of the Act on Health Insurance that includes the implementation time, the newly established regulation for the patient categorization system. </span><span lang="EN-US" style="line-height: 150%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="line-height: 150%; margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial', 'sans-serif'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial unicode ms'">The revised DRG Payment System reflecting the realigned patient categorization system for seven disease groups will be finalized and notified after passing through the disease group-specific assessment committee and the Health Insurance Policy Review Committee by May based on the result of the discussion conducted by the discussion body.<span style="mso-spacerun: yes">  </span><o:p></o:p></span></font></font></p>
+<p class="a" style="line-height: 190%; text-indent: -24.5pt; margin: 0cm 0cm 0pt 24.5pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="a" style="line-height: 200%; text-indent: -23.1pt; margin: 0cm 0cm 0pt 23.1pt">
+<font size="2"><font color="#000000"><b><u style="text-underline: black"><span lang="EN-US" style="font-family: 'arial unicode ms'">&lt; Medical Cost Aid for Pregnancy and Childbirth and Medical Treatment Material Management System Plan, etc &gt;</span></u></b><span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p></o:p></span></font></font></p>
+<p class="a" style="line-height: 180%; text-indent: -23.1pt; margin: 0cm 0cm 0pt 23.1pt">
+<font size="2"><font color="#000000"><b><span lang="EN-US" style="font-family: 'arial unicode ms'; letter-spacing: -0.3pt">(Medical Cost for Pregnancy and Childbirth)</span></b><span lang="EN-US" style="font-family: 'arial unicode ms'; letter-spacing: -0.3pt"> A program called “Go-un Mom Card” that provides an</span></font></font></p>
+<p class="a" style="line-height: 180%; text-indent: -23.1pt; margin: 0cm 0cm 0pt 23.1pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial unicode ms'; letter-spacing: -0.3pt">aid of 400 thousand won (500 thousand won in Apr. 2012) to pregnant women in support of before-delivery</span></font></font></p>
+<p class="a" style="line-height: 180%; text-indent: -23.1pt; margin: 0cm 0cm 0pt 23.1pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial unicode ms'; letter-spacing: -0.3pt">treatments and delivery, etc. will be available at maternal nursing institutions (44 places nationwide)</span></font></font></p>
+<p class="a" style="line-height: 180%; text-indent: -23.1pt; margin: 0cm 0cm 0pt 23.1pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial unicode ms'; letter-spacing: -0.3pt">starting from Apr. this year. <o:p></o:p></span></font></font></p>
+<p class="a" style="line-height: 180%; text-indent: -23.1pt; margin: 0cm 0cm 0pt 23.1pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="a" style="line-height: 180%; text-indent: -30pt; margin: 0cm 0cm 0pt 30pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Mothers pregnant with more than one baby will be provided with additional 200 thousand won (700</font></font></span></p>
+<p class="a" style="line-height: 180%; text-indent: -30pt; margin: 0cm 0cm 0pt 30pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">thousand won in total) and this will be applied as of Jul. this year. <o:p></o:p></font></font></span></p>
+<p class="a" style="line-height: 180%; text-indent: -25.4pt; margin: 0cm 0cm 0pt 25.4pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="a" style="line-height: 180%; text-indent: -33.1pt; margin: 0cm 0cm 0pt 33.1pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">Ministry of Health and Welfare said that it expects that pregnant mothers who use maternal nursing</font></font></span></p>
+<p class="a" style="line-height: 180%; text-indent: -33.1pt; margin: 0cm 0cm 0pt 33.1pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">institutions will have an expanded range of choices and mothers pregnant with more than one baby wil</font></font></span></p>
+<p class="a" style="line-height: 180%; text-indent: -33.1pt; margin: 0cm 0cm 0pt 33.1pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">have less financial burdens through the revision of the system this time. <span style="letter-spacing: -0.4pt"><span style="mso-spacerun: yes"> </span></span><o:p></o:p></font></font></span></p>
+<p class="a" style="line-height: 190%; text-indent: -31.9pt; margin: 0cm 0cm 0pt 31.9pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="a" style="line-height: 180%; text-indent: -23.2pt; margin: 0cm 0cm 0pt 23.2pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">In addition, the “Medical Treatment Materials Management System Improvement Plan” was reported. <o:p></o:p></font></font></span></p>
+<p class="a" style="line-height: 150%; text-indent: -30.1pt; margin: 0cm 0cm 0pt 30.1pt">
+<font size="2"><font color="#000000"><sup><span lang="EN-US" style="font-family: 'arial unicode ms'">*</span></sup><span lang="EN-US" style="font-family: 'arial unicode ms'"> Medical treatment materials; medical devices that medical staff use in treatments of patients and</span></font></font></p>
+<p class="a" style="line-height: 150%; text-indent: -30.1pt; margin: 0cm 0cm 0pt 30.1pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial unicode ms'">surgeries such as bandage, artificial joints and stent, etc <o:p></o:p></span></font></font></p>
+<p class="a" style="line-height: 170%; text-indent: -25.4pt; margin: 0cm 0cm 0pt 25.4pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial unicode ms'">In the meantime, as the medical treatment materials account for a small share* of the health insurance compared to medical service activities and drugs and rebate issues haven’t been seriously highlighted, thorough management was not sufficiently carried out. </span><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+<p class="a" style="text-indent: -29.5pt; margin: 0cm 0cm 0pt 29.5pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="a" style="line-height: 110%; text-indent: -43.9pt; margin: 0cm 0cm 0pt 43.9pt">
+<font size="2"><font color="#000000"><sup><span lang="EN-US" style="font-family: 'arial unicode ms'">*</span></sup><span lang="EN-US" style="font-family: 'arial unicode ms'"> Health Insurance Benefits<span style="letter-spacing: -1pt">: </span>medical service activities (35%,16 trillion won) &gt; drugs (32%,12 trillion won) &gt;</span></font></font></p>
+<p class="a" style="line-height: 110%; text-indent: -43.9pt; margin: 0cm 0cm 0pt 43.9pt">
+		 </p>
+<p class="a" style="line-height: 110%; text-indent: -43.9pt; margin: 0cm 0cm 0pt 43.9pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial unicode ms'"> treatment material (4.5%, 1.9 trillion won)<o:p></o:p></span></font></font></p>
+<p class="a" style="line-height: 190%; text-indent: -25.4pt; margin: 0cm 0cm 0pt 25.4pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="a" style="line-height: 140%; text-indent: -25.4pt; margin: 0cm 0cm 0pt 25.4pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial unicode ms'">Recently, the increase rate of the treatment material benefits is around 16%, revolving above the entire health insurance benefit increase rate (12%).<span style="mso-spacerun: yes">  </span></span><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+<p class="a" style="text-indent: -25.4pt; margin: 0cm 0cm 0pt 25.4pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="a" style="text-indent: -35pt; margin: 0cm 0cm 0pt 35pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">- It is determined that the reason is that there is insufficient benefits that encourage medical institutions to</font></font></span></p>
+<p class="a" style="text-indent: -35pt; margin: 0cm 0cm 0pt 35pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">select cost-effective medical treatment materials under the fee for service payment system and there is a</font></font></span></p>
+<p class="a" style="text-indent: -35pt; margin: 0cm 0cm 0pt 35pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">lack of system that controls prices on a regular basis. <o:p></o:p></font></font></span></p>
+<p class="a" style="text-indent: -25.4pt; margin: 0cm 0cm 0pt 25.4pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="a" style="text-indent: -35.8pt; margin: 0cm 0cm 0pt 35.8pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">-In the meantime, some companies that have exclusive market shares sometimes stop supply of</font></font></span></p>
+<p class="a" style="text-indent: -35.8pt; margin: 0cm 0cm 0pt 35.8pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">materials asking for the maximum prices and some provide materials charging prices beyond the</font></font></span></p>
+<p class="a" style="text-indent: -35.8pt; margin: 0cm 0cm 0pt 35.8pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">maximum rates to medical institutions, causing inconvenience to patients. <o:p></o:p></font></font></span></p>
+<p class="a" style="text-indent: -25.4pt; margin: 0cm 0cm 0pt 25.4pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">To resolve such problems, Ministry of Health and Welfare said that it will be preparing the pricing and adjustment scheme as below. <o:p></o:p></font></font></span></p>
+<p class="a" style="line-height: 150%; text-indent: -25.4pt; margin: 0cm 0cm 0pt 25.4pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="a" style="line-height: 190%; text-indent: -43.2pt; margin: 0cm 0cm 0pt 43.2pt">
+<span style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">▸ <span lang="EN-US">Improvement of the pricing scheme <span style="mso-spacerun: yes"> </span></span>◂<span lang="EN-US"><o:p></o:p></span></font></font></span></p>
+<p class="a" style="text-indent: -43.2pt; margin: 0cm 0cm 0pt 43.2pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">-To encourage medical institutions to use cost-effective treatment materials, the fixed amount payment</font></font></span></p>
+<p class="a" style="text-indent: -43.2pt; margin: 0cm 0cm 0pt 43.2pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">system that provides a reward in a bundle for materials used for a certain activity will be expanded. <o:p></o:p></font></font></span></p>
+<p class="a" style="text-indent: -25.4pt; margin: 0cm 0cm 0pt 25.4pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="a" style="text-indent: -42.7pt; margin: 0cm 0cm 0pt 42.7pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">- Medical treatment materials that are essential for treatment but are expected to cause obstacle to</font></font></span></p>
+<p class="a" style="text-indent: -42.7pt; margin: 0cm 0cm 0pt 42.7pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">treatment due to decrease of demand and supply will be designated as items subject to prevention of</font></font></span></p>
+<p class="a" style="text-indent: -42.7pt; margin: 0cm 0cm 0pt 42.7pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">supply withdrawal and prime costs of them will be compensated so that there will be no problem to patient</font></font></span></p>
+<p class="a" style="text-indent: -42.7pt; margin: 0cm 0cm 0pt 42.7pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">treatment. <o:p></o:p></font></font></span></p>
+<p class="a" style="line-height: 150%; text-indent: -25.4pt; margin: 0cm 0cm 0pt 25.4pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="a" style="line-height: 150%; text-indent: -43.2pt; margin: 0cm 0cm 0pt 43.2pt">
+<span style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">▸ <span lang="EN-US">Improvement of Price Adjustment Scheme</span>◂<span lang="EN-US"><o:p></o:p></span></font></font></span></p>
+<p class="a" style="line-height: 150%; text-indent: -25.4pt; margin: 0cm 0cm 0pt 25.4pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="a" style="text-indent: -43pt; margin: 0cm 0cm 0pt 43pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">-Furthermore, a mechanism to control prices by linking prices to changes of use volumes and a</font></font></span></p>
+<p class="a" style="text-indent: -43pt; margin: 0cm 0cm 0pt 43pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">mechanism to adjust prices of medical treatment materials which are related to illegal rebate practices</font></font></span></p>
+<p class="a" style="text-indent: -43pt; margin: 0cm 0cm 0pt 43pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><font size="2"><font color="#000000">found, etc will be prepared. <o:p></o:p></font></font></span></p>
+<p class="a" style="text-indent: -25.4pt; margin: 0cm 0cm 0pt 25.4pt">
+<span lang="EN-US" style="font-family: 'arial unicode ms'"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font size="2"><font color="#000000"><span lang="EN-US" style="font-family: 'arial unicode ms'">Ministry of Health and Welfare said that it will implement the revised scheme in the second half of the year after revising the detailed improvement plan and a related law. </span><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; letter-spacing: -0.5pt; mso-bidi-font-size: 10.0pt"><span style="mso-spacerun: yes"> </span></span></font></font><span lang="EN-US" style="line-height: 115%; font-family: 'arial unicode ms'; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+</drg></p></td>
+</tr>
+<tr>
+<th scope="row">File</th>
+<td colspan="3">
+<p><img alt="" src="../../images/common/file/icon_file.gif"/> <a href="../../../download.mohw.go.kr/front_new/modules/2cd9f906d44ff7403c0d1109d6dbd584">[ENG][2.15]Expansion_of_the_mandatory_application_of_DRG_payment_system_for_seven_disease_groups_to_more_hospitals_and_clinics_as_of_this_July.docx (41 KB / Download : 499)</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- /table:view -->
+<!-- ÇÏ´Ü ¹öÆ° ¿µ¿ª -->
+<div class="btn btm">
+<!--  ¿À¸¥ ÂÊ ¿µ¿ª ¹öÆ° -->
+<a href="e9a17658ff68b1011b3bf38b014eea17"><img alt="list" class="right" src="../../images/eng/common/btn_list.gif"/></a>
+<!--  /¿À¸¥ ÂÊ ¿µ¿ª ¹öÆ° -->
+</div>
+<!-- /ÇÏ´Ü ¹öÆ° ¿µ¿ª -->
+</form>
+<br/>
+<br/>
+<div class="view_list">
+<form action="ssg0111ls.jsp" method="post" name="fmList">
+<input name="PAR_MENU_ID" type="hidden" value="1001"/>
+<input name="MENU_ID" type="hidden" value="100111"/>
+<input name="page" type="hidden" value="18"/>
+<input name="SEARCHKEY" type="hidden" value=""/>
+<input name="SEARCHVALUE" type="hidden" value=""/>
+<input name="CONT_SEQ" type="hidden" value=""/>
+<!-- table head above list -->
+<div id="tablehead">
+<p>Total <strong>345</strong> Articles</p>
+</div>
+<!-- /table head above list -->
+<table class="list" summary="Publication list.">
+<caption>Publication</caption>
+<colgroup>
+<col width="8%"/><col width="60%"/>
+<col width="16%"/><col width="8%"/><col width="8%"/>
+</colgroup>
+<thead>
+<tr>
+<th class="first" scope="col">No</th>
+<th scope="col">Subject</th>
+<th scope="col">Date</th>
+<th scope="col">File</th>
+<th scope="col">Hit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>175</td>
+<td class="left"><a href="fffc2e4a7e7a8e105ad5a72ce1d4377b">MERS Hotline English Service</a></td>
+<td>2015-06-12</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1998</td>
+</tr>
+<tr>
+<td>174</td>
+<td class="left"><a href="635775aca590cc59614804018fb57728">87 Hospitals Applied for ‘National Safe Hospital’ ...</a></td>
+<td>2015-06-12</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1255</td>
+</tr>
+<tr>
+<td>173</td>
+<td class="left"><a href="02989dd3ea38c93c0dd2206dcbc75036">Press Release Summary (June 11)</a></td>
+<td>2015-06-11</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>2262</td>
+</tr>
+<tr>
+<td>172</td>
+<td class="left"><a href="943fad1742bd26bf0e0ae85cc5a569b3">Hospitals with Known MERS Exposure (June, 10)</a></td>
+<td>2015-06-10</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>2533</td>
+</tr>
+<tr>
+<td>171</td>
+<td class="left"><a href="7fa85168c0c9d84989f3aadb63cf2dbb">Press Release Summary (June 10)</a></td>
+<td>2015-06-10</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>2039</td>
+</tr>
+<tr>
+<td>170</td>
+<td class="left"><a href="872051b888d4ada9229b5116c156c707">MERS Prevention and Reporting Guidance</a></td>
+<td>2015-06-10</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1881</td>
+</tr>
+<tr>
+<td>169</td>
+<td class="left"><a href="e15f985f0807e08c9354b6cecb70571d">Must Know about MERS</a></td>
+<td>2015-06-10</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1597</td>
+</tr>
+<tr>
+<td>168</td>
+<td class="left"><a href="de7b92b8e948147557678a04d715c756">KOREA-WHO MERS Joint Mission, Messages to Public &amp;...</a></td>
+<td>2015-06-10</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1536</td>
+</tr>
+<tr>
+<td>167</td>
+<td class="left"><a href="9e602c5e994ab066595416b2d4da7eac">Press Release Summary</a></td>
+<td>2015-06-10</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1895</td>
+</tr>
+<tr>
+<td>166</td>
+<td class="left"><a href="0dce9feba5faf48192fef664540c1e5e">[ENG] [5.20] MERS Case Reported In</a></td>
+<td>2015-05-28</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>5013</td>
+</tr>
+</tbody>
+</table>
+<!-- /table:list -->
+<!-- paging -->
+<!-- paging -->
+<div id="paging">
+<a class="btn" href="ebfb6bc3f850eb20122e1021c6e4c0d1"><img alt="first page" src="../../images/eng/common/btn_firstpage.gif"/></a>
+<a class="btn" href="ffdc4366d327476f2a2bdd61bea75d3f"><img alt="pre page" src="../../images/eng/common/btn_prepage.gif"/></a>
+<a href="b5ac7ead72941feddd2152cd97408423" title="11page">11</a> 
+
+				<a href="43305223367df6986d635c77763975b3" title="12page">12</a> 
+
+				<a href="2711dbddb6de0a13625580768c3557fa" title="13page">13</a> 
+
+				<a href="291c7b2c06ad0f481977e50fbd85795e" title="14page">14</a> 
+
+				<a href="69279edea38f89c531ee92dcc558f429" title="15page">15</a> 
+
+				<a href="3d5e6982b8cfbd3ae4834a4e77e21144" title="16page">16</a> 
+
+				<a href="32fde42f13158f6b4f430ac227830ad3" title="17page">17</a> 
+
+				<span title="present">18</span> 
+
+				<a href="3fbff7a5c45a170ce3270ba839fff4fb" title="19page">19</a> 
+
+				<a href="095823f82b64fc9c0ab92d552e48e0b3" title="20page">20</a> 
+
+				<a class="btn" href="6c8765ade6af448afd7277d09046c33a"><img alt="next page" src="../../images/eng/common/btn_nextpage.gif"/></a>
+<a class="btn" href="2d7e34ab1d5e2a71b1530de73fd24299"><img alt="last page" src="../../images/eng/common/btn_lastpage.gif"/></a>
+</div>
+<!-- /paging -->
+<!-- /paging -->
+</form>
+<!-- DB ¿¡¼­ contents µ¥ÀÌÅÍ¸¦ °¡Á®¿Í¼­ »Ñ·ÁÁØ´Ù. -->
+</div>
+</div>
+<!-- /contents -->
+</div>
+</div>
+<!-- footer -->
+<!-- footer -->
+<div id="footer">
+<div class="foot">
+<p class="flogo"><img alt="ministry of health and welfare" src="../../images/eng/common/flogo.gif"/></p>
+<div class="finfo">
+<address><img alt="13, Doum 4-ro, Sejong, (30113) Korea ¤ÓCALL CENTER 82-129" src="../../images/eng/common/foot_address.gif"/></address>
+<p class="copyright"><img alt="Copyright(C) By MOHW. All rights reserved." src="../../images/eng/common/foot_copyright.gif"/></p>
+</div>
+<!-- ÀÏÀÏ¹æ¹®ÀÚ¼ö Ãß°¡ -->
+<p class="visits">Daily visits : <strong>198</strong></p>
+<!--// ÀÏÀÏ¹æ¹®ÀÚ¼ö Ãß°¡ -->
+</div>
+</div>
+<!-- //footer -->
+</div>
+<div id="returntotop"><a href="#skip-navi">go to the top</a></div>
+<script type="text/javascript">
+//<![CDATA[
+function jsOpenSite(formEl) {	
+	var errorMessage = null;
+	var objFocus = null;
+	if (formEl.sitelink.value.length == 0) {
+		errorMessage = "please! select a site to move!";
+		objFocus = formEl.sitelink;
+	} 
+	if(errorMessage != null) {
+		alert(errorMessage);
+		objFocus.focus();
+		return false;
+	}
+	return true;
+}
+//]]>	
+</script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101800795-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- /footer -->
+</div>
+</body>
+</html>

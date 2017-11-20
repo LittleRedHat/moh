@@ -1,0 +1,1195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Ministry of Health &amp; Welfare : ABOUT MOHW &gt; Press Release View Content</title>
+<link href="../../css/eng/mwf_eng.css" rel="stylesheet" type="text/css"/>
+<script src="../../js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="../../js/common.js" type="text/javascript"></script>
+<script src="../../js/mw_eng.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+//<![CDATA[
+
+
+
+	// ¸®½ºÆ®·Î ÀÌµ¿
+
+	function jsList()
+
+	{
+
+		var form = document.fmList;
+
+		form.action = "ssg0111ls.jsp";
+
+		form.submit();
+
+	}
+
+
+
+	//³»¿ë º¸±â
+
+	function goView(seq)
+
+	{
+
+		var form = document.fmView;
+
+		form.CONT_SEQ.value = seq;
+
+		form.action = "ssg0111vw.jsp";
+
+		form.submit();
+
+	}
+
+
+
+	//ÇÏ´Ü ¸®½ºÆ® ÆäÀÌÁö ÀÌµ¿
+
+	function goPage( page)
+
+	{
+
+		var form = document.fmList;
+
+		form.page.value = page;
+
+		form.submit();
+
+	}
+
+
+
+	//ÆÄÀÏ ´Ù¿î·Îµå.
+
+	function fileDownLoad(fileSeq)
+
+	{
+
+		if( confirm( "Do you wish to download now?") == true ) {
+
+			var form = document.fmView;
+
+			form.FILE_SEQ.value = fileSeq;
+
+			form.action = "/front_new/modules/download.jsp";
+
+			form.submit();
+
+		}
+
+	}
+
+//]]>
+
+</script>
+</head>
+<body>
+<!-- ¹Ù·Î°¡±â ¸µÅ© -->
+<p id="skip-navi">
+<a href="#contents">go to the contents</a>
+<a href="#snb">go to the menu</a>
+</p>
+<!-- //¹Ù·Î°¡±â ¸µÅ© -->
+<!-- header -->
+<div id="wrap">
+<!-- head -->
+<div class="sbHead" id="head">
+<!-- header -->
+<div id="header">
+<!-- ·Î°í -->
+<h1 class="logo"><a href="../261f58801c1da21d0b6f7021b30b648b"><img alt="ministry of health and welfare" src="../../images/eng/common/logo.gif"/></a></h1>
+<div class="kor_sym">
+<a href="../../../moi.go.kr/eng/sub/a03/nationalSymbol/d5a2e22490af7d4414516807b47a6064" target="_blank" title="new browser"><img alt="National Symbols of the Republic of Korea" src="../../images/eng/common/kor_sym_eng.gif"/></a>
+</div>
+<!-- function -->
+<div class="function">
+<!-- [Funciton] - ÆùÆ®»çÀÌÁî -->
+<div class="unit">
+<div class="ft_size">
+<button class="plus" onclick="fontSizeWrap.btnPlus();" type="button"><span class="hide">expand</span></button>
+<button class="minus" onclick="fontSizeWrap.btnMinus();" type="button"><span class="hide">reduce</span></button>
+<span class="Font_Size"><span class="hide">Font Size</span></span>
+</div>
+<script type="text/javascript">var fontSizeWrap = new fontSize();</script>
+<!-- //[Funciton] - ÆùÆ®»çÀÌÁî -->
+<!-- ¾ð¾îº° ¸µÅ© -->
+<ul class="global_language">
+<li class="mobile"><a href="../../m_eng/50b06ecdc2a14f90913d780c3460fca4" target="_blank" title="new browser"><span class="hide">Mobile</span></a></li>
+<li class="Korean"><a href="../../front_new/647a6a76a15a5a8bfc6d5f73d0d9d4d1" target="_blank" title="new browser"><span class="hide">Korean</span></a></li>
+<li class="sitemap"><a href="../cs/38f03257ef34df8e601ed2e794b4f84f"><span class="hide">sitemap</span></a></li>
+<li class="a-z"><a href="../cs/1001c96bb6754f09ed925f7b6d593bf7"><span class="hide">A-Z Index</span></a></li>
+</ul>
+<!-- //¾ð¾îº° ¸µÅ© -->
+<!-- ¸Þ´º¼³Á¤ -->
+<div class="mnsetup">
+<div class="btnsetup"><a class="btnms" href="#msetup_layer" id="svcmore_h"><span class="hide">my menu</span></a></div>
+<div class="msetup_layer" id="msetup_layer">
+<h2>
+<img alt="Menu setup" src="../../images/eng/main/musetup.gif"/>
+</h2>
+<div class="mnsetup_cont">
+<ul class="list" id="fmenu"><li>My menu list</li></ul>
+</div>
+<div class="cg_contwrap">
+<div class="cg_cont">
+<!-- ÀüÃ¼¸ñ·Ï -->
+<ul class="ms_category">
+<li>
+<input class="input-check" id="mw_100103" name="setmenu" type="checkbox" value="/eng/sg/ssg0103mn.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100103|100103|Organization"/>
+<label for="mw_100103">Organization</label>
+</li>
+<li>
+<input class="input-check" id="mw_100113" name="setmenu" type="checkbox" value="/eng/sg/ssg0101mn.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100113|100113|Contact Us"/>
+<label for="mw_100113">Contact Us</label>
+</li>
+<li>
+<input class="input-check" id="mw_100105" name="setmenu" type="checkbox" value="/eng/sg/ssg0105mn.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100105|100105|Minister's Profile"/>
+<label for="mw_100105">Minister's Profile</label>
+</li>
+<li>
+<input class="input-check" id="mw_100111" name="setmenu" type="checkbox" value="/eng/sg/ssg0111ls.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100111|100111|Press Release"/>
+<label for="mw_100111">Press Release</label>
+</li>
+<li>
+<input class="input-check" id="mw_10031801" name="setmenu" type="checkbox" value="/eng/jc/sjc0101mn.jsp?PAR_MENU_ID=1003&amp;MENU_ID=10031801|10031801|Policies"/>
+<label for="mw_10031801">Policies</label>
+</li>
+<li>
+<input class="input-check" id="mw_100408" name="setmenu" type="checkbox" value="/eng/cs/scs0301mn.jsp?PAR_MENU_ID=1004&amp;MENU_ID=100408|100408|RSS"/>
+<label for="mw_100408">RSS</label>
+</li>
+<li>
+<input class="input-check" id="mw_100410" name="setmenu" type="checkbox" value="/eng/cs/scs0301mn.jsp?PAR_MENU_ID=1004&amp;MENU_ID=100410|100410|Privacy Guideline"/>
+<label for="mw_100410">Privacy Guideline</label>
+</li>
+<li>
+<input class="input-check" id="mw_100404" name="setmenu" type="checkbox" value="/eng/cs/scs0301mn.jsp?PAR_MENU_ID=1004&amp;MENU_ID=100404|100404|Users Guide"/>
+<label for="mw_100404">Users Guide</label>
+</li>
+</ul>
+<!-- //ÀüÃ¼¸ñ·Ï -->
+</div>
+<!-- ¹öÆ° Á¤·Ä -->
+<div class="btn_msetup">
+<p class="left"><input alt="default" class="input-image" id="mymenu_default" src="/images/eng/btn/btn_base.gif" type="image"/></p>
+<span class="cg_msg">User can personalize the website</span>
+<p class="center">
+<input alt="confirm" class="input-image" id="mymenu_set" src="/images/eng/btn/btn_confirm.gif" type="image"/>
+<!--a href="#" id="mymenu_set" ><img src="/images/front/btn/btn_confirm.gif" alt="È®ÀÎ" /></a-->
+<input alt="cancel" class="input-image" id="mymenu_cancel" src="/images/eng/btn/btn_cancel.gif" type="image"/>
+</p>
+<p class="right"><a href="../cs/38f03257ef34df8e601ed2e794b4f84f">sitemap</a></p>
+</div>
+<!-- //¹öÆ° Á¤·Ä -->
+</div>
+<p class="btn-more"><button class="msbtn_close" id="msbtn_close" type="button"><span class="hide">close</span></button></p>
+</div>
+</div>
+<!-- //¸Þ´º¼³Á¤ -->
+<!-- °Ë»ö -->
+<!-- 
+
+					<div class="search">
+
+						<form method="post" name="fmSearch" action="/eng/cs/scs0401ls.jsp" onsubmit="return searchCommon(this)" >
+
+							<input type="hidden" name="PAR_MENU_ID" value="1004" />
+
+							<input type="hidden" name="MENU_ID" value="100406" />
+
+							<input type="hidden" name="SEARCHKEY" value="TITLE" />				
+
+							<fieldset>
+
+								<legend>search</legend>
+
+								<label for="SEARCHVALUE" class="hide">search value</label>
+
+								<input type="text" id="SEARCHVALUE" name="SEARCHVALUE" class="input-text" />
+
+								<input type="image" class="input-image" src="/images/eng/common/tl_btnsearch.gif" alt="search" />
+
+							</fieldset>
+
+						</form>
+
+					</div>
+
+					 -->
+<!-- //°Ë»ö -->
+</div><!-- //unit -->
+</div>
+<!-- //function -->
+</div>
+<!-- //header -->
+</div>
+<!-- //head -->
+<hr/>
+<!-- spot main -->
+<div id="spot-sub">
+<img alt="A life-long friend who stands by the public" src="../../images/front_eng/sg/img_head_sg.jpg"/>
+</div>
+<!-- //spot main -->
+<hr/>
+<!-- container -->
+<div class="clear" id="container">
+<div id="subwrap">
+<!-- snb -->
+<div id="snb">
+<h2><a href="616feca8de871f8a1f1e040342b5d550"><img alt="About MW" src="../../images/front_eng/title/h2_am.gif"/></a></h2>
+<ul id="snbMenu1">
+<li><a href="616feca8de871f8a1f1e040342b5d550"><img alt="Vision &amp; Mission" src="../../images/front_eng/title/left_am01.gif"/></a>
+</li>
+<li><a href="93dae7d73a99735630654fc2fb46a9eb"><img alt="Organization" src="../../images/front_eng/title/left_am02.gif"/></a>
+</li>
+<li><a href="482124899dc6a43227599ea28a921fea"><img alt="Contact Us" src="../../images/front_eng/title/left_am03.gif"/></a>
+</li>
+<li><a href="2d75b746f82cbae41316bd3da4ceb30d"><img alt="Minister¡¯s Profile" src="../../images/front_eng/title/left_am04.gif"/></a>
+</li>
+<li><a href="a2fde158a68020769e116fe2815d95aa"><img alt="Vice Minister¡¯s Profile" src="../../images/front_eng/title/left_am05.gif"/></a>
+</li>
+<li><a href="8c6914a853d28a0cf2ce417c6d5fe3ce"><img alt="Past Ministers &amp; Vice Ministers" src="../../images/front_eng/title/left_am06.gif"/></a>
+</li>
+<li><a href="a79fdae6ffae612a0b5f784645afb1db"><img alt="Location" src="../../images/front_eng/title/left_am07.gif"/></a>
+</li>
+<li class="on"><a href="76b19fd6a92fcb216e55a4e9dea9a4c8"><img alt="Press Release" src="../../images/front_eng/title/left_am08_over.gif"/></a>
+</li>
+<li><a href="ea8a1ea6f8dcdcb2b03b8ebc89df5ef6"><img alt="129 Call Center" src="../../images/front_eng/title/left_am09.gif"/></a>
+</li>
+<li><a href="../../../www.epeople.go.kr/jsp/user/on/eng/ebb342dee28c17242d927d0b1019800f" target="_blank"><img alt="Online Petition" src="../../images/front_eng/title/left_am10.gif"/></a>
+</li>
+</ul>
+<h2><a href="../jc/f397eab66fb162470b191bcc18dfac4f"><img alt="Policies" src="../../images/front_eng/title/h2_pl.gif"/></a></h2>
+<ul id="snbMenu2">
+<li class="submenu"><img alt="Enhancement of Customized Welfare Services by Life-Cycle Phase" src="../../images/front_new/title/left_pl100321.gif"/>
+<ul>
+<li><a href="../jc/f397eab66fb162470b191bcc18dfac4f"><img alt="Reinforcement of support for income growth and work opportunities of low-income people" src="../../images/front_new/title/left_pl10032101.gif"/></a></li>
+<li><a href="../jc/6d963af417c35f2c3575a2f47d93315d"><img alt="Welfare services reaching out to people and improvement of public perception" src="../../images/front_new/title/left_pl10032102.gif"/></a></li>
+<li><a href="../jc/7c117d987132de318dd869c7e15cd6d1"><img alt="Promotion of rights and interests of children, the disabled, the elderly, etc." src="../../images/front_new/title/left_pl10032103.gif"/></a></li>
+<li><a href="../jc/3cd7dc5b01d534d90eba055e35cdf386"><img alt="Reduction of burden of medical expenses, and the reorganization of the system for determining health insurance premiums" src="../../images/front_new/title/left_pl10032104.gif"/></a></li>
+</ul>
+</li>
+<li class="submenu"><img alt="Establishment of Health Insurance System centered on People" src="../../images/front_new/title/left_pl100322.gif"/>
+<ul>
+<li><a href="../jc/6698fa46cb8d35f0f8aeb6f289ab2ce9"><img alt="Reinforcement of patient-oriented medical services" src="../../images/front_new/title/left_pl10032201.gif"/></a></li>
+<li><a href="../jc/6194a5e0555dab84754814c541f09b27"><img alt="Strengthening of essential and public health care services and systematic response to infectious diseases" src="../../images/front_new/title/left_pl10032202.gif"/></a></li>
+<li><a href="../jc/7603054a50c83c708da6d6702afe3d14"><img alt="Reinforcement of Preventive Health Care" src="../../images/front_new/title/left_pl10032203.gif"/></a></li>
+<li><a href="../jc/5975190b9def38149afd3ad48132162f"><img alt="Enhancement of healthcare industry performance and job creation" src="../../images/front_new/title/left_pl10032204.gif"/></a></li>
+</ul>
+</li>
+<li class="submenu"><img alt="Strengthening Responses to Demographic Crisis" src="../../images/front_new/title/left_pl100323.gif"/>
+<ul>
+<li><a href="../jc/8334fe91b7312eb840b99581e90bc297"><img alt="Establishment of a response system for coping with low birthrate" src="../../images/front_new/title/left_pl10032301.gif"/></a></li>
+<li><a href="../jc/687f9bcd11741aea5264c8392dc17ffc"><img alt="Improvement of a system for supporting childbirth and parenting" src="../../images/front_new/title/left_pl10032302.gif"/></a></li>
+<li><a href="../jc/d59e41ec8156d3ed1193b5f64629cf85"><img alt="Enhancement of preparation for aging society" src="../../images/front_new/title/left_pl10032303.gif"/></a></li>
+</ul>
+</li>
+</ul>
+<h2><a href="../cs/b64cc4894874ba0eb4af154d245908a9"><img alt="Help" src="../../images/front_eng/title/h2_hp.gif"/></a></h2>
+<ul id="snbMenu3">
+<li><a href="../cs/b64cc4894874ba0eb4af154d245908a9"><img alt="Users Guide" src="../../images/front_eng/title/left_hp01.gif"/></a>
+</li>
+<li><a href="../cs/81e6dbd0ed113665170a29b899ab0c21"><img alt="Privacy Guideline" src="../../images/front_eng/title/left_hp04.gif"/></a>
+</li>
+<li><a href="../cs/bab2f9d80d5980695b6081cb22ceb64b"><img alt="RSS" src="../../images/front_eng/title/left_hp03.gif"/></a>
+</li>
+<li><a href="../cs/38f03257ef34df8e601ed2e794b4f84f"><img alt="Sitemap" src="../../images/front_eng/title/left_hp05.gif"/></a>
+</li>
+<li><a href="../cs/1001c96bb6754f09ed925f7b6d593bf7"><img alt="A-Z Index" src="../../images/front_eng/title/left_hp06.gif"/></a>
+</li>
+</ul>
+</div>
+<script src="../../js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+			$('.submenu').last().find('ul').attr('class', 'noline');
+			imgMenuOver("snb");
+			
+			$(function(){
+				$(".on").parents('ul').slideDown();
+			});	
+			
+			$(".submenu").click(function(){
+				$(".submenu").not($(this)).children('ul').slideUp();
+				$(this).children('ul').slideToggle();
+			});
+		</script>
+<!-- //snb -->
+<!-- contents -->
+<div id="contents">
+<!-- mnvisual - ÄÁÅÙÃ÷ Å¸ÀÌÆ² -->
+<div class="mnvisual">
+<!-- h2 - Å¸ÀÌÆ² -->
+<!-- //h2 - Å¸ÀÌÆ² -->
+<!-- location - ÁÖ¼Ò -->
+<div id="location"> <a class="home" href="../261f58801c1da21d0b6f7021b30b648b">HOME</a> &gt; <a href="616feca8de871f8a1f1e040342b5d550">ABOUT MOHW</a> &gt; <span class="here">Press Release</span></div>
+<!-- //location - ÁÖ¼Ò -->
+</div>
+<!-- //mnvisual - ÄÁÅÙÃ÷ Å¸ÀÌÆ² -->
+<!-- content-area -->
+<div class="content-area">
+<!-- DB ¿¡¼­ contents µ¥ÀÌÅÍ¸¦ °¡Á®¿Í¼­ »Ñ·ÁÁØ´Ù. -->
+<!-- board -->
+<form action="ssg0111vw.jsp" method="post" name="fmView">
+<input name="PAR_MENU_ID" type="hidden" value="1001"/>
+<input name="MENU_ID" type="hidden" value="100111"/>
+<input name="page" type="hidden" value="21"/>
+<input name="CONT_SEQ" type="hidden" value="260743"/>
+<input name="MENU_ID" type="hidden" value="100111"/>
+<input name="FILE_SEQ" type="hidden" value=""/>
+<input name="SEARCHKEY" type="hidden" value=""/>
+<input name="SEARCHVALUE" type="hidden" value=""/>
+<!-- table:view -->
+<table class="view" summary="ABOUT MOHW &gt; Press Release detail.">
+<caption>ABOUT MOHW &gt; Press Release</caption>
+<colgroup>
+<col width="12%"/><col width="38%"/><col width="12%"/><col width="38%"/>
+</colgroup>
+<tbody>
+<tr>
+<th scope="row">Subject</th>
+<td colspan="3">National pension set the FX hedging target rate for 2012; overseas bond at 100% and overseas stock at 20%</td>
+</tr>
+<tr>
+<th scope="row">Date</th>
+<td>2011-11-24</td>
+<th scope="row">Hit</th>
+<td>3713</td>
+</tr>
+<tr>
+<th scope="row">Contents</th>
+<td class="view" colspan="3"><p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<b style="mso-bidi-font-weight: normal"><u><span lang="EN-US" style="font-size: 14pt; color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">National pension set the FX hedging target rate for 2012; overseas bond at 100% and overseas stock at 20%<o:p></o:p></span></u></b></p>
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="font-size: 11pt; color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÇÑ¾çÁß°íµñ; mso-font-kerning: 0pt; text-shadow: auto">The FX hedging target rate for 2012 has been finalized<o:p></o:p></span></p>
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+	 </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; text-shadow: auto">Ministry of Health and Welfare convened the fifth National Pension Fund Operation Committee (Chair; Health and Welfare Minister Rim, Chae Min)<span style="mso-spacerun: yes">  </span>on 24<sup>th</sup> Nov. (Thur.) and finalized that the FX hedging target rate for 2012. </span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+	 </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">National Pension conducts foreign-exchange hedging* on overseas investment to secure stable rates of return as a long-term investor.<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÇÑ¾çÁß°íµñ; mso-font-kerning: 0pt">* Foreign exchange hedge is a practice of fixing an exchange rate at the current rate against potential foreign exchange risk in trade such investment, import, and export, etc</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÇÑ¾çÁß°íµñ; mso-font-kerning: 0pt; mso-hansi-font-family: ÇÑ¾çÁß°íµñ"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">- By conducting FX hedging on overseas assets at an appropriate rate, volatility in the entire asset portfolio resulting from an exchange rate fluctuation is minimized. <o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">The Fund Operation Committee had set the strategic FX hedging rates at 100% for overseas bond and 0% for overseas stock earlier in Sep. 2009</font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p><font size="2"> </font></o:p></span></p>
+<div style="text-align: justify">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">However, the strategic FX hedging rates shall be applied in phases given the impact of the scale of the National Pension’s FX hedging on the foreign exchange market and accordingly, the annual target hedging rate is determined each year.<o:p></o:p></font></span></div>
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+	 </p>
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">&lt;FX hedging target rates by year&gt;</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p align="right" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: right; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">(Unit :%)<o:p></o:p></font></span></p>
+<div align="right">
+<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-right: medium none; border-top: medium none; border-left: medium none; border-bottom: medium none; border-collapse: collapse; mso-border-alt: solid black .25pt; mso-yfti-tbllook: 1184">
+<tbody>
+<tr style="height: 29.4pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: black 1.5pt solid; padding-left: 0cm; background: #d6d6d6; padding-bottom: 0cm; border-left: black 1.5pt solid; width: 148.75pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 29.4pt; mso-border-bottom-alt: .25pt; mso-border-top-alt: 1.5pt; mso-border-left-alt: 1.5pt; mso-border-right-alt: .25pt; mso-border-color-alt: black; mso-border-style-alt: solid" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Year</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt dashed; padding-right: 0cm; border-top: black 1.5pt solid; padding-left: 0cm; background: #d6d6d6; padding-bottom: 0cm; border-left: #ece9d8; width: 148.75pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 29.4pt; mso-border-bottom-alt: solid .25pt; mso-border-top-alt: solid 1.5pt; mso-border-left-alt: solid .25pt; mso-border-right-alt: dashed .25pt; mso-border-color-alt: black" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Overseas bond</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1.5pt solid; padding-right: 0cm; border-top: black 1.5pt solid; padding-left: 0cm; background: #d6d6d6; padding-bottom: 0cm; border-left: #ece9d8; width: 148.75pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 29.4pt; mso-border-bottom-alt: .25pt; mso-border-top-alt: 1.5pt; mso-border-left-alt: .25pt; mso-border-right-alt: 1.5pt; mso-border-color-alt: black; mso-border-style-alt: solid" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Overseas stock</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">(overseas alternative investment included)</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+<tr style="height: 15.8pt; mso-yfti-irow: 1">
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: black 1.5pt solid; width: 148.75pt; padding-top: 0cm; border-bottom: black 1pt dotted; height: 15.8pt; background-color: transparent; mso-border-bottom-alt: dotted .25pt; mso-border-top-alt: dotted .25pt; mso-border-left-alt: solid 1.5pt; mso-border-right-alt: solid .25pt; mso-border-color-alt: black" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">End of 2008<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt dashed; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 148.75pt; padding-top: 0cm; border-bottom: black 1pt dotted; height: 15.8pt; background-color: transparent; mso-border-bottom-alt: dotted; mso-border-top-alt: dotted; mso-border-left-alt: solid; mso-border-right-alt: dashed; mso-border-color-alt: black; mso-border-width-alt: .25pt" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">100%<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1.5pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 148.75pt; padding-top: 0cm; border-bottom: black 1pt dotted; height: 15.8pt; background-color: transparent; mso-border-bottom-alt: dotted .25pt; mso-border-top-alt: dotted .25pt; mso-border-left-alt: solid .25pt; mso-border-right-alt: solid 1.5pt; mso-border-color-alt: black" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">90%</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+<tr style="height: 18.65pt; mso-yfti-irow: 2">
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: black 1.5pt solid; width: 148.75pt; padding-top: 0cm; border-bottom: black 1pt dotted; height: 18.65pt; background-color: transparent; mso-border-bottom-alt: dotted .25pt; mso-border-top-alt: dotted .25pt; mso-border-left-alt: solid 1.5pt; mso-border-right-alt: solid .25pt; mso-border-color-alt: black" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">End of 2009<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt dashed; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 148.75pt; padding-top: 0cm; border-bottom: black 1pt dotted; height: 18.65pt; background-color: transparent; mso-border-bottom-alt: dotted; mso-border-top-alt: dotted; mso-border-left-alt: solid; mso-border-right-alt: dashed; mso-border-color-alt: black; mso-border-width-alt: .25pt" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">100%<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1.5pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 148.75pt; padding-top: 0cm; border-bottom: black 1pt dotted; height: 18.65pt; background-color: transparent; mso-border-bottom-alt: dotted .25pt; mso-border-top-alt: dotted .25pt; mso-border-left-alt: solid .25pt; mso-border-right-alt: solid 1.5pt; mso-border-color-alt: black" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">70%</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+<tr style="height: 18.65pt; mso-yfti-irow: 3">
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: black 1.5pt solid; width: 148.75pt; padding-top: 0cm; border-bottom: black 1pt dotted; height: 18.65pt; background-color: transparent; mso-border-bottom-alt: dotted .25pt; mso-border-top-alt: dotted .25pt; mso-border-left-alt: solid 1.5pt; mso-border-right-alt: solid .25pt; mso-border-color-alt: black" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">End of 2010<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt dashed; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 148.75pt; padding-top: 0cm; border-bottom: black 1pt dotted; height: 18.65pt; background-color: transparent; mso-border-bottom-alt: dotted; mso-border-top-alt: dotted; mso-border-left-alt: solid; mso-border-right-alt: dashed; mso-border-color-alt: black; mso-border-width-alt: .25pt" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">100%<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1.5pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 148.75pt; padding-top: 0cm; border-bottom: black 1pt dotted; height: 18.65pt; background-color: transparent; mso-border-bottom-alt: dotted .25pt; mso-border-top-alt: dotted .25pt; mso-border-left-alt: solid .25pt; mso-border-right-alt: solid 1.5pt; mso-border-color-alt: black" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">50%</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+<tr style="height: 18.65pt; mso-yfti-irow: 4">
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: black 1.5pt solid; width: 148.75pt; padding-top: 0cm; border-bottom: black 3pt solid; height: 18.65pt; background-color: transparent; mso-border-bottom-alt: solid 3.0pt; mso-border-top-alt: dotted .25pt; mso-border-left-alt: solid 1.5pt; mso-border-right-alt: solid .25pt; mso-border-color-alt: black" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">End of 2011<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt dashed; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 148.75pt; padding-top: 0cm; border-bottom: black 3pt solid; height: 18.65pt; background-color: transparent; mso-border-bottom-alt: solid 3.0pt; mso-border-top-alt: dotted .25pt; mso-border-left-alt: solid .25pt; mso-border-right-alt: dashed .25pt; mso-border-color-alt: black" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">100%<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1.5pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 148.75pt; padding-top: 0cm; border-bottom: black 3pt solid; height: 18.65pt; background-color: transparent; mso-border-top-alt: dotted black .25pt; mso-border-left-alt: solid black .25pt" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">30%</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+<tr style="height: 18.65pt; mso-yfti-irow: 5; mso-yfti-lastrow: yes">
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: black 3pt solid; width: 148.75pt; padding-top: 0cm; border-bottom: black 3pt solid; height: 18.65pt; background-color: transparent; mso-border-alt: solid black 3.0pt; mso-border-top-alt: solid black 3.0pt; mso-border-right-alt: solid black .25pt" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">End of 2012</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt dashed; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 148.75pt; padding-top: 0cm; border-bottom: black 3pt solid; height: 18.65pt; background-color: transparent; mso-border-bottom-alt: solid 3.0pt; mso-border-top-alt: solid 3.0pt; mso-border-left-alt: solid .25pt; mso-border-right-alt: dashed .25pt; mso-border-color-alt: black" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">100%</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 3pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 148.75pt; padding-top: 0cm; border-bottom: black 3pt solid; height: 18.65pt; background-color: transparent; mso-border-top-alt: solid black 3.0pt; mso-border-left-alt: solid black .25pt" width="198">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">20%</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+	 </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">The FX hedging rate for overseas bond for 2012 will be maintained at 100% according to the strategic FX hedging rate and the rate for overseas stock is determined at 20% by maintaining the foreign exchange buying volume for 2012 similar to that of 2011, taking into account of the impact on the foreign exchange market, etc.<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+	 </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">In this regard, the <b>National Pension expects to purchase foreign currency worth $ 10.3 billion (around 12 trillion won) in 2012. </b>(Approximately, $ 40 million a day will be bought on average) <o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+	 </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; text-shadow: auto"><font size="2">According to “the target-exceeding return rate and the extent of investment allowed per asset group for 2012 (draft)” which was decided along with the target FX hedging rate on that day, the extent of overseas stock and alternative investment allowed for next year will be expanded.<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; text-shadow: auto"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">The Fund Operation Committee decides the target investment proportion per each asset group *(domestic stock, overseas stock, domestic bond and alternative investment, etc) every year and grants the extent of investment allowed, providing room for exceeding or falling short of the target. <o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÇÑ¾çÁß°íµñ; mso-font-kerning: 0pt"><font size="2">*The target proportion per asset group for 2012 was decided at the fourth Fund Operation Committee on 29 June. <o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">&lt; Target proportion for 2012 &gt;<o:p></o:p></font></span></p>
+<p align="right" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: right; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">(Unit :%)<o:p></o:p></font></span></p>
+<div align="right">
+<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-right: medium none; border-top: medium none; border-left: medium none; border-bottom: medium none; border-collapse: collapse; mso-border-alt: solid black .25pt; mso-yfti-tbllook: 1184">
+<tbody>
+<tr style="height: 21.5pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: black 1.5pt solid; padding-left: 0cm; background: #bbbbbb; padding-bottom: 0cm; border-left: black 1.5pt solid; width: 109.7pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 21.5pt; mso-border-bottom-alt: .25pt; mso-border-top-alt: 1.5pt; mso-border-left-alt: 1.5pt; mso-border-right-alt: .25pt; mso-border-color-alt: black; mso-border-style-alt: solid" width="146">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Category</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: black 1.5pt solid; padding-left: 0cm; background: #bbbbbb; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 21.5pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black 1.5pt; mso-border-left-alt: solid black .25pt" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Domestic stock</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: black 1.5pt solid; padding-left: 0cm; background: #bbbbbb; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 21.5pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black 1.5pt; mso-border-left-alt: solid black .25pt" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Overseas stock</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: black 1.5pt solid; padding-left: 0cm; background: #bbbbbb; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 21.5pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black 1.5pt; mso-border-left-alt: solid black .25pt" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Overseas bond</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: black 1.5pt solid; padding-left: 0cm; background: #bbbbbb; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 21.5pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black 1.5pt; mso-border-left-alt: solid black .25pt" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Alternative investment</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: black 1.5pt solid; padding-left: 0cm; background: #bbbbbb; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 21.5pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black 1.5pt; mso-border-left-alt: solid black .25pt" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Domestic bond</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1.5pt solid; padding-right: 0cm; border-top: black 1.5pt solid; padding-left: 0cm; background: #bbbbbb; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 21.5pt; mso-border-bottom-alt: .25pt; mso-border-top-alt: 1.5pt; mso-border-left-alt: .25pt; mso-border-right-alt: 1.5pt; mso-border-color-alt: black; mso-border-style-alt: solid" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Total</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+<tr style="height: 21.5pt; mso-yfti-irow: 1">
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: black 1.5pt solid; width: 109.7pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 21.5pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black 1.5pt" width="146">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Target proportion for 2012</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 21.5pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">19.3%</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 21.5pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">8.1%</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 21.5pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">4.1%</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 21.5pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">9.2%</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 21.5pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">59.3%</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1.5pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 21.5pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-right-alt: solid black 1.5pt" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">100%</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+<tr style="height: 21.5pt; mso-yfti-irow: 2; mso-yfti-lastrow: yes">
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: black 1.5pt solid; width: 109.7pt; padding-top: 0cm; border-bottom: black 1.5pt solid; height: 21.5pt; background-color: transparent; mso-border-bottom-alt: 1.5pt; mso-border-top-alt: .25pt; mso-border-left-alt: 1.5pt; mso-border-right-alt: .25pt; mso-border-color-alt: black; mso-border-style-alt: solid" width="146">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">Target proportion for 2011<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1.5pt solid; height: 21.5pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: solid black 1.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">18.0%<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1.5pt solid; height: 21.5pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: solid black 1.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">6.6%<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1.5pt solid; height: 21.5pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: solid black 1.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">4.1%<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1.5pt solid; height: 21.5pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: solid black 1.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">7.8%<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1.5pt solid; height: 21.5pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: solid black 1.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">63.5%<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1.5pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 55.9pt; padding-top: 0cm; border-bottom: black 1.5pt solid; height: 21.5pt; background-color: transparent; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="75">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">100%<o:p></o:p></font></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">- With this, the Fund Operation office intends to provide room for flexible operation of the fund given economic conditions and for active operation for creation of excess return. <o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">¡Û <b>The extent of overseas investment allowed has been expanded to make it able to flexibly respond to market fluctuations considering the investment conditions per the foreign exchange market situation. </b><o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">- This allows the proportion of overseas stock to become more flexibly adjustable even if it gets difficult to secure a supply of foreign exchange for overseas investment due to a drastic rise in exchange rate resulting from a global financial crisis or if there is concern for a decline in investment return rates even though investment is possible, the proportion of overseas stock can be more flexibly adjusted. <o:p></o:p></font></span></p>
+<div align="right">
+<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-right: medium none; border-top: medium none; border-left: medium none; border-bottom: medium none; border-collapse: collapse; mso-border-alt: solid black .25pt; mso-yfti-tbllook: 1184">
+<tbody>
+<tr style="height: 141.6pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-yfti-lastrow: yes">
+<td style="border-right: black 1pt dotted; padding-right: 0cm; border-top: black 1pt dotted; padding-left: 0cm; padding-bottom: 0cm; border-left: black 1pt dotted; width: 464.9pt; padding-top: 0cm; border-bottom: black 1pt dotted; height: 141.6pt; background-color: transparent; mso-border-alt: dotted black .25pt" width="620">
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÇÑ¾çÁß°íµñ; mso-font-kerning: 0pt">¢º When overseas stock prices plummet, it often drives down domestic stock prices as well, causing the exchange rate to rise dramatically, thus leading to lack of foreign currency liquidity. </span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<font size="2"><span style="color: black; line-height: 150%; font-family: ±¼¸²; mso-bidi-font-size: 10.0pt; mso-font-kerning: 0pt; mso-bidi-font-family: ±¼¸²">¢º</span><span style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÇÑ¾çÁß°íµñ; mso-font-kerning: 0pt"> <span lang="EN-US">When trying to purchase overseas stock in order to keep the proportion in the case of a sharp decline in overseas stock (decrease of the proportion resulting from a decline in asset value), lack of foreign currency liquidity often causes difficulty in buying foreign currency (dollar). Even if investment could be made with foreign currency purchased, volatility in the foreign exchange market would get even worse and the return rate could decline since the purchase would have been made at a high rate.<span style="mso-spacerun: yes">  </span><span style="mso-spacerun: yes">  </span></span></span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">- The proportion of overseas investment in 2012 is anticipated to be within the range between 10.1% at maximum and 6.1% at minimum. (Target proportion: 8.1%) <b><o:p></o:p></b></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+	 </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">When it comes to alternative investment, the extent of investment allowed has been expanded considering low liquidity of the concerned asset*. <b><o:p></o:p></b></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÇÑ¾çÁß°íµñ; mso-font-kerning: 0pt">* Alternative investments such as real estate, SOC and private equity fund are large in scale and making new alternative investments and disinvestments is difficult. Therefore, it is highly likely to violate the allowed extent.<span style="mso-spacerun: yes">  </span></span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">- The proportion of alternative investment for <b>2012 is expected to be within the range between 11.6% at maximum and 6.8% at minimum </b><span style="mso-bidi-font-weight: bold">depending on economic conditions.<b> </b></span>(Target proportion: 9.2%)<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">&lt; The extent of investment allowed per asset group for <b>2012</b> &gt;<o:p></o:p></font></span></p>
+<p align="right" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: right; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">(Unit: %pt)<o:p></o:p></font></span></p>
+<div align="right">
+<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-right: medium none; border-top: medium none; border-left: medium none; border-bottom: medium none; border-collapse: collapse; mso-border-alt: solid black .25pt; mso-yfti-tbllook: 1184">
+<tbody>
+<tr style="height: 27.7pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+<td colspan="2" style="border-right: black 1pt solid; padding-right: 0cm; border-top: black 1.5pt solid; padding-left: 0cm; background: #bbbbbb; padding-bottom: 0cm; border-left: black 1.5pt solid; width: 130.6pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.7pt; mso-border-bottom-alt: .25pt; mso-border-top-alt: 1.5pt; mso-border-left-alt: 1.5pt; mso-border-right-alt: .25pt; mso-border-color-alt: black; mso-border-style-alt: solid" width="174">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Category</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: black 3pt double; padding-left: 0cm; background: #bbbbbb; padding-bottom: 0cm; border-left: #ece9d8; width: 64.5pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.7pt; mso-border-alt: solid black .25pt; mso-border-top-alt: thick-thin-small-gap black 3.0pt; mso-border-left-alt: solid black .25pt" width="86">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Domestic stock</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: black 1.5pt solid; padding-left: 0cm; background: #bbbbbb; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.7pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black 1.5pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Overseas stock</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: black 1.5pt solid; padding-left: 0cm; background: #bbbbbb; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.7pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black 1.5pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Overseas bond</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: black 1.5pt solid; padding-left: 0cm; background: #bbbbbb; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.7pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black 1.5pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Alternative investment</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1.5pt solid; padding-right: 0cm; border-top: black 1.5pt solid; padding-left: 0cm; background: #bbbbbb; padding-bottom: 0cm; border-left: #ece9d8; width: 67.1pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.7pt; mso-border-bottom-alt: .25pt; mso-border-top-alt: 1.5pt; mso-border-left-alt: .25pt; mso-border-right-alt: 1.5pt; mso-border-color-alt: black; mso-border-style-alt: solid" width="89">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Domestic bond</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+<tr style="height: 27.15pt; mso-yfti-irow: 1">
+<td rowspan="3" style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: black 1.5pt solid; width: 48.5pt; padding-top: 0cm; border-bottom: blue 3pt double; height: 27.15pt; background-color: transparent; mso-border-bottom-alt: thick-thin-small-gap blue 3.0pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black 1.5pt; mso-border-right-alt: solid black .25pt" width="65">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">2011</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">(A)</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 82.15pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="110">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">SAA extent allowed<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 64.5pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="86">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">±2.0<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±0.8</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">±0.5<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">±1.2<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1.5pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.1pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-right-alt: solid black 1.5pt" width="89">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">±3.3<o:p></o:p></font></span></p>
+</td>
+</tr>
+<tr style="height: 27.15pt; mso-yfti-irow: 2">
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 82.15pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="110">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">TAA extent allowed<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 64.5pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="86">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">±3.0<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±0.7</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">±1.0<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±0.8</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1.5pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 67.1pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-right-alt: solid black 1.5pt" width="89">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">±4.7<o:p></o:p></font></span></p>
+</td>
+</tr>
+<tr style="height: 27.15pt; mso-yfti-irow: 3">
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 82.15pt; padding-top: 0cm; border-bottom: blue 3pt double; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: thick-thin-small-gap blue 3.0pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="110">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Total extent allowed</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 64.5pt; padding-top: 0cm; border-bottom: blue 3pt double; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: thick-thin-small-gap blue 3.0pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="86">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">±5.0<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: blue 3pt double; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: thick-thin-small-gap blue 3.0pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±1.5</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: blue 3pt double; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: thick-thin-small-gap blue 3.0pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">±1.5<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: blue 3pt double; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: thick-thin-small-gap blue 3.0pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">±2.0<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1.5pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.1pt; padding-top: 0cm; border-bottom: blue 3pt double; height: 27.15pt; background-color: transparent; mso-border-bottom-alt: thick-thin-small-gap blue 3.0pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-right-alt: solid black 1.5pt" width="89">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">±8.0<o:p></o:p></font></span></p>
+</td>
+</tr>
+<tr style="height: 27.15pt; mso-yfti-irow: 4">
+<td rowspan="3" style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: blue 3pt double; width: 48.5pt; padding-top: 0cm; border-bottom: blue 3pt double; height: 27.15pt; background-color: transparent; mso-border-alt: thick-thin-small-gap blue 3.0pt; mso-border-top-alt: thick-thin-small-gap blue 3.0pt; mso-border-right-alt: solid black .25pt" width="65">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">2012</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">(B)</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 82.15pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: thick-thin-small-gap blue 3.0pt; mso-border-left-alt: solid black .25pt" width="110">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">SAA extent allowed</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 64.5pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: thick-thin-small-gap blue 3.0pt; mso-border-left-alt: solid black .25pt" width="86">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±2.0</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: thick-thin-small-gap blue 3.0pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±1.0</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: thick-thin-small-gap blue 3.0pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±0.5</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: thick-thin-small-gap blue 3.0pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±1.2</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: blue 3pt double; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.1pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-bottom-alt: solid black .25pt; mso-border-top-alt: thick-thin-small-gap blue 3.0pt; mso-border-left-alt: solid black .25pt; mso-border-right-alt: thick-thin-small-gap blue 3.0pt" width="89">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±3.5</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+<tr style="height: 27.15pt; mso-yfti-irow: 5">
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 82.15pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="110">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">TAA extent allowed</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 64.5pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="86">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±3.0</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±1.0</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±1.0</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±1.2</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: blue 3pt double; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 67.1pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-right-alt: thick-thin-small-gap blue 3.0pt" width="89">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±5.0</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+<tr style="height: 27.15pt; mso-yfti-irow: 6">
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 82.15pt; padding-top: 0cm; border-bottom: blue 3pt double; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: thick-thin-small-gap blue 3.0pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="110">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Total extent allowed</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 64.5pt; padding-top: 0cm; border-bottom: blue 3pt double; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: thick-thin-small-gap blue 3.0pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="86">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±5.0</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: blue 3pt double; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: thick-thin-small-gap blue 3.0pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±2.0</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: blue 3pt double; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: thick-thin-small-gap blue 3.0pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±1.5</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: blue 3pt double; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: thick-thin-small-gap blue 3.0pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±2.4</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: blue 3pt double; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.1pt; padding-top: 0cm; border-bottom: blue 3pt double; height: 27.15pt; background-color: transparent; mso-border-bottom-alt: thick-thin-small-gap blue 3.0pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-right-alt: thick-thin-small-gap blue 3.0pt" width="89">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">±8.5</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+<tr style="height: 27.15pt; mso-yfti-irow: 7">
+<td rowspan="3" style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: black 1.5pt solid; width: 48.5pt; padding-top: 0cm; border-bottom: black 1.5pt solid; height: 27.15pt; background-color: transparent; mso-border-bottom-alt: solid black 1.5pt; mso-border-top-alt: thick-thin-small-gap blue 3.0pt; mso-border-left-alt: solid black 1.5pt; mso-border-right-alt: solid black .25pt" width="65">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">B-A</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 82.15pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: thick-thin-small-gap blue 3.0pt; mso-border-left-alt: solid black .25pt" width="110">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">SAA extent allowed<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 64.5pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: thick-thin-small-gap blue 3.0pt; mso-border-left-alt: solid black .25pt" width="86">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">-</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: thick-thin-small-gap blue 3.0pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">+0.2</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: thick-thin-small-gap blue 3.0pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">-</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-top-alt: thick-thin-small-gap blue 3.0pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">-</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1.5pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.1pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; background-color: transparent; mso-border-bottom-alt: solid black .25pt; mso-border-top-alt: thick-thin-small-gap blue 3.0pt; mso-border-left-alt: solid black .25pt; mso-border-right-alt: solid black 1.5pt" width="89">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">+0.2<o:p></o:p></font></span></p>
+</td>
+</tr>
+<tr style="height: 27.15pt; mso-yfti-irow: 8">
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 82.15pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="110">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">TAA extent allowed<o:p></o:p></font></span></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 64.5pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="86">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">-</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">+0.3</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">-</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">+0.4</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1.5pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; background: #e3f4e3; padding-bottom: 0cm; border-left: #ece9d8; width: 67.1pt; padding-top: 0cm; border-bottom: black 1pt solid; height: 27.15pt; mso-border-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-right-alt: solid black 1.5pt" width="89">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">+0.3<o:p></o:p></font></span></p>
+</td>
+</tr>
+<tr style="height: 27.15pt; mso-yfti-irow: 9; mso-yfti-lastrow: yes">
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 82.15pt; padding-top: 0cm; border-bottom: black 1.5pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: solid black 1.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="110">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">Total extent allowed</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 64.5pt; padding-top: 0cm; border-bottom: black 3pt double; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: thick-thin-small-gap black 3.0pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="86">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">-</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1.5pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: solid black 1.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">+0.5</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1.5pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: solid black 1.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">-</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.3pt; padding-top: 0cm; border-bottom: black 1.5pt solid; height: 27.15pt; background-color: transparent; mso-border-alt: solid black .25pt; mso-border-bottom-alt: solid black 1.5pt; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="90">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt">+0.4</span></b><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-right: black 1.5pt solid; padding-right: 0cm; border-top: #ece9d8; padding-left: 0cm; padding-bottom: 0cm; border-left: #ece9d8; width: 67.1pt; padding-top: 0cm; border-bottom: black 1.5pt solid; height: 27.15pt; background-color: transparent; mso-border-top-alt: solid black .25pt; mso-border-left-alt: solid black .25pt" width="89">
+<p align="center" class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; text-align: center; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">+0.5<o:p></o:p></font></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">The rate of excess return beyond the target for 2012 has been decided at 0.41%.<b><o:p></o:p></b></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+	 </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">The target-exceeding return rate refers to the target excess return rate that the National Pension should achieve against the market return rate (the benchmark rate of return). <o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">- The excess return rate is determined upon consideration of the operation capacity level (target IR) required from the Fund Operation office and the target active risk per judgment of the operator.<span style="mso-spacerun: yes">  </span><o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p><font size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">From 2011, the extent allowed for investments was separately set aside for changes of the investment proportions per market conditions, minimizing the extent that can be operated at the discretion of the Fund Operation office. As a result, the 2012 target excess rate has been lowered compared to the previous year (‘11: 0.45% → ’12: 0.41%). <o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+	 </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">The 2012 loan interest rate for private childcare facilities and paid elderly welfare centers will remain the same as this year at 2.78%. <o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+	 </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">The National Pension had run a loan program for private child care facilities from 1 Oct. 1994 to 31 Dec. 1998 and for paid elderly welfare centers from 1 Feb. 1995 to 31 Dec. 2000. (The program no longer exists now.) <o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">- As of 30 Sep. 2011, 733 billion which accounts for 95.7% of the entire loan of 765.4 billion won has been paid back and 32.4 billion won remains to be repaid. <o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+	 </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">The loan interest rate is readjusted only when the interest rate averaging the one-year time deposit for three months prior to the determination of the interest rate fluctuates by more than <b>±0.5%pt </b><span style="mso-bidi-font-weight: bold">compared to the current</span> loan interest rate. If the flunctuation remains within the range, the existing interest rate is applied.<o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+	 </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">The interest rate averaging the one-year time deposit interest rates for three months from Aug. 2011 to Oct. was 2.89%, of which the range of fluctuation remains within the standard range. Therefore, it has been decided that the current interest rate will be maintained. <o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">- 328 private childcare facilities and paid elderly welfare centers that are paying back the loans will be paying back the principle and interest at the interest of 2.78% next year (with the bank commission to be separately paid) <o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+	 </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; text-shadow: auto">In the meantime, the fund operation status as of end of Oct. 2011 has also been reported.</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+	 </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">As of end of Oct. 2011, the fund asset amounts to 344.8 trillion won at market value, 20 trillion and 761.8 billion won up from the previous year by 6.4%. <o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÇÑ¾çÁß°íµñ; mso-font-kerning: 0pt">* Proportion per asset: financial area: 99.3%(domestic stock<b> 18.3%, overseas stock 5.6%, domestic bond 64.6%, overseas bond 4.2%, alternative investment 7.2%</b>), welfare area: 0.03%, etc: 0.7%</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+	 </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">The net fund flowed in by the end of Oct. 2011 was 20 trillion and 641.6 billion won, out of which 12 trillion and 24.3 billion was invested in stock, 3 trillion and 339.3 billion won, in bond and 5 trillion and 278 billion won was put into alternative investment*.<b> </b><o:p></o:p></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÇÑ¾çÁß°íµñ; mso-font-kerning: 0pt">* By asset group, domestic stock: 11 trillion and 274.9 billion won, alternative investment: 5 trillion 278 billion won, domestic bond: 2 trillion 866.3 billion won, overseas stock: 749.4 billion won, and overseas bond: 472.9 billion won, respectively. </span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><o:p></o:p></span></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+	 </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; line-height: 150%; text-autospace: ideograph-numeric; mso-pagination: widow-orphan">
+<span lang="EN-US" style="color: black; line-height: 150%; font-family: 'arial','sans-serif'; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt"><font size="2">The figures shown in the fund operation status reported this time are tentative as of end of Oct. and the 2011 result will be finalized through the settlement at the end of Feb. next year. <o:p></o:p></font></span></p></td>
+</tr>
+<tr>
+<th scope="row">File</th>
+<td colspan="3">
+<p><img alt="" src="../../images/common/file/icon_file.gif"/> <a href="../../../download.mohw.go.kr/front_new/modules/c3fa577dbf8093cd8b05c30aa5614832">[ENG_11.24]_National_pension_set_the_FX_hedging_target_rate_for_2012;_overseas_bond_at_100%_and_overseas_stock_at_20%.docx (73 KB / Download : 389)</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- /table:view -->
+<!-- ÇÏ´Ü ¹öÆ° ¿µ¿ª -->
+<div class="btn btm">
+<!--  ¿À¸¥ ÂÊ ¿µ¿ª ¹öÆ° -->
+<a href="6c8765ade6af448afd7277d09046c33a"><img alt="list" class="right" src="../../images/eng/common/btn_list.gif"/></a>
+<!--  /¿À¸¥ ÂÊ ¿µ¿ª ¹öÆ° -->
+</div>
+<!-- /ÇÏ´Ü ¹öÆ° ¿µ¿ª -->
+</form>
+<br/>
+<br/>
+<div class="view_list">
+<form action="ssg0111ls.jsp" method="post" name="fmList">
+<input name="PAR_MENU_ID" type="hidden" value="1001"/>
+<input name="MENU_ID" type="hidden" value="100111"/>
+<input name="page" type="hidden" value="21"/>
+<input name="SEARCHKEY" type="hidden" value=""/>
+<input name="SEARCHVALUE" type="hidden" value=""/>
+<input name="CONT_SEQ" type="hidden" value=""/>
+<!-- table head above list -->
+<div id="tablehead">
+<p>Total <strong>345</strong> Articles</p>
+</div>
+<!-- /table head above list -->
+<table class="list" summary="Publication list.">
+<caption>Publication</caption>
+<colgroup>
+<col width="8%"/><col width="60%"/>
+<col width="16%"/><col width="8%"/><col width="8%"/>
+</colgroup>
+<thead>
+<tr>
+<th class="first" scope="col">No</th>
+<th scope="col">Subject</th>
+<th scope="col">Date</th>
+<th scope="col">File</th>
+<th scope="col">Hit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>145</td>
+<td class="left"><a href="ce71b22141c7f309b8fac12d9126b2dd">Korea Celebrates the 7th Annual World Autism Aware...</a></td>
+<td>2014-04-11</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>3719</td>
+</tr>
+<tr>
+<td>144</td>
+<td class="left"><a href="51fa305c8acd449c01802a9262b6f741">Korea Verified as Measles Free Nation by the World...</a></td>
+<td>2014-03-24</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>3833</td>
+</tr>
+<tr>
+<td>143</td>
+<td class="left"><a href="e85993da0b55e7f8fbacfcd0abf94cdf">Expensive Anticancer Drugs to be covered by Health...</a></td>
+<td>2014-03-24</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>4016</td>
+</tr>
+<tr>
+<td>142</td>
+<td class="left"><a href="cdeedfcd13c8be16a422f4c9d6f7e089">New Korea-made Medical Devices, including Ultrason...</a></td>
+<td>2014-03-20</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>3015</td>
+</tr>
+<tr>
+<td>141</td>
+<td class="left"><a href="b5057848e47a49938c3699381a7f1257">Korea Centers for Disease Control and Prevention (...</a></td>
+<td>2014-02-26</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>3415</td>
+</tr>
+<tr>
+<td>140</td>
+<td class="left"><a href="cff5dec19ce25e89ed2abd2c9ce153d4">2nd Pilot Program Regarding Comprehensive Nursing ...</a></td>
+<td>2014-02-18</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>3167</td>
+</tr>
+<tr>
+<td>139</td>
+<td class="left"><a href="dd90e5d4e970e66377124c59ab262d4b">Correction to Yonhap News’ Article on January 22nd...</a></td>
+<td>2014-01-27</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>3536</td>
+</tr>
+<tr>
+<td>138</td>
+<td class="left"><a href="3f48a21ec4143b2cc4726b61d7748b62">Manual on human rights to be published and distrib...</a></td>
+<td>2013-12-13</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>3470</td>
+</tr>
+<tr>
+<td>137</td>
+<td class="left"><a href="cc863cc4dbf8a5933c5db2751f4dd45a">Indicators of public health care at a glance</a></td>
+<td>2013-12-05</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>4388</td>
+</tr>
+<tr>
+<td>136</td>
+<td class="left"><a href="fe755d028408a008f46a2396e30caf3a">Three out of four are cremated</a></td>
+<td>2013-11-05</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>3740</td>
+</tr>
+</tbody>
+</table>
+<!-- /table:list -->
+<!-- paging -->
+<!-- paging -->
+<div id="paging">
+<a class="btn" href="ebfb6bc3f850eb20122e1021c6e4c0d1"><img alt="first page" src="../../images/eng/common/btn_firstpage.gif"/></a>
+<a class="btn" href="095823f82b64fc9c0ab92d552e48e0b3"><img alt="pre page" src="../../images/eng/common/btn_prepage.gif"/></a>
+<span title="present">21</span> 
+
+				<a href="e453adc41f3cb9391c5ad53958fa730b" title="22page">22</a> 
+
+				<a href="eb51d0a070686e3976ff35a308c35aa3" title="23page">23</a> 
+
+				<a href="440e558891873ed4da3985cd02de3111" title="24page">24</a> 
+
+				<a href="bb0bcd8b77ab444163ce7c8e3c476cfb" title="25page">25</a> 
+
+				<a href="3be21c33e17414591d7e67af562780a2" title="26page">26</a> 
+
+				<a href="1ea48dee797ce1561e0c4d128b33e9ad" title="27page">27</a> 
+
+				<a href="af3e73abd81f610ec472672588b594a7" title="28page">28</a> 
+
+				<a href="4901735d7916816f471c26a82250ffa8" title="29page">29</a> 
+
+				<a href="c14fd087ea2f0e882bb6ab2cf7e848bb" title="30page">30</a> 
+
+				<a class="btn" href="d8fa6dc92b0e715f36bf7391a89ff632"><img alt="next page" src="../../images/eng/common/btn_nextpage.gif"/></a>
+<a class="btn" href="2d7e34ab1d5e2a71b1530de73fd24299"><img alt="last page" src="../../images/eng/common/btn_lastpage.gif"/></a>
+</div>
+<!-- /paging -->
+<!-- /paging -->
+</form>
+<!-- DB ¿¡¼­ contents µ¥ÀÌÅÍ¸¦ °¡Á®¿Í¼­ »Ñ·ÁÁØ´Ù. -->
+</div>
+</div>
+<!-- /contents -->
+</div>
+</div>
+<!-- footer -->
+<!-- footer -->
+<div id="footer">
+<div class="foot">
+<p class="flogo"><img alt="ministry of health and welfare" src="../../images/eng/common/flogo.gif"/></p>
+<div class="finfo">
+<address><img alt="13, Doum 4-ro, Sejong, (30113) Korea ¤ÓCALL CENTER 82-129" src="../../images/eng/common/foot_address.gif"/></address>
+<p class="copyright"><img alt="Copyright(C) By MOHW. All rights reserved." src="../../images/eng/common/foot_copyright.gif"/></p>
+</div>
+<!-- ÀÏÀÏ¹æ¹®ÀÚ¼ö Ãß°¡ -->
+<p class="visits">Daily visits : <strong>198</strong></p>
+<!--// ÀÏÀÏ¹æ¹®ÀÚ¼ö Ãß°¡ -->
+</div>
+</div>
+<!-- //footer -->
+</div>
+<div id="returntotop"><a href="#skip-navi">go to the top</a></div>
+<script type="text/javascript">
+//<![CDATA[
+function jsOpenSite(formEl) {	
+	var errorMessage = null;
+	var objFocus = null;
+	if (formEl.sitelink.value.length == 0) {
+		errorMessage = "please! select a site to move!";
+		objFocus = formEl.sitelink;
+	} 
+	if(errorMessage != null) {
+		alert(errorMessage);
+		objFocus.focus();
+		return false;
+	}
+	return true;
+}
+//]]>	
+</script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101800795-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- /footer -->
+</div>
+</body>
+</html>

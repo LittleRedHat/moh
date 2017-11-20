@@ -1,0 +1,759 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Ministry of Health &amp; Welfare : ABOUT MOHW &gt; Press Release View Content</title>
+<link href="../../css/eng/mwf_eng.css" rel="stylesheet" type="text/css"/>
+<script src="../../js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="../../js/common.js" type="text/javascript"></script>
+<script src="../../js/mw_eng.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+//<![CDATA[
+
+
+
+	// ¸®½ºÆ®·Î ÀÌµ¿
+
+	function jsList()
+
+	{
+
+		var form = document.fmList;
+
+		form.action = "ssg0111ls.jsp";
+
+		form.submit();
+
+	}
+
+
+
+	//³»¿ë º¸±â
+
+	function goView(seq)
+
+	{
+
+		var form = document.fmView;
+
+		form.CONT_SEQ.value = seq;
+
+		form.action = "ssg0111vw.jsp";
+
+		form.submit();
+
+	}
+
+
+
+	//ÇÏ´Ü ¸®½ºÆ® ÆäÀÌÁö ÀÌµ¿
+
+	function goPage( page)
+
+	{
+
+		var form = document.fmList;
+
+		form.page.value = page;
+
+		form.submit();
+
+	}
+
+
+
+	//ÆÄÀÏ ´Ù¿î·Îµå.
+
+	function fileDownLoad(fileSeq)
+
+	{
+
+		if( confirm( "Do you wish to download now?") == true ) {
+
+			var form = document.fmView;
+
+			form.FILE_SEQ.value = fileSeq;
+
+			form.action = "/front_new/modules/download.jsp";
+
+			form.submit();
+
+		}
+
+	}
+
+//]]>
+
+</script>
+</head>
+<body>
+<!-- ¹Ù·Î°¡±â ¸µÅ© -->
+<p id="skip-navi">
+<a href="#contents">go to the contents</a>
+<a href="#snb">go to the menu</a>
+</p>
+<!-- //¹Ù·Î°¡±â ¸µÅ© -->
+<!-- header -->
+<div id="wrap">
+<!-- head -->
+<div class="sbHead" id="head">
+<!-- header -->
+<div id="header">
+<!-- ·Î°í -->
+<h1 class="logo"><a href="../261f58801c1da21d0b6f7021b30b648b"><img alt="ministry of health and welfare" src="../../images/eng/common/logo.gif"/></a></h1>
+<div class="kor_sym">
+<a href="../../../moi.go.kr/eng/sub/a03/nationalSymbol/d5a2e22490af7d4414516807b47a6064" target="_blank" title="new browser"><img alt="National Symbols of the Republic of Korea" src="../../images/eng/common/kor_sym_eng.gif"/></a>
+</div>
+<!-- function -->
+<div class="function">
+<!-- [Funciton] - ÆùÆ®»çÀÌÁî -->
+<div class="unit">
+<div class="ft_size">
+<button class="plus" onclick="fontSizeWrap.btnPlus();" type="button"><span class="hide">expand</span></button>
+<button class="minus" onclick="fontSizeWrap.btnMinus();" type="button"><span class="hide">reduce</span></button>
+<span class="Font_Size"><span class="hide">Font Size</span></span>
+</div>
+<script type="text/javascript">var fontSizeWrap = new fontSize();</script>
+<!-- //[Funciton] - ÆùÆ®»çÀÌÁî -->
+<!-- ¾ð¾îº° ¸µÅ© -->
+<ul class="global_language">
+<li class="mobile"><a href="../../m_eng/50b06ecdc2a14f90913d780c3460fca4" target="_blank" title="new browser"><span class="hide">Mobile</span></a></li>
+<li class="Korean"><a href="../../front_new/647a6a76a15a5a8bfc6d5f73d0d9d4d1" target="_blank" title="new browser"><span class="hide">Korean</span></a></li>
+<li class="sitemap"><a href="../cs/38f03257ef34df8e601ed2e794b4f84f"><span class="hide">sitemap</span></a></li>
+<li class="a-z"><a href="../cs/1001c96bb6754f09ed925f7b6d593bf7"><span class="hide">A-Z Index</span></a></li>
+</ul>
+<!-- //¾ð¾îº° ¸µÅ© -->
+<!-- ¸Þ´º¼³Á¤ -->
+<div class="mnsetup">
+<div class="btnsetup"><a class="btnms" href="#msetup_layer" id="svcmore_h"><span class="hide">my menu</span></a></div>
+<div class="msetup_layer" id="msetup_layer">
+<h2>
+<img alt="Menu setup" src="../../images/eng/main/musetup.gif"/>
+</h2>
+<div class="mnsetup_cont">
+<ul class="list" id="fmenu"><li>My menu list</li></ul>
+</div>
+<div class="cg_contwrap">
+<div class="cg_cont">
+<!-- ÀüÃ¼¸ñ·Ï -->
+<ul class="ms_category">
+<li>
+<input class="input-check" id="mw_100103" name="setmenu" type="checkbox" value="/eng/sg/ssg0103mn.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100103|100103|Organization"/>
+<label for="mw_100103">Organization</label>
+</li>
+<li>
+<input class="input-check" id="mw_100113" name="setmenu" type="checkbox" value="/eng/sg/ssg0101mn.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100113|100113|Contact Us"/>
+<label for="mw_100113">Contact Us</label>
+</li>
+<li>
+<input class="input-check" id="mw_100105" name="setmenu" type="checkbox" value="/eng/sg/ssg0105mn.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100105|100105|Minister's Profile"/>
+<label for="mw_100105">Minister's Profile</label>
+</li>
+<li>
+<input class="input-check" id="mw_100111" name="setmenu" type="checkbox" value="/eng/sg/ssg0111ls.jsp?PAR_MENU_ID=1001&amp;MENU_ID=100111|100111|Press Release"/>
+<label for="mw_100111">Press Release</label>
+</li>
+<li>
+<input class="input-check" id="mw_10031801" name="setmenu" type="checkbox" value="/eng/jc/sjc0101mn.jsp?PAR_MENU_ID=1003&amp;MENU_ID=10031801|10031801|Policies"/>
+<label for="mw_10031801">Policies</label>
+</li>
+<li>
+<input class="input-check" id="mw_100408" name="setmenu" type="checkbox" value="/eng/cs/scs0301mn.jsp?PAR_MENU_ID=1004&amp;MENU_ID=100408|100408|RSS"/>
+<label for="mw_100408">RSS</label>
+</li>
+<li>
+<input class="input-check" id="mw_100410" name="setmenu" type="checkbox" value="/eng/cs/scs0301mn.jsp?PAR_MENU_ID=1004&amp;MENU_ID=100410|100410|Privacy Guideline"/>
+<label for="mw_100410">Privacy Guideline</label>
+</li>
+<li>
+<input class="input-check" id="mw_100404" name="setmenu" type="checkbox" value="/eng/cs/scs0301mn.jsp?PAR_MENU_ID=1004&amp;MENU_ID=100404|100404|Users Guide"/>
+<label for="mw_100404">Users Guide</label>
+</li>
+</ul>
+<!-- //ÀüÃ¼¸ñ·Ï -->
+</div>
+<!-- ¹öÆ° Á¤·Ä -->
+<div class="btn_msetup">
+<p class="left"><input alt="default" class="input-image" id="mymenu_default" src="/images/eng/btn/btn_base.gif" type="image"/></p>
+<span class="cg_msg">User can personalize the website</span>
+<p class="center">
+<input alt="confirm" class="input-image" id="mymenu_set" src="/images/eng/btn/btn_confirm.gif" type="image"/>
+<!--a href="#" id="mymenu_set" ><img src="/images/front/btn/btn_confirm.gif" alt="È®ÀÎ" /></a-->
+<input alt="cancel" class="input-image" id="mymenu_cancel" src="/images/eng/btn/btn_cancel.gif" type="image"/>
+</p>
+<p class="right"><a href="../cs/38f03257ef34df8e601ed2e794b4f84f">sitemap</a></p>
+</div>
+<!-- //¹öÆ° Á¤·Ä -->
+</div>
+<p class="btn-more"><button class="msbtn_close" id="msbtn_close" type="button"><span class="hide">close</span></button></p>
+</div>
+</div>
+<!-- //¸Þ´º¼³Á¤ -->
+<!-- °Ë»ö -->
+<!-- 
+
+					<div class="search">
+
+						<form method="post" name="fmSearch" action="/eng/cs/scs0401ls.jsp" onsubmit="return searchCommon(this)" >
+
+							<input type="hidden" name="PAR_MENU_ID" value="1004" />
+
+							<input type="hidden" name="MENU_ID" value="100406" />
+
+							<input type="hidden" name="SEARCHKEY" value="TITLE" />				
+
+							<fieldset>
+
+								<legend>search</legend>
+
+								<label for="SEARCHVALUE" class="hide">search value</label>
+
+								<input type="text" id="SEARCHVALUE" name="SEARCHVALUE" class="input-text" />
+
+								<input type="image" class="input-image" src="/images/eng/common/tl_btnsearch.gif" alt="search" />
+
+							</fieldset>
+
+						</form>
+
+					</div>
+
+					 -->
+<!-- //°Ë»ö -->
+</div><!-- //unit -->
+</div>
+<!-- //function -->
+</div>
+<!-- //header -->
+</div>
+<!-- //head -->
+<hr/>
+<!-- spot main -->
+<div id="spot-sub">
+<img alt="A life-long friend who stands by the public" src="../../images/front_eng/sg/img_head_sg.jpg"/>
+</div>
+<!-- //spot main -->
+<hr/>
+<!-- container -->
+<div class="clear" id="container">
+<div id="subwrap">
+<!-- snb -->
+<div id="snb">
+<h2><a href="616feca8de871f8a1f1e040342b5d550"><img alt="About MW" src="../../images/front_eng/title/h2_am.gif"/></a></h2>
+<ul id="snbMenu1">
+<li><a href="616feca8de871f8a1f1e040342b5d550"><img alt="Vision &amp; Mission" src="../../images/front_eng/title/left_am01.gif"/></a>
+</li>
+<li><a href="93dae7d73a99735630654fc2fb46a9eb"><img alt="Organization" src="../../images/front_eng/title/left_am02.gif"/></a>
+</li>
+<li><a href="482124899dc6a43227599ea28a921fea"><img alt="Contact Us" src="../../images/front_eng/title/left_am03.gif"/></a>
+</li>
+<li><a href="2d75b746f82cbae41316bd3da4ceb30d"><img alt="Minister¡¯s Profile" src="../../images/front_eng/title/left_am04.gif"/></a>
+</li>
+<li><a href="a2fde158a68020769e116fe2815d95aa"><img alt="Vice Minister¡¯s Profile" src="../../images/front_eng/title/left_am05.gif"/></a>
+</li>
+<li><a href="8c6914a853d28a0cf2ce417c6d5fe3ce"><img alt="Past Ministers &amp; Vice Ministers" src="../../images/front_eng/title/left_am06.gif"/></a>
+</li>
+<li><a href="a79fdae6ffae612a0b5f784645afb1db"><img alt="Location" src="../../images/front_eng/title/left_am07.gif"/></a>
+</li>
+<li class="on"><a href="76b19fd6a92fcb216e55a4e9dea9a4c8"><img alt="Press Release" src="../../images/front_eng/title/left_am08_over.gif"/></a>
+</li>
+<li><a href="ea8a1ea6f8dcdcb2b03b8ebc89df5ef6"><img alt="129 Call Center" src="../../images/front_eng/title/left_am09.gif"/></a>
+</li>
+<li><a href="../../../www.epeople.go.kr/jsp/user/on/eng/ebb342dee28c17242d927d0b1019800f" target="_blank"><img alt="Online Petition" src="../../images/front_eng/title/left_am10.gif"/></a>
+</li>
+</ul>
+<h2><a href="../jc/f397eab66fb162470b191bcc18dfac4f"><img alt="Policies" src="../../images/front_eng/title/h2_pl.gif"/></a></h2>
+<ul id="snbMenu2">
+<li class="submenu"><img alt="Enhancement of Customized Welfare Services by Life-Cycle Phase" src="../../images/front_new/title/left_pl100321.gif"/>
+<ul>
+<li><a href="../jc/f397eab66fb162470b191bcc18dfac4f"><img alt="Reinforcement of support for income growth and work opportunities of low-income people" src="../../images/front_new/title/left_pl10032101.gif"/></a></li>
+<li><a href="../jc/6d963af417c35f2c3575a2f47d93315d"><img alt="Welfare services reaching out to people and improvement of public perception" src="../../images/front_new/title/left_pl10032102.gif"/></a></li>
+<li><a href="../jc/7c117d987132de318dd869c7e15cd6d1"><img alt="Promotion of rights and interests of children, the disabled, the elderly, etc." src="../../images/front_new/title/left_pl10032103.gif"/></a></li>
+<li><a href="../jc/3cd7dc5b01d534d90eba055e35cdf386"><img alt="Reduction of burden of medical expenses, and the reorganization of the system for determining health insurance premiums" src="../../images/front_new/title/left_pl10032104.gif"/></a></li>
+</ul>
+</li>
+<li class="submenu"><img alt="Establishment of Health Insurance System centered on People" src="../../images/front_new/title/left_pl100322.gif"/>
+<ul>
+<li><a href="../jc/6698fa46cb8d35f0f8aeb6f289ab2ce9"><img alt="Reinforcement of patient-oriented medical services" src="../../images/front_new/title/left_pl10032201.gif"/></a></li>
+<li><a href="../jc/6194a5e0555dab84754814c541f09b27"><img alt="Strengthening of essential and public health care services and systematic response to infectious diseases" src="../../images/front_new/title/left_pl10032202.gif"/></a></li>
+<li><a href="../jc/7603054a50c83c708da6d6702afe3d14"><img alt="Reinforcement of Preventive Health Care" src="../../images/front_new/title/left_pl10032203.gif"/></a></li>
+<li><a href="../jc/5975190b9def38149afd3ad48132162f"><img alt="Enhancement of healthcare industry performance and job creation" src="../../images/front_new/title/left_pl10032204.gif"/></a></li>
+</ul>
+</li>
+<li class="submenu"><img alt="Strengthening Responses to Demographic Crisis" src="../../images/front_new/title/left_pl100323.gif"/>
+<ul>
+<li><a href="../jc/8334fe91b7312eb840b99581e90bc297"><img alt="Establishment of a response system for coping with low birthrate" src="../../images/front_new/title/left_pl10032301.gif"/></a></li>
+<li><a href="../jc/687f9bcd11741aea5264c8392dc17ffc"><img alt="Improvement of a system for supporting childbirth and parenting" src="../../images/front_new/title/left_pl10032302.gif"/></a></li>
+<li><a href="../jc/d59e41ec8156d3ed1193b5f64629cf85"><img alt="Enhancement of preparation for aging society" src="../../images/front_new/title/left_pl10032303.gif"/></a></li>
+</ul>
+</li>
+</ul>
+<h2><a href="../cs/b64cc4894874ba0eb4af154d245908a9"><img alt="Help" src="../../images/front_eng/title/h2_hp.gif"/></a></h2>
+<ul id="snbMenu3">
+<li><a href="../cs/b64cc4894874ba0eb4af154d245908a9"><img alt="Users Guide" src="../../images/front_eng/title/left_hp01.gif"/></a>
+</li>
+<li><a href="../cs/81e6dbd0ed113665170a29b899ab0c21"><img alt="Privacy Guideline" src="../../images/front_eng/title/left_hp04.gif"/></a>
+</li>
+<li><a href="../cs/bab2f9d80d5980695b6081cb22ceb64b"><img alt="RSS" src="../../images/front_eng/title/left_hp03.gif"/></a>
+</li>
+<li><a href="../cs/38f03257ef34df8e601ed2e794b4f84f"><img alt="Sitemap" src="../../images/front_eng/title/left_hp05.gif"/></a>
+</li>
+<li><a href="../cs/1001c96bb6754f09ed925f7b6d593bf7"><img alt="A-Z Index" src="../../images/front_eng/title/left_hp06.gif"/></a>
+</li>
+</ul>
+</div>
+<script src="../../js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+			$('.submenu').last().find('ul').attr('class', 'noline');
+			imgMenuOver("snb");
+			
+			$(function(){
+				$(".on").parents('ul').slideDown();
+			});	
+			
+			$(".submenu").click(function(){
+				$(".submenu").not($(this)).children('ul').slideUp();
+				$(this).children('ul').slideToggle();
+			});
+		</script>
+<!-- //snb -->
+<!-- contents -->
+<div id="contents">
+<!-- mnvisual - ÄÁÅÙÃ÷ Å¸ÀÌÆ² -->
+<div class="mnvisual">
+<!-- h2 - Å¸ÀÌÆ² -->
+<!-- //h2 - Å¸ÀÌÆ² -->
+<!-- location - ÁÖ¼Ò -->
+<div id="location"> <a class="home" href="../261f58801c1da21d0b6f7021b30b648b">HOME</a> &gt; <a href="616feca8de871f8a1f1e040342b5d550">ABOUT MOHW</a> &gt; <span class="here">Press Release</span></div>
+<!-- //location - ÁÖ¼Ò -->
+</div>
+<!-- //mnvisual - ÄÁÅÙÃ÷ Å¸ÀÌÆ² -->
+<!-- content-area -->
+<div class="content-area">
+<!-- DB ¿¡¼­ contents µ¥ÀÌÅÍ¸¦ °¡Á®¿Í¼­ »Ñ·ÁÁØ´Ù. -->
+<!-- board -->
+<form action="ssg0111vw.jsp" method="post" name="fmView">
+<input name="PAR_MENU_ID" type="hidden" value="1001"/>
+<input name="MENU_ID" type="hidden" value="100111"/>
+<input name="page" type="hidden" value="14"/>
+<input name="CONT_SEQ" type="hidden" value="323678"/>
+<input name="MENU_ID" type="hidden" value="100111"/>
+<input name="FILE_SEQ" type="hidden" value=""/>
+<input name="SEARCHKEY" type="hidden" value=""/>
+<input name="SEARCHVALUE" type="hidden" value=""/>
+<!-- table:view -->
+<table class="view" summary="ABOUT MOHW &gt; Press Release detail.">
+<caption>ABOUT MOHW &gt; Press Release</caption>
+<colgroup>
+<col width="12%"/><col width="38%"/><col width="12%"/><col width="38%"/>
+</colgroup>
+<tbody>
+<tr>
+<th scope="row">Subject</th>
+<td colspan="3">Full Disclosure of Medical Facilities Exposed to MERS</td>
+</tr>
+<tr>
+<th scope="row">Date</th>
+<td>2015-06-23</td>
+<th scope="row">Hit</th>
+<td>1724</td>
+</tr>
+<tr>
+<th scope="row">Contents</th>
+<td class="view" colspan="3"><p align="center" class="a" style="text-align: center; line-height: 107%; margin: 0cm 0cm 8pt">
+<b style="mso-bidi-font-weight: normal"><u><span lang="EN-US" style="font-family: 'times new roman', 'serif'; background: white; mso-fareast-font-family: hyÇìµå¶óÀÎm"><o:p><span style="text-decoration: none"><font color="#000000" face="Times New Roman" size="2"> </font></span></o:p></span></u></b></p>
+<p align="center" class="a" style="text-align: center; line-height: 107%; margin: 0cm 0cm 8pt">
+<b style="mso-bidi-font-weight: normal"><u><span lang="EN-US" style="line-height: 107%; font-family: 'times new roman', 'serif'; background: white; font-size: 14pt; mso-fareast-font-family: hyÇìµå¶óÀÎm; mso-font-width: 90%"><font color="#000000"><font face="Times New Roman">The List of Hospitals Exposed to MERS-CoV is Disclosed to the Public <o:p></o:p></font></font></span></u></b></p>
+<p align="center" class="MsoListParagraph" style="text-align: center; text-indent: -18pt; margin: 0cm 0cm 10pt 38pt; background: white; vertical-align: baseline; word-break: keep-all; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo1">
+<font face="Times New Roman"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; letter-spacing: -0.5pt; color: black; font-size: 12pt; mso-bidi-font-weight: bold; mso-fareast-font-family: 'times new roman'; mso-font-kerning: 0pt"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">                    </span></span></span><b><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; background: white; letter-spacing: -0.5pt; color: black; font-size: 12pt; mso-fareast-font-family: ÇÑ¾çÁß°íµñ; mso-font-kerning: 0pt">Please do not visit hospitals but call the MERS-CoV emergency hotline when you develop MERS-CoV symptoms –<o:p></o:p></span></b></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt"><font face="Times New Roman"><font color="#000000">The government decided to disclose the information of all medical facilities exposed to MERS-CoV including the dates and duration of MERS-CoV case exposure. The names of the medical facilities as well as the duration of MERS-CoV patients’ stay have been released. <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt"><font face="Times New Roman"><font color="#000000">After an intensive discussion with Seoul Metropolitan City Government, Daejeon Metropolitan City Government and Gyeonggi Provincial Government on MERS-CoV response measures, including whether or not to disclose the names of medical facilities exposed to MERS-CoV, and areas for cooperation to contain the virus, the Ministry of Health and Welfare held a joint press briefing to inform the outcome of the meeting.<span style="mso-spacerun: yes">  </span><o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt"><font face="Times New Roman"><font color="#000000">The Ministry of Health and Welfare announced that as of June 7, 2015, the number of the confirmed cases of MERS-CoV infection stood at 64, while 24 medical facilities were exposed to the virus including 18 medical facilities where the MERS-CoV cases made a visit en route. <o:p></o:p></font></font></span></p>
+<p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 0cm 10pt 38pt; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo1">
+<font face="Times New Roman"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; mso-fareast-font-family: 'times new roman'; mso-bidi-font-size: 10.0pt"><span style="mso-list: ignore"><font size="2">-</font><span style="font: 7pt 'times new roman'">          </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt">Hospitals where numerous confirmed MERS-CoV cases have been reported are Pyeongtaek Saint Mary’s Hospital (37 cases), Samsung Medical Center (17 cases), Dae-Chung Hospital (3 cases) and Konyang University Hospital (5 cases).</span><span lang="EN-US" style="line-height: 115%; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+<p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 0cm 10pt 38pt; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo1">
+<font face="Times New Roman"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; mso-fareast-font-family: 'times new roman'; mso-bidi-font-size: 10.0pt"><span style="mso-list: ignore"><font size="2">-</font><span style="font: 7pt 'times new roman'">          </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt">Two clinics (365 Seoul Open Clinic and Asan Seoul Clinic) reported a single case of MERS-CoV infection respectively, while the 18 medical facilities are where patients visited before the final hospital where they were tested positive for MERS-CoV. The epidemiologic study and contact tracing on these 18 medical facilities found no infection, indicating that these facilities pose no risk of infection and thus they are safe to use. </span><span lang="EN-US" style="line-height: 115%; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt 38pt">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman"><font color="#000000">* See the Appendix for the full list of medical facilities exposed to MERS-CoV.<o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman"><font color="#000000">The Ministry of Health and Welfare explained that such a disclosure of hospital names is to track down with the help of the public the suspected MERS-CoV cases that might have been missed during contact tracing as the virus infection takes on a new pattern. The government also aims to contain hospital infection in order to eradicate the public concern of MERS-CoV infection.<o:p></o:p></font></font></span></p>
+<p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 0cm 10pt 38pt; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo1">
+<font face="Times New Roman"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-fareast-font-family: 'times new roman'; mso-bidi-font-size: 10.0pt"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">          </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-bidi-font-size: 10.0pt">To date, the Ministry of Health and Welfare has been concerned about the possible negative effects that the disclosure of the names of MERS-CoV stricken medical facilities might cause, and thus it had focused on containment measures through intensive contact tracing and by quarantining suspected cases at home or at medical facilities, and testing those who had developed symptoms. <o:p></o:p></span></font></font></p>
+<p class="MsoListParagraph" style="margin: 0cm 0cm 10pt 38pt; mso-para-margin-left: 0gd">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman"><font color="#000000">The Ministry judged that disclosing the names of MERS-CoV exposed medical facilities would bring about more damages than benefits, including the public’s avoidance of those disclosed medical facilities, and consequent reaction by other medical facilities to avoid treatment of patients with similar MERS-CoV symptoms, the possible chaos in the community where such facilities are located, as well as sluggish local economies. <o:p></o:p></font></font></span></p>
+<p class="MsoListParagraph" style="margin: 0cm 0cm 10pt 38pt; mso-para-margin-left: 0gd">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman"><font color="#000000">The list of hospitals where MERS-CoV cases were detected as well as the personal information of confirmed MERS-CoV patients has been shared within the medical community to ensure safe treatment of patients. <o:p></o:p></font></font></span></p>
+<p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 0cm 10pt 38pt; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo1">
+<font face="Times New Roman"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-fareast-font-family: 'times new roman'; mso-bidi-font-size: 10.0pt"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">          </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-bidi-font-size: 10.0pt">Although contact tracing of those who were in close contact with MERS-CoV cases was carried out thoroughly, the number of confirmed MERS-CoV cases continued to grow as infection from hospital served as a key element of the virus spread.<o:p></o:p></span></font></font></p>
+<p class="MsoListParagraph" style="margin: 0cm 0cm 10pt 38pt; mso-para-margin-left: 0gd">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman"><font color="#000000">Also since some of suspected MERS-CoV cases were missed out during the course of contact tracing, the government came to the conclusion that intensive contact tracing would not be sufficient to contain the further spread of the virus.<span style="mso-spacerun: yes">  </span><span style="mso-spacerun: yes"> </span><o:p></o:p></font></font></span></p>
+<p class="MsoListParagraph" style="margin: 0cm 0cm 10pt 38pt; mso-para-margin-left: 0gd">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman"><font color="#000000">In addition, the growing number of confirmed MERS-CoV cases aggravated the fear of the public and the demand for information disclosure grew stronger. <o:p></o:p></font></font></span></p>
+<p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 0cm 10pt 38pt; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo1">
+<font face="Times New Roman"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-fareast-font-family: 'times new roman'; mso-bidi-font-size: 10.0pt"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">          </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-bidi-font-size: 10.0pt">As a result, the Ministry of Health and Welfare decided to expand the scope of screening by identifying those missed out from earlier contact tracing with the voluntary cooperation from the public. Together with the existing contact tracing approach, the Ministry expects to fully contain the virus from further spreading. <o:p></o:p></span></font></font></p>
+<p class="MsoListParagraph" style="margin: 0cm 0cm 10pt 38pt; mso-para-margin-left: 0gd">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman"><font color="#000000">In addition, it is necessary to disclose information in a more transparent manner to alleviate public concern. <o:p></o:p></font></font></span></p>
+<p class="MsoListParagraph" style="margin: 0cm 0cm 10pt 38pt; mso-para-margin-left: 0gd">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman"><font color="#000000">At the private-public emergency meeting on MERS-CoV on June 3<sup>rd</sup>, the president ordered a more transparent information disclosure and instructed to build up a system of additional contact tracing given the possibility of missing out suspected MERS-CoV cases. <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt">
+<font face="Times New Roman"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-bidi-font-size: 10.0pt">The Ministry of Health and Welfare strongly advised anyone who had visited any of the listed medical facilities, including Pyeongtaek Saint Mary’s Hospital (May 15-29), Samsung Medical Center (May 27-31), </span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt">Dae-Chung Hospital (May 22-30) and Konyang University Hospital (May28-30) </span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-bidi-font-size: 10.0pt">during high risk period,</span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt"> stay at home and refrain from going to any me</span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-bidi-font-size: 10.0pt">dical facility when MERS-CoV symptoms show up.<o:p></o:p></span></font></font></p>
+<p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 0cm 10pt 38pt; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo1">
+<font face="Times New Roman"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-fareast-font-family: 'times new roman'; mso-bidi-font-size: 10.0pt"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">          </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-bidi-font-size: 10.0pt">They are strongly advised to contact Gyeonggi-do MERS-CoV hotline (031-120), Seoul MERS-CoV hotline (120), or Daejeon MERS-CoV hotline (042-120) depending on their location or report to the city or provincial government via online. <o:p></o:p></span></font></font></p>
+<p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 0cm 10pt 38pt; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo1">
+<font color="#000000"><font face="Times New Roman"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-fareast-font-family: 'times new roman'; mso-bidi-font-size: 10.0pt"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">          </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-bidi-font-size: 10.0pt">The government will monitor them in a same way it did for all of those who visited Pyeongtaek Saint Mary’s Hospital on June 5. <o:p></o:p></span></font></font></p>
+<p>
+	 </p>
+<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-bottom: medium none; border-left: medium none; margin: auto auto auto 5.1pt; width: 16cm; border-collapse: collapse; border-top: medium none; border-right: medium none; mso-border-alt: solid black .25pt; mso-yfti-tbllook: 1184" width="605">
+<tbody>
+<tr style="height: 31.2pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+<td style="border-bottom: black 1pt solid; border-left: #7f7f7f 1.5pt solid; padding-bottom: 1.4pt; padding-left: 5.1pt; width: 74.25pt; padding-right: 5.1pt; background: #d8d8d8; height: 31.2pt; border-top: #7f7f7f 1.5pt solid; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-left-alt: #7f7f7f 1.5pt; mso-border-top-alt: #7f7f7f 1.5pt; mso-border-bottom-alt: black .25pt; mso-border-right-alt: black .25pt; mso-border-style-alt: solid" width="99">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 130%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">Region</span></b><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #000000; padding-bottom: 1.4pt; padding-left: 5.1pt; width: 91.6pt; padding-right: 5.1pt; background: #d8d8d8; height: 31.2pt; border-top: #7f7f7f 1.5pt solid; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid #7f7f7f 1.5pt" width="122">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 130%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">Name of Medical Facility</span></b><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #000000; padding-bottom: 1.4pt; padding-left: 5.1pt; width: 79.9pt; padding-right: 5.1pt; background: #d8d8d8; height: 31.2pt; border-top: #7f7f7f 1.5pt solid; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid #7f7f7f 1.5pt" width="107">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 130%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">High risk Period</span></b><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td colspan="2" style="border-bottom: black 1pt solid; border-left: #000000; padding-bottom: 1.4pt; padding-left: 5.1pt; width: 117.4pt; padding-right: 5.1pt; background: #d8d8d8; height: 31.2pt; border-top: #7f7f7f 1.5pt solid; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid #7f7f7f 1.5pt" width="157">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 130%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">MERS-CoV Hotline</span></b><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #000000; padding-bottom: 1.4pt; padding-left: 5.1pt; width: 90.45pt; padding-right: 5.1pt; background: #d8d8d8; height: 31.2pt; border-top: #7f7f7f 1.5pt solid; border-right: #7f7f7f 1.5pt solid; padding-top: 1.4pt; mso-border-left-alt: black .25pt; mso-border-top-alt: #7f7f7f 1.5pt; mso-border-bottom-alt: black .25pt; mso-border-right-alt: #7f7f7f 1.5pt; mso-border-style-alt: solid" width="121">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 130%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><b><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">Website</span></b><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+<tr style="height: 26.9pt; mso-yfti-irow: 1">
+<td style="border-bottom: black 1pt solid; border-left: #7f7f7f 1.5pt solid; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 74.25pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid #7f7f7f 1.5pt; mso-border-top-alt: solid black .25pt" width="99">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 110%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 110%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">Seoul</span><span lang="EN-US" style="line-height: 110%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #000000; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 91.6pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid black .25pt" width="122">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 110%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 110%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">Samsung Medical Center</span><span lang="EN-US" style="line-height: 110%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #000000; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 79.9pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid black .25pt" width="107">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 130%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">5. 27 ~ 31</span><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #000000; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 53.4pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid black .25pt" width="71">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 130%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">Seoul</span><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #000000; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 64pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid black .25pt" width="85">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 130%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-bidi-font-weight: bold; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">02-120</span><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td rowspan="4" style="border-bottom: #7f7f7f 1.5pt solid; border-left: #000000; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 90.45pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: #7f7f7f 1.5pt solid; padding-top: 1.4pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid black .25pt" width="121">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 130%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">Websites of Seoul City, Daejeon City and Gyeonggi Provincial Government</span><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+<tr style="height: 26.9pt; mso-yfti-irow: 2">
+<td style="border-bottom: black 1pt solid; border-left: #7f7f7f 1.5pt solid; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 74.25pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid #7f7f7f 1.5pt; mso-border-top-alt: solid black .25pt" width="99">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 110%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 110%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">Daejeon</span><span lang="EN-US" style="line-height: 110%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #000000; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 91.6pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid black .25pt" width="122">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 110%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 110%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">Dae-Chung Hospital</span><span lang="EN-US" style="line-height: 110%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #000000; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 79.9pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid black .25pt" width="107">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 130%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">5. 22 ~ 30</span><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td rowspan="2" style="border-bottom: black 1pt solid; border-left: #000000; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 53.4pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid black .25pt" width="71">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 130%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">Daejeon</span><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td rowspan="2" style="border-bottom: black 1pt solid; border-left: #000000; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 64pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid black .25pt" width="85">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 130%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-bidi-font-weight: bold; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">042-120</span><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+<tr style="height: 26.9pt; mso-yfti-irow: 3">
+<td style="border-bottom: black 1pt solid; border-left: #7f7f7f 1.5pt solid; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 74.25pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid #7f7f7f 1.5pt; mso-border-top-alt: solid black .25pt" width="99">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 110%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 110%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">Daejeon</span><span lang="EN-US" style="line-height: 110%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #000000; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 91.6pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid black .25pt" width="122">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 110%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 110%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">Konyang University Hospital</span><span lang="EN-US" style="line-height: 110%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: black 1pt solid; border-left: #000000; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 79.9pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid black .25pt" width="107">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 130%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">5. 28 ~ 30</span><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+<tr style="height: 26.9pt; mso-yfti-irow: 4; mso-yfti-lastrow: yes">
+<td style="border-bottom: #7f7f7f 1.5pt solid; border-left: #7f7f7f 1.5pt solid; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 74.25pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-left-alt: #7f7f7f 1.5pt; mso-border-top-alt: black .25pt; mso-border-bottom-alt: #7f7f7f 1.5pt; mso-border-right-alt: black .25pt; mso-border-style-alt: solid" width="99">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 110%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 110%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">Gyeonggi-do</span><span lang="EN-US" style="line-height: 110%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: #7f7f7f 1.5pt solid; border-left: #000000; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 91.6pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-bottom-alt: solid #7f7f7f 1.5pt" width="122">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 110%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 110%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">Pyeongtaek Saint Mary’s Hospital</span><span lang="EN-US" style="line-height: 110%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: #7f7f7f 1.5pt solid; border-left: #000000; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 79.9pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-bottom-alt: solid #7f7f7f 1.5pt" width="107">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 130%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">5. 15 ~ 29</span><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: #7f7f7f 1.5pt solid; border-left: #000000; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 53.4pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-bottom-alt: solid #7f7f7f 1.5pt" width="71">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 130%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">Gyeonggi</span><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+<td style="border-bottom: #7f7f7f 1.5pt solid; border-left: #000000; padding-bottom: 1.4pt; background-color: transparent; padding-left: 5.1pt; width: 64pt; padding-right: 5.1pt; height: 26.9pt; border-top: #000000; border-right: black 1pt solid; padding-top: 1.4pt; mso-border-alt: solid black .25pt; mso-border-left-alt: solid black .25pt; mso-border-top-alt: solid black .25pt; mso-border-bottom-alt: solid #7f7f7f 1.5pt" width="85">
+<p align="center" class="MsoNormal" style="text-align: center; line-height: 130%; margin: 0cm 0cm 0pt; layout-grid-mode: char; word-break: keep-all; mso-pagination: widow-orphan">
+<font size="2"><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-bidi-font-weight: bold; mso-fareast-font-family: ÈÞ¸Õ¸íÁ¶; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt">031-120</span><span lang="EN-US" style="line-height: 130%; font-family: 'arial', 'sans-serif'; color: black; mso-fareast-font-family: ¹ÙÅÁ; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><o:p></o:p></span></font></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoListParagraph" style="margin: 0cm 0cm 10pt 38pt; mso-para-margin-left: 0gd">
+<span lang="EN-US" style="line-height: 115%; font-family: 'arial', 'sans-serif'; mso-bidi-font-size: 12.0pt"><o:p><font color="#000000" size="2"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 4.7pt 10pt 8pt; mso-para-margin-left: .8gd; mso-para-margin-top: 0cm; mso-para-margin-right: .47gd; mso-para-margin-bottom: 10.0pt">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt"><font face="Times New Roman"><font color="#000000">* (Appendix) See ‘Information to the Public’ <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 4.7pt 10pt 8pt; mso-para-margin-left: .8gd; mso-para-margin-top: 0cm; mso-para-margin-right: .47gd; mso-para-margin-bottom: 10.0pt">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt"><font face="Times New Roman"><font color="#000000">Suspected MERS-CoV patients who contacted the hotline will be medically examined through an interview to check their health conditions and the history of listed medical facility visits.<o:p></o:p></font></font></span></p>
+<p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 4.7pt 10pt 38pt; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo1; mso-para-margin-top: 0cm; mso-para-margin-right: .47gd; mso-para-margin-bottom: 10.0pt">
+<font face="Times New Roman"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-fareast-font-family: 'times new roman'"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">          </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt">When they develop symptoms suspicious of MERS-CoV, a medical team will be dispatched to their homes and transfer them to temporary quarantined hospitals for tests and monitoring. <o:p></o:p></span></font></font></p>
+<p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 4.7pt 10pt 38pt; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo1; mso-para-margin-top: 0cm; mso-para-margin-right: .47gd; mso-para-margin-bottom: 10.0pt">
+<font face="Times New Roman"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-fareast-font-family: 'times new roman'"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">          </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt">However, when the symptoms do not show up, they will be asked to quarantine themselves at home* for 14 days since the medical facility visit. When they still do not develop any symptom during the isolation period, they will be released.<span style="mso-spacerun: yes">  </span><span style="mso-spacerun: yes"> </span><o:p></o:p></span></font></font></p>
+<p class="MsoListParagraph" style="text-indent: -28.3pt; margin: 0cm 4.7pt 10pt 2cm; mso-para-margin-left: 2.84gd; mso-para-margin-top: 0cm; mso-para-margin-right: .47gd; mso-para-margin-bottom: 10.0pt; mso-char-indent-count: -2.36">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt"><font face="Times New Roman"><font color="#000000">* Ex) When one visited the listed medical facility on May 15<sup>th</sup>, he/she will be home quarantined for 14 days from May 16<sup>th</sup> to 29<sup>th</sup> and be released on May 30<sup>th</sup> when no symptom (fever, cough etc.) shows up during the quarantined period.<span style="mso-spacerun: yes">  </span><o:p></o:p></font></font></span></p>
+<p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 4.7pt 10pt 38pt; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo1; mso-para-margin-top: 0cm; mso-para-margin-right: .47gd; mso-para-margin-bottom: 10.0pt">
+<font face="Times New Roman"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-fareast-font-family: 'times new roman'"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">          </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt">The same home quarantine will be applied to students and workers who visited the listed medical facilities and they will be advised not to go to school or to work for 14 days. The government will discuss with the respective education offices to ensure such home quarantine period does not affect the attendance record of the quarantined students.<span style="mso-spacerun: yes">   </span><o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 4.7pt 10pt 0cm; mso-para-margin-right: .47gd">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt"><font face="Times New Roman"><font color="#000000">The government stressed the importance of not visiting medical facilities arbitrarily but to wait for the medical team at home after calling the MERS-CoV hotline if one had visited the listed medical facilities. <o:p></o:p></font></font></span></p>
+<p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 4.7pt 10pt 38pt; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo1; mso-para-margin-top: 0cm; mso-para-margin-right: .47gd; mso-para-margin-bottom: 10.0pt">
+<font face="Times New Roman"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-fareast-font-family: 'times new roman'"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">          </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt">The government expects the public to act wisely and with caution as there still is a possibility of spreading the infection to other hospitals. <o:p></o:p></span></font></font></p>
+<p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 4.7pt 10pt 38pt; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo1; mso-para-margin-top: 0cm; mso-para-margin-right: .47gd; mso-para-margin-bottom: 10.0pt">
+<font face="Times New Roman"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-fareast-font-family: 'times new roman'"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">          </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt">Before disclosing the list, the Ministry discussed with Seoul, Daejeon and Gyeonggi provincial governments to make necessary preparations. <o:p></o:p></span></font></font></p>
+<p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 4.7pt 10pt 38pt; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo1; mso-para-margin-top: 0cm; mso-para-margin-right: .47gd; mso-para-margin-bottom: 10.0pt">
+<font face="Times New Roman"><font color="#000000"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-fareast-font-family: 'times new roman'"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">          </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt">Local governments including Seoul, Daejeon and Gyeonggi province agreed to make best efforts to set up a necessary response system and carry out follow-up measures. <o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 4.7pt 10pt 0cm; mso-para-margin-right: .47gd">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt"><font face="Times New Roman"><font color="#000000">For a speedy test of MERS-CoV, the government plans to approve regional institutes of health and environment to conduct MERS-CoV laboratory tests provided that they strengthen quality control and comply with to the standards and procedures set by Korea National Institute of Health. <o:p></o:p></font></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 4.7pt 10pt 0cm; mso-para-margin-right: .47gd">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt"><font face="Times New Roman"><font color="#000000">Intense contact tracing found no new infection in the 20 medical facilities of the total 24 disclosed medical facilities after a confirmed case of MERS-CoV was reported.<o:p></o:p></font></font></span></p>
+<p class="MsoListParagraph" style="text-indent: -18pt; margin: 0cm 4.7pt 10pt 38pt; mso-para-margin-left: 0gd; mso-list: l0 level1 lfo1; mso-para-margin-top: 0cm; mso-para-margin-right: .47gd; mso-para-margin-bottom: 10.0pt">
+<font color="#000000"><font face="Times New Roman"><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-fareast-font-family: 'times new roman'"><span style="mso-list: ignore">-<span style="font: 7pt 'times new roman'">          </span></span></span><span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt">The government, therefore, informed the public not to worry about visiting the above mentioned 20 medical facilities and asked them to contact their community clinics should they find anyone suspected of having MERS-CoV.<o:p></o:p></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 4.7pt 10pt 0cm; mso-para-margin-right: .47gd">
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt"><font color="#000000"><font face="Times New Roman">The Ministry of Health and Welfare asked the public for their proactive and sound judgment to fully contain MERS-CoV infection in hospitals and minimize the side effects of disclosing the names of MERS-CoV stricken medical facilities. <o:p></o:p></font></font></span></p>
+<p>
+<span lang="EN-US" style="line-height: 115%; font-family: 'times new roman', 'serif'; font-size: 12pt; mso-fareast-font-family: '¸¼Àº °íµñ'; mso-fareast-theme-font: minor-fareast; mso-ansi-language: en-us; mso-fareast-language: ko; mso-bidi-language: ar-sa"><font color="#000000" face="Times New Roman">The government will do its best to alleviate public fear of infection through close cooperation with relevant parties including local governments to avoid any cause of confusion or miscommunication and to ultimately halt further spread of the disease.</font></span></p></td>
+</tr>
+<tr>
+<th scope="row">File</th>
+<td colspan="3">
+<p><img alt="" src="../../images/common/file/icon_file.gif"/> <a href="../../../download.mohw.go.kr/front_new/modules/b1631f1c9ade0bff18ed641fffb916ba">[ENG]_[6.7]_Full_Disclosure_of_Medical_Facilities_Exposed_to_MERS.docx (92 KB / Download : 160)</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- /table:view -->
+<!-- ÇÏ´Ü ¹öÆ° ¿µ¿ª -->
+<div class="btn btm">
+<!--  ¿À¸¥ ÂÊ ¿µ¿ª ¹öÆ° -->
+<a href="291c7b2c06ad0f481977e50fbd85795e"><img alt="list" class="right" src="../../images/eng/common/btn_list.gif"/></a>
+<!--  /¿À¸¥ ÂÊ ¿µ¿ª ¹öÆ° -->
+</div>
+<!-- /ÇÏ´Ü ¹öÆ° ¿µ¿ª -->
+</form>
+<br/>
+<br/>
+<div class="view_list">
+<form action="ssg0111ls.jsp" method="post" name="fmList">
+<input name="PAR_MENU_ID" type="hidden" value="1001"/>
+<input name="MENU_ID" type="hidden" value="100111"/>
+<input name="page" type="hidden" value="14"/>
+<input name="SEARCHKEY" type="hidden" value=""/>
+<input name="SEARCHVALUE" type="hidden" value=""/>
+<input name="CONT_SEQ" type="hidden" value=""/>
+<!-- table head above list -->
+<div id="tablehead">
+<p>Total <strong>345</strong> Articles</p>
+</div>
+<!-- /table head above list -->
+<table class="list" summary="Publication list.">
+<caption>Publication</caption>
+<colgroup>
+<col width="8%"/><col width="60%"/>
+<col width="16%"/><col width="8%"/><col width="8%"/>
+</colgroup>
+<thead>
+<tr>
+<th class="first" scope="col">No</th>
+<th scope="col">Subject</th>
+<th scope="col">Date</th>
+<th scope="col">File</th>
+<th scope="col">Hit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>215</td>
+<td class="left"><a href="714174925d055a5fb88dbee02e3421dc">MERS Statistics (June 26)</a></td>
+<td>2015-06-26</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1574</td>
+</tr>
+<tr>
+<td>214</td>
+<td class="left"><a href="71cbeed3fd534aec08c616bd7da1f521">Press Release (June 25)</a></td>
+<td>2015-06-26</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1501</td>
+</tr>
+<tr>
+<td>213</td>
+<td class="left"><a href="833a8cabd890e05c2742195fb824925d">MERS Statistics (June 25)</a></td>
+<td>2015-06-26</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1409</td>
+</tr>
+<tr>
+<td>212</td>
+<td class="left"><a href="05ce7d1b97774e97b3ef5614a47bac15">Anshim (Safe) Hospitals (June 23)</a></td>
+<td>2015-06-25</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1602</td>
+</tr>
+<tr>
+<td>211</td>
+<td class="left"><a href="df3473b5298741443dcdf1bf0b952d7b">Press Release Summary (June 24)</a></td>
+<td>2015-06-24</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>2236</td>
+</tr>
+<tr>
+<td>210</td>
+<td class="left"><a href="a4fa80cf2ee38e928d539ad802a5c544">236 ERs Run Selective Clinics to Deal With Suspect...</a></td>
+<td>2015-06-24</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1702</td>
+</tr>
+<tr>
+<td>209</td>
+<td class="left"><a href="863e21cf37a2be6c55480914dc7cc958">MERS Hotline Expands Services</a></td>
+<td>2015-06-23</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1696</td>
+</tr>
+<tr>
+<td>208</td>
+<td class="left"><a href="d0477557edb13243f65dbf74ef40a94d">All-out Effort to Contain MERS</a></td>
+<td>2015-06-23</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1616</td>
+</tr>
+<tr>
+<td>207</td>
+<td class="left"><a href="65a09eb80dc8b3c252bbe6e4b06acbfd"><strong>Full Disclosure of Medical Facilities Exposed to M...</strong></a></td>
+<td>2015-06-23</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>1723</td>
+</tr>
+<tr>
+<td>206</td>
+<td class="left"><a href="cb9c2c999d823640ba5395a3b161f17d">MERS Statistics (June 23)</a></td>
+<td>2015-06-23</td>
+<td><img alt="file" src="../../images/eng/common/icon_file.gif"/></td>
+<td>2013</td>
+</tr>
+</tbody>
+</table>
+<!-- /table:list -->
+<!-- paging -->
+<!-- paging -->
+<div id="paging">
+<a class="btn" href="ebfb6bc3f850eb20122e1021c6e4c0d1"><img alt="first page" src="../../images/eng/common/btn_firstpage.gif"/></a>
+<a class="btn" href="ffdc4366d327476f2a2bdd61bea75d3f"><img alt="pre page" src="../../images/eng/common/btn_prepage.gif"/></a>
+<a href="b5ac7ead72941feddd2152cd97408423" title="11page">11</a> 
+
+				<a href="43305223367df6986d635c77763975b3" title="12page">12</a> 
+
+				<a href="2711dbddb6de0a13625580768c3557fa" title="13page">13</a> 
+
+				<span title="present">14</span> 
+
+				<a href="69279edea38f89c531ee92dcc558f429" title="15page">15</a> 
+
+				<a href="3d5e6982b8cfbd3ae4834a4e77e21144" title="16page">16</a> 
+
+				<a href="32fde42f13158f6b4f430ac227830ad3" title="17page">17</a> 
+
+				<a href="e9a17658ff68b1011b3bf38b014eea17" title="18page">18</a> 
+
+				<a href="3fbff7a5c45a170ce3270ba839fff4fb" title="19page">19</a> 
+
+				<a href="095823f82b64fc9c0ab92d552e48e0b3" title="20page">20</a> 
+
+				<a class="btn" href="6c8765ade6af448afd7277d09046c33a"><img alt="next page" src="../../images/eng/common/btn_nextpage.gif"/></a>
+<a class="btn" href="2d7e34ab1d5e2a71b1530de73fd24299"><img alt="last page" src="../../images/eng/common/btn_lastpage.gif"/></a>
+</div>
+<!-- /paging -->
+<!-- /paging -->
+</form>
+<!-- DB ¿¡¼­ contents µ¥ÀÌÅÍ¸¦ °¡Á®¿Í¼­ »Ñ·ÁÁØ´Ù. -->
+</div>
+</div>
+<!-- /contents -->
+</div>
+</div>
+<!-- footer -->
+<!-- footer -->
+<div id="footer">
+<div class="foot">
+<p class="flogo"><img alt="ministry of health and welfare" src="../../images/eng/common/flogo.gif"/></p>
+<div class="finfo">
+<address><img alt="13, Doum 4-ro, Sejong, (30113) Korea ¤ÓCALL CENTER 82-129" src="../../images/eng/common/foot_address.gif"/></address>
+<p class="copyright"><img alt="Copyright(C) By MOHW. All rights reserved." src="../../images/eng/common/foot_copyright.gif"/></p>
+</div>
+<!-- ÀÏÀÏ¹æ¹®ÀÚ¼ö Ãß°¡ -->
+<p class="visits">Daily visits : <strong>198</strong></p>
+<!--// ÀÏÀÏ¹æ¹®ÀÚ¼ö Ãß°¡ -->
+</div>
+</div>
+<!-- //footer -->
+</div>
+<div id="returntotop"><a href="#skip-navi">go to the top</a></div>
+<script type="text/javascript">
+//<![CDATA[
+function jsOpenSite(formEl) {	
+	var errorMessage = null;
+	var objFocus = null;
+	if (formEl.sitelink.value.length == 0) {
+		errorMessage = "please! select a site to move!";
+		objFocus = formEl.sitelink;
+	} 
+	if(errorMessage != null) {
+		alert(errorMessage);
+		objFocus.focus();
+		return false;
+	}
+	return true;
+}
+//]]>	
+</script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101800795-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- /footer -->
+</div>
+</body>
+</html>
