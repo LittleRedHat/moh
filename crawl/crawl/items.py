@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+ # -*- coding: utf-8 -*-
 
 # Define here the models for your scraped items
 #
@@ -19,6 +19,7 @@ class ResourceItem(scrapy.Item):
      language = Field()
      publish = Field()
      nation = Field()
+     keywords = Field()
 
      def __repr__(self):
          return repr({"url": self['url']})

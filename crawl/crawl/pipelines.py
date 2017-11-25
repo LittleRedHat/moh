@@ -106,8 +106,10 @@ class FilePipeline(object):
         next_item['title'] = item.get('title') or ''
         next_item['location']=item['location']
         next_item['language'] = item.get('language')
-        next_item['publish'] = item.get('publish') or ''
+        next_item['publish'] = item.get('publish') or '1970-01-01T00:00:00Z'
+        print item.get('publish')
         next_item['nation'] = item.get('nation') or ''
+        next_item['keywords']=item.get('keywords') or ''
         netloc = urlparse(url).netloc
 
         # for all html, it musts be update

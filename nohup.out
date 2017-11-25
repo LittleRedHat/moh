@@ -1,0 +1,2151 @@
+/usr/local/lib/python2.7/dist-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+ * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+ * Restarting with stat
+/usr/local/lib/python2.7/dist-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+ * Debugger is active!
+ * Debugger PIN: 229-440-769
+10.141.245.191 - - [21/Nov/2017 16:28:13] "POST /moh/history HTTP/1.1" 405 -
+10.141.245.191 - - [21/Nov/2017 16:28:24] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [21/Nov/2017 18:49:25] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [21/Nov/2017 18:55:40] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [21/Nov/2017 18:55:54] "GET /moh/history HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:11:45] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:11:45] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:11:54] "GET /moh/history HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:12:03] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:12:03] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:13:39] "GET /moh/history HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:13:50] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:13:51] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:13:51] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:14:06] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:14:06] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:14:12] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:14:12] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:14:21] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:14:21] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:14:24] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:14:25] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:14:26] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:14:27] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:14:27] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:14:28] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:16:11] "GET /moh/history HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:16:12] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:16:13] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:16:13] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:19:16] "GET /moh/history HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:19:17] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:19:17] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:19:17] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:20:26] "GET /moh/history HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:20:28] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:20:28] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:20:28] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:22:05] "GET /moh/history HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:22:07] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:22:07] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:22:07] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:23:14] "GET /moh/history HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:23:14] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:23:15] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:23:15] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:23:41] "GET /moh/history HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:23:44] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:23:44] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:23:44] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:24:49] "GET /moh/history HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:24:57] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:24:57] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:24:58] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:04] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:04] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:05] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:08] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:09] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:11] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:11] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:12] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:13] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:13] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:17] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:17] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:17] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:23] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:23] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:23] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:31] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:31] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:25:31] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:26:25] "GET /moh/history HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:26:28] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:26:28] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:26:28] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:27:03] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:27:03] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:27:12] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:27:12] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:27:12] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:27:20] "GET /moh/history HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:27:21] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:27:22] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:27:22] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:27:24] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:27:50] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:27:50] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:28:42] "GET /moh/history HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:28:43] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:28:43] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:28:44] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:30:46] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:30:46] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:32:19] "GET /moh/history HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:32:20] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:32:20] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:32:20] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:32:53] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:32:53] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:36:53] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:36:53] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:36:53] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:36:53] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 248, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.147.136.23 - - [22/Nov/2017 01:36:53] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:36:53] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:36:55] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:36:55] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:36:59] "GET /moh/history HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:37:03] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:37:03] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:37:04] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:37:16] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:37:16] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 248, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.147.136.23 - - [22/Nov/2017 01:37:18] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 248, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.147.136.23 - - [22/Nov/2017 01:37:19] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 248, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.147.136.23 - - [22/Nov/2017 01:37:19] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 248, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.147.136.23 - - [22/Nov/2017 01:37:19] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 248, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.147.136.23 - - [22/Nov/2017 01:37:19] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 248, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.147.136.23 - - [22/Nov/2017 01:37:20] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 248, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.147.136.23 - - [22/Nov/2017 01:37:20] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 248, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.147.136.23 - - [22/Nov/2017 01:37:20] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 248, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.147.136.23 - - [22/Nov/2017 01:40:54] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:40:54] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:40:54] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:40:54] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 248, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.147.136.23 - - [22/Nov/2017 01:43:35] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:43:35] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:43:35] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:43:35] "POST /moh/es/search HTTP/1.1" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 209, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 200, in execute
+    write(data)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 181, in write
+    self.wfile.write(data)
+IOError: [Errno 32] Broken pipe
+10.147.136.23 - - [22/Nov/2017 01:43:35] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:43:36] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:43:40] "GET /moh/history HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:43:40] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:43:41] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:43:41] "POST /moh/es/search HTTP/1.1" 200 -
+10.147.136.23 - - [22/Nov/2017 01:45:42] "GET /moh/es/search?callback=jQuery321046903671724705776_1511286341550&{%22should%22:[[%22health%20carecenter%22,%22medical%20assistant%22]],%22size%22:20,%22from%22:0,%22sort%22:%22date%22,%22filters%22:[{%22name%22:%22type%22,%22value%22:%22html%22}]}&_=1511286341551 HTTP/1.1" 405 -
+10.147.136.23 - - [22/Nov/2017 01:45:51] "GET /moh/es/search?callback=jQuery32108270959263660174_1511286351147&{%22should%22:[[%22health%20carecenter%22,%22medical%20assistant%22]],%22size%22:20,%22from%22:0,%22sort%22:%22date%22,%22filters%22:[{%22name%22:%22type%22,%22value%22:%22html%22}]}&_=1511286351148 HTTP/1.1" 405 -
+10.222.148.231 - - [22/Nov/2017 14:59:49] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 14:59:49] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 14:59:50] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 14:59:57] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 14:59:57] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 14:59:58] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:00:05] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:00:05] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:00:05] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:00:10] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:00:10] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 248, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 15:04:28] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:04:28] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:04:41] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:04:41] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:04:42] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:04:43] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:04:45] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:04:51] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:04:51] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:04:59] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:04:59] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:05:04] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:05:44] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:05:44] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 248, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 15:37:51] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:37:52] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:37:53] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:37:53] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:37:58] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:37:58] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:39:03] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:39:03] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:39:03] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:39:04] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:39:19] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:39:19] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:43:31] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:43:31] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:43:32] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:43:36] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:43:36] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:43:36] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:43:58] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:43:58] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:43:59] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:44:47] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:44:48] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:45:46] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:45:46] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:46:45] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 15:46:45] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 248, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.160.217 - - [22/Nov/2017 16:00:30] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:00:30] "POST /moh/es/search HTTP/1.1" 400 -
+10.222.160.217 - - [22/Nov/2017 16:01:21] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:01:34] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:01:34] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:01:34] "POST /moh/es/search HTTP/1.1" 400 -
+10.222.160.217 - - [22/Nov/2017 16:01:50] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:01:50] "POST /moh/es/search HTTP/1.1" 400 -
+10.222.160.217 - - [22/Nov/2017 16:02:27] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:02:27] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:02:31] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:02:32] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:02:59] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:02:59] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:03:11] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:03:11] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:03:29] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:03:29] "GET /moh/es/search HTTP/1.1" 405 -
+10.222.160.217 - - [22/Nov/2017 16:03:29] "GET /favicon.ico HTTP/1.1" 404 -
+10.222.160.217 - - [22/Nov/2017 16:03:29] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 16:07:29] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 16:07:31] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 16:07:31] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 16:07:32] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 16:07:37] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 16:07:37] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 16:08:13] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 16:08:13] "POST /moh/es/search HTTP/1.1" 200 -
+ * Detected change in '/home/zookeeper/Documents/moh/app.py', reloading
+ * Restarting with stat
+/usr/local/lib/python2.7/dist-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+ * Debugger is active!
+ * Debugger PIN: 229-440-769
+ * Detected change in '/home/zookeeper/Documents/moh/app.py', reloading
+ * Restarting with stat
+/usr/local/lib/python2.7/dist-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+ * Debugger is active!
+ * Debugger PIN: 229-440-769
+10.222.160.217 - - [22/Nov/2017 16:08:46] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:09:31] "GET /moh/es/search HTTP/1.1" 405 -
+ * Detected change in '/home/zookeeper/Documents/moh/app.py', reloading
+ * Restarting with stat
+/usr/local/lib/python2.7/dist-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+ * Debugger is active!
+ * Debugger PIN: 229-440-769
+10.222.160.217 - - [22/Nov/2017 16:27:31] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:27:31] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:27:42] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:27:42] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:28:03] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:28:04] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:29:59] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:30:12] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:30:28] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:30:59] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 16:42:49] "POST /moh/es/search HTTP/1.1" 200 -
+ * Detected change in '/home/zookeeper/Documents/moh/app.py', reloading
+ * Restarting with stat
+/usr/local/lib/python2.7/dist-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+ * Debugger is active!
+ * Debugger PIN: 229-440-769
+10.222.160.217 - - [22/Nov/2017 16:59:51] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:01:08] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:01:08] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:01:19] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:01:19] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:01:30] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:01:30] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:18:23] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:18:23] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:18:30] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:18:30] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:18:33] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:18:37] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:18:37] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:18:42] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:18:49] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:18:49] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:18:52] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:18:55] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:18:55] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:18:56] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:18:58] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:03] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:03] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:04] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:05] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:06] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:06] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:07] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:07] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:07] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:08] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:09] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:10] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:11] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:11] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:11] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:12] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:12] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:12] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:18] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:18] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:20] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:25] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:25] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:29] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:30] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:30] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:33] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:35] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:37] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:37] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:39] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:47] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:47] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:48] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:49] "POST /moh/es/search HTTP/1.1" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 209, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 200, in execute
+    write(data)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 181, in write
+    self.wfile.write(data)
+IOError: [Errno 32] Broken pipe
+10.222.148.231 - - [22/Nov/2017 17:19:49] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:49] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:50] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:50] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:50] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:50] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:51] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:51] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:52] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:52] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:53] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:19:53] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:53] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:53] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:53] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:54] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:54] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:54] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:54] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:55] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:55] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:55] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:55] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:56] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:56] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:56] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:19:56] "POST /moh/es/search HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/zookeeper/Documents/moh/app.py", line 250, in search
+    cursor = es.es_search("crawler","articles",dsl)
+  File "/home/zookeeper/Documents/moh/search/search.py", line 41, in es_search
+    results = self.es.search(index=index,doc_type=doc_type,body=query)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 73, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/__init__.py", line 623, in search
+    doc_type, '_search'), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 312, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 128, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+RequestError: TransportError(400, u'parsing_exception', u'[terms] query does not support [type]')
+10.222.148.231 - - [22/Nov/2017 17:21:44] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:21:44] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:21:48] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:23:35] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:23:35] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:23:40] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:23:40] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:23:44] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:23:48] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:23:48] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:37:23] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:37:34] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:37:42] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:37:51] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:38:01] "POST /moh/es/search HTTP/1.1" 200 -
+ * Detected change in '/home/zookeeper/Documents/moh/app.py', reloading
+ * Restarting with stat
+/usr/local/lib/python2.7/dist-packages/flask_sqlalchemy/__init__.py:794: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+ * Debugger is active!
+ * Debugger PIN: 229-440-769
+10.222.160.217 - - [22/Nov/2017 17:42:41] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:42:48] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:42:56] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:43:16] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:43:37] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:45:50] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:46:51] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:46:51] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:46:53] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:46:58] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:02] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:02] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:03] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:07] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:07] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:13] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:13] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:18] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:19] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:21] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:23] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:25] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:25] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:26] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:30] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:31] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:31] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:33] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:35] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:36] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:36] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:38] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:40] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:41] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:45] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:45] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:48] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:50] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:54] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:47:54] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:01] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:01] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:04] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:06] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:08] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:08] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:09] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:11] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:13] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:15] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:15] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:17] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:19] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:20] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:21] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:22] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:24] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:25] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:26] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:27] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:29] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:31] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:31] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:33] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:48:35] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:49:12] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 17:49:12] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:49:54] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:49:54] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:49:58] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.160.217 - - [22/Nov/2017 17:49:58] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:26:34] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:26:35] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:26:35] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:26:35] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:26:38] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:26:40] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:26:41] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:26:42] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:26:55] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:26:58] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:26:58] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:26:58] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:27:01] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:27:02] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:29:51] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:29:55] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:29:55] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:29:55] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:30:14] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:30:14] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:31:30] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:31:32] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:31:32] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:31:32] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:31:36] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:31:37] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:31:37] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:31:37] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:31:42] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:31:45] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:31:45] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:31:46] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:31:48] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:32:23] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:32:24] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:32:24] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:32:25] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:32:50] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:32:52] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:32:52] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:32:52] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:33:04] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:33:07] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:33:07] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:33:07] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:34:28] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:34:28] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:34:28] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:34:30] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:34:30] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:34:32] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:34:34] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:34:35] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:34:36] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:34:37] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:34:38] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [22/Nov/2017 18:34:39] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [23/Nov/2017 13:37:46] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [23/Nov/2017 13:37:46] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [23/Nov/2017 13:37:47] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 11:20:48] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 11:20:50] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 11:20:50] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 11:20:50] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 11:29:07] "POST /moh/user/login HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 11:34:32] "POST /moh/user/login HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 11:34:34] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:08:09] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:08:09] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:08:09] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:08:09] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:08:09] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:08:09] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:08:09] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:08:10] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:08:10] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:08:10] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:08:54] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:08:54] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:08:54] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:08:55] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:09:02] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:09:02] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:12:07] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:12:09] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:12:09] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:12:09] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:13:08] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:13:09] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:13:09] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:13:09] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:13:27] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:13:27] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:13:28] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:14:17] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:14:21] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:14:21] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:14:21] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:14:48] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:14:49] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:14:49] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:14:49] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:14:59] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:14:59] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:14:59] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:15:52] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:15:59] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:15:59] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:15:59] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:16:10] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:16:13] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:16:13] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:16:13] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:16:19] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:16:19] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:16:20] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:18:47] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:18:47] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:18:47] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:25:40] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:25:40] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:25:48] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 12:25:48] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:23:59] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:23:59] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:23:59] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:26:47] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:26:48] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:26:48] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:27:05] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:27:11] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:27:11] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:27:11] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:27:26] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:27:27] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:27:27] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:27:30] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:27:30] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:27:48] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:27:48] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:27:48] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:42:41] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:42:56] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:42:56] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:42:57] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:43:04] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:43:12] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:43:16] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:43:18] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:43:20] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:43:22] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:43:23] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:43:25] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:43:26] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:43:27] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:43:28] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:43:29] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 13:43:31] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:04:16] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:11:25] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:11:25] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:11:25] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:11:25] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:11:42] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:11:44] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:11:44] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:11:44] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:11:59] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:12:00] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:12:00] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:12:00] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:12:31] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:12:33] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:12:33] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:12:33] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:12:53] "GET /moh/history HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:12:54] "OPTIONS /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:12:55] "POST /moh/es/search HTTP/1.1" 200 -
+10.222.148.231 - - [24/Nov/2017 14:12:55] "POST /moh/es/search HTTP/1.1" 200 -
+10.141.245.191 - - [24/Nov/2017 18:02:22] "OPTIONS /search HTTP/1.1" 404 -
+10.141.245.191 - - [25/Nov/2017 14:25:52] "GET /moh/history HTTP/1.1" 200 -

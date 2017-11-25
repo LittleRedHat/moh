@@ -8,6 +8,7 @@ import sys
 import tinycss
 import re
 import time
+import json
 from crawl.items import ResourceItem
 from summa import keywords
 import sys
@@ -172,10 +173,10 @@ configure = {
     "cn": {
         'allowed_domains':['moh.gov.cn'],
         'site_url':'http://www.moh.gov.cn',
-        'start_urls':[''],
+        'start_urls':['http://www.moh.gov.cn/zwgk/jdjd/ejlist.shtml'],
+        'rules':[r'(.*)/zwgk/jdjd/(.*)'],
         'language':'zh'
-
-
+        'publish':[{'rule':"//span[@class='time']/text()",'format':'%Y-%m-%d'}]
 
     },
      # 澳大利亚
@@ -188,9 +189,9 @@ configure = {
         
     },
 
-
+    # 萨摩亚
     'ws':{
-        'allowed_domains':[''],
+        'allowed_domains':['health.gov.ws'],
         'site_url':'http://www.health.gov.ws',
         'start_urls':'',
         'rules':[],
@@ -248,9 +249,10 @@ class MohSpider(scrapy.Spider):
             resource['location'] = self.site_url
             resource['language'] = self.language_inference(response)
             resource['publish'] = self.publish_time_inference(response)
+            # print resource['publish']
             resource['nation'] = self.nation
             text = self.h2t(response)
-            resource['keywords'] = self.text2keywords(text,resource['language'],keywords_num=5)
+            resource['keywords'] = json.dumps(self.text2keywords(text,resource['language'],keywords_num=5))
 
             print response.url
             if response.meta.get('title'):
@@ -367,10 +369,10 @@ class MohSpider(scrapy.Spider):
                 continue
             try:
                 t = time.strptime(t,item["format"])
-            except: 
+            except:
                 t = None
             if t:
-                t = time.strftime("%Y-%m-%d %H:%M:%S",t)
+                t = time.strftime("%Y-%m-%dT%H:%M:%SZ",t)
                 break
         return t
 
@@ -446,7 +448,7 @@ class MohSpider(scrapy.Spider):
             if 'zh' in language:
                 tr4w = TextRank4Keyword()
                 tr4w.analyze(text=text, lower=True, window=2)
-                return tr4w.get_keywords(keywords_num=keywords_num, word_min_len=1):
+                return tr4w.get_keywords(keywords_num=keywords_num, word_min_len=1)
             # 其他网页关键词提取，用summa textrank
             else:
                 k = keywords.keywords(text,scores=True)
