@@ -246,7 +246,7 @@ def search():
         'from':qfrom,
         'size':qsize
     }
-    es = Searcher(["127.0.0.1:9200"])
+    es = Searcher(["10.48.41.24:9200"])
     cursor = es.es_search("crawler","articles",dsl)
     results = cursor['hits']['hits']
     total = cursor['hits']['total']

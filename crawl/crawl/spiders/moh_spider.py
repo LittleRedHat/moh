@@ -175,7 +175,7 @@ configure = {
         'site_url':'http://www.moh.gov.cn',
         'start_urls':['http://www.moh.gov.cn/zwgk/jdjd/ejlist.shtml'],
         'rules':[r'(.*)/zwgk/jdjd/(.*)'],
-        'language':'zh'
+        'language':'zh',
         'publish':[{'rule':"//span[@class='time']/text()",'format':'%Y-%m-%d'}]
 
     },
@@ -196,7 +196,207 @@ configure = {
         'start_urls':'',
         'rules':[],
         'publish':[]
+    },
+    ###############################################
+    # 非洲
+    ###############################################
+
+
+    ###############################################
+    # 北美洲
+    ###############################################
+
+
+    ###############################################
+    # 南美洲
+    ###############################################
+
+
+    ###############################################
+    # 大洋洲
+    ###############################################
+
+    # 新西兰
+    'nz':{
+        'allowed_domains':['health.govt.nz'],
+        'site_url':'http://www.health.govt.nz',
+        'start_urls':['http://www.health.govt.nz/nz-health-statistics','http://www.health.govt.nz/publications'],
+        'rules':[
+            r'(.*)/nz-health-statistics(.*)',
+            r'(.*)/publication(.*)',
+        ]
+    },
+    # 斐济群岛
+    'fj':{
+        'allowed_domains':['health.gov.fj'],
+        'site_url':['http://www.health.gov.fj'],
+        'start_urls':['http://www.health.gov.fj/?page_id=198'],
+        'rules':[]
+    },
+
+    # 澳大利亚
+    'au':{
+        'allowed_domains':['health.gov.au'],
+        'site_url':'http://www.health.gov.au',
+        'start_urls':['http://www.health.gov.au/internet/main/publishing.nsf/Content/health-publicat.htm','http://www.health.gov.au/internet/main/publishing.nsf/Content/Research+&+Statistics-1','http://www.health.gov.au/internet/main/publishing.nsf/Content/CurrentIssues'],
+        'rules':[r'(.*)/internet/main/publishing\.nsf/Content/(.*)'],
+        'excludes':[r'(.*)/internet/main/publishing\.nsf/Content/health-overview\.htm(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/health-central\.htm(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Annual\+Reports-3(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Budget-1(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Listing\+of\+Tenders\+and\+Grants-1(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/health-eta2\.htm(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/reporting-fraud-misconduct-compliance(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/foi-about(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/public-interest-disclosure(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/health-contracts-index\.htm(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/stakeholder-engagement(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/social-media-channels(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Career\+Opportunities-1(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/health-pubs-calendar-index\.htm(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/health-history\.htm(.*)',
+
+                    r'(.*)/internet/main/publishing\.nsf/Content/Australian\+Health\+Ministers%27\+Conference-1(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Council\+of\+Australian\+Governments(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Departmental\+media\+releases\+and\+speeches-1(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Health\+Warnings-1(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/health-mediarel-subscribe-index\.htm(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Ministers-1(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/government-responses(.*)',
+
+                    r'(.*)/internet/main/publishing\.nsf/Content/Agreements-1(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/eHealth(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/programs-initiatives-menu(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/campaign_certification_statements-lp(.*)',
+
+                    r'(.*)/internet/main/publishing\.nsf/Content/Aboriginal\+and\+Torres\+Strait\+Islander\+Health-1lp(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Conditions\+and\+Diseases-[1-2](.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Education\+and\+Prevention-[1-2](.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Gene\+Technology-[1-2](.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/health-compliance(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/health-ethics-index.htm(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/health-care-homes(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Health\+products\+and\+medicines-[1-2](.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/health-thesaurus.htm(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Healthcare\+systems-[1-2](.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/health-medicarebenefits-index\.htm(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Mental\+Health\+and\+Wellbeing-[1-2](.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/national-mens-and-womens-health-[1-2](.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/norfolk-is(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Palliative\+Care-[1-2](.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/consumer-pharmacy(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/primarycare(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/regulation-and-red-tape-reduction(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Rural\+Health-[1-2](.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Services-[1-2](.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/healthiermedicare(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/Health\+Warnings-[1-2](.*)',
+
+                    r'(.*)/internet/main/publishing\.nsf/Content/Health\+Workforce-2(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/health-care-homes-professional(.*)',
+                    r'(.*)/internet/main/publishing\.nsf/Content/strongmedicare(.*)'
+
+
+
+                   ]
+        
+    },
+
+    # 巴布亚新几内亚
+    'pg':{
+        'allowed_domains':['health.gov.pg'],
+        'site_url':'http://www.health.gov.pg',
+        'start_urls':['http://www.health.gov.pg/pages/healthpolicyA.htm','http://www.health.gov.pg/pages/healthpolicyD.htm','http://www.health.gov.pg/pages/healthpolicyH.htm','http://www.health.gov.pg/pages/healthpolicyM.htm','http://www.health.gov.pg/pages/healthpolicyP.htm'],
+        'rules':[]
+    },
+
+    # 所罗门群岛
+    'sb':{
+        'allowed_domains':['health.gov.sb'],
+        'site_url':'http://www.health.gov.sb',
+        'start_urls':[],
+        'rules':[]
+    },
+
+    # 瓦努阿图
+    'vu':{
+        'allowed_domains':['moh.gov.vu'],
+        'site_url':'https://moh.gov.vu',
+        'start_urls':[],
+        'rules':[]
+    },
+    # 帕罗
+    'pw':{
+        'allowed_domains':['health.gov.pw'],
+        'site_url':'http://health.gov.pw',
+        'start_urls':[],
+        'rules':[]
+    },
+
+    # 密克罗尼西亚联邦
+    'fm':{
+        'allowed_domains':['health.gov.fm'],
+        'site_url':'http://health.gov.fm',
+        'start_urls':[],
+        'rules':[]
+    },
+
+    # 马绍尔群岛
+    'mh':{
+        'allowed_domains':['health.gov.mh'],
+        'site_url':'http://health.gov.mh',
+        'start_urls':[],
+        'rules':[]
+
+    },
+
+    # 基里巴斯
+    'ki':{
+        'allowed_domains':['health.gov.ki'],
+        'site_url':'http://health.gov.ki',
+        'start_urls':['http://www.health.gov.ki/download.html','http://www.health.gov.ki/health-news.html','http://www.health.gov.ki/documents.html','http://www.health.gov.ki/iec-materials.html','http://www.health.gov.ki/forms.html'],
+        'rules':[r'(.*)/download/category/(.*)',r'(.*)/health-news/(.*)']
+    },
+    # 瑙鲁
+    'nr':{
+        'allowed_domains':['health.gov.nr'],
+        'site_url':'http://health.gov.nr',
+        'start_urls':[''],
+        'rules':[]
+    },
+
+    # 图瓦卢
+    'tv':{
+        'allowed_domains':['health.gov.tv'],
+        'site_url':'http://health.gov.to',
+        'start_urls':[''],
+        'rules':[]
+
+    },
+
+    # 汤加
+    'to':{
+        'allowed_domains':['health.gov.to'],
+        'site_url':'http://health.gov.to',
+        'start_urls':['http://www.health.gov.to/drupal/?q=Annual','http://www.health.gov.to/drupal/sites/default/files/MOH%20Corporate%20Plan%202008-2012.pdf','http://www.health.gov.to/drupal/sites/default/files/Tongan%20Registered%20List%20of%20Medicinal%20%20Drugs%20Final%20-%20MARCH%202016.xlsx'],
+        'rules':[r'(.*)/drupal/sites/default/file(.*)'],
+    },
+
+    # 萨摩亚
+    'ws':{
+        'allowed_domains':['health.gov.ws'],
+        'site_url':'http://www.health.gov.ws',
+        'start_urls':['http://www.health.gov.ws/publications0/legislations'],
+        'rules':[]
+
     }
+
+
+
+
+
+
+
 }
 
 
@@ -204,7 +404,7 @@ class MohSpider(scrapy.Spider):
 
     name = 'moh'
 
-    def __init__(self, domain=None, *args, **kwargs):
+    def __init__(self, domain=None, debug=None,*args, **kwargs):
 
        super(MohSpider, self).__init__()
        params = configure[domain]
@@ -217,6 +417,7 @@ class MohSpider(scrapy.Spider):
        self.publish = params.get('publish') or []
        self.language = params.get('language') or ''
        self.nation = domain
+       self.debug = debug
        
 
     def parse(self, response):
@@ -254,7 +455,6 @@ class MohSpider(scrapy.Spider):
             text = self.h2t(response)
             resource['keywords'] = json.dumps(self.text2keywords(text,resource['language'],keywords_num=5))
 
-            print response.url
             if response.meta.get('title'):
                 title = response.meta.get('title')
             else:
@@ -265,8 +465,15 @@ class MohSpider(scrapy.Spider):
                     title = ''
 
             resource['title'] = title
-            yield resource
+            
+
+            if not self.debug:
+                yield resource
             # return
+
+            if self.debug:
+                print '*'*40
+                print '(url,language,publish,title)',resource['url'],resource['language'],resource['publish'],resource['title']
 
             links = response.xpath('//a[@href]')
             for link in links:
@@ -283,7 +490,8 @@ class MohSpider(scrapy.Spider):
                     link_title = '没有标题'
                 http_url = self.gen_http_url(response.url,link_text)
                 if http_url:
-                    # print 'yield http url %s from %s'%(http_url,response.url)
+                    # if self.debug:
+                    #     print 'yield http url %s from %s'%(http_url,response.url)
                     # if http_url == 'http://www.mz.gov.pl/wp-content/uploads/2015/07/Wczesne-wykrywanie-dane-krajowe.ppt':
                     #     print 'yield http url %s from %s'%(http_url,response.url)
                     #     print 'link title is ',link_title
@@ -295,14 +503,15 @@ class MohSpider(scrapy.Spider):
                 '//link[@type="text/css"]/@href').extract()
             for stylesheet in stylesheets:
                 http_url = self.gen_http_url(response.url, stylesheet)
-                if http_url:
+                if http_url and not self.debug:
                     yield scrapy.Request(http_url, callback=self.style_parse)
+
                     
 
             javascripts = response.xpath('//script[@src]/@src').extract()
             for javascript in javascripts:
                 http_url = self.gen_http_url(response.url, javascript)
-                if http_url:
+                if http_url and not self.debug:
                     yield scrapy.Request(http_url, callback=self.assets_parse)
 
             images = response.xpath('//img[@src]/@src').extract() or []
@@ -311,10 +520,9 @@ class MohSpider(scrapy.Spider):
             images.extend(input_images)
             for img in images:
                 img_http_url = self.gen_http_url(response.url, img)
-                if img_http_url:
+                if img_http_url and not self.debug:
                     yield scrapy.Request(img_http_url, callback=self.assets_parse)
         else:
-            print response.url
             resource = ResourceItem()
             resource['url'] = response.url
             resource['content'] = response.body
@@ -325,7 +533,10 @@ class MohSpider(scrapy.Spider):
                 resource['title'] = response.meta.get('title')
             else:
                 resource['title'] = ''
-            yield resource
+            if not self.debug:
+                yield resource
+            if self.debug:
+                print '(url,title)',resource['url'],resource['title']
 
     def assets_parse(self, response):
         '''

@@ -1,0 +1,15 @@
+## 环境安装
+
+安装虚拟环境 virtualenv venv
+激活虚拟环境 source ./venv/bin/activate(mac/linux) windows上 venv/Scripts/activate
+首次运行安装依赖包: pip install -r requirements.txt
+
+
+## 爬虫运行
+cd crawl
+运行命令：
+scrapy crawl moh -a domain=[NATION] debug=True
+
+##命令说明
+domain对应国家的缩写，debug选项打开调试模式（此时不会将爬下来的网页写到数据库中，并会输出爬取得网页信息基本信息，用于查看时间，标题是否正确
+
