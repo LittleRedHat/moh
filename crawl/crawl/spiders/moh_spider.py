@@ -55,7 +55,7 @@ def br_time_sub(text):
     if len(groups) >= 6:
         month = groups[2]
         for key,en in enumerate(br2en):
-            if en in month:
+            if en.lower() in month.lower():
                 month = str(key + 1)
                 break
         
@@ -74,14 +74,29 @@ def uy_time_sub(text):
     if len(groups) >= 4:
         month = groups[2]
         for key,en in enumerate(br2en):
-            if en in month:
+            if en.lower() in month.lower():
                 month = str(key + 1)
                 break
         day = groups[1]
         year = groups[3]
         return year+'-'+month+'-'+day
     
-
+def mx_time_sub(text):
+    p = r'([0-9]{1,2}) de (.*) de ([0-9]{4})(.*?)'
+    m = re.match(p,text)
+    groups = m.groups()
+    br2en = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+    if len(groups) >= 3:
+        month = groups[1]
+        for key,en in enumerate(br2en):
+            if en.lower() in month.lower():
+                month = str(key + 1)
+                break
+        day = groups[0]
+        year = groups[2]
+        return year+'-'+month+'-'+day
+    
+    
 configure = {
     "output_dir": '/var/www/html',
     # 韩国
@@ -251,7 +266,10 @@ configure = {
         'rules':[
             r'(.*)/blog(.*)',
             r'(.*)/about/news(.*)',
-
+            r'(.*)/about/strategic-plan(.*)',
+            r'(.*)/programs/prevention-and-wellness(.*)',
+            r'(.*)/programs/research(.*)',
+            r'(.*)/programs/topic-sites(.*)'
         ],
         'publish':[
             {
@@ -259,13 +277,187 @@ configure = {
                 'format':'%Y-%m-%dT%H:%M:%S-05:00'
             },
             {
-                'rule':'//*[@id="site-content"]//*[contains(@class,"site-content")]//*[contains(@class,"left")]/b/text()[2]',
-                'format':''
+                'rule':'//*[@id="site-content"]//*[contains(@class,"content")]//*[contains(@class,"left")]/b/text()[2]',
+                'format':'%B %d, %Y'
+            }
+        ]
+    },
+    ## 加拿大
+    'ca':{
+        'allowed_domains':['canada.ca','healthycanadians.gc.ca'],
+        'site_url':'',
+        'start_urls':[
+            'https://www.canada.ca/en/services/health.html',
+
+        ],
+        'rules':[
+            r'(.*)/en/services/health(.*)',
+            r'(.*)/en/health-canada/services(.*)',
+            r'(.*)/en/public-health/services(.*)',
+            r'(.*)/en/public-health(.*)',
+            r'(.*)/en/health-canada(.*)',
+            r'(.*)/eating-nutrition(.*)',
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="wb-dtmd"]//*[contains(@property,"dateModified")]/text()',
+                'format':'%Y-%m-%d'
+            }
+
+        ]
+    },
+    ## 墨西哥
+    'mx':{
+        'allowed_domains':['gob.mx'],
+        'site_url':'https://www.gob.mx',
+        'start_urls':[
+            'https://www.gob.mx/salud/en',
+            'https://www.gob.mx/salud/en/archivo/articulos',
+            'https://www.gob.mx/salud/en/archivo/prensa',
+            'https://www.gob.mx/salud/en/archivo/documentos',
+            'https://www.gob.mx/temas/archivo/galerias/influenza',
+
+
+        ],
+        'rules':[
+            r'(.*)/salud/archivo/articulos(.*)',
+            r'(.*)/salud/en/archivo/prensa(.*)',
+            r'(.*)/salud/en/prensa(.*)',
+            r'(.*)salud/en/articulos(.*)',
+            r'(.*)/salud/en/archivo/documentos(.*)',
+            r'(.*)/salud/acciones-y-programas/personal-de-la-salud(.*)',
+            r'(.*)/senasica(.*)',
+            r'(.*)/salud/acciones-y-programas(.*)',
+            r'(.*)/temas/archivo/galerias/influenza(.*)',
+            r'(.*)/salud/censia/galerias(.*)'
+
+        ],
+        'publish':[
+            {
+                'rule':'//section[contains(@class,"border-box")]/dl/dd[2]/text()',
+                'format':'%B %d, %Y'
+            },
+            {
+                'rule':'//section[contains(@class,"border-box")]/dl/dd[1]/text()',
+                'format':'%Y-%m-%d',
+                'extra':mx_time_sub,
+
             }
 
         ]
 
     },
+    ## 洪都拉斯 打不开
+    'hn':{
+        'allowed_domains':['go.hn'],
+        'site_url':'http://health.go.hn',
+        'start_urls':[''],
+        'rules':[],
+
+    },
+    ## 危地马拉
+    'gt':{
+        'allowed_domains':['gob.gt'],
+        'site_url':'http://www.mspas.gob.gt',
+        'start_urls':[
+            'http://www.mspas.gob.gt/index.php/noticias/comunicados',
+            'http://www.mspas.gob.gt/index.php/servicios'
+        ],
+        'rules':[
+            r'(.*)/index\.php/noticias(.*)',
+            r'(.*)/index\.php/servicios(.*)',
+            r'(.*)index\.php/institucional(.*)',
+
+            
+
+
+        ],
+        'publish':[
+            {
+                'rule':'normalize-space(string(//*[@id="content"]/article//*[contains(@class,"blog-article-date")]))',
+                'format':'%b %d %Y'
+            }
+
+        ]
+
+    },
+    ## 萨尔瓦多 打不开
+    'sv':{
+        'allowed_domains':['gob.sv'],
+        'site_url':'http://www.mspas.gob.sv',
+        'start_urls':[''],
+        'rules':[],
+    },
+    ## 牙买加
+    'jm':{
+        'allowed_domains':['gov.jm'],
+        'site_url':'http://moh.gov.jm',
+        'start_urls':[
+            'http://moh.gov.jm/updates/press-releases',
+        ],
+        'rules':[
+            r'(.*)/updates/press-releases(.*)',
+            r'(.*)/(.*)'
+
+        ],
+        'excludes':[
+
+        ],
+        'publish':[
+            {
+                'rule':'//*[contains(@class,"entry-meta")]//time[contains(@class,"entry-date published")]/@datetime',
+                'format':'%Y-%m-%dT%H:%M:%S-05:00'
+            }
+
+        ]
+    },
+    ## 特立尼达和多巴哥 时间解析过于不鲁棒
+    'tt':{
+        'allowed_domains':['gov.tt'],
+        'site_url':'http://www.health.gov.tt',
+        'start_urls':[
+            'http://www.health.gov.tt',
+            'http://www.health.gov.tt/news',
+
+        ],
+        'rules':[
+            r'(.*)/news(.*)',
+            r'(.*)/sitepages/default\.aspx(.*)',
+
+
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="ctl00_cphCore_GridView1_ctl02_Table2"]//td[@valign="top"]/text()[2]',
+                'format':'%A, %B %d, %Y'
+            }
+        ]
+
+
+    },
+    ## 巴哈马
+    'bs':{
+        'allowed_domains':['gov.bs'],
+        'site_url':'http://www.bahamas.gov.bs',
+        'start_urls':[
+            'http://www.bahamas.gov.bs/health'
+        ],
+        'rules':[
+
+        ],
+
+    },
+
+    ## 伯利兹
+    'bz':{
+
+    },
+    ## 尼加瓜拉
+    'ni':{
+
+    },
+
+
 
 
 
@@ -653,13 +845,6 @@ configure = {
         ]
 
     }
-
-
-
-
-
-
-
 }
 
 
