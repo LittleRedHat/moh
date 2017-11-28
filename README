@@ -8,8 +8,12 @@
 ## 爬虫运行
 cd crawl
 运行命令：
-scrapy crawl moh -a domain=[NATION] debug=True
+scrapy crawl moh -a domain=[NATION] -a debug=True
 
 ##命令说明
 domain对应国家的缩写，debug选项打开调试模式（此时不会将爬下来的网页写到数据库中，并会输出爬取得网页信息基本信息，用于查看时间，标题是否正确
+
+
+
+## 爬取规则制定说明
 

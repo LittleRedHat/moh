@@ -211,6 +211,115 @@ configure = {
     # 南美洲
     ###############################################
 
+    ## 哥伦比亚
+    'co':{
+        'allowed_domains':['minsalud.gov.co'],
+        'site_url':'https://www.minsalud.gov.co',
+        'start_urls':['https://www.minsalud.gov.co/Paginas/default.aspx'],
+        'rules':[r'(.*)/Paginas(.*)'],
+        'publish':[
+            {
+                'rule':'//*[@id="DeltaPlaceHolderMain"]//*[@class="fecha"]/text()',
+                'format':'%d/%m/%Y'
+            }
+        ]
+
+    },
+    # 委瑞内拉
+    'gy':{
+        'allowed_domains':['sdnp.org.gy'],
+        'site_url':'http://www.sdnp.org.gy',
+        'start_urls':[],
+        'rules':[]
+    },
+
+    # 圭亚那
+    'gy':{
+        'allowed_domains':['sdnp.org.gy'],
+        'site_url':'http://www.sdnp.org.gy',
+        'start_urls':[],
+        'rules':[]
+    },
+
+    # 苏里南
+    'sr':{
+        'allowed_domains':['www.gov.sr'],
+        'site_url':'http://www.gov.sr',
+        'start_urls':['http://www.gov.sr/ministerie-van-volksgezondheid/publicaties.aspx'],
+        'rules':[r'(.*)/ministerie-van-volksgezondheid/publicaties(.*)']
+    },
+
+     # 秘鲁
+    'pe':{
+        'allowed_domains':['minsa.gob.pe'],
+        'site_url':'http://www.minsa.gob.pe',
+        'start_urls':['http://www.minsa.gob.pe/portalweb/02estadistica/estadistica_1.asp?sub5=2','http://www.minsa.gob.pe/portalweb/index_est03.asp?box=4','http://www.minsa.gob.pe/portalweb/index_pro03.asp?box=1'],
+        'rules':[r'(.*)/portalweb/02estadistica/(.*)',r'(.*)/estadisticas/estadisticas(.*)',r'(.*)/portalweb/07profesionales(.*)']  
+    },
+    
+    # 玻利维亚
+    'bo':{
+        'allowed_domains':['sns.gov.bo'],
+        'site_url':'http://www.sns.gov.bo',
+        'start_urls':[],
+        'rules':[]
+          
+        
+    },
+
+
+    ## 巴拉圭
+    'py':{
+        'allowed_domains':['saude.gov.br'],
+        'site_url':'http://www.saude.gov.br',
+        'start_urls':[],
+        'rules':[]  
+    },
+
+    # 巴西
+    'br':{
+        'allowed_domains':['saude.gov.br'],
+        'site_url':'http://www.saude.gov.br',
+        'start_urls':[],
+        'rules':[]
+          
+        
+    },
+
+    # 智利
+    'cl':{
+        'allowed_domains':['deis.cl'],
+        'site_url':'http://www.deis.cl',
+        'start_urls':['http://www.deis.cl/indicadores-basicos-de-salud','http://www.deis.cl/estadisticas-de-natalidad-y-mortalidad','http://www.deis.cl/estadisticas-de-atenciones-y-recursos-para-la-salud','http://www.deis.cl/estadisticas-de-enfermedades-de-notificacion-obligatoria','http://www.deis.cl/prensa-y-otras-publicaciones-2','http://www.deis.cl/archivo-historico'],
+        'rules':[],
+          
+        
+    },
+
+    # 阿根廷 TODO 网站开发中
+    'ar':{
+        'allowed_domains':['msal.gov.ar'],
+        'site_url':'http://www.msal.gov.ar',
+        'start_urls':[],
+        'rules':[
+          
+        ]
+    },
+
+    # 乌拉圭
+    'uy':{
+        'allowed_domains':['msp.gub.uy'],
+        'site_url':'http://www.msp.gub.uy',
+        'start_urls':['http://www.msp.gub.uy/publicaciones/alimentos-cosm%C3%A9ticos-y-domisanitarios','http://www.health.govt.nz/publications'],
+        'rules':[
+            r'(.*)/publicaciones(.*)',
+            r'(.*)/publication(.*)',
+            r'(.*)/publicaci%C3%B3n(.*)',
+        ]
+    },
+
+
+
 
     ###############################################
     # 大洋洲
@@ -222,8 +331,18 @@ configure = {
         'site_url':'http://www.health.govt.nz',
         'start_urls':['http://www.health.govt.nz/nz-health-statistics','http://www.health.govt.nz/publications'],
         'rules':[
-            r'(.*)/nz-health-statistics(.*)',
-            r'(.*)/publication(.*)',
+            r'(.*?)/nz-health-statistics(.*)',
+            r'(.*?)/publication(.*)',
+        ],
+        'publish':[
+            {
+                'rule':'//article//*[@class="date-display-single"]/@content',
+                'format':'%Y-%m-%dT%H:%M:%S+13:00'
+            },
+            # {
+            #     'rule':'//*[@id="content-footer"]//*[@class="date"]/text()',
+            #     'format':'%d %B %Y'
+            # },
         ]
     },
     # 斐济群岛
@@ -234,7 +353,7 @@ configure = {
         'rules':[]
     },
 
-    # 澳大利亚
+    # 澳大利亚 TODO
     'au':{
         'allowed_domains':['health.gov.au'],
         'site_url':'http://www.health.gov.au',
@@ -310,7 +429,7 @@ configure = {
         'rules':[]
     },
 
-    # 所罗门群岛
+    # 所罗门群岛 打不开
     'sb':{
         'allowed_domains':['health.gov.sb'],
         'site_url':'http://www.health.gov.sb',
@@ -318,14 +437,14 @@ configure = {
         'rules':[]
     },
 
-    # 瓦努阿图
+    # 瓦努阿图 打不开
     'vu':{
         'allowed_domains':['moh.gov.vu'],
         'site_url':'https://moh.gov.vu',
         'start_urls':[],
         'rules':[]
     },
-    # 帕罗
+    # 帕罗 已废弃
     'pw':{
         'allowed_domains':['health.gov.pw'],
         'site_url':'http://health.gov.pw',
@@ -333,7 +452,7 @@ configure = {
         'rules':[]
     },
 
-    # 密克罗尼西亚联邦
+    # 密克罗尼西亚联邦 打不开
     'fm':{
         'allowed_domains':['health.gov.fm'],
         'site_url':'http://health.gov.fm',
@@ -341,7 +460,7 @@ configure = {
         'rules':[]
     },
 
-    # 马绍尔群岛
+    # 马绍尔群岛 打不开
     'mh':{
         'allowed_domains':['health.gov.mh'],
         'site_url':'http://health.gov.mh',
@@ -350,14 +469,14 @@ configure = {
 
     },
 
-    # 基里巴斯
+    # 基里巴斯 
     'ki':{
         'allowed_domains':['health.gov.ki'],
         'site_url':'http://health.gov.ki',
         'start_urls':['http://www.health.gov.ki/download.html','http://www.health.gov.ki/health-news.html','http://www.health.gov.ki/documents.html','http://www.health.gov.ki/iec-materials.html','http://www.health.gov.ki/forms.html'],
         'rules':[r'(.*)/download/category/(.*)',r'(.*)/health-news/(.*)']
     },
-    # 瑙鲁
+    # 瑙鲁 打不开
     'nr':{
         'allowed_domains':['health.gov.nr'],
         'site_url':'http://health.gov.nr',
@@ -365,10 +484,10 @@ configure = {
         'rules':[]
     },
 
-    # 图瓦卢
+    # 图瓦卢 打不开
     'tv':{
         'allowed_domains':['health.gov.tv'],
-        'site_url':'http://health.gov.to',
+        'site_url':'http://health.gov.tv',
         'start_urls':[''],
         'rules':[]
 
@@ -378,7 +497,7 @@ configure = {
     'to':{
         'allowed_domains':['health.gov.to'],
         'site_url':'http://health.gov.to',
-        'start_urls':['http://www.health.gov.to/drupal/?q=Annual','http://www.health.gov.to/drupal/sites/default/files/MOH%20Corporate%20Plan%202008-2012.pdf','http://www.health.gov.to/drupal/sites/default/files/Tongan%20Registered%20List%20of%20Medicinal%20%20Drugs%20Final%20-%20MARCH%202016.xlsx'],
+        'start_urls':['http://www.health.gov.to/drupal/?q=node/26','http://www.health.gov.to/drupal/?q=Annual','http://www.health.gov.to/drupal/sites/default/files/MOH%20Corporate%20Plan%202008-2012.pdf','http://www.health.gov.to/drupal/sites/default/files/Tongan%20Registered%20List%20of%20Medicinal%20%20Drugs%20Final%20-%20MARCH%202016.xlsx'],
         'rules':[r'(.*)/drupal/sites/default/file(.*)'],
     },
 
@@ -386,8 +505,14 @@ configure = {
     'ws':{
         'allowed_domains':['health.gov.ws'],
         'site_url':'http://www.health.gov.ws',
-        'start_urls':['http://www.health.gov.ws/publications0/legislations'],
-        'rules':[]
+        'start_urls':['http://www.health.gov.ws','http://www.health.gov.ws/publications0/legislations','http://www.health.gov.ws/publications0/findings-and-reports'],
+        'rules':[r'(.*)/component/content/article(.*)',r'(.*)/health-warning-alerts/(.*)'],
+        'publish':[
+            {
+                'rule':'//*[@id="sp-component"]//*[@class="article-info"]//time[@datetime]/@datetime',
+                'format':'%Y-%m-%dT%H:%M:%S+14:00'
+            }
+        ]
 
     }
 
@@ -404,14 +529,17 @@ class MohSpider(scrapy.Spider):
 
     name = 'moh'
 
-    def __init__(self, domain=None, debug=None,*args, **kwargs):
+    def __init__(self, domain=None, debug=None, debug_url=None,*args, **kwargs):
 
        super(MohSpider, self).__init__()
        params = configure[domain]
        self.allowed_domains = params['allowed_domains']
        self.site_url = params['site_url']
        self.output_dir = configure['output_dir']
-       self.start_urls = params['start_urls']
+       if debug_url:
+           self.start_urls = [debug_url]
+       else:
+           self.start_urls = params['start_urls']
        self.rules = params['rules'] or []
        self.excludes = params.get('excludes') or []
        self.publish = params.get('publish') or []
@@ -576,6 +704,8 @@ class MohSpider(scrapy.Spider):
                 extra = item.get('extra')
                 if extra:
                     t = extra(t)
+                # if self.debug:
+                #     print t
             else:
                 continue
             try:
