@@ -47,7 +47,40 @@ def cz_time_sub(text):
     return None
 
 
+def br_time_sub(text):
+    p = r'(.*?), ([0-9]{1,2}) de (.*?) de ([0-9]{4}), ([0-9]{1,2})h([0-9]{2})(.*?)'
+    m = re.match(p,text)
+    groups = m.groups()
+    br2en = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+    if len(groups) >= 6:
+        month = groups[2]
+        for key,en in enumerate(br2en):
+            if en in month:
+                month = str(key + 1)
+                break
+        
+        day = groups[1]
+        year = groups[3]
+        hour = groups[4]
+        minute = groups[5]
+        return year+'-'+month+'-'+day+' '+hour+":"+minute
+    return None
 
+def uy_time_sub(text):
+    p = r'(.*?)([0-9]{1,2}) (.*?), ([0-9]{4})'
+    m = re.match(p,text)
+    groups = m.groups()
+    br2en = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+    if len(groups) >= 4:
+        month = groups[2]
+        for key,en in enumerate(br2en):
+            if en in month:
+                month = str(key + 1)
+                break
+        day = groups[1]
+        year = groups[3]
+        return year+'-'+month+'-'+day
+    
 
 configure = {
     "output_dir": '/var/www/html',
@@ -206,6 +239,35 @@ configure = {
     # 北美洲
     ###############################################
 
+    ## 美国
+    'us':{
+        'allowed_domains':['hhs.gov'],
+        'site_url':'https://www.hhs.gov',
+        'start_urls':[
+            'https://www.hhs.gov',
+            'https://www.hhs.gov/blog',
+
+        ],
+        'rules':[
+            r'(.*)/blog(.*)',
+            r'(.*)/about/news(.*)',
+
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="block-system-main"]//*[contains(@class,"date-display-single") and @content]/@content',
+                'format':'%Y-%m-%dT%H:%M:%S-05:00'
+            },
+            {
+                'rule':'//*[@id="site-content"]//*[contains(@class,"site-content")]//*[contains(@class,"left")]/b/text()[2]',
+                'format':''
+            }
+
+        ]
+
+    },
+
+
 
     ###############################################
     # 南美洲
@@ -306,36 +368,57 @@ configure = {
     # 巴西
     'br':{
         'allowed_domains':['saude.gov.br'],
-        'site_url':'http://www.saude.gov.br',
+        'site_url':'http://portalms.saude.gov.br',
         'start_urls':[
-            'http://portalms.saude.gov.br/noticias'
+            'http://portalms.saude.gov.br/noticias','http://blog.saude.gov.br','http://www.blog.saude.gov.br/promocao-da-saude'
         ],
         'rules':[
-            r'(.*)/noticias(.*)'
+            r'(.*)/noticias(.*)',r'(.*)index\.php/servicos(.*)',r'(.*)/promocao-da-saude(.*)',r'(.*)index\.php/promocao-da-saude(.*)',
+            r'(.*)index\.php/entenda-o-sus-home(.*)',r'(.*)index\.php/perguntas-e-respostas-home(.*)',r'(.*)index\.php/cursos-e-eventos-home(.*)',
+            r'(.*)index\.php/combate-ao-aedes-home(.*)',r'(.*)index\.php/materias-especiais(.*)',r'(.*)/acoes-e-programas(.*)',
+
         ],
         'publish':[
             {
-                'rule':'',
-                'format':''
+                'rule':'//*[@id="content-section"]//*[contains(@class,"documentPublished")]/text()',
+                'extra':br_time_sub,
+                'format':'%Y-%m-%d %H:%M',
+            },
+            {
+                'rule':'//*[@id="content-section"]//*[contains(@class,"documentByLine")]/ul[2]/li[1]/text()[2]',
+                'extra':br_time_sub,
+                'format':'%Y-%m-%d %H:%M',
+
             }
         ]
           
         
     },
 
-    # 智利
+    # 智利 scrapy all thing
     'cl':{
         'allowed_domains':['deis.cl'],
         'site_url':'http://www.deis.cl',
-        'start_urls':['http://www.deis.cl/indicadores-basicos-de-salud','http://www.deis.cl/estadisticas-de-natalidad-y-mortalidad','http://www.deis.cl/estadisticas-de-atenciones-y-recursos-para-la-salud','http://www.deis.cl/estadisticas-de-enfermedades-de-notificacion-obligatoria','http://www.deis.cl/prensa-y-otras-publicaciones-2','http://www.deis.cl/archivo-historico'],
-        'rules':[],
-          
-        
+        'start_urls':[
+            'http://www.deis.cl/indicadores-basicos-de-salud',
+            'http://www.deis.cl/estadisticas-de-natalidad-y-mortalidad',
+            'http://www.deis.cl/estadisticas-de-atenciones-y-recursos-para-la-salud',
+            'http://www.deis.cl/estadisticas-de-enfermedades-de-notificacion-obligatoria',
+            'http://www.deis.cl/prensa-y-otras-publicaciones-2',
+            'http://www.deis.cl/archivo-historico',
+            'http://www.deis.cl/category/agenda',
+            'http://www.deis.cl/category/noticias',
+            'http://www.deis.cl/estandares-y-normativas'
+        ],
+        'rules':[
+            r'(.*)'
+        ],
+        'exludes':[]   
     },
 
-    # 阿根廷 TODO 网站开发中
+    # 阿根廷 再说
     'ar':{
-        'allowed_domains':['msal.gov.ar'],
+        'allowed_domains':['msal.gob.ar'],
         'site_url':'http://www.msal.gov.ar',
         'start_urls':[],
         'rules':[
@@ -347,11 +430,29 @@ configure = {
     'uy':{
         'allowed_domains':['msp.gub.uy'],
         'site_url':'http://www.msp.gub.uy',
-        'start_urls':['http://www.msp.gub.uy/publicaciones/alimentos-cosm%C3%A9ticos-y-domisanitarios','http://www.health.govt.nz/publications'],
+        'start_urls':[
+            'http://www.msp.gub.uy/listado-de-noticias',
+            'http://www.msp.gub.uy/comunicados'
+
+        ],
         'rules':[
+            r'(.*)/comunicado(.*)',
+            r'(.*)/noticia(.*)',
+            r'(.*)/programa(.*)',
+            r'(.*)/publicación(.*)',
             r'(.*)/publicaciones(.*)',
-            r'(.*)/publication(.*)',
-            r'(.*)/publicaci%C3%B3n(.*)',
+            r'(.*)/publica(.*)'
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="content"]//*[contains(@class,"field-fecha-noticia")]/text()',
+                'format':'%d/%m/%Y'
+            },
+            {
+                'rule':'//*[@id="content"]//*[contains(@class,"date-display-single")]/text()',
+                'format':'%Y-%m-%d',
+                'extra':uy_time_sub
+            }
         ]
     },
 
@@ -610,7 +711,7 @@ class MohSpider(scrapy.Spider):
             
             resource = ResourceItem()
             resource['url'] = response.url
-            resource['content'] = response.body
+            
             resource['type'] = 'html'
             resource['location'] = self.site_url
             resource['language'] = self.language_inference(response)
@@ -618,6 +719,10 @@ class MohSpider(scrapy.Spider):
             # print resource['publish']
             resource['nation'] = self.nation
             text = self.h2t(response)
+            if text:
+                resource['content'] = text
+            else:
+                resource['content'] = response.body
             resource['keywords'] = json.dumps(self.text2keywords(text,resource['language'],keywords_num=5))
 
             if response.meta.get('title'):
@@ -701,6 +806,7 @@ class MohSpider(scrapy.Spider):
             if not self.debug:
                 yield resource
             if self.debug:
+                print '*'*40
                 print '(url,title)',resource['url'],resource['title']
 
     def assets_parse(self, response):
@@ -729,30 +835,30 @@ class MohSpider(scrapy.Spider):
         return language
 
     def publish_time_inference(self,response):
-        '''
-            article publish time inference from defined rules, it is tightly with html structure  
-        '''
-        t = None
-        for item in self.publish:
-            t = response.xpath(item['rule']).extract()
-            if t:
-                t = t[0]
-                t = t.strip(' \r\n')
-                extra = item.get('extra')
-                if extra:
-                    t = extra(t)
-                # if self.debug:
-                #     print t
-            else:
-                continue
-            try:
-                t = time.strptime(t,item["format"])
-            except:
-                t = None
-            if t:
-                t = time.strftime("%Y-%m-%dT%H:%M:%SZ",t)
-                break
-        return t
+        try:
+            t = None
+            for item in self.publish:
+                t = response.xpath(item['rule']).extract()
+                if t:
+                    t = t[0]
+                    t = t.strip(' \r\n')
+                    extra = item.get('extra')
+                    if extra:
+                        t = extra(t)
+                    # if self.debug:
+                    #     print t
+                else:
+                    continue
+                try:
+                    t = time.strptime(t,item["format"])
+                except:
+                    t = None
+                if t:
+                    t = time.strftime("%Y-%m-%dT%H:%M:%SZ",t)
+                    break
+            return t
+        except:
+            return None
 
     def style_parse(self, response):
         '''
