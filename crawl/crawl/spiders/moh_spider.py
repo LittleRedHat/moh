@@ -215,25 +215,33 @@ configure = {
     'co':{
         'allowed_domains':['minsalud.gov.co'],
         'site_url':'https://www.minsalud.gov.co',
-        'start_urls':['https://www.minsalud.gov.co/Paginas/default.aspx'],
-        'rules':[r'(.*)/Paginas(.*)'],
+        'start_urls':['https://www.minsalud.gov.co/English/Paginas/ABC-victims.aspx','https://www.minsalud.gov.co/English/Paginas/Social-Health-Promotion.aspx','https://www.minsalud.gov.co/English/Paginas/inicio.aspx','https://www.minsalud.gov.co/English/Paginas/historico-noticias.aspx'],
+        'rules':[r'(.*)/English/Paginas(.*)'],
         'publish':[
             {
-                'rule':'//*[@id="DeltaPlaceHolderMain"]//*[@class="fecha"]/text()',
+                'rule':'//*[@id="DeltaPlaceHolderMain"]//*[contains(@class,"fecha")]/text()',
                 'format':'%d/%m/%Y'
             }
         ]
 
     },
-    # 委瑞内拉
-    'gy':{
-        'allowed_domains':['sdnp.org.gy'],
-        'site_url':'http://www.sdnp.org.gy',
+    ## 厄瓜多尔 打不开
+    'ec':{
+        'allowed_domains':['msp.gov.ec'],
+        'site_url':'http://www.msp.gov.ec',
+        'start_urls':[],
+        'rules':[]
+
+    },
+    # 委瑞内拉 无效
+    've':{
+        'allowed_domains':['platino.gov.ve'],
+        'site_url':'http://www.platino.gov.ve',
         'start_urls':[],
         'rules':[]
     },
 
-    # 圭亚那
+    # 圭亚那 打不开
     'gy':{
         'allowed_domains':['sdnp.org.gy'],
         'site_url':'http://www.sdnp.org.gy',
@@ -246,18 +254,25 @@ configure = {
         'allowed_domains':['www.gov.sr'],
         'site_url':'http://www.gov.sr',
         'start_urls':['http://www.gov.sr/ministerie-van-volksgezondheid/publicaties.aspx'],
-        'rules':[r'(.*)/ministerie-van-volksgezondheid/publicaties(.*)']
+        'rules':[r'(.*)/ministerie-van-volksgezondheid/publicaties(.*)'],
+        'publish':[]
     },
 
-     # 秘鲁
+     # 秘鲁 网站暂时下线
     'pe':{
         'allowed_domains':['minsa.gob.pe'],
         'site_url':'http://www.minsa.gob.pe',
         'start_urls':['http://www.minsa.gob.pe/portalweb/02estadistica/estadistica_1.asp?sub5=2','http://www.minsa.gob.pe/portalweb/index_est03.asp?box=4','http://www.minsa.gob.pe/portalweb/index_pro03.asp?box=1'],
-        'rules':[r'(.*)/portalweb/02estadistica/(.*)',r'(.*)/estadisticas/estadisticas(.*)',r'(.*)/portalweb/07profesionales(.*)']  
+        'rules':[r'(.*)/portalweb/02estadistica/(.*)',r'(.*)/estadisticas/estadisticas(.*)',r'(.*)/portalweb/07profesionales(.*)'],
+        'publish':[
+            {
+                'rule':'',
+                'format':''
+            }
+        ]
     },
     
-    # 玻利维亚
+    # 玻利维亚 打不开
     'bo':{
         'allowed_domains':['sns.gov.bo'],
         'site_url':'http://www.sns.gov.bo',
@@ -266,22 +281,44 @@ configure = {
           
         
     },
-
-
     ## 巴拉圭
     'py':{
-        'allowed_domains':['saude.gov.br'],
-        'site_url':'http://www.saude.gov.br',
-        'start_urls':[],
-        'rules':[]  
+        'allowed_domains':['mspbs.gov.py'],
+        'site_url':'https://www.mspbs.gov.py',
+        'start_urls':[
+            'https://www.mspbs.gov.py/portal','https://www.mspbs.gov.py/dgtic','https://www.mspbs.gov.py/dnerhs',
+            'http://www.mspbs.gov.py/rrhh','https://www.mspbs.gov.py/dnvs','https://www.mspbs.gov.py/planificacion',
+            'http://www.mspbs.gov.py/dggies','https://www.mspbs.gov.py/dgrrii','https://www.mspbs.gov.py/drcps',
+        ],
+        'rules':[
+            r'(.*)/portal/(.*)',r'(.*)/digies(.*)',r'(.*)/dgtic(.*)',r'(.*)/dnerhs(.*)',r'(.*)/rrhh(.*)',
+            r'(.*)/dnvs(.*)',r'(.*)/planificacion(.*)',r'(.*)/dggies(.*)',r'(.*)/dgrrii(.*)',r'(.*)/drcps(.*)',  
+        ],
+        'publish':[
+            # {
+            #     'rule':'normalize-space(//*[contains(@class,"news-bar")]//*[contains(@class,"time-clock")])',
+            #     'format':'%d %b, %Y'
+            # }
+
+        ]
     },
 
     # 巴西
     'br':{
         'allowed_domains':['saude.gov.br'],
         'site_url':'http://www.saude.gov.br',
-        'start_urls':[],
-        'rules':[]
+        'start_urls':[
+            'http://portalms.saude.gov.br/noticias'
+        ],
+        'rules':[
+            r'(.*)/noticias(.*)'
+        ],
+        'publish':[
+            {
+                'rule':'',
+                'format':''
+            }
+        ]
           
         
     },
