@@ -501,6 +501,89 @@ configure = {
         ]
 
     },
+    ## 哥斯达黎加 没有网站
+
+    ## 巴拿马
+    'pa':{
+        'allowed_domains':['gob.pa'],
+        'site_url':'http://www.minsa.gob.pa',
+        'start_urls':[
+            'http://www.minsa.gob.pa/noticias-breves',
+            'http://www.minsa.gob.pa/destacados',
+            'http://www.minsa.gob.pa/informacion-salud',
+            'http://www.minsa.gob.pa/direccion',
+            'http://www.minsa.gob.pa/regiones-de-salud',
+            'http://www.minsa.gob.pa/proyectos',
+            'http://www.minsa.gob.pa/programas',
+            'http://www.minsa.gob.pa/centro-de-prensa',
+        ],
+        'rules':[
+            r'(.*)/noticias-breves(.*)',
+            r'(.*)/destacados(.*)',
+            r'(.*)/informacion-salud(.*)',
+            r'(.*)/direccion(.*)',
+            r'(.*)/regiones-de-salud(.*)',
+            r'(.*)/proyectos(.*)',
+            r'(.*)/programas(.*)',
+            r'(.*)/noticia(.*)',
+            r'(.*)/campana(.*)',
+            r'(.*)/promocion-salud(.*)'
+        ],
+        'publish':[
+            {
+            'rule':'//*[@id="block-system-main"]//article//footer/span/@content',
+            'format':'%Y-%m-%dT%H:%M:%S-05:00'
+            },
+        ]
+    },
+
+    ## 古巴 打不开
+    'cu':{
+        'allowed_domains':['gob.cu'],
+        'site_url':'http://www.minsa.gob.cu',
+        'start_urls':[''],
+        'rules':[],
+
+    },
+    ## 海地 没有网站
+
+    ## 安提瓜和巴布达
+    'ag':{
+        'allowed_domains':['gov.ag'],
+        'site_url':'http://mbs.gov.ag',
+        'start_urls':[
+            'http://mbs.gov.ag'
+        ],
+        'rules':[
+            r'(.*)/press_releases(.*)',
+            r'(.*)/information(.*)',  
+        ],
+    },
+    ## 多米尼克 网站开发中
+    'dm':{
+
+
+    },
+    ## 多米尼加 打不开
+    'do':{
+
+    },
+    ## 圣卢西亚 打不开
+    'lc':{
+
+    },
+    ## 圣基茨和尼维斯 打不开
+    'kn':{
+
+    },
+    ## 巴巴多斯
+    'bb':{
+        'allowed_domains':['gov.bb'],
+        'site_url':'http://health.gov.bb',
+        'start_urls':[''],
+        'rules':[],
+    },
+
 
 
 
