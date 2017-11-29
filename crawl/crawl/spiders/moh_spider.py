@@ -136,6 +136,19 @@ def lr_time_sub(text):
         year = groups[4]
         return year+','+month+','+day
 
+def sc_time_sub(text):
+    p = r'([0-9]{1,2})(.*?) (\w+) ([0-9]{4})'
+    m = re.match(p,text)
+    groups = m.groups()
+    if len(groups) >=4:
+        year = groups[3]
+        month = groups[2]
+        day = groups[0]
+        return day+' '+month+' '+year
+
+
+
+
 configure = {
     "output_dir": '/var/www/html',
     # 韩国
@@ -640,6 +653,104 @@ configure = {
             }
         ]
     },
+    ## 塞舌尔
+    'sc':{
+        'allowed_domains':['health.gov.sc'],
+        'site_url':'http://www.health.gov.sc',
+        'start_urls':[
+            'http://www.health.gov.sc'
+        ],
+        'rules':[
+            r'(.*)index\.php/media/news(.*)',
+            r'(.*)/index\.php/news-posts(.*)',
+            r'(.*)index\.php/press-release-blog(.*)',
+            r'(.*)index\.php/[0-9]{4}/[0-9]{1,2}/[0-9]{1,2}/(.*)',
+            r'(.*)/index\.php/newsletters(.*)',
+            r'(.*)/index\.php/media/speeches(.*)',
+            r'(.*)/index\.php/national-assembly-questions(.*)',
+            r'(.*)/index\.php/policies(.*)',
+            r'(.*)/index\.php/plans(.*)',
+            r'(.*)/index\.php/reports(.*)',
+            r'(.*)/index\.php/statistics(.*)',
+            r'(.*)/index\.php/money-matters(.*)',
+            r'(.*)/index\.php/faqs(.*)'
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="theme-page"]//time[@datetime and contains(@class,"news-single-date")]/@datetime',
+                'format':'%B %d, %Y'
+            },
+            {
+                'rule':'//*[@id="theme-page"]//*[contains(@class,"mk-single-content")]/p[1]/span/em/text()',
+                'format':'%d %B %Y',
+                'extra':sc_time_sub,
+            }
+        ]
+
+    },
+    ## 纳米比亚
+    'na':{
+        'allowed_domains':['mhss.gov.na'],
+        'site_url':'http://www.mhss.gov.na',
+        'start_urls':[
+            'http://www.mhss.gov.na'
+        ],
+        'rules':[
+            r'(.*)/(news|events)(.*)',
+            r'(.*)/downloads(.*)',
+            r'(.*)/namphia(.*)'
+        ],
+        'excludes':[
+            r'(.*)/(videos|picture-galleries)(.*)'
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="id_passed"]/div[1]/b/span/text()',
+                'format':'%d %b %Y'
+            }
+        ]
+
+    },
+    ## 伯兹瓦纳 
+    'bw':{
+        'allowed_domains':['gov.bw'],
+        'site_url':'http://www.gov.bw',
+        'start_urls':['http://www.gov.bw/en/Ministries--Authorities/Ministries/MinistryofHealth-MOH/'],
+        'rules':[
+            r'(.*)/en/Ministries--Authorities/Ministries/MinistryofHealth-MOH(.*)'
+        ],
+    },
+    ## 津巴布韦 503
+    'zw':{
+
+    },
+    ## 斯威士兰 404
+    'sz':{
+
+    },
+    ## 莱索托
+    'ls':{
+        'allowed_domains':['health.gov.ls'],
+        'site_url':'http://www.health.gov.ls',
+        'start_urls':[
+            'http://www.health.gov.ls/gov_webportal/home/index.html'
+        ],
+        'rules':[
+            r'(.*)/gov_webportal/(articles|health|ministries|news archives|home)(.*)',
+        ],
+    },
+    ## 南非
+    'za':{
+        'allowed_domains':['health.gov.za'],
+        'site_url':'http://www.health.gov.za',
+        'start_urls':['http://www.health.gov.za'],
+        'rules':[
+            r'(.*)/index\.php/(diseases|gf-tb-program)(.*)',
+            r'(.*)/index\.php/component/phocadownload(.*)',
+            r'(.*)/index\.php/[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}-[0-9]{1,2}-[0-9]{1,2}-[0-9]{1,2}'
+        ],
+    },
+
 
 
 
