@@ -51,7 +51,7 @@ def br_time_sub(text):
     p = r'(.*?), ([0-9]{1,2}) de (.*?) de ([0-9]{4}), ([0-9]{1,2})h([0-9]{2})(.*?)'
     m = re.match(p,text)
     groups = m.groups()
-    br2en = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+    br2en = ['ene','feb','mar','abr','may','jun','jul','agos','sep','oct','nov', 'dic']
     if len(groups) >= 6:
         month = groups[2]
         for key,en in enumerate(br2en):
@@ -70,7 +70,7 @@ def uy_time_sub(text):
     p = r'(.*?)([0-9]{1,2}) (.*?), ([0-9]{4})'
     m = re.match(p,text)
     groups = m.groups()
-    br2en = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+    br2en = ['ene','feb','mar','abr','may','jun','jul','agos','sep','oct','nov', 'dic']
     if len(groups) >= 4:
         month = groups[2]
         for key,en in enumerate(br2en):
@@ -85,7 +85,7 @@ def mx_time_sub(text):
     p = r'([0-9]{1,2}) de (.*) de ([0-9]{4})(.*?)'
     m = re.match(p,text)
     groups = m.groups()
-    br2en = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+    br2en = ['ene','feb','mar','abr','may','jun','jul','agos','sep','oct','nov', 'dic']
     if len(groups) >= 3:
         month = groups[1]
         for key,en in enumerate(br2en):
@@ -95,7 +95,20 @@ def mx_time_sub(text):
         day = groups[0]
         year = groups[2]
         return year+'-'+month+'-'+day
-    
+def ni_time_sub(text):
+    p = r'(.*?) ([0-9]{1,2}) de (.*?)/([0-9]{4})'
+    m = re.match(p,text)
+    groups = m.groups()
+    br2en = ['ene','feb','mar','abr','may','jun','jul','agos','sep','oct','nov', 'dic']
+    if len(groups) >= 3:
+        month = groups[2]
+        for key,en in enumerate(br2en):
+            if en.lower() in month.lower():
+                month = str(key + 1)
+                break
+        day = groups[1]
+        year = groups[3]
+        return year+'-'+month+'-'+day    
     
 configure = {
     "output_dir": '/var/www/html',
@@ -435,7 +448,7 @@ configure = {
 
 
     },
-    ## 巴哈马
+    ## 巴哈马 TODO
     'bs':{
         'allowed_domains':['gov.bs'],
         'site_url':'http://www.bahamas.gov.bs',
@@ -450,10 +463,42 @@ configure = {
 
     ## 伯利兹
     'bz':{
+        'allowed_domains':['enum.hu'],
+        'site_url':'http://www.eum.hu',
+        'start_urls':[
+            'http://www.belize.gov.bz/index.php/ministry-of-health'
+        ],
+        'rules':[
+            
+        ],
+        'publish':[
+
+        ]
+
 
     },
     ## 尼加瓜拉
     'ni':{
+        'allowed_domains':['gob.ni'],
+        'site_url':'http://www.minsa.gob.ni',
+        'start_urls':[
+            'http://www.minsa.gob.ni',
+
+        ],
+        'rules':[
+            r'(.*)index\.php/(.*)noticias(.*)',
+            r'(.*)index\.php/enlaces(.*)',
+            r'(.*)index\.php/repository(.*)',
+            r'(.*)index\.php/directorio(.*)',
+
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="contenido"]/div[3]/p[position()= (last()-1)]/strong/text()',
+                'format':'%Y-%m-%d',
+                'extra':ni_time_sub,
+            }
+        ]
 
     },
 
