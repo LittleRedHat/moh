@@ -556,8 +556,92 @@ configure = {
         'start_urls':[
             'http://health.go.ug'
         ],
-        'rules':[],
+        'rules':[
+            r'(.*)/news-and-updates(.*)',
+            r'(.*)/contene(.*)',
+            r'(.*)/projects(.*)',
+            r'(.*)/programs(.*)',
+            r'(.*)/publications(.*)'
+        ],
     },
+    ## 卢旺达 带cookie才可以访问
+    'rw':{
+        'allowed_domains':['moh.gov.rw'],
+        'site_url':'http://moh.gov.rw',
+        'start_urls':[
+            'http://moh.gov.rw/index.php?id=2'
+        ],
+
+        'rules':[
+            r'(.*)/index\.php\?id=(5|2|183|90|95|109|99|177|124|136|29|242|227)(.*?)',
+            r'(.*)/index\.php\?id=34(.*)'
+        ],
+    },
+
+    ## 布隆迪 打不开
+    'bi':{
+
+    },
+    ## 赞比亚 打不开
+    'zm':{
+
+    },
+    ## 马拉维
+    'mw':{
+        'allowed_domains':['health.gov.mw'],
+        'site_url':'http://www.hiv.health.gov.mw',
+        'start_urls':[
+            'http://www.hiv.health.gov.mw'
+        ],
+        'rules':[
+            r'(.*)/index\.php/our-documents(.*)',
+            r'(.*)/index\.php/(.*)/latest-news(.*)',
+            r'(.*)/index\.php/(.*)/events-calender(.*)',
+            r'(.*)/index\.php/information(.*)',
+            r'(.*)/index\.php(.*)'
+        ],
+
+
+    },
+    ## 莫桑比克 打不开
+    'mz':{
+
+    },
+    ## 马达加斯加 前端渲染 爬不了
+    'mg':{
+        'allowed_domains':['sante.gov.mg'],
+        'site_url':'http://www.sante.gov.mg',
+        'start_urls':[
+            'http://www.sante.gov.mg'
+        ],
+        'rules':[
+            r'(.*)'
+        ],
+    },
+    ## 毛里求斯
+    'mu':{
+        'allowed_domains':['health.govmu.org'],
+        'site_url':'http://health.govmu.org',
+        'start_urls':[
+            'http://health.govmu.org/English/Pages/default.aspx'
+        ],
+        'rules':[
+            r'(.*)/(e|E)nglish/ServicesHealth(.*)',
+            r'(.*)/(e|E)nglish/Statistics(.*)',
+            r'(.*)/(e|E)nglish/News(.*)',
+            r'(.*)/(e|E)nglish/Events(.*)'
+
+
+        ],
+        'publish':[
+            {
+                'rule':'normalize-space(//*[@id="ctl00_PlaceHolderMain__editModePanelPublishingDateFormatted"]/span[2]/text())',
+                'format':'%B %d, %Y'
+            }
+        ]
+    },
+
+
 
 
 
@@ -1321,7 +1405,15 @@ class MohSpider(scrapy.Spider):
        self.language = params.get('language') or ''
        self.nation = domain
        self.debug = debug
-       
+    
+
+    def start_requests(self):
+        for url in self.start_urls:
+            if self.nation in ['rw']:
+                yield scrapy.Request(url,cookies={'_accessKey2':'CD2we/sGT5LdZuwhvlgz3y4zkhvdvTTh'})
+            else:
+                yield scrapy.Request(url)
+
 
     def parse(self, response):
         '''
