@@ -109,7 +109,33 @@ def ni_time_sub(text):
         day = groups[1]
         year = groups[3]
         return year+'-'+month+'-'+day    
-    
+# spanish_month=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre']
+fr_month = ['jan','fév','mars','avr','mai','juin','juillet','aoû','sept','oct','nov','déc']
+
+def ma_time_sub(text):
+    p = r'([0-9]{1,2}) (.*?) ([0-9]{2})'
+    m = re.match(p,text)
+    groups = m.groups()
+    if len(groups) >= 3:
+        month = groups[1]
+        for key,en in enumerate(fr_month):
+            if en.lower() in month.lower() or month.lower() in en.lower():
+                month = str(key + 1)
+                break
+        day = groups[0]
+        year = groups[2]
+        return '20'+year+'-'+month+'-'+day 
+  
+def lr_time_sub(text):
+    p = r'(.*?) (\w+) ([0-9]{1,2})(.*)([0-9]{4})'
+    m = re.match(p,text)
+    groups = m.groups()
+    if len(groups) >= 5:
+        month = groups[1]
+        day = groups[2]
+        year = groups[4]
+        return year+','+month+','+day
+
 configure = {
     "output_dir": '/var/www/html',
     # 韩国
@@ -127,16 +153,6 @@ configure = {
         'start_urls':['http://www.mohap.gov.ae/en/AwarenessCenter/Pages/posts.aspx','http://www.mohap.gov.ae/ar/Aboutus/Pages/PublicHealthPolicies.aspx','http://www.mohap.gov.ae/en/MediaCenter/Pages/news.aspx','http://www.mohap.gov.ae/en/MediaCenter/Pages/events.aspx','http://www.mohap.gov.ae/en/OpenData/Pages/default.aspx','http://www.mohap.gov.ae/en/OpenData/Pages/health-statistics.aspx'],
         'rules':[r'(.*)/en/AwarenessCenter/Pages/post\.aspx(.*)',r'(.*)/FlipBooks/PublicHealthPolicies/(.*)/mobile/index\.html(.*)',r'(.*)/en/MediaCenter/Pages/news\.aspx(.*)',r'(.*)/en/OpenData/Pages/default\.aspx(.*)',r'(.*)/en/OpenData/Pages/health-statistics\.aspx(.*)',r'(.*)/en/MediaCenter/Pages/EventDetail.aspx(.*)'],
         'publish':[{"rule":"//div[@class='newsdetailstitle']/p[@class='metadate']/span[2]/text()","format":"%d %b %Y"},{"rule":"//div[@class='contentblock']/p[@class='metadata']/span[1]/text()","format":"%d %A, %B, %Y","extra":ae_time_sub},{"rule":"//div[@class='newsdetailstitle']/p[@class='metadate']/span[2]/text()","format":"%d %B %Y"}]
-    },
-    # 埃及
-    'eg':{
-        'allowed_domains':['mohp.gov.eg'],
-        'site_url':'http://www.mohp.gov.eg',
-        'start_urls':['http://www.mohp.gov.eg/News.aspx','http://www.mohp.gov.eg/Events.aspx','http://www.mohp.gov.eg/Courses.aspx','http://www.mohp.gov.eg/cancer/'],
-        'rules':[r'(.*)/NewsDetails\.aspx(.*)',r'(.*)/EventDetails\.aspx(.*)',r'(.*)/coursedetailes\.aspx(.*)'],
-        'language':'ar_EG',
-        'publish':[{"rule":"//div[@class='redate']/text()","format":"%d %B %Y"}]
-
     },
     # 伊拉克
     'iq':{
@@ -259,8 +275,299 @@ configure = {
         'publish':[]
     },
     ###############################################
+    # 亚洲
+    ###############################################
+
+
+    ###############################################
+    # 欧洲
+    ###############################################
+
+
+
+    ###############################################
     # 非洲
     ###############################################
+
+    ## 埃及
+    'eg':{
+        'allowed_domains':['mohp.gov.eg'],
+        'site_url':'http://www.mohp.gov.eg',
+        'start_urls':[
+            'http://www.mohp.gov.eg/News.aspx',
+            'http://www.mohp.gov.eg/Events.aspx',
+            'http://www.mohp.gov.eg/Courses.aspx',
+            'http://www.mohp.gov.eg/cancer/'
+        ],
+        'rules':[
+            r'(.*)/NewsDetails\.aspx(.*)',
+            r'(.*)/EventDetails\.aspx(.*)',
+            r'(.*)/coursedetailes\.aspx(.*)'
+        ],
+        'language':'ar_EG',
+        'publish':[{"rule":"//div[contains(@class,'redate')]/text()","format":"%d %B %Y"}]
+    },
+    ## 利比亚 网站失效
+    'ly':{
+
+    },
+    ## 阿尔及利亚 打不开
+    'dz':{
+    },
+    ## 摩洛哥
+    'ma':{
+        'allowed_domains':['gov.ma'],
+        'site_url':'http://www.sante.gov.ma',
+        'start_urls':[
+            'http://www.sante.gov.ma/Pages/Accueil.aspx',
+
+        ],
+        'language':'fr-fr',
+        'rules':[
+            r'(.*)/Pages/activites\.aspx(.*)',
+            r'(.*)/Pages/toutes_actualites\.aspx(.*)',
+            r'(.*)/Publications(.*)',
+            r'(.*)/Medicaments(.*)',
+            r'(.*)/Pages/annonces\.aspx(.*)',
+            r'(.*)/Pages/communiqués\.aspx(.*)'
+        ],
+        'publish':[
+            {
+                'rule':'//*[contains(@class,"article")]//*[contains(@class,"date")]/text()',
+                'format':'%Y-%m-%d',
+                'extra':ma_time_sub
+
+            }
+        ]
+    },
+    ## 突尼斯
+    'tn':{
+        'allowed_domains':['santetunisie.rns.tn'],
+        'site_url':'http://www.santetunisie.rns.tn',
+        'start_urls':[
+            'http://www.santetunisie.rns.tn/fr',
+
+        ],
+        'language':'fr-fr',
+        'rules':{
+            r'(.*)fr/toutes-les-actualites(.*)',
+            r'(.*)fr/education-santé(.*)',
+            r'(.*)fr/sante-en-tunisie(.*)',
+            r'(.*)fr/indicateurs(.*)'
+        }
+    },
+    ## 毛里塔尼亚 打不开
+    'mr':{
+
+    },
+    ## 马里 没有网站
+    'ml':{
+
+    },
+    ## 塞内加尔
+    'sn':{
+        'allowed_domains':['sante.gouv.sn'],
+        'language':'fr-fr',
+        'site_url':'http://www.sante.gouv.sn',
+        'start_urls':[
+            'http://www.sante.gouv.sn/index.php',
+            'http://www.sante.gouv.sn/index.php',
+        ],
+        'rules':[
+            r'(.*)page-reader-les-actualites-get\.php(.*)',
+            r'(.*)/page-reader-content-details\.php(.*)',
+            r'(.*)page-reader-categories-article-presse(.*)'
+        ],
+    },
+    ## 冈比亚
+    'gm':{
+        'allowed_domains':['moh.gov.gm'],
+        'site_url':'http://moh.gov.gm',
+        'start_urls':[
+            'http://moh.gov.gm'
+        ],
+        'rules':[
+            r'(.*)'
+        ]
+
+    },
+    ## 利比里亚
+    'lr':{
+        'allowed_domains':['moh.gov.lr'],
+        'site_url':'http://moh.gov.lr',
+        'start_urls':[
+            'http://moh.gov.lr',
+        ],
+        'rules':[
+            r'(.*)',
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="page"]//article//p[contains(@class,"post-byline")]/text()[2]',
+                'format':'%Y,%B,%d',
+                'extra':lr_time_sub,
+            }
+        ],
+        'excludes':[
+            r'(.*)/photos(.*)',
+            r'(.*)/videos(.*)',
+            r'(.*)/audios(.*)'
+        ]
+    },
+    ## 加纳
+    'gh':{
+        'allowed_domains':['moh.gov.gh'],
+        'site_url':'http://www.moh.gov.gh',
+        'start_urls':[
+            'http://www.moh.gov.gh',
+        ],
+        'rules':[
+            r'(.*)'
+        ],
+        'excludes':[
+            r'(.*)/gallery-of-projects(.*)',
+        ]
+        
+    },
+    ## 贝宁 打不开
+    'bj':{
+
+    },
+    ## 尼日利亚 打不开
+    'ng':{
+
+    },
+    ## 喀麦隆
+    'cm':{
+        'allowed_domains':['minsante.cm'],
+        'site_url':'http://www.minsante.cm',
+        'start_urls':[
+            'http://www.minsante.cm/site/?q=fr',
+        ],
+        'language':'fr-fr',
+        'rules':[
+            r'(.*)/site/\?q=fr(.*)'
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="block-system-main"]//*[contains(@class,"creation")]/span[1]/text()',
+                'format':'Publi\xe9 le %d %b %Y'
+            }
+        ]
+    },
+    ## 苏丹 打不开
+    'sd':{
+
+    },
+    ## 安哥拉 打不开
+    'ao':{
+
+    },
+    ## 埃塞俄比亚 打不开
+    'et':{
+
+    },
+    ## 索马里
+    'so':{
+        'allowed_domains':['moh.gov.so'],
+        'site_url':'http://moh.gov.so',
+        'start_urls':[
+            'http://moh.gov.so'
+        ],
+        'rules':[
+            r'(.*)/en/media-center/news-updates(.*)',
+            r'(.*)/en/media-center/reports(.*)',
+            r'(.*)/en/media-center/events(.*)',
+            r'(.*)/en/media-center/press-release(.*)',
+            r'(.*)/en/awareness(.*)',
+            r'(.*)/en/health-programs(.*)',
+            r'(.*)/en/tb-program(.*)',
+            r'(.*)/en/component/content/article(.*)',
+            r'(.*)/en/publications(.*)',
+            r'(.*)/en/health-facilities(.*)',
+        ],
+
+    },
+    ## 厄立特里亚 网站在维护
+    'er':{
+
+
+    },
+    ## 坦桑尼亚
+    'tz':{
+        'allowed_domains':['moh.go.tz'],
+        'site_url':'http://www.moh.go.tz',
+        'start_urls':[
+            'http://www.moh.go.tz/en/'
+
+        ],
+        'rules':[
+            r'(.*)/en/hmis-data(.*)',
+            r'(.*)/en/announcements(.*)',
+            r'(.*)/en/upcoming-events(.*)',
+            r'(.*)/en/press-releases(.*)',
+            r'(.*)/en/86-news-and-events(.*)',
+            r'(.*)en/strategic-plans(.*)',
+            r'(.*)/en/reports(.*)',
+            r'(.*)/en/research-and-findings(.*)',
+            r'(.*)/en/circulars(.*)',
+            r'(.*)/en/guidelines(.*)',
+            r'(.*)/en/yellow-fever-entry(.*)',
+            r'(.*)/en/epidemiological-disease-report(.*)'
+
+
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="jsn-mainbody"]//time[@datetime]/@datetime',
+                'format':'%Y-%m-%dT%H:%M:%S+00:00'
+            }
+        ]
+        
+
+    },
+    ## 肯尼亚
+    'ke':{
+        'allowed_domains':['health.go.ke'],
+        'site_url':'http://www.health.go.ke',
+        'start_urls':[
+            'http://www.health.go.ke'
+        ],
+        'rules':[
+            r'(.*)/event(.*)',
+            r'(.*)/[0-9]{4}/[0-9]{1,2}(.*)',
+            r'(.*)/news(.*)',
+            r'(.*)/resources(.*)',
+
+
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="main-content"]//*[contains(@class,"postmetadata")]/span[1]/text()',
+                'format':'On %B %d, %Y',
+
+            }
+        ]
+    },
+    ## 乌干达
+    'ug':{
+        'allowed_domains':['health.go.ug'],
+        'site_url':'http://health.go.ug',
+        'start_urls':[
+            'http://health.go.ug'
+        ],
+        'rules':[],
+    },
+
+
+
+
+
+
+
+
+
+
 
 
     ###############################################
@@ -580,15 +887,36 @@ configure = {
     'bb':{
         'allowed_domains':['gov.bb'],
         'site_url':'http://health.gov.bb',
-        'start_urls':[''],
-        'rules':[],
+        'start_urls':[
+            'http://health.gov.bb'
+        ],
+        'rules':[
+            r'(.*)/ministry_health(.*)',
+        ],
     },
+    ## 格林纳达
+    'gd':{
+        'allowed_domains':['gov.gd'],
+        'site_url':'http://health.gov.gd',
+        'start_urls':[
+            'http://health.gov.gd/index.php?lang=en',
+        ],
+        'rules':[
+            r'(.*)/index\.php(.*)'
+        ]
+    },
+    ## 圣文森特和格林纳丁斯
+    'vc':{
+        'allowed_domains':['gov.vc'],
+        'site_url':'http://moh.gov.vc',
+        'start_urls':[
+            'http://moh.gov.vc/health',
+        ],
+        'rules':[
+            r'(.*)/health/index\.php(.*)',
 
-
-
-
-
-
+        ]
+    },
     ###############################################
     # 南美洲
     ###############################################
@@ -775,10 +1103,6 @@ configure = {
             }
         ]
     },
-
-
-
-
     ###############################################
     # 大洋洲
     ###############################################
@@ -1003,7 +1327,7 @@ class MohSpider(scrapy.Spider):
         '''
         parse html to extract useful link and assets
         '''
-        if response.headers and response.headers['Content-Type'] and ('text/html' in response.headers['Content-Type']):
+        if response.headers and response.headers.get('Content-Type') and ('text/html' in response.headers['Content-Type']):
             # print response.url
 
             # 过滤掉不相关的页面
