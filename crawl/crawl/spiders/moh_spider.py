@@ -750,21 +750,6 @@ configure = {
             r'(.*)/index\.php/[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}-[0-9]{1,2}-[0-9]{1,2}-[0-9]{1,2}'
         ],
     },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     ###############################################
     # 北美洲
     ###############################################
@@ -1559,10 +1544,7 @@ class MohSpider(scrapy.Spider):
             # print resource['publish']
             resource['nation'] = self.nation
             text = self.h2t(response)
-            if text:
-                resource['content'] = text
-            else:
-                resource['content'] = response.body
+            resource['content'] = text
             resource['keywords'] = json.dumps(self.text2keywords(text,resource['language'],keywords_num=5))
 
             if response.meta.get('title'):
@@ -1685,8 +1667,6 @@ class MohSpider(scrapy.Spider):
                     extra = item.get('extra')
                     if extra:
                         t = extra(t)
-                    # if self.debug:
-                    #     print t
                 else:
                     continue
                 try:

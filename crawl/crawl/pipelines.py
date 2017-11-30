@@ -18,6 +18,7 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 from elasticsearch import Elasticsearch
 import base64
+import html2text
 
 from crawl.items import ResourceItem
 
@@ -29,6 +30,7 @@ class ElasticsearchPipeline(object):
             return DropItem()
         if item['type'] == 'html':
             doc = dict(item)
+            doc['content'] = h2t(doc['content'])
             # doc['content']=base64.b64encode(doc['content'])
             # doc['content']="this is a test"
             self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc)
@@ -40,7 +42,14 @@ class ElasticsearchPipeline(object):
             # doc['content']="this is a test"
             self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,pipeline='attachment')
         return item
-        
+
+def h2t(html):
+    try:
+        h = html2text.HTML2Text()
+        return h.handle(html)
+    except:
+        return html
+
 
 
 
@@ -107,7 +116,7 @@ class FilePipeline(object):
         next_item['location']=item['location']
         next_item['language'] = item.get('language')
         next_item['publish'] = item.get('publish') or '1970-01-01T00:00:00Z'
-        print item.get('publish')
+        #print item.get('publish')
         next_item['nation'] = item.get('nation') or ''
         next_item['keywords']=item.get('keywords') or ''
         netloc = urlparse(url).netloc
