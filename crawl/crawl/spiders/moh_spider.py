@@ -1544,7 +1544,7 @@ class MohSpider(scrapy.Spider):
             # print resource['publish']
             resource['nation'] = self.nation
             text = self.h2t(response)
-            resource['content'] = text
+            resource['content'] = response.body
             resource['keywords'] = json.dumps(self.text2keywords(text,resource['language'],keywords_num=5))
 
             if response.meta.get('title'):
