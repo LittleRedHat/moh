@@ -1464,6 +1464,9 @@ configure = {
     },
 
     # 萨摩亚
+    '''
+        存在的问题:链接跳转不正确,需要修改base
+    '''
     'ws':{
         'allowed_domains':['health.gov.ws'],
         'site_url':'http://www.health.gov.ws',
@@ -1565,7 +1568,14 @@ class MohSpider(scrapy.Spider):
 
             print '*'*40
             print '(url,language,publish,title)',resource['url'],resource['language'],resource['publish'],resource['title']
-
+            
+            ## get html base
+            base = response.xpath('//base[@href]/@href').extract()
+            if len(base):
+                base = base[0]
+            else:
+                base = None
+            
             links = response.xpath('//a[@href]')
             for link in links:
                 link_text = link.xpath('@href').extract()
@@ -1579,7 +1589,7 @@ class MohSpider(scrapy.Spider):
                     link_title = link_title[0]
                 else:
                     link_title = '没有标题'
-                http_url = self.gen_http_url(response.url,link_text)
+                http_url = self.gen_http_url(response.url,link_text,base)
                 if http_url:
                     # if self.debug:
                     #     print 'yield http url %s from %s'%(http_url,response.url)
@@ -1593,7 +1603,7 @@ class MohSpider(scrapy.Spider):
             stylesheets = response.xpath(
                 '//link[@type="text/css"]/@href').extract()
             for stylesheet in stylesheets:
-                http_url = self.gen_http_url(response.url, stylesheet)
+                http_url = self.gen_http_url(response.url, stylesheet,base)
                 if http_url and not self.debug:
                     yield scrapy.Request(http_url, callback=self.style_parse)
 
@@ -1601,7 +1611,7 @@ class MohSpider(scrapy.Spider):
 
             javascripts = response.xpath('//script[@src]/@src').extract()
             for javascript in javascripts:
-                http_url = self.gen_http_url(response.url, javascript)
+                http_url = self.gen_http_url(response.url, javascript,base)
                 if http_url and not self.debug:
                     yield scrapy.Request(http_url, callback=self.assets_parse)
 
@@ -1610,7 +1620,7 @@ class MohSpider(scrapy.Spider):
                 '//input[@type="image"]/@src').extract() or []
             images.extend(input_images)
             for img in images:
-                img_http_url = self.gen_http_url(response.url, img)
+                img_http_url = self.gen_http_url(response.url, img,base)
                 if img_http_url and not self.debug:
                     yield scrapy.Request(img_http_url, callback=self.assets_parse)
         else:
@@ -1721,7 +1731,7 @@ class MohSpider(scrapy.Spider):
                                 yield scrapy.Request(image_url,self.assets_parse)
 
    
-    def gen_http_url(self,source_url,dest_url):
+    def gen_http_url(self,source_url,dest_url,base):
         '''
             generate absolute url 
         '''
@@ -1733,8 +1743,10 @@ class MohSpider(scrapy.Spider):
             return None
         elif dest_url.startswith('javascript:'):
             return None
+        elif base:
+            return urljoin(base,dest_url).encode('utf-8')
         else:
-            return urljoin(source_url,dest_url)
+            return urljoin(source_url,dest_url).encode('utf-8')
 
 
 

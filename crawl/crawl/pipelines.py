@@ -140,13 +140,24 @@ class FilePipeline(object):
             mine_output_path = os.path.join(mine_dir,modified_name)
             next_item['md5']=md5
             next_item['local_url'] = mine_output_path
+
             try:
                 soup = BeautifulSoup(decode_content,'lxml')
                 # modify hrefs
                 hrefs = soup.find_all('a')
+                base = soup.find('base')
+                if base:
+                    
+                    tmp = base[0].get('href')
+                    base.decompose()
+                    base = tmp
+                else:
+                    base = None
+
+
                 for item in hrefs:
                     href = item.get('href')
-                    http_url = self.gen_http_url(url,href)
+                    http_url = self.gen_http_url(url,href,base)
                     if http_url:     
                         dir,_ = self.map_url_to_dirs(http_url)
                         path_name = hashlib.md5(http_url).hexdigest()
@@ -160,7 +171,7 @@ class FilePipeline(object):
                 javascripts = soup.find_all('script')
                 for item in javascripts:
                     src = item.get('src')
-                    http_url = self.gen_http_url(url,src)
+                    http_url = self.gen_http_url(url,src,base)
                     if http_url:
                         dir,path_name= self.map_url_to_dirs(http_url)
                         your_output_path = os.path.join(dir,path_name)
@@ -171,7 +182,7 @@ class FilePipeline(object):
                 styles = soup.find_all('link')
                 for item in styles:
                     href = item.get('href')
-                    http_url = self.gen_http_url(url,href)
+                    http_url = self.gen_http_url(url,href,base)
                     if http_url:
                         dir,path_name= self.map_url_to_dirs(http_url)
                         your_output_path = os.path.join(dir,path_name)
@@ -181,14 +192,13 @@ class FilePipeline(object):
                 images = soup.find_all('img')
                 for item in images:
                     src = item.get('src')
-                    http_url = self.gen_http_url(url,src)
+                    http_url = self.gen_http_url(url,src,base)
                     if http_url:
                         dir,path_name= self.map_url_to_dirs(http_url)
                         your_output_path = os.path.join(dir,path_name)
                         relpath = os.path.relpath(your_output_path,mine_dir)
                         item['src']=relpath
                 self.output_content(url,str(soup),modified_name)
-
                 next_item['content'] = str(soup)
                
 
@@ -250,8 +260,13 @@ class FilePipeline(object):
             return None
         elif dest_url.startswith('mailto'):
             return None
+        elif dest_url.startswith('javascript:'):
+            return None
+        elif base:
+            return urljoin(base,dest_url).encode('utf-8')
         else:
-            return urljoin(source_url,dest_url).encode('utf-8')     
+            return urljoin(source_url,dest_url).encode('utf-8')
+
             
             
         
