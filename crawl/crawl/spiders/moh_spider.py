@@ -1464,9 +1464,6 @@ configure = {
     },
 
     # 萨摩亚
-    '''
-        存在的问题:链接跳转不正确,需要修改base
-    '''
     'ws':{
         'allowed_domains':['health.gov.ws'],
         'site_url':'http://www.health.gov.ws',
@@ -1575,6 +1572,7 @@ class MohSpider(scrapy.Spider):
                 base = base[0]
             else:
                 base = None
+            print base
             
             links = response.xpath('//a[@href]')
             for link in links:
@@ -1611,7 +1609,7 @@ class MohSpider(scrapy.Spider):
 
             javascripts = response.xpath('//script[@src]/@src').extract()
             for javascript in javascripts:
-                http_url = self.gen_http_url(response.url, javascript,base)
+                http_url = self.gen_http_url(response.url,javascript,base)
                 if http_url and not self.debug:
                     yield scrapy.Request(http_url, callback=self.assets_parse)
 
@@ -1620,7 +1618,7 @@ class MohSpider(scrapy.Spider):
                 '//input[@type="image"]/@src').extract() or []
             images.extend(input_images)
             for img in images:
-                img_http_url = self.gen_http_url(response.url, img,base)
+                img_http_url = self.gen_http_url(response.url,img,base)
                 if img_http_url and not self.debug:
                     yield scrapy.Request(img_http_url, callback=self.assets_parse)
         else:
@@ -1726,7 +1724,8 @@ class MohSpider(scrapy.Spider):
                     for decl_val in getattr(decl,'value'):
                         if getattr(decl_val,'type') == u'URI':
                             uri = getattr(decl_val,'value')
-                            image_url = self.gen_http_url(url,uri)
+
+                            image_url = self.gen_http_url(url,uri,None)
                             if image_url:
                                 yield scrapy.Request(image_url,self.assets_parse)
 
