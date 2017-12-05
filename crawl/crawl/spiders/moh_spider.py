@@ -1563,9 +1563,8 @@ class MohSpider(scrapy.Spider):
                 yield resource
             # return
 
-            if self.debug:
-                print '*'*40
-                print '(url,language,publish,title)',resource['url'],resource['language'],resource['publish'],resource['title']
+            print '*'*40
+            print '(url,language,publish,title)',resource['url'],resource['language'],resource['publish'],resource['title']
 
             links = response.xpath('//a[@href]')
             for link in links:
@@ -1627,9 +1626,8 @@ class MohSpider(scrapy.Spider):
                 resource['title'] = ''
             if not self.debug:
                 yield resource
-            if self.debug:
-                print '*'*40
-                print '(url,title)',resource['url'],resource['title']
+            print '*'*40
+            print '(url,title)',resource['url'],resource['title']
 
     def assets_parse(self, response):
         '''
@@ -1684,7 +1682,8 @@ class MohSpider(scrapy.Spider):
         '''
             css parser to extract import css and image
         '''
-        print response.url
+        print '*'*40
+        print ('css','url'),response.url
         url = response.url
         content = response.body
         resource = ResourceItem()
