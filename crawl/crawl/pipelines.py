@@ -34,14 +34,14 @@ class ElasticsearchPipeline(object):
             doc['content'] = h2t(doc['content'])
             # doc['content']=base64.b64encode(doc['content'])
             # doc['content']="this is a test"
-            self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,timeout=60)
+            self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,timeout='60s')
         elif item['type'] == 'attachment':
             doc = dict(item)
             doc['data']=base64.b64encode(doc['content'])
             del doc['content']
             # doc['data']=doc['content']
             # doc['content']="this is a test"
-            self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,pipeline='attachment',timeout=60)
+            self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,pipeline='attachment',timeout='60s')
         return item
 
 def h2t(html):

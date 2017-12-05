@@ -1572,7 +1572,7 @@ class MohSpider(scrapy.Spider):
                 base = base[0]
             else:
                 base = None
-            print base
+            
             
             links = response.xpath('//a[@href]')
             for link in links:
