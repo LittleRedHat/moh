@@ -1724,7 +1724,6 @@ class MohSpider(scrapy.Spider):
                     for decl_val in getattr(decl,'value'):
                         if getattr(decl_val,'type') == u'URI':
                             uri = getattr(decl_val,'value')
-
                             image_url = self.gen_http_url(url,uri,None)
                             if image_url:
                                 yield scrapy.Request(image_url,self.assets_parse)

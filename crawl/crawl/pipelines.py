@@ -146,13 +146,15 @@ class FilePipeline(object):
                 # modify hrefs
                 hrefs = soup.find_all('a')
                 base = soup.find('base')
-                if base:
-                    
-                    tmp = base[0].get('href')
-                    base.decompose()
-                    base = tmp
+                if base and base.get('href'):
+                    base_href = base.get('href')
+                    base['href'] = ''
+                    base = base_href
                 else:
                     base = None
+
+                
+                
 
 
                 for item in hrefs:
@@ -200,11 +202,9 @@ class FilePipeline(object):
                         item['src']=relpath
                 self.output_content(url,str(soup),modified_name)
                 next_item['content'] = str(soup)
-               
-
             
-            
-            except:
+            except Exception,e:
+                print e
                 self.output_content(url,item['content'],modified_name)
 
             return next_item 
