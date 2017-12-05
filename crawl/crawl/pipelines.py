@@ -153,14 +153,11 @@ class FilePipeline(object):
                 else:
                     base = None
 
-                
-                
-
-
                 for item in hrefs:
                     href = item.get('href')
                     http_url = self.gen_http_url(url,href,base)
-                    if http_url:     
+                    if http_url:
+                        http_url = urllib.unquote(http_url)     
                         dir,_ = self.map_url_to_dirs(http_url)
                         path_name = hashlib.md5(http_url).hexdigest()
                         your_output_path = os.path.join(dir,path_name)
@@ -175,6 +172,7 @@ class FilePipeline(object):
                     src = item.get('src')
                     http_url = self.gen_http_url(url,src,base)
                     if http_url:
+                        http_url = urllib.unquote(http_url)
                         dir,path_name= self.map_url_to_dirs(http_url)
                         your_output_path = os.path.join(dir,path_name)
                         relpath = os.path.relpath(your_output_path,mine_dir)
@@ -186,6 +184,7 @@ class FilePipeline(object):
                     href = item.get('href')
                     http_url = self.gen_http_url(url,href,base)
                     if http_url:
+                        http_url = urllib.unquote(http_url)
                         dir,path_name= self.map_url_to_dirs(http_url)
                         your_output_path = os.path.join(dir,path_name)
                         relpath = os.path.relpath(your_output_path,mine_dir)
@@ -194,8 +193,10 @@ class FilePipeline(object):
                 images = soup.find_all('img')
                 for item in images:
                     src = item.get('src')
+                    
                     http_url = self.gen_http_url(url,src,base)
                     if http_url:
+                        http_url = urllib.unquote(http_url)
                         dir,path_name= self.map_url_to_dirs(http_url)
                         your_output_path = os.path.join(dir,path_name)
                         relpath = os.path.relpath(your_output_path,mine_dir)
@@ -205,7 +206,7 @@ class FilePipeline(object):
             
             except Exception,e:
                 print e
-                self.output_content(url,item['content'],modified_name)
+                #self.output_content(url,item['content'],modified_name)
 
             return next_item 
            
@@ -253,7 +254,7 @@ class FilePipeline(object):
             traceback.print_exc()
         return False
 
-    def gen_http_url(self,source_url,dest_url):
+    def gen_http_url(self,source_url,dest_url,base):
         if not dest_url:
             return None
         elif dest_url.startswith('#'):

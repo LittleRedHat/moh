@@ -1463,7 +1463,7 @@ configure = {
         'rules':[r'(.*)/drupal/sites/default/file(.*)'],
     },
 
-    # 萨摩亚
+    # 萨摩亚 通过
     'ws':{
         'allowed_domains':['health.gov.ws'],
         'site_url':'http://www.health.gov.ws',
