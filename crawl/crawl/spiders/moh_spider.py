@@ -1307,11 +1307,11 @@ configure = {
             # },
         ]
     },
-    # 斐济群岛
+    # 斐济群岛 通过
     'fj':{
         'allowed_domains':['health.gov.fj'],
         'site_url':['http://www.health.gov.fj'],
-        'start_urls':['http://www.health.gov.fj/?page_id=198'],
+        'start_urls':['http://www.health.gov.fj','http://www.health.gov.fj/?page_id=198'],
         'rules':[]
     },
 
@@ -1383,11 +1383,11 @@ configure = {
         
     },
 
-    # 巴布亚新几内亚
+    # 巴布亚新几内亚 文件过大下载
     'pg':{
         'allowed_domains':['health.gov.pg'],
         'site_url':'http://www.health.gov.pg',
-        'start_urls':['http://www.health.gov.pg/pages/healthpolicyA.htm','http://www.health.gov.pg/pages/healthpolicyD.htm','http://www.health.gov.pg/pages/healthpolicyH.htm','http://www.health.gov.pg/pages/healthpolicyM.htm','http://www.health.gov.pg/pages/healthpolicyP.htm'],
+        'start_urls':['http://www.health.gov.pg','http://www.health.gov.pg/pages/healthpolicyA.htm','http://www.health.gov.pg/pages/healthpolicyD.htm','http://www.health.gov.pg/pages/healthpolicyH.htm','http://www.health.gov.pg/pages/healthpolicyM.htm','http://www.health.gov.pg/pages/healthpolicyP.htm'],
         'rules':[]
     },
 
@@ -1431,7 +1431,7 @@ configure = {
 
     },
 
-    # 基里巴斯 
+    # 基里巴斯 通过
     'ki':{
         'allowed_domains':['health.gov.ki'],
         'site_url':'http://health.gov.ki',
@@ -1455,7 +1455,7 @@ configure = {
 
     },
 
-    # 汤加
+    # 汤加 通过
     'to':{
         'allowed_domains':['health.gov.to'],
         'site_url':'http://health.gov.to',

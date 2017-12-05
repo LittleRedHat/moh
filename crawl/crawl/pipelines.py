@@ -21,6 +21,7 @@ import base64
 import html2text
 
 from crawl.items import ResourceItem
+from crawl.spiders.moh_spider import configure
 
 class ElasticsearchPipeline(object):
     def __init__(self):
@@ -33,14 +34,14 @@ class ElasticsearchPipeline(object):
             doc['content'] = h2t(doc['content'])
             # doc['content']=base64.b64encode(doc['content'])
             # doc['content']="this is a test"
-            self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc)
+            self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,timeout=60)
         elif item['type'] == 'attachment':
             doc = dict(item)
             doc['data']=base64.b64encode(doc['content'])
             del doc['content']
             # doc['data']=doc['content']
             # doc['content']="this is a test"
-            self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,pipeline='attachment')
+            self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,pipeline='attachment',timeout=60)
         return item
 
 def h2t(html):
@@ -49,6 +50,7 @@ def h2t(html):
         return h.handle(html)
     except:
         return html
+
 
 
 
@@ -141,6 +143,11 @@ class FilePipeline(object):
             next_item['md5']=md5
             next_item['local_url'] = mine_output_path
 
+            domain = []
+            if item.get('nation') and configure.get(item.get('nation')):
+                c = configure.get(item.get('nation'))
+                domain = c.get('allowed_domains')
+
             try:
                 soup = BeautifulSoup(decode_content,'lxml')
                 # modify hrefs
@@ -156,7 +163,7 @@ class FilePipeline(object):
                 for item in hrefs:
                     href = item.get('href')
                     http_url = self.gen_http_url(url,href,base)
-                    if http_url:
+                    if http_url and url_in_domain(http_url,domain):
                         http_url = urllib.unquote(http_url)     
                         dir,_ = self.map_url_to_dirs(http_url)
                         path_name = hashlib.md5(http_url).hexdigest()
@@ -171,7 +178,7 @@ class FilePipeline(object):
                 for item in javascripts:
                     src = item.get('src')
                     http_url = self.gen_http_url(url,src,base)
-                    if http_url:
+                    if http_url and url_in_domain(http_url,domain):
                         http_url = urllib.unquote(http_url)
                         dir,path_name= self.map_url_to_dirs(http_url)
                         your_output_path = os.path.join(dir,path_name)
@@ -183,7 +190,7 @@ class FilePipeline(object):
                 for item in styles:
                     href = item.get('href')
                     http_url = self.gen_http_url(url,href,base)
-                    if http_url:
+                    if http_url and url_in_domain(http_url,domain):
                         http_url = urllib.unquote(http_url)
                         dir,path_name= self.map_url_to_dirs(http_url)
                         your_output_path = os.path.join(dir,path_name)
@@ -193,9 +200,9 @@ class FilePipeline(object):
                 images = soup.find_all('img')
                 for item in images:
                     src = item.get('src')
-                    
+
                     http_url = self.gen_http_url(url,src,base)
-                    if http_url:
+                    if http_url and url_in_domain(http_url,domain):
                         http_url = urllib.unquote(http_url)
                         dir,path_name= self.map_url_to_dirs(http_url)
                         your_output_path = os.path.join(dir,path_name)
@@ -210,9 +217,7 @@ class FilePipeline(object):
 
             return next_item 
            
-
         elif item['type'] == 'attachment':
-            
             
             modified_name = hashlib.md5(url).hexdigest()
             mine_dir,_ = self.map_url_to_dirs(url)
@@ -266,10 +271,7 @@ class FilePipeline(object):
         elif base:
             return urljoin(base,dest_url).encode('utf-8')
         else:
-            return urljoin(source_url,dest_url).encode('utf-8')
-
-            
-            
+            return urljoin(source_url,dest_url).encode('utf-8')       
         
     def output_content(self,url,content,modified_name = None):
         if content:
@@ -306,6 +308,16 @@ class FilePipeline(object):
             os.makedirs(output_dir_from_url)
         return output_dir_from_url,output_name
 
+
+def url_in_domain(url,domain):
+    try:
+        netloc = urlparse(url).netloc
+        for item in domain:
+            if item in netloc:
+                return True
+        return False
+    except:
+        return True
 if __name__ == '__main__':
     pass
     
