@@ -1223,11 +1223,12 @@ configure = {
         
     },
 
-    # 智利 scrapy all thing
+    # 智利 scrapy all thing 
     'cl':{
         'allowed_domains':['deis.cl'],
         'site_url':'http://www.deis.cl',
         'start_urls':[
+            'http://www.deis.cl',
             'http://www.deis.cl/indicadores-basicos-de-salud',
             'http://www.deis.cl/estadisticas-de-natalidad-y-mortalidad',
             'http://www.deis.cl/estadisticas-de-atenciones-y-recursos-para-la-salud',
@@ -1254,11 +1255,12 @@ configure = {
         ]
     },
 
-    # 乌拉圭
+    # 乌拉圭 通过
     'uy':{
         'allowed_domains':['msp.gub.uy'],
         'site_url':'http://www.msp.gub.uy',
         'start_urls':[
+            'http://www.msp.gub.uy',
             'http://www.msp.gub.uy/listado-de-noticias',
             'http://www.msp.gub.uy/comunicados'
 
@@ -1287,11 +1289,11 @@ configure = {
     # 大洋洲
     ###############################################
 
-    # 新西兰
+    # 新西兰 通过
     'nz':{
         'allowed_domains':['health.govt.nz'],
         'site_url':'http://www.health.govt.nz',
-        'start_urls':['http://www.health.govt.nz/nz-health-statistics','http://www.health.govt.nz/publications'],
+        'start_urls':['http://www.health.govt.nz','http://www.health.govt.nz/nz-health-statistics','http://www.health.govt.nz/publications'],
         'rules':[
             r'(.*?)/nz-health-statistics(.*)',
             r'(.*?)/publication(.*)',
@@ -1573,7 +1575,6 @@ class MohSpider(scrapy.Spider):
             else:
                 base = None
             
-            
             links = response.xpath('//a[@href]')
             for link in links:
                 link_text = link.xpath('@href').extract()
@@ -1716,7 +1717,7 @@ class MohSpider(scrapy.Spider):
         for item in stylesheet.rules: 
             if isinstance(item,tinycss.css21.ImportRule):
                 uri = item.uri
-                http_url = self.gen_http_url(url,uri)
+                http_url = self.gen_http_url(url,uri,None)
                 if http_url:  
                     yield scrapy.Request(http_url,self.style_parse)	
             elif hasattr(item,'declarations'):
