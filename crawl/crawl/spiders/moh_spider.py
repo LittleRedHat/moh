@@ -287,7 +287,7 @@ configure = {
         'rules':[],
         'publish':[]
     },
-    ###############################################
+###############################################
     # 亚洲
     ###############################################
 
@@ -512,7 +512,7 @@ configure = {
         'publish':[{'rule':"//div[@id='right-header-datetime']/text()",'format':"%Y-%m-%d"}]
     },
 
-    # 孟加拉国 修改
+    # 孟加拉国
     'bd':{
         'allowed_domains':['mohfw.gov.bd'],
         'site_url':'http://www.mohfw.gov.bd',
@@ -611,7 +611,7 @@ configure = {
     },
 
 
-    # 卡塔尔 时间解析问题
+    # 卡塔尔
     'qa':{
         'allowed_domains':['moph.gov.qa'],
         'site_url':'https://www.moph.gov.qa',
@@ -621,7 +621,9 @@ configure = {
                         'https://www.moph.gov.qa/health-strategies/national-health-strategy'
                     ],
         'rules':[r'(.*)/news(.*)',r'(.*)/events(.*)',r'(.*)/health-strategies(.*)'],
-        'publish':[{"rule":"//article[@class='newsDetails']/dd[@class='pubDate']/abbr/text()","format":"%d %B %Y"}]
+        'publish':[
+            {"rule":"//header/div[@class='newsDetailsListContainer']/dl[@class='newsDetailsList']/dd[@class='pubDate']/abbr/text()","format":"%d %B %Y"}
+            ]
 
 
     },
@@ -696,7 +698,7 @@ configure = {
 
     },
 
-    # 约旦 爬不下来东西
+    # 约旦 网站打不开
     'jo':{
         'allowed_domains':['moh.gov.jo'],
         'site_url':'http://www.moh.gov.jo',
@@ -742,15 +744,15 @@ configure = {
         'excludes':[r'(.*)/images/(.*)']
     },
 
-    # 塞浦路斯 时间解析不对
+    # 塞浦路斯 时间解析有问题
     'cy':{
         'allowed_domains':['moh.gov.cy'],
         'site_url':'http://www.moh.gov.cy',
         'start_urls':['https://www.moh.gov.cy/moh/moh.nsf/dmlannouncements_en/dmlannouncements_en?OpenDocument&Start=1&Count=1000&Collapse=1'],
-        'rules':[r'(.*)/Moh/MOH\.nsf/All/(.*)'],
+        'rules':[r'(.*)/Moh/MOH\.nsf/All/(.*)',r'(.*)/moh/moh\.nsf/All/(.*)'],
         'publish':[
-                    {'rule':"//div[@class='lastupdate']/text()",'format':'Last Modified at: %d/%m/%Y %S:%M:%H PM'},
-                    {'rule':"//div[@class='lastupdate']/text()",'format':'Last Modified at: %d/%m/%Y %I:%M:%S AM'}
+                    {'rule':"//form/div[@id='footer']/div[@class='lastupdate']/text()",'format':'Last Modified at: %d/%m/%Y %I:%M:%S PM'},
+                    {'rule':"//form/div[@id='footer']/div[@class='lastupdate']/text()",'format':'Last Modified at: %d/%m/%Y %I:%M:%S AM'}
                 ]
     },
 
@@ -798,12 +800,12 @@ configure = {
         'publish':[{'rule':"//div[@class='NewsIn']/div[@class='ScrollPane']/span/text()",'format':'%d %B %Y'}]
     },
 
-    # 土库曼斯坦 动态生成网页，爬不下来
+    # 土库曼斯坦
     'tm':{
         'allowed_domains':['saglykhm.gov.tm'],
         'site_url':'http://www.saglykhm.gov.tm',
-        'start_urls':[],
-        'rules':[r'(.*)'],
+        'start_urls':['http://www.saglykhm.gov.tm/ru/news/','http://www.saglykhm.gov.tm/ru/informasionny/'],
+        'rules':[r'(.*)/netcat_files/(.*)',r'(.*)/ru/Informasionny/(.*)'],
         'publish':[],
         'excludes':[r'(.*)\.jpg']
     },
@@ -814,15 +816,18 @@ configure = {
         'site_url':'http://www.med.kg',
         'start_urls':['http://www.med.kg/ru/novosti.html'],
         'rules':[r'(.*)/ru/[0-9]{3}(.*)',r'(.*)/ru/novosti\.html(.*)'],
-        'publish':[{'rule':"//dd[@class='published hasTooltip']/time/text()",'format':' %d %B %Y '}]
+        'publish':[{'rule':"//dd[@class='published hasTooltip']/time/text()",'format':'''
+					%d %B %Y				'''}]
     },
 
-    # 塔吉克斯坦 打开为突尼斯网站
+    # 塔吉克斯坦 网站域名不对，网站打不开
     'tj':{
         'allowed_domains':['ministeres.tn'],
         'site_url':'http://www.ministeres.tn/html/ministere',
         'start_urls':[]
     },
+
+
 
     ###############################################
     # 欧洲
@@ -854,7 +859,7 @@ configure = {
         'publish':[{'rule':"//span[@class='published']/time/text()",'format':'%d %B %Y'}]
     },
 
-    # 芬兰  特殊字符无法解码，爬虫终止
+    # 芬兰
     'fi':{
         'allowed_domains':['stm.fi'],
         'site_url':'http://stm.fi/en/frontpage',
@@ -863,7 +868,10 @@ configure = {
                     r'(.*)/en/article/-/asset_publisher/(.*)',
                     r'(.*)/en/artikkeli/-/asset_publisher/(.*)'
                 ],
-        'publish':[{'rule':"//i[@class='icon-time']/span[@class='date']/text()",'format':'%d.%m.%Y'}]
+        'publish':[
+            {'rule':"//div[@class='meta clearfix']/div[@class='published row-fluid']/span[@class='date'][1]/text()",'format':'%d.%m.%Y'},
+            {'rule':"//div[@class='meta clearfix']/div[@class='published row-fluid']/span[@class='date']/text()",'format':'%d.%m.%Y'}
+            ]
     },
 
     # 丹麦
@@ -1071,19 +1079,19 @@ configure = {
                         'https://www.bag.admin.ch/bag/de/home/aktuell/veranstaltungen.html'
                     ],
         'rules':[
-                    r'(.*)/home/aktuell/news/news(.*)',
-                    r'(.*)/bag/de/home/aktuell/medienmitteilungen.msg-id(.*)',
+                    r'(.*)/bag/de/home/aktuell/news(.*)',
+                    r'(.*)/bag/de/home/aktuell/medienmitteilungen\.msg-id(.*)',
                     r'(.*)/bag/de/home/aktuell/veranstaltungen/(.*)'
                 ],
-        'publish':[{'rule':"//p[@class='pull-left']/small/span[@class='text-dimmed']/text()",'format':'Letzte Änderung %d.%m.%Y'}]
+        'publish':[{'rule':"//div[@class='clearfix']/p[@class='pull-left']/small/span[@class='text-dimmed']/text()",'format':'Letzte Änderung %d.%m.%Y'}]
     },
 
-    # 列支敦士登 有问题，需要修改
+    # 列支敦士登 感觉规则没问题，加上规则爬不下来东西
     'li':{
         'allowed_domains':['llv.li'],
         'site_url':'https://www.llv.li/#/1908/amt-fur-gesundheit',
         'start_urls':['https://www.llv.li/#/40/'],
-        'rules':[r'(.*)']
+        'rules':[r'(.*)/[0-9]{2,5}/(.*)',r'(.*)/files/dss/(.*)']
     },
 
     # 英国
@@ -1113,7 +1121,8 @@ configure = {
         'site_url':'https://www.government.nl/ministries/ministry-of-health-welfare-and-sport',
         'start_urls':['https://www.government.nl/ministries/ministry-of-health-welfare-and-sport/news'],
         'rules':[r'(.*)/ministries/ministry-of-health-welfare-and-sport/news(.*)'],
-        'publish':[{'rule':"//div[@id='content']/p[@class='article-meta']/text()",'format':" News item | %d-%m-%Y | %H:%M"}]
+        'publish':[{'rule':"//div[@id='main']/div[@class='wrapper']/div[@id='content']/p[@class='article-meta']/text()",'format':'''
+  News item | %d-%m-%Y | %H:%M'''}]
     },
 
     # 比利时 时间解析有问题
@@ -1122,7 +1131,8 @@ configure = {
         'site_url':'https://www.belgium.be/en/health',
         'start_urls':['https://www.belgium.be/en/news'],
         'rules':[r'(.*)/en/news(.*)'],
-        'publish':[{'rule':"//div[@class='content']/div[@class='submitted']/text()",'format':'      date: %d %B %Y    '}]
+        'publish':[{'rule':"//section[@id='content']/div[@id='block-system-main']/div/div[@class='submitted']/text()",'format':'''
+      date: %d %B %Y    '''}]
     },
 
     # 卢森堡
@@ -1140,8 +1150,7 @@ configure = {
         'site_url':'http://solidarites-sante.gouv.fr',
         'start_urls':['http://solidarites-sante.gouv.fr/actualites/'],
         'rules':[
-                    r'(.*)/actualites/presse/communiques-de-presse/article/(.*)',
-                    r'(.*)/actualites/evenements/article/(.*)'
+                    r'(.*)'
                 ],
         'publish':[{'rule':"//div[@class='main-article__horodatage']/span[@class='main-article__date date--publication']",'format':'%d.%m.%y'}]
     },
@@ -1155,7 +1164,7 @@ configure = {
         'publish':[{'rule':"//div[@class='info']/span[@class='date']/text()",'format':'%d %B %Y'}]
     },
 
-    # 西班牙 时间解析有问题
+    # 西班牙 时间解析有问题,月份不是英语
     'es':{
         'allowed_domains':['msc.es'],
         'site_url':'http://www.msc.es/en/home.htm',
