@@ -1198,7 +1198,7 @@ configure = {
         'allowed_domains':['saude.gov.br'],
         'site_url':'http://portalms.saude.gov.br',
         'start_urls':[
-            'http://portalms.saude.gov.br/noticias','http://blog.saude.gov.br','http://www.blog.saude.gov.br/promocao-da-saude'
+            'http://portalms.saude.gov.br','http://portalms.saude.gov.br/noticias','http://blog.saude.gov.br','http://www.blog.saude.gov.br/promocao-da-saude'
         ],
         'rules':[
             r'(.*)/noticias(.*)',r'(.*)index\.php/servicos(.*)',r'(.*)/promocao-da-saude(.*)',r'(.*)index\.php/promocao-da-saude(.*)',
@@ -1223,7 +1223,7 @@ configure = {
         
     },
 
-    # 智利 scrapy all thing 
+    # 智利 scrapy all thing 通过
     'cl':{
         'allowed_domains':['deis.cl'],
         'site_url':'http://www.deis.cl',
