@@ -107,16 +107,32 @@ class FilePipeline(object):
     def process_item(self,item,spider):
         if not item:
             return DropItem()
+
+        ## asset handler
+        if item.get('type') == 'asset':
+            # 去掉资源文件后面带查询
+            url = item['url']
+            url = urllib.unquote(url)
+            content = item.get('content')
+            
+            parse_result = urlparse(url)
+            url =  parse_result.netloc + parse_result.path
+            # not update already exist resource 
+            mine_dir,output_name= self.map_url_to_dirs(url)
+            mine_output_path = os.path.join(mine_dir,output_name)
+            self.output_content(url,content)
+            return DropItem()
+
         next_item = ResourceItem()
         url = item['url']
         url = urllib.unquote(url)
-        content = item['content']
+        content = item.get('content')
         next_item['url'] = url
         next_item['content']=content
-        next_item['type']=item['type']
+        next_item['type']=item.get('type')
         next_item['title'] = item.get('title') or ''
-        next_item['location']=item['location']
-        next_item['language'] = item.get('language')
+        next_item['location']=item.get('location') or ''
+        next_item['language'] = item.get('language') or ''
         next_item['publish'] = item.get('publish') or '1970-01-01T00:00:00Z'
         #print item.get('publish')
         next_item['nation'] = item.get('nation') or ''
@@ -235,16 +251,7 @@ class FilePipeline(object):
             self.output_content(url,content,modified_name)
             return next_item
             
-        else:
-            # 去掉资源文件后面带查询
-            parse_result = urlparse(url)
-            url =  parse_result.netloc + parse_result.path
-            # not update already exist resource 
-            mine_dir,output_name= self.map_url_to_dirs(url)
-            mine_output_path = os.path.join(mine_dir,output_name)
-            if os.path.exists(mine_output_path):
-                return DropItem()
-            self.output_content(url,content)
+        
        
     def isAbsolutePath(self,url):
         if not url:

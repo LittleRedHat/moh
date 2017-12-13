@@ -2262,7 +2262,7 @@ configure = {
         'start_urls':[
             'http://portalms.saude.gov.br',
             'http://portalms.saude.gov.br/noticias',
-            'http://blog.saude.gov.br',
+            'http://www.blog.saude.gov.br',
             'http://www.blog.saude.gov.br/promocao-da-saude'
         ],
         'rules':[
@@ -2687,14 +2687,15 @@ class MohSpider(scrapy.Spider):
                     #     print 'link title is ',link_title
                     #     return
                     request = scrapy.Request(http_url,callback=self.parse,meta={'title':link_title})
-                    yield request
+                    # yield request
 
             stylesheets = response.xpath(
                 '//link[@type="text/css"]/@href').extract()
+            
             for stylesheet in stylesheets:
                 http_url = self.gen_http_url(response.url, stylesheet,base)
-                if http_url and not self.debug:
-                    yield scrapy.Request(http_url, callback=self.style_parse)
+                # if http_url and not self.debug:
+                yield scrapy.Request(http_url, callback=self.style_parse)
 
                     
 
@@ -2790,7 +2791,7 @@ class MohSpider(scrapy.Spider):
         resource['content'] = content
         resource['type'] = 'asset'
         resource['location'] = self.site_url
-        yield resource
+        # yield resource
         
         try:
             decode_content = content.decode('utf-8')
