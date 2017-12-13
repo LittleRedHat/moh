@@ -2687,7 +2687,7 @@ class MohSpider(scrapy.Spider):
                     #     print 'link title is ',link_title
                     #     return
                     request = scrapy.Request(http_url,callback=self.parse,meta={'title':link_title})
-                    # yield request
+                    yield request
 
             stylesheets = response.xpath(
                 '//link[@type="text/css"]/@href').extract()
@@ -2791,7 +2791,7 @@ class MohSpider(scrapy.Spider):
         resource['content'] = content
         resource['type'] = 'asset'
         resource['location'] = self.site_url
-        # yield resource
+        yield resource
         
         try:
             decode_content = content.decode('utf-8')
