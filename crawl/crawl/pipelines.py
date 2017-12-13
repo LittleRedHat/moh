@@ -27,9 +27,10 @@ class ElasticsearchPipeline(object):
     def __init__(self):
         self.es = Elasticsearch(hosts=settings['ES_HOSTS'])
     def process_item(self,item,spider):
-        if not item:
-            return DropItem()
-        if item['rtype'] == 'html':
+        if not item or isinstance(item,DropItem):
+            return
+
+        if item.get('rtype') == 'html':
             doc = dict(item)
             doc['content'] = h2t(doc['content'])
             doc['type'] = doc['rtype']
@@ -37,7 +38,7 @@ class ElasticsearchPipeline(object):
             # doc['content']=base64.b64encode(doc['content'])
             # doc['content']="this is a test"
             self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,timeout='60s')
-        elif item['rtype'] == 'attachment':
+        elif item.get('rtype') == 'attachment':
             doc = dict(item)
             doc['data']=base64.b64encode(doc['content'])
             doc['type'] = doc['rtype']
@@ -85,7 +86,7 @@ def h2t(html):
 #         if not item:
 #             return DropItem()
 
-#         if item['type'] == 'html':
+#         if item.get('type') == 'html':
             
 #             article = dict(item)
 #             # article['content'] = bson.binary.Binary(article['content']) 
@@ -109,9 +110,10 @@ class FilePipeline(object):
         self.output_dir = settings['DATA_OUTPUT']
 
     def process_item(self,item,spider):
-        if not item:
-            return DropItem()
+        if not item or isinstance(item,DropItem):
+            return
 
+	print ('filepipeline process'),item
         ## asset handler
         if item.get('rtype') == 'asset':
             # 去掉资源文件后面带查询
@@ -125,7 +127,7 @@ class FilePipeline(object):
             mine_dir,output_name= self.map_url_to_dirs(url)
             mine_output_path = os.path.join(mine_dir,output_name)
             self.output_content(url,content)
-            return DropItem()
+            return
 
         next_item = ResourceItem()
         url = item['url']
@@ -144,7 +146,7 @@ class FilePipeline(object):
         netloc = urlparse(url).netloc
 
         # for all html, it musts be update
-        if item['rtype'] == 'html':
+        if item.get('rtype') == 'html':
             try:
                 decode_content = content.decode('utf-8')
             except:
@@ -237,7 +239,7 @@ class FilePipeline(object):
 
             return next_item 
            
-        elif item['rtype'] == 'attachment':
+        elif item.get('rtype') == 'attachment':
             
             modified_name = hashlib.md5(url).hexdigest()
             mine_dir,_ = self.map_url_to_dirs(url)
@@ -245,7 +247,7 @@ class FilePipeline(object):
 
             # not update exist attachment
             if os.path.exists(mine_output_path):
-                return DropItem()
+                return
 
             md5 = hashlib.md5(content).hexdigest()
 

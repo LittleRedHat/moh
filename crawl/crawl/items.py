@@ -22,10 +22,10 @@ class ResourceItem(scrapy.Item):
      keywords = Field()
 
      def __repr__(self):
-         return repr({"url": self['url']})
+         return repr({"url": self['url'],"rtype":self['rtype']})
 
      def __str__(self):
-         return str({"url": self['url']})
+         return str({"url": self['url'],"rtype":self['rtype']})
 
     
 
