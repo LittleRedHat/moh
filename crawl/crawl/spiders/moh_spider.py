@@ -2629,7 +2629,7 @@ class MohSpider(scrapy.Spider):
             resource = ResourceItem()
             resource['url'] = response.url
             
-            resource['type'] = 'html'
+            resource['rtype'] = 'html'
             resource['location'] = self.site_url
             resource['language'] = self.language_inference(response)
             resource['publish'] = self.publish_time_inference(response)
@@ -2717,7 +2717,7 @@ class MohSpider(scrapy.Spider):
             resource = ResourceItem()
             resource['url'] = response.url
             resource['content'] = response.body
-            resource['type'] = 'attachment'
+            resource['rtype'] = 'attachment'
             resource['location'] = self.site_url
             resource['nation'] =  self.nation
             if response.meta.get('title'):
@@ -2736,7 +2736,7 @@ class MohSpider(scrapy.Spider):
         resource = ResourceItem()
         resource['url'] = response.url
         resource['content'] = response.body
-        resource['type'] = 'asset'
+        resource['rtype'] = 'asset'
         resource['location'] = self.site_url
         yield resource
 
@@ -2789,7 +2789,7 @@ class MohSpider(scrapy.Spider):
         resource = ResourceItem()
         resource['url'] = url
         resource['content'] = content
-        resource['type'] = 'asset'
+        resource['rtype'] = 'asset'
         resource['location'] = self.site_url
         yield resource
         

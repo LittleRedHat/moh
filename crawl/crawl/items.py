@@ -12,7 +12,7 @@ class ResourceItem(scrapy.Item):
      url = Field()
      md5 = Field()
      content = Field()
-     type = Field()
+     rtype = Field()
      location = Field()
      title = Field()
      local_url = Field()
