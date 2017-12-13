@@ -2694,8 +2694,8 @@ class MohSpider(scrapy.Spider):
             
             for stylesheet in stylesheets:
                 http_url = self.gen_http_url(response.url, stylesheet,base)
-                # if http_url and not self.debug:
-                yield scrapy.Request(http_url, callback=self.style_parse)
+                if http_url and not self.debug:
+                    yield scrapy.Request(http_url, callback=self.style_parse)
 
                     
 
