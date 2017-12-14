@@ -1,0 +1,18 @@
+body {
+    font-size: 15px;
+}
+.radio label, .checkbox label {
+    font-weight: bold;
+}
+#wordCloud {
+    height: 200px;
+    width: 500px;
+    border-radius: 10px;
+}
+#map {
+    height: 600px;
+    width: 100%;
+    border-radius: 10px;
+    border: solid;
+    display: none;
+}
