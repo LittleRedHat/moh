@@ -27,17 +27,22 @@ class ElasticsearchPipeline(object):
     def __init__(self):
         self.es = Elasticsearch(hosts=settings['ES_HOSTS'])
     def process_item(self,item,spider):
-        if not item:
-            return DropItem()
-        if item['type'] == 'html':
+        if not item or isinstance(item,DropItem):
+            return
+
+        if item.get('rtype') == 'html':
             doc = dict(item)
             doc['content'] = h2t(doc['content'])
+            doc['type'] = doc['rtype']
+            del doc['rtype']
             # doc['content']=base64.b64encode(doc['content'])
             # doc['content']="this is a test"
             self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,timeout='60s')
-        elif item['type'] == 'attachment':
+        elif item.get('rtype') == 'attachment':
             doc = dict(item)
             doc['data']=base64.b64encode(doc['content'])
+            doc['type'] = doc['rtype']
+            del doc['rtype']
             del doc['content']
             # doc['data']=doc['content']
             # doc['content']="this is a test"
@@ -81,7 +86,7 @@ def h2t(html):
 #         if not item:
 #             return DropItem()
 
-#         if item['type'] == 'html':
+#         if item.get('type') == 'html':
             
 #             article = dict(item)
 #             # article['content'] = bson.binary.Binary(article['content']) 
@@ -105,18 +110,35 @@ class FilePipeline(object):
         self.output_dir = settings['DATA_OUTPUT']
 
     def process_item(self,item,spider):
-        if not item:
-            return DropItem()
+        if not item or isinstance(item,DropItem):
+            return
+
+	print ('filepipeline process'),item
+        ## asset handler
+        if item.get('rtype') == 'asset':
+            # 去掉资源文件后面带查询
+            url = item['url']
+            url = urllib.unquote(url)
+            content = item.get('content')
+
+            parse_result = urlparse(url)
+            url =  parse_result.netloc + parse_result.path
+            # not update already exist resource 
+            mine_dir,output_name= self.map_url_to_dirs(url)
+            mine_output_path = os.path.join(mine_dir,output_name)
+            self.output_content(url,content)
+            return
+
         next_item = ResourceItem()
         url = item['url']
         url = urllib.unquote(url)
-        content = item['content']
+        content = item.get('content')
         next_item['url'] = url
         next_item['content']=content
-        next_item['type']=item['type']
+        next_item['rtype']= item.get('rtype') or ''
         next_item['title'] = item.get('title') or ''
-        next_item['location']=item['location']
-        next_item['language'] = item.get('language')
+        next_item['location']=item.get('location') or ''
+        next_item['language'] = item.get('language') or ''
         next_item['publish'] = item.get('publish') or '1970-01-01T00:00:00Z'
         #print item.get('publish')
         next_item['nation'] = item.get('nation') or ''
@@ -124,7 +146,7 @@ class FilePipeline(object):
         netloc = urlparse(url).netloc
 
         # for all html, it musts be update
-        if item['type'] == 'html':
+        if item.get('rtype') == 'html':
             try:
                 decode_content = content.decode('utf-8')
             except:
@@ -217,7 +239,7 @@ class FilePipeline(object):
 
             return next_item 
            
-        elif item['type'] == 'attachment':
+        elif item.get('rtype') == 'attachment':
             
             modified_name = hashlib.md5(url).hexdigest()
             mine_dir,_ = self.map_url_to_dirs(url)
@@ -225,7 +247,7 @@ class FilePipeline(object):
 
             # not update exist attachment
             if os.path.exists(mine_output_path):
-                return DropItem()
+                return
 
             md5 = hashlib.md5(content).hexdigest()
 
@@ -235,16 +257,7 @@ class FilePipeline(object):
             self.output_content(url,content,modified_name)
             return next_item
             
-        else:
-            # 去掉资源文件后面带查询
-            parse_result = urlparse(url)
-            url =  parse_result.netloc + parse_result.path
-            # not update already exist resource 
-            mine_dir,output_name= self.map_url_to_dirs(url)
-            mine_output_path = os.path.join(mine_dir,output_name)
-            if os.path.exists(mine_output_path):
-                return DropItem()
-            self.output_content(url,content)
+        
        
     def isAbsolutePath(self,url):
         if not url:

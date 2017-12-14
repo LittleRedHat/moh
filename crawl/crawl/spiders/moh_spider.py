@@ -19,6 +19,8 @@ except:
     pass
 from textrank4zh import TextRank4Keyword
 import html2text
+import mimetypes
+mimetypes.init()
 
 
 def ae_time_sub(text):
@@ -2258,12 +2260,22 @@ configure = {
         'allowed_domains':['saude.gov.br'],
         'site_url':'http://portalms.saude.gov.br',
         'start_urls':[
-            'http://portalms.saude.gov.br/noticias','http://blog.saude.gov.br','http://www.blog.saude.gov.br/promocao-da-saude'
+            'http://portalms.saude.gov.br',
+            'http://portalms.saude.gov.br/noticias',
+            'http://www.blog.saude.gov.br',
+            'http://www.blog.saude.gov.br/promocao-da-saude'
         ],
         'rules':[
-            r'(.*)/noticias(.*)',r'(.*)index\.php/servicos(.*)',r'(.*)/promocao-da-saude(.*)',r'(.*)index\.php/promocao-da-saude(.*)',
-            r'(.*)index\.php/entenda-o-sus-home(.*)',r'(.*)index\.php/perguntas-e-respostas-home(.*)',r'(.*)index\.php/cursos-e-eventos-home(.*)',
-            r'(.*)index\.php/combate-ao-aedes-home(.*)',r'(.*)index\.php/materias-especiais(.*)',r'(.*)/acoes-e-programas(.*)',
+            r'(.*)/noticias(.*)',
+            r'(.*)index\.php/servicos(.*)',
+            r'(.*)/promocao-da-saude(.*)',
+            r'(.*)index\.php/promocao-da-saude(.*)',
+            r'(.*)index\.php/entenda-o-sus-home(.*)',
+            r'(.*)index\.php/perguntas-e-respostas-home(.*)',
+            r'(.*)index\.php/cursos-e-eventos-home(.*)',
+            r'(.*)index\.php/combate-ao-aedes-home(.*)',
+            r'(.*)index\.php/materias-especiais(.*)',
+            r'(.*)/acoes-e-programas(.*)',
 
         ],
         'publish':[
@@ -2283,7 +2295,7 @@ configure = {
         
     },
 
-    # 智利 scrapy all thing 
+    # 智利 scrapy all thing 通过
     'cl':{
         'allowed_domains':['deis.cl'],
         'site_url':'http://www.deis.cl',
@@ -2381,9 +2393,16 @@ configure = {
     'au':{
         'allowed_domains':['health.gov.au'],
         'site_url':'http://www.health.gov.au',
-        'start_urls':['http://www.health.gov.au/internet/main/publishing.nsf/Content/health-publicat.htm','http://www.health.gov.au/internet/main/publishing.nsf/Content/Research+&+Statistics-1','http://www.health.gov.au/internet/main/publishing.nsf/Content/CurrentIssues'],
-        'rules':[r'(.*)/internet/main/publishing\.nsf/Content/(.*)'],
-        'excludes':[r'(.*)/internet/main/publishing\.nsf/Content/health-overview\.htm(.*)',
+        'start_urls':[
+            'http://www.health.gov.au/internet/main/publishing.nsf/Content/health-publicat.htm',
+            'http://www.health.gov.au/internet/main/publishing.nsf/Content/Research+&+Statistics-1',
+            'http://www.health.gov.au/internet/main/publishing.nsf/Content/CurrentIssues'
+        ],
+        'rules':[
+            r'(.*)/internet/main/publishing\.nsf/Content/(.*)',
+        ],
+        'excludes':[
+                    r'(.*)/internet/main/publishing\.nsf/Content/health-overview\.htm(.*)',
                     r'(.*)/internet/main/publishing\.nsf/Content/health-central\.htm(.*)',
                     r'(.*)/internet/main/publishing\.nsf/Content/Annual\+Reports-3(.*)',
                     r'(.*)/internet/main/publishing\.nsf/Content/Budget-1(.*)',
@@ -2438,10 +2457,7 @@ configure = {
                     r'(.*)/internet/main/publishing\.nsf/Content/Health\+Workforce-2(.*)',
                     r'(.*)/internet/main/publishing\.nsf/Content/health-care-homes-professional(.*)',
                     r'(.*)/internet/main/publishing\.nsf/Content/strongmedicare(.*)'
-
-
-
-                   ]
+        ]
         
     },
 
@@ -2541,6 +2557,14 @@ configure = {
     }
 }
 
+ALLOWED_FILE_DOWNLOAD = [
+    'text/xml','text/plain',
+    # 'image/jpeg','application/x-bmp','image/fax','image/x-icon','image/jpeg','application/x-jpg','application/x-png','image/tiff',
+    'application/vnd.ms-powerpoint','application/vnd.ms-powerpoint','application/x-ppt',
+    'application/msword',
+    'application/x-xls','application/vnd.ms-excel',
+    'application/pdf',
+]
 
 class MohSpider(scrapy.Spider):
 
@@ -2564,6 +2588,12 @@ class MohSpider(scrapy.Spider):
        self.nation = domain
        self.debug = debug
     
+
+    def content_allowed(self,content_type):
+        for item in ALLOWED_FILE_DOWNLOAD:
+            if item in content_type:
+                return True
+        return False
 
     def start_requests(self):
         for url in self.start_urls:
@@ -2599,7 +2629,7 @@ class MohSpider(scrapy.Spider):
             resource = ResourceItem()
             resource['url'] = response.url
             
-            resource['type'] = 'html'
+            resource['rtype'] = 'html'
             resource['location'] = self.site_url
             resource['language'] = self.language_inference(response)
             resource['publish'] = self.publish_time_inference(response)
@@ -2661,6 +2691,7 @@ class MohSpider(scrapy.Spider):
 
             stylesheets = response.xpath(
                 '//link[@type="text/css"]/@href').extract()
+            
             for stylesheet in stylesheets:
                 http_url = self.gen_http_url(response.url, stylesheet,base)
                 if http_url and not self.debug:
@@ -2682,11 +2713,11 @@ class MohSpider(scrapy.Spider):
                 img_http_url = self.gen_http_url(response.url,img,base)
                 if img_http_url and not self.debug:
                     yield scrapy.Request(img_http_url, callback=self.assets_parse)
-        else:
+        elif response.headers and response.headers.get('Content-Type') and self.content_allowed(response.headers.get('Content-Type')):
             resource = ResourceItem()
             resource['url'] = response.url
             resource['content'] = response.body
-            resource['type'] = 'attachment'
+            resource['rtype'] = 'attachment'
             resource['location'] = self.site_url
             resource['nation'] =  self.nation
             if response.meta.get('title'):
@@ -2705,7 +2736,7 @@ class MohSpider(scrapy.Spider):
         resource = ResourceItem()
         resource['url'] = response.url
         resource['content'] = response.body
-        resource['type'] = 'asset'
+        resource['rtype'] = 'asset'
         resource['location'] = self.site_url
         yield resource
 
@@ -2758,7 +2789,7 @@ class MohSpider(scrapy.Spider):
         resource = ResourceItem()
         resource['url'] = url
         resource['content'] = content
-        resource['type'] = 'asset'
+        resource['rtype'] = 'asset'
         resource['location'] = self.site_url
         yield resource
         
