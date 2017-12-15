@@ -22,7 +22,7 @@ NEWSPIDER_MODULE = 'crawl.spiders'
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
@@ -58,9 +58,9 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
-#EXTENSIONS = {
-#    'scrapy.extensions.telnet.TelnetConsole': None,
-#}
+# EXTENSIONS = {
+#    'scrapy.contrib.resolver.CachingResolver': 0,
+# }
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
@@ -68,7 +68,7 @@ ITEM_PIPELINES = {
      'crawl.pipelines.FilePipeline': 200,
      'crawl.pipelines.ElasticsearchPipeline':400,
 }
-
+SCHEDULER_ORDER = 'BFO'
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
@@ -96,5 +96,8 @@ ITEM_PIPELINES = {
 DATA_OUTPUT = '/var/www/html'
 # DATA_OUTPUT = './data'
 LOG_LEVEL='ERROR'
+
+
+STAT_DIR = './statics/'
 
 ES_HOSTS = ['10.48.41.24:9200']

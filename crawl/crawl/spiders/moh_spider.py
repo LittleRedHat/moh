@@ -153,143 +153,8 @@ def sc_time_sub(text):
 
 configure = {
     "output_dir": '/var/www/html',
-    # 韩国
-    "kr": {
-        'allowed_domains': ['mohw.go.kr'],
-        'site_url': 'http://www.mohw.go.kr',
-        'start_urls': ['http://www.mohw.go.kr/eng/sg/ssg0111ls.jsp?PAR_MENU_ID=1001&MENU_ID=100111&page=1'],
-        'rules': [r'(.*)ssg0111vw\.jsp(.*)', r'(.*)ssg0111ls\.jsp(.*)'],
-        'publish':[{"rule":"//table[@class='view']/tbody/tr[2]/td[1]/text()","format":"%Y-%m-%d"}],
-    },
-    # 阿联酋
-    'ae':{
-        'allowed_domains':['mohap.gov.ae'],
-        'site_url':'http://www.mohap.gov.ae',
-        'start_urls':['http://www.mohap.gov.ae/en/AwarenessCenter/Pages/posts.aspx','http://www.mohap.gov.ae/ar/Aboutus/Pages/PublicHealthPolicies.aspx','http://www.mohap.gov.ae/en/MediaCenter/Pages/news.aspx','http://www.mohap.gov.ae/en/MediaCenter/Pages/events.aspx','http://www.mohap.gov.ae/en/OpenData/Pages/default.aspx','http://www.mohap.gov.ae/en/OpenData/Pages/health-statistics.aspx'],
-        'rules':[r'(.*)/en/AwarenessCenter/Pages/post\.aspx(.*)',r'(.*)/FlipBooks/PublicHealthPolicies/(.*)/mobile/index\.html(.*)',r'(.*)/en/MediaCenter/Pages/news\.aspx(.*)',r'(.*)/en/OpenData/Pages/default\.aspx(.*)',r'(.*)/en/OpenData/Pages/health-statistics\.aspx(.*)',r'(.*)/en/MediaCenter/Pages/EventDetail.aspx(.*)'],
-        'publish':[{"rule":"//div[@class='newsdetailstitle']/p[@class='metadate']/span[2]/text()","format":"%d %b %Y"},{"rule":"//div[@class='contentblock']/p[@class='metadata']/span[1]/text()","format":"%d %A, %B, %Y","extra":ae_time_sub},{"rule":"//div[@class='newsdetailstitle']/p[@class='metadate']/span[2]/text()","format":"%d %B %Y"}]
-    },
-    # 伊拉克
-    'iq':{
-        'allowed_domains':['moh.gov.iq'],
-        'site_url':'https://www.moh.gov.iq',
-        'start_urls':['https://moh.gov.iq'],
-        'rules':[r'(.*)/index\.php\?name=News(.*)'],
-        'language':'ar_IQ',
-        'publish':[{'rule':"//table[@class='shadow_table']/tbody/center/table[@dir='rtl']/span[@dir='rtl']/p[2]/text()","format":'%Y-%m-%d %H:%M:%S',"extra":iq_time_sub}]
-
-    },
-
-    # 以色列
-    "il": {
-        'allowed_domains': ['health.gov.il'],
-        'site_url': 'http://www.health.gov.il',
-        'start_urls': ['https://www.health.gov.il/English/News_and_Events/Spokespersons_Messages/Pages/default.aspx'],
-        'rules': [r'(.*)English/News_and_Events/Spokespersons_Messages/Pages/default\.aspx(.*)', r'(.*)English/News_and_Events/Spokespersons_Messages/Pages/(.*)'],
-        'publish':[{"rule":"//table[@class='ContentLayoutNoLeftSideMainTable']/td[@class='ContentLayoutNoLeftLeftSid']/div[@class='HealthMMdDivLayout']/div[@class='HealthPRDate']/text()","format":"%d/%m/%Y %H:%M"}]
-    },
-
-    
    
-    # 卡塔尔
-    'qa':{
-        'allowed_domains':['moph.gov.qa'],
-        'site_url':'https://www.moph.gov.qa',
-        'start_urls':['https://www.moph.gov.qa/news/news','https://www.moph.gov.qa/events/events','https://www.moph.gov.qa/health-strategies/national-health-strategy'],
-        'rules':[r'(.*)/news(.*)',r'(.*)/events(.*)',r'(.*)/health-strategies(.*)'],
-        'publish':[{"rule":"//article[@class='newsDetails']/dd[@class='pubDate']/abbr/text()","format":"%d %B %Y"}]
-
-
-    },
-    # 斯洛伐克
-    'sk':{
-        'allowed_domains':['uvzsr.sk'],
-        'site_url':'http://www.uvzsr.sk',
-        'start_urls':['http://www.uvzsr.sk/en/index.php/documents','http://www.uvzsr.sk/en/index.php/expert-departments'],
-        'rules':[r'(.*)/en/index\.php/documents'],
-        'publish':[]
-    },
-    # 波兰
-    'pl':{
-        'allowed_domains':['mz.gov.pl'],
-        'site_url':'http://www.mz.gov.pl',
-        'start_urls':['http://www.mz.gov.pl/aktualnosci','http://www.mz.gov.pl/leki/aktualnosci-leki/','http://www.mz.gov.pl/zdrowie-i-profilaktyka/'],
-        'rules':[r'(.*)/aktualnosci/page(.*)',r'(.*)/aktualnosci(.*)',r'(.*)/zdrowie-i-profilaktyka(.*)',r'(.*)/leki/aktualnosci-leki(.*)'],
-        'publish':[{"rule":"//*[@id='content-wrapper']/p[@class='news-date']/strong/text()","format":"%d.%m.%Y"}]
-    },
-     # 保加利亚
-    'bg':{
-        'allowed_domains':['mh.government.bg'],
-        'site_url':'http://www.mh.government.bg',
-        'start_urls':['http://www.mh.government.bg/bg/novini/aktualno/','http://www.mh.government.bg/bg/politiki/','http://www.mh.government.bg/bg/evropeyski-programi/tekushti-programi-i-proekti/'],
-        'rules':[r'(.*)/bg/novini/aktualno(.*)',r'(.*)/bg/evropeyski-programi/tekushti-programi-i-proekti(.*)',r'(.*)/bg/politiki(.*)'],
-        'publish':[{"rule":"//div[@id='top']/ul[@class='newsdate']/time[@datetime]/@datetime","format":"%Y-%m-%dT%H:%M:%S+03:00"}]
-    },
-    # 斯洛文尼亚
-    'si':{
-        'allowed_domains':['mz.gov.si',],
-        'site_url':'http://www.mz.gov.si',
-        'start_urls':['http://www.mz.gov.si/si/medijsko_sredisce/intervjuji','http://www.mz.gov.si/si/medijsko_sredisce/sporocila_za_medije','http://www.mz.gov.si/si/medijsko_sredisce/koledar_dogodkov','http://www.mz.gov.si/si/medijsko_sredisce/poslanska_vprasanja','http://www.mz.gov.si/si/pogoste_vsebine_za_javnost/izdaja_zdravil_prek_medmrezja'],
-        'rules':[r'(.*)/si/medijsko_sredisce(.*)',r'(.*)/si/pogoste_vsebine_za_javnost(.*)'],
-        'publish':[{"rule":"//div[@id='mainContainer']/div[@class='newsdate']/text()","format":"%d. %m. %Y"}]
-    },
-
-    # 克罗地亚
-    'hr':{
-        'allowed_domains':['zdravstvo.gov.hr'],
-        'site_url':'https://zdravstvo.gov.hr/',
-        'start_urls':['https://zdravstvo.gov.hr/vijesti/8','https://zdravstvo.gov.hr/dokumenti/10','https://zdravstvo.gov.hr/savjetovanje-sa-zainteresiranom-javnoscu-1475/1475','https://zdravstvo.gov.hr/najcesca-pitanja-i-odgovori/1479','https://zdravstvo.gov.hr/strategije-planovi-i-izvjesca/2396'],
-        'rules':[r'(.*)/vijesti/8(.*)',r'(.*)/vijesti(.*)',r'(.*)/pristup-informacijama(.*)'],
-        'publish':[{"rule":"//div[@class='article_left']/li[@class='time_info']/text()","format":"Objavljeno: %d.%m.%Y."}]
-
-    },
-    # 匈牙利
-    'hu':{
-        'allowed_domains':['enum.hu'],
-        'site_url':'http://www.eum.hu',
-        'start_urls':[''],
-        'rules':[],
-
-    },
-    # 捷克
-    'cz':{
-        'allowed_domains':['mzcr.cz'],
-        'site_url':'http://www.mzcr.cz',
-        'start_urls':['http://www.mzcr.cz','http://www.mzcr.cz/Odbornik','http://www.mzcr.cz/Verejne'],
-        'rules':[r'(.*)/dokumenty(.*)',r'(.*)/Odbornik(.*)',r'(.*)/Verejne(.*)'],
-        'publish':[{'rule':"//*[@id='right-column-content']/div[@class='box-ostrance']/p[1]/text()","format":'%d.%m.%Y','extra':cz_time_sub}]
-
-    },
-
-    # 中国
-    "cn": {
-        'allowed_domains':['moh.gov.cn'],
-        'site_url':'http://www.moh.gov.cn',
-        'start_urls':['http://www.moh.gov.cn/zwgk/jdjd/ejlist.shtml'],
-        'rules':[r'(.*)/zwgk/jdjd/(.*)'],
-        'language':'zh',
-        'publish':[{'rule':"//span[@class='time']/text()",'format':'%Y-%m-%d'}]
-
-    },
-     # 澳大利亚
-    'au':{
-        'allowed_domains':['health.gov.au'],
-        'site_url':'http://www.health.gov.au',
-        'start_urls':['http://www.health.gov.au/internet/main/publishing.nsf/Content/health-publicat.htm','http://www.health.gov.au/internet/main/publishing.nsf/Content/Research+&+Statistics-1','http://www.health.gov.au/internet/main/publishing.nsf/Content/CurrentIssues'],
-        'rules':[r'(.*)/internet/main/publishing\.nsf/Content/(.*)'],
-        'excludes':[r'(.*)internet/main/publishing\.nsf/Content/health-overview\.htm(.*)',r'(.*)internet/main/publishing.nsf/Content/health-central\.htm(.*)',r'(.*)internet/main/publishing\.nsf/Content/Budget-1(.*)',r'(.*)/internet/main/publishing\.nsf/Content/Listing\+of\+Tenders\+and\+Grants-1(.*)',r'(.*)/internet/main/publishing\.nsf/Content/health-eta2\.htm(.*)',r'(.*)internet/main/publishing\.nsf/Content/reporting-fraud-misconduct-compliance(.*)',r'(.*)/internet/main/publishing\.nsf/Content/foi-about(.*)',r'(.*)internet/main/publishing\.nsf/Content/public-interest-disclosure(.*)',r'(.*)internet/main/publishing\.nsf/Content/health-contracts-index\.htm(.*)',r'(.*)/internet/main/publishing\.nsf/Content/health-eta2\.htm(.*)',r'(.*)/internet/main/publishing\.nsf/Content/social-media-channels(.*)',r'(.*)/internet/main/publishing\.nsf/Content/Career\+Opportunities-1(.*)',r'(.*)/internet/main/publishing\.nsf/Content/health-pubs-calendar-index\.htm(.*)',r'(.*)/internet/main/publishing\.nsf/Content/health-history\.htm(.*)',r'(.*)/internet/main/publishing\.nsf/Content/Australian\+Health\+Ministers%27\+Conference-1(.*)',r'(.*)/internet/main/publishing\.nsf/Content/Council\+of\+Australian\+Governments(.*)',r'(.*)/internet/main/publishing\.nsf/Content/Agreements-1(.*)',r'(.*)/internet/main/publishing\.nsf/Content/eHealth(.*)',r'(.*)/internet/main/publishing\.nsf/Content/programs-initiatives-menu(.*)',r'(.*)/internet/main/publishing\.nsf/Content/campaign_certification_statements-lp(.*)',r'(.*)/internet/main/publishing\.nsf/Content/Australian\+Health\+Ministers%27\+Conference-1(.*)',r'(.*)/internet/main/publishing\.nsf/Content/Council\+of\+Australian\+Governments(.*)',r'(.*)/internet/main/publishing\.nsf/Content/Departmental\+media\+releases\+and\+speeches-1(.*)',r'(.*)/internet/main/publishing\.nsf/Content/health-mediarel-subscribe-index\.htm',r'(.*)/internet/main/publishing\.nsf/Content/Ministers-1(.*)',r'(.*)/internet/main/publishing\.nsf/Content/government-responses(.*)']
-        
-    },
-
-    # 萨摩亚
-    'ws':{
-        'allowed_domains':['health.gov.ws'],
-        'site_url':'http://www.health.gov.ws',
-        'start_urls':'',
-        'rules':[],
-        'publish':[]
-    },
-###############################################
+    ##############################################
     # 亚洲
     ###############################################
 
@@ -975,22 +840,6 @@ configure = {
         ]
     },
     
-    #'pl':{
-    #    'allowed_domains':['mz.gov.pl'],
-    #    'site_url':'http://www.mz.gov.pl',
-    #    'start_urls':[
-    #                    'http://www.mz.gov.pl/aktualnosci',
-    #                    'http://www.mz.gov.pl/leki/aktualnosci-leki/',
-    #                    'http://www.mz.gov.pl/zdrowie-i-profilaktyka/'
-    #                ],
-    #    'rules':[
-    #                r'(.*)/aktualnosci/page(.*)',
-    #                r'(.*)/aktualnosci(.*)',r'(.*)/zdrowie-i-profilaktyka(.*)',
-    #                r'(.*)/leki/aktualnosci-leki(.*)'
-    #            ],
-    #    'publish':[{"rule":"//*[@id='content-wrapper']/p[@class='news-date']/strong/text()","format":"%d.%m.%Y"}]
-    #},
-
     # 德国
     'de':{
         'allowed_domains':['bundesgesundheitsministerium.de'],
@@ -1035,14 +884,6 @@ configure = {
         'rules':[r'(.*)/En/dokumenty/(.*)'],
         'publish':[{'rule':"//div[@id='right-column-content']/div[@class='box-ostrance']/p[1]/text()",'format':'Published: %d.%m.%Y'}]
     },
-
-    #'cz':{
-    #    'allowed_domains':['mzcr.cz'],
-    #    'site_url':'http://www.mzcr.cz',
-    #    'start_urls':['http://www.mzcr.cz','http://www.mzcr.cz/Odbornik','http://www.mzcr.cz/Verejne'],
-    #    'rules':[r'(.*)/dokumenty(.*)',r'(.*)/Odbornik(.*)',r'(.*)/Verejne(.*)'],
-    #    'publish':[{'rule':"//*[@id='right-column-content']/div[@class='box-ostrance']/p[1]/text()","format":'%d.%m.%Y','extra':cz_time_sub}]
-    #},
 
     # 斯洛伐克
     'sk':{
@@ -1123,8 +964,7 @@ configure = {
         'site_url':'https://www.government.nl/ministries/ministry-of-health-welfare-and-sport',
         'start_urls':['https://www.government.nl/ministries/ministry-of-health-welfare-and-sport/news'],
         'rules':[r'(.*)/ministries/ministry-of-health-welfare-and-sport/news(.*)'],
-        'publish':[{'rule':"//div[@id='main']/div[@class='wrapper']/div[@id='content']/p[@class='article-meta']/text()",'format':'''
-  News item | %d-%m-%Y | %H:%M'''}]
+        'publish':[{'rule':"//div[@id='main']/div[@class='wrapper']/div[@id='content']/p[@class='article-meta']/text()",'format':'News item | %d-%m-%Y | %H:%M'}]
     },
 
     # 比利时 时间解析有问题
@@ -1950,9 +1790,9 @@ configure = {
         'start_urls':[''],
         'rules':[],
     },
-    ## 牙买加
+    ## 牙买加 通过
     'jm':{
-        'allowed_domains':['gov.jm'],
+        'allowed_domains':['moh.gov.jm'],
         'site_url':'http://moh.gov.jm',
         'start_urls':[
             'http://moh.gov.jm/updates/press-releases',
@@ -1975,7 +1815,7 @@ configure = {
     },
     ## 特立尼达和多巴哥 时间解析过于不鲁棒
     'tt':{
-        'allowed_domains':['gov.tt'],
+        'allowed_domains':['health.gov.tt'],
         'site_url':'http://www.health.gov.tt',
         'start_urls':[
             'http://www.health.gov.tt',
@@ -2026,9 +1866,9 @@ configure = {
 
 
     },
-    ## 尼加瓜拉
+    ## 尼加瓜拉 通过
     'ni':{
-        'allowed_domains':['gob.ni'],
+        'allowed_domains':['minsa.gob.ni'],
         'site_url':'http://www.minsa.gob.ni',
         'start_urls':[
             'http://www.minsa.gob.ni',
@@ -2052,9 +1892,9 @@ configure = {
     },
     ## 哥斯达黎加 没有网站
 
-    ## 巴拿马
+    ## 巴拿马 通过
     'pa':{
-        'allowed_domains':['gob.pa'],
+        'allowed_domains':['minsa.gob.pa'],
         'site_url':'http://www.minsa.gob.pa',
         'start_urls':[
             'http://www.minsa.gob.pa/noticias-breves',
@@ -2088,7 +1928,7 @@ configure = {
 
     ## 古巴 打不开
     'cu':{
-        'allowed_domains':['gob.cu'],
+        'allowed_domains':['minsa.gob.cu'],
         'site_url':'http://www.minsa.gob.cu',
         'start_urls':[''],
         'rules':[],
@@ -2096,9 +1936,9 @@ configure = {
     },
     ## 海地 没有网站
 
-    ## 安提瓜和巴布达
+    ## 安提瓜和巴布达 通过
     'ag':{
-        'allowed_domains':['gov.ag'],
+        'allowed_domains':['mbs.gov.ag'],
         'site_url':'http://mbs.gov.ag',
         'start_urls':[
             'http://mbs.gov.ag'
@@ -2110,8 +1950,6 @@ configure = {
     },
     ## 多米尼克 网站开发中
     'dm':{
-
-
     },
     ## 多米尼加 打不开
     'do':{
@@ -2125,9 +1963,9 @@ configure = {
     'kn':{
 
     },
-    ## 巴巴多斯
+    ## 巴巴多斯 通过
     'bb':{
-        'allowed_domains':['gov.bb'],
+        'allowed_domains':['health.gov.bb'],
         'site_url':'http://health.gov.bb',
         'start_urls':[
             'http://health.gov.bb'
@@ -2136,9 +1974,9 @@ configure = {
             r'(.*)/ministry_health(.*)',
         ],
     },
-    ## 格林纳达
+    ## 格林纳达 通过
     'gd':{
-        'allowed_domains':['gov.gd'],
+        'allowed_domains':['health.gov.gd'],
         'site_url':'http://health.gov.gd',
         'start_urls':[
             'http://health.gov.gd/index.php?lang=en',
@@ -2147,9 +1985,9 @@ configure = {
             r'(.*)/index\.php(.*)'
         ]
     },
-    ## 圣文森特和格林纳丁斯
+    ## 圣文森特和格林纳丁斯 未通过
     'vc':{
-        'allowed_domains':['gov.vc'],
+        'allowed_domains':['moh.gov.vc'],
         'site_url':'http://moh.gov.vc',
         'start_urls':[
             'http://moh.gov.vc/health',
@@ -2163,7 +2001,7 @@ configure = {
     # 南美洲
     ###############################################
 
-    ## 哥伦比亚
+    ## 哥伦比亚 通过
     'co':{
         'allowed_domains':['minsalud.gov.co'],
         'site_url':'https://www.minsalud.gov.co',
@@ -2201,7 +2039,7 @@ configure = {
         'rules':[]
     },
 
-    # 苏里南
+    # 苏里南 通过
     'sr':{
         'allowed_domains':['www.gov.sr'],
         'site_url':'http://www.gov.sr',
@@ -2233,11 +2071,12 @@ configure = {
           
         
     },
-    ## 巴拉圭
+    ## 巴拉圭 (样式有问题)
     'py':{
         'allowed_domains':['mspbs.gov.py'],
         'site_url':'https://www.mspbs.gov.py',
         'start_urls':[
+            'https://www.mspbs.gov.py',
             'https://www.mspbs.gov.py/portal','https://www.mspbs.gov.py/dgtic','https://www.mspbs.gov.py/dnerhs',
             'http://www.mspbs.gov.py/rrhh','https://www.mspbs.gov.py/dnvs','https://www.mspbs.gov.py/planificacion',
             'http://www.mspbs.gov.py/dggies','https://www.mspbs.gov.py/dgrrii','https://www.mspbs.gov.py/drcps',
@@ -2255,7 +2094,7 @@ configure = {
         ]
     },
 
-    # 巴西
+    # 巴西 通过(样式会乱)
     'br':{
         'allowed_domains':['saude.gov.br'],
         'site_url':'http://portalms.saude.gov.br',
