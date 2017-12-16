@@ -109,6 +109,9 @@ class FilePipeline(object):
     def __init__(self):
         self.output_dir = settings['DATA_OUTPUT']
 
+    # def map_name_from_url(self,url):
+
+
     def process_item(self,item,spider):
         if not item or isinstance(item,DropItem):
             return
@@ -158,9 +161,10 @@ class FilePipeline(object):
 
             decode_content = content
             md5 = hashlib.md5(decode_content).hexdigest()
-            # modified_name = hashlib.md5(url).hexdigest()
+            key = hashlib.md5(url).hexdigest()
             # mine_dir,_ = self.map_url_to_dirs(url)
-            mine_dir,modified_name = self.map_url_to_dirs(url)
+            mine_dir,modified_name= self.map_url_to_dirs(url)
+            modified_name = key+'_'+modified_name 
             mine_output_path = os.path.join(mine_dir,modified_name)
             next_item['md5']=md5
             next_item['local_url'] = mine_output_path
@@ -188,7 +192,8 @@ class FilePipeline(object):
                     if http_url and url_in_domain(http_url,domain):
                         http_url = urllib.unquote(http_url)     
                         dir,path_name = self.map_url_to_dirs(http_url)
-                        # path_name = hashlib.md5(http_url).hexdigest()
+                        key = hashlib.md5(http_url).hexdigest()
+                        path_name = key +'_'+path_name
                         your_output_path = os.path.join(dir,path_name)
                         relpath = os.path.relpath(your_output_path,mine_dir)
                         # if href.startswith('http'):
@@ -241,9 +246,10 @@ class FilePipeline(object):
            
         elif item.get('rtype') == 'attachment':
             
-            # modified_name = hashlib.md5(url).hexdigest()
+            key = hashlib.md5(url).hexdigest()
             # mine_dir,_ = self.map_url_to_dirs(url)
             mine_dir,modified_name = self.map_url_to_dirs(url)
+            modified_name = key+'_'+modified_name 
 
             mine_output_path = os.path.join(mine_dir,modified_name)
 
@@ -317,7 +323,7 @@ class FilePipeline(object):
     def mkdirs_from_url(self,url):
         output_dir_from_url,output_name = self.map_url_to_dirs(url)
         output_dir_from_url = os.path.join(self.output_dir,output_dir_from_url)
-        if not os.path.exists(output_dir_from_url):
+        if not os.path.exists(output_dir_from_url) or not os.path.isdir(output_dir_from_url):
             os.makedirs(output_dir_from_url)
         return output_dir_from_url,output_name
 
