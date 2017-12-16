@@ -2564,6 +2564,7 @@ class MohSpider(scrapy.Spider):
         
 
     def get_record(self,url):
+        url = urllib.unquote(url)
         key = hashlib.md5(url).hexdigest()
         record = {}
         if self.history and self.history.get(key):
@@ -2572,6 +2573,8 @@ class MohSpider(scrapy.Spider):
 
     def save_record(self,url,r):
         record = self.get_record(url)
+        
+        url = urllib.unquote(url)
         key = hashlib.md5(url).hexdigest()
         should_update = self.should_update(record)
         if should_update:
