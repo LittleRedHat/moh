@@ -2844,7 +2844,7 @@ class MohSpider(scrapy.Spider):
             
 
         last_update = datetime.date.today()
-        self.__save_record(response.url,{'last_update':last_update.strftime('%Y-%m-%d'),'url':resource['url'],'type':resource['rtype']})
+        self.save_record(response.url,{'last_update':last_update.strftime('%Y-%m-%d'),'url':resource['url'],'type':resource['rtype']})
         
         # try:
         #     decode_content = content.decode('utf-8')

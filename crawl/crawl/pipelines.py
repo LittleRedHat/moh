@@ -114,13 +114,13 @@ class FilePipeline(object):
             return
         ## asset handler
         if item.get('rtype') == 'asset':
-            # 去掉资源文件后面带查询
             url = item['url']
             url = urllib.unquote(url)
             content = item.get('content')
 
             parse_result = urlparse(url)
-            url =  parse_result.netloc + parse_result.path
+
+            # url =  parse_result.netloc + parse_result.path
             # not update already exist resource 
             mine_dir,output_name= self.map_url_to_dirs(url)
             mine_output_path = os.path.join(mine_dir,output_name)
@@ -186,8 +186,8 @@ class FilePipeline(object):
                     http_url = self.gen_http_url(url,href,base)
                     if http_url and url_in_domain(http_url,domain):
                         http_url = urllib.unquote(http_url)     
-                        dir,_ = self.map_url_to_dirs(http_url)
-                        path_name = hashlib.md5(http_url).hexdigest()
+                        dir,path_name = self.map_url_to_dirs(http_url)
+                        # path_name = hashlib.md5(http_url).hexdigest()
                         your_output_path = os.path.join(dir,path_name)
                         relpath = os.path.relpath(your_output_path,mine_dir)
                         # if href.startswith('http'):
@@ -298,8 +298,6 @@ class FilePipeline(object):
     
 
     def map_url_to_dirs(self,url):
-        
-        
         
         parse_result = urlparse(url)
         base_dir = parse_result.netloc
