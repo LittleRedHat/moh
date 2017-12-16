@@ -112,8 +112,6 @@ class FilePipeline(object):
     def process_item(self,item,spider):
         if not item or isinstance(item,DropItem):
             return
-
-	print ('filepipeline process'),item
         ## asset handler
         if item.get('rtype') == 'asset':
             # 去掉资源文件后面带查询
@@ -147,17 +145,18 @@ class FilePipeline(object):
 
         # for all html, it musts be update
         if item.get('rtype') == 'html':
-            try:
-                decode_content = content.decode('utf-8')
-            except:
-                try:
-                    decode_content = content.decode('str_escape')
-                except:
-                    try:
-                        decode_content = content.decode('unicode_escape')
-                    except:
-                        decode_content = content
-            
+            # try:
+            #     decode_content = content.decode('utf-8')
+            # except:
+            #     try:
+            #         decode_content = content.decode('str_escape')
+            #     except:
+            #         try:
+            #             decode_content = content.decode('unicode_escape')
+            #         except:
+            #             decode_content = content
+
+            decode_content = content
             md5 = hashlib.md5(decode_content).hexdigest()
             modified_name = hashlib.md5(url).hexdigest()
             mine_dir,_ = self.map_url_to_dirs(url)

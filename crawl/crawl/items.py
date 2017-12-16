@@ -10,7 +10,7 @@ from scrapy import Field
 
 class ResourceItem(scrapy.Item):
      url = Field()
-     md5 = Field()
+     md5 = Field() 
      content = Field()
      rtype = Field()
      location = Field()

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+import os
 # Scrapy settings for crawl project
 #
 # For simplicity, this file contains only settings considered important or
@@ -93,11 +93,15 @@ SCHEDULER_ORDER = 'BFO'
 # MONGO_HOST = '127.0.0.1'
 # MONGO_PORT = 27017
 # MONGO_DB = 'crawler'
+
+base_dir = os.path.split(os.path.realpath(__file__))[0]
+
+
 DATA_OUTPUT = '/var/www/html'
 # DATA_OUTPUT = './data'
 LOG_LEVEL='ERROR'
 
 
-STAT_DIR = './statics/'
+HISTORY_DIR = os.path.join(base_dir,'history')
 
 ES_HOSTS = ['10.48.41.24:9200']

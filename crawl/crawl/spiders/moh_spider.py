@@ -1,6 +1,7 @@
 # !bin/python
 # -*- coding: utf-8 -*-
 import scrapy
+from scrapy import signals
 from scrapy.conf import settings
 from urlparse import urlparse, urljoin
 import os
@@ -8,6 +9,8 @@ import sys
 import tinycss
 import re
 import time
+import datetime
+from datetime import timedelta
 import json
 from crawl.items import ResourceItem
 from summa import keywords
@@ -19,8 +22,10 @@ except:
     pass
 from textrank4zh import TextRank4Keyword
 import html2text
-import mimetypes
-mimetypes.init()
+import codecs
+import hashlib
+# import mimetypes
+# mimetypes.init()
 
 
 def ae_time_sub(text):
@@ -2397,19 +2402,29 @@ configure = {
 }
 
 ALLOWED_FILE_DOWNLOAD = [
-    'text/xml','text/plain',
+    'text/xml','text/plain','text/html',
     # 'image/jpeg','application/x-bmp','image/fax','image/x-icon','image/jpeg','application/x-jpg','application/x-png','image/tiff',
     'application/vnd.ms-powerpoint','application/vnd.ms-powerpoint','application/x-ppt',
-    'application/msword',
+    'application/msword','application/octet-stream',
     'application/x-xls','application/vnd.ms-excel',
     'application/pdf',
 ]
+
+
+
+class Recorder(object):
+    def __init__(self):
+        pass
+    
+
+
+
 
 class MohSpider(scrapy.Spider):
 
     name = 'moh'
 
-    def __init__(self, domain=None, debug=None, debug_url=None,*args, **kwargs):
+    def __init__(self, domain=None, debug=None, debug_url=None,html_update = 0,attachment_update = 30,asset_update = 10,*args, **kwargs):
 
        super(MohSpider, self).__init__()
        params = configure[domain]
@@ -2426,7 +2441,57 @@ class MohSpider(scrapy.Spider):
        self.language = params.get('language') or ''
        self.nation = domain
        self.debug = debug
+       self.history = self.load_history()
+       self.html_update = int(html_update)
+       self.attachment_update = int(attachment_update)
+       self.asset_update = int(asset_update)
+       self.now = datetime.datetime.now()
+
+    def url_in_rule(self,url):
+        flag = False
+        for rule in self.rules:
+            if re.match(rule, url):
+                flag = True
+                break
+        for rule in self.excludes:
+            if re.match(rule, url):
+                flag = False
+                break
+        if url in self.start_urls:
+            flag = True
+        return flag
+
     
+
+    def load_history(self):
+        if self.debug:
+            history_file = os.path.join(settings['HISTORY_DIR'],self.nation + '-debug.json')
+        else:
+            history_file = os.path.join(settings['HISTORY_DIR'],self.nation + '.json')
+        if os.path.exists(history_file):
+            return json.load(codecs.open(history_file,'r'))
+        else:
+            return {}
+            
+    @classmethod
+    def from_crawler(cls, crawler, *args, **kwargs):
+        spider = super(MohSpider, cls).from_crawler(crawler, *args, **kwargs)
+        crawler.signals.connect(spider.spider_closed, signal=signals.spider_closed)
+        return spider
+
+    def spider_closed(self,spider):
+        self.save_history()
+       
+
+    def save_history(self):
+        if self.debug:
+            history_file = os.path.join(settings['HISTORY_DIR'],self.nation + '-debug.json')
+        else:
+            history_file = os.path.join(settings['HISTORY_DIR'],self.nation + '.json')
+        if self.history:
+            json.dump(self.history,codecs.open(history_file,'w','utf-8'))
+
+
 
     def content_allowed(self,content_type):
         for item in ALLOWED_FILE_DOWNLOAD:
@@ -2442,58 +2507,152 @@ class MohSpider(scrapy.Spider):
                 yield scrapy.Request(url)
 
 
+    def should_update(self,record):
+        if not record:
+            return True
+        
+    
+        last_update = record.get('last_update')
+        if not last_update:
+            return True
+        last_update_date = datetime.datetime.strptime(last_update,'%Y-%m-%d').date()
+        now = datetime.date.today()
+        
+        if record.get('type') == 'attachment':
+            delta = timedelta(days = self.attachment_update)
+            content_type = record.get('content_type') or '&&&&&'
+
+            if not self.content_allowed(content_type):
+                if self.debug:
+                    pass
+                    # print '*'*40
+                    # print record.get('url') + ' is rejected'
+                return False
+
+           
+        elif record.get('type') == 'html':
+            delta = timedelta(days = self.html_update)
+            content_type = record.get('content_type') or '&&&&&'
+            if not self.content_allowed(content_type):
+                if self.debug:
+                    pass
+                    # print '*'*40
+                    # print record.get('url') + ' is rejected because content type'
+                return False
+
+            if not self.url_in_rule(record.get('url')):
+                if self.debug:
+                    pass
+                    # print '*'*40
+                    # print record.get('url') + ' is rejected because rule'
+                return False
+
+
+        elif record.get('type') == 'asset':
+            delta = timedelta(days = self.asset_update)
+
+        else:
+            # print '*'*40
+            # print record.get('url') + ' is rejected'
+            return False
+        # print last_update_date + delta >= now
+        if last_update_date + delta > now:
+            return False
+        else:
+            return True
+
+        
+
+    def get_record(self,url):
+        key = hashlib.md5(url).hexdigest()
+        record = {}
+        if self.history and self.history.get(key):
+            record = self.history.get(key)
+        return record
+
+    def save_record(self,url,r):
+        record = self.get_record(url)
+        key = hashlib.md5(url).hexdigest()
+        should_update = self.should_update(record)
+        if should_update:
+            self.history[key] = r
+
     def parse(self, response):
         '''
         parse html to extract useful link and assets
-        '''
-        if response.headers and response.headers.get('Content-Type') and ('text/html' in response.headers['Content-Type']):
-            # print response.url
 
+        '''
+        
+
+
+        now = datetime.datetime.now()
+        history_save_interval = timedelta(minutes = 1)
+        if self.now + history_save_interval < now:
+            self.now = now
+            self.save_history()
+
+        record = self.get_record(response.url)
+        
+        content_type = None
+        saved_record = None
+
+        if record and record.get('content_type'):
+            content_type = record.get('content_type').strip()
+        elif response.headers and response.headers.get('Content-Type'):
+            ct = response.headers.get('Content-Type').split(';')
+            if len(ct):
+                content_type = ct[0].strip()
+        
+        if content_type and ('text/html' in content_type):
+            # print response.url
             # 过滤掉不相关的页面
-            flag = False
-            for rule in self.rules:
-                if re.match(rule, response.url):
-                    flag = True
-                    break
-            for rule in self.excludes:
-                if re.match(rule, response.url):
-                    flag = False
-                    break
-            
-            if response.url in self.start_urls:
-                flag = True
-            if not flag:
+            if not self.url_in_rule(response.url):
+                last_update = datetime.date.today()
+                saved_record = {'url':response.url,'type':'html','content_type':content_type,'last_update':last_update.strftime('%Y-%m-%d'),'valid':False}
+                self.save_record(response.url,saved_record)
                 return
+
+
             
             resource = ResourceItem()
             resource['url'] = response.url
-            
             resource['rtype'] = 'html'
             resource['location'] = self.site_url
             resource['language'] = self.language_inference(response)
             resource['publish'] = self.publish_time_inference(response)
-            # print resource['publish']
             resource['nation'] = self.nation
+
             text = self.h2t(response)
-            resource['content'] = response.body
+            resource['content'] = response.text
             resource['keywords'] = json.dumps(self.text2keywords(text,resource['language'],keywords_num=5))
 
-            if response.meta.get('title'):
-                title = response.meta.get('title')
+            title_from_meta = response.meta.get('title') or ''
+            title_from_html = response.xpath('//title/text()').extract()
+
+            
+            if len(title_from_html):
+                title_from_html = title_from_html[0]
             else:
-                title = response.xpath('//title/text()').extract()
-                if len(title):
-                    title = title[0]
-                else:
-                    title = ''
+                title_from_html = ''
+            
+            # if len(title_from_meta) < len(title_from_html):
+            #     title = title_from_html 
+            # else:
+            #     title = title_from_meta
+            if title_from_meta:
+                title = title_from_meta
+            else:
+                title = title_from_html
 
             resource['title'] = title
-            
 
-            if not self.debug:
+            should_update = self.should_update(record)
+            if not self.debug and should_update:
                 yield resource
-            # return
 
+            last_update = datetime.date.today()
+            saved_record = {'content_type':content_type,'last_update':last_update.strftime('%Y-%m-%d'),'nation':resource['nation'],'url':resource['url'],'type':resource['rtype'],'publish':resource['publish']}
+            
             print '*'*40
             print '(url,language,publish,title)',resource['url'],resource['language'],resource['publish'],resource['title']
             
@@ -2503,7 +2662,6 @@ class MohSpider(scrapy.Spider):
                 base = base[0]
             else:
                 base = None
-            
             links = response.xpath('//a[@href]')
             for link in links:
                 link_text = link.xpath('@href').extract()
@@ -2511,38 +2669,55 @@ class MohSpider(scrapy.Spider):
                     link_text = link_text[0]
                 else:
                     link_text = None
-
                 link_title = link.xpath('normalize-space(string(.))').extract()
                 if len(link_title):
                     link_title = link_title[0]
                 else:
-                    link_title = '没有标题'
+                    link_title = ''
                 http_url = self.gen_http_url(response.url,link_text,base)
+               
                 if http_url:
+                    request = scrapy.Request(http_url,callback=self.parse,meta={'title':link_title})
+                    _record = self.get_record(http_url)
+                    should_update = self.should_update(_record)
+                    # print '*'*40
+                    # print http_url,should_update
+                    # print '*'*40
+                    if should_update:
+                        # print http_url
+                        yield request
+                    
                     # if self.debug:
                     #     print 'yield http url %s from %s'%(http_url,response.url)
                     # if http_url == 'http://www.mz.gov.pl/wp-content/uploads/2015/07/Wczesne-wykrywanie-dane-krajowe.ppt':
                     #     print 'yield http url %s from %s'%(http_url,response.url)
                     #     print 'link title is ',link_title
                     #     return
-                    request = scrapy.Request(http_url,callback=self.parse,meta={'title':link_title})
-                    yield request
-
             stylesheets = response.xpath(
                 '//link[@type="text/css"]/@href').extract()
             
             for stylesheet in stylesheets:
                 http_url = self.gen_http_url(response.url, stylesheet,base)
-                if http_url and not self.debug:
-                    yield scrapy.Request(http_url, callback=self.style_parse)
-
-                    
+                if http_url:
+                    request = scrapy.Request(http_url, callback=self.style_parse)
+                    link_key = hashlib.md5(http_url).hexdigest()
+                    _record = self.history.get(link_key)
+                    should_update = self.should_update(_record)
+                    if should_update:
+                        yield request
 
             javascripts = response.xpath('//script[@src]/@src').extract()
             for javascript in javascripts:
                 http_url = self.gen_http_url(response.url,javascript,base)
-                if http_url and not self.debug:
-                    yield scrapy.Request(http_url, callback=self.assets_parse)
+                if http_url:
+                    request = scrapy.Request(http_url, callback=self.assets_parse)
+                    
+                    _record = self.get_record(http_url)
+
+                    should_update = self.should_update(_record)
+                    if should_update and self.url_in_rule(http_url):
+                        
+                        yield request
 
             images = response.xpath('//img[@src]/@src').extract() or []
             input_images = response.xpath(
@@ -2550,9 +2725,15 @@ class MohSpider(scrapy.Spider):
             images.extend(input_images)
             for img in images:
                 img_http_url = self.gen_http_url(response.url,img,base)
-                if img_http_url and not self.debug:
-                    yield scrapy.Request(img_http_url, callback=self.assets_parse)
-        elif response.headers and response.headers.get('Content-Type') and self.content_allowed(response.headers.get('Content-Type')):
+                if img_http_url:
+                    request = scrapy.Request(img_http_url, callback=self.assets_parse)
+
+                    _record = self.get_record(img_http_url)
+                    should_update = self.should_update(_record)
+                    if should_update:
+                        yield request
+
+        elif content_type and self.content_allowed(content_type):  
             resource = ResourceItem()
             resource['url'] = response.url
             resource['content'] = response.body
@@ -2563,10 +2744,25 @@ class MohSpider(scrapy.Spider):
                 resource['title'] = response.meta.get('title')
             else:
                 resource['title'] = ''
-            if not self.debug:
+
+            should_update = self.should_update(record)
+
+            if (not self.debug) and should_update:
                 yield resource
+
             print '*'*40
-            print '(url,title)',resource['url'],resource['title']
+            print '(url,type)',resource['url'],resource['rtype']
+            
+            last_update = datetime.date.today()
+            saved_record = {'content_type':content_type,'last_update':last_update.strftime('%Y-%m-%d'),'url':resource['url'],'type':resource['rtype']}
+        else:
+            saved_record = {'url':response.url,'content_type':content_type}
+        
+        self.save_record(response.url,saved_record)
+
+
+
+   
 
     def assets_parse(self, response):
         '''
@@ -2577,7 +2773,17 @@ class MohSpider(scrapy.Spider):
         resource['content'] = response.body
         resource['rtype'] = 'asset'
         resource['location'] = self.site_url
-        yield resource
+
+        if not self.debug:
+            yield resource
+        print '*'*40
+        print '(url,type)',resource['url'],resource['rtype']
+            
+        last_update = datetime.date.today()
+        self.save_record(response.url,{'last_update':last_update.strftime('%Y-%m-%d'),'url':resource['url'],'type':resource['rtype']})
+        
+
+        
 
     def language_inference(self,response):
         '''
@@ -2621,35 +2827,51 @@ class MohSpider(scrapy.Spider):
         '''
             css parser to extract import css and image
         '''
-        print '*'*40
-        print ('css','url'),response.url
+        # print '*'*40
+        # print ('css','url'),response.url
         url = response.url
-        content = response.body
+        content = response.text
         resource = ResourceItem()
         resource['url'] = url
         resource['content'] = content
         resource['rtype'] = 'asset'
         resource['location'] = self.site_url
-        yield resource
+
+        if not self.debug:
+            yield resource
+        print '*'*40
+        print '(url,type)',resource['url'],resource['rtype']
+            
+
+        last_update = datetime.date.today()
+        self.__save_record(response.url,{'last_update':last_update.strftime('%Y-%m-%d'),'url':resource['url'],'type':resource['rtype']})
         
-        try:
-            decode_content = content.decode('utf-8')
-        except:
-            try:
-                decode_content = content.decode('str_escape')
-            except:
-                try:
-                    decode_content = content.decode('unicode_escape')
-                except:
-                    decode_content = content
-        stylesheet = tinycss.make_parser().parse_stylesheet(decode_content)
+        # try:
+        #     decode_content = content.decode('utf-8')
+        # except:
+        #     try:
+        #         decode_content = content.decode('str_escape')
+        #     except:
+        #         try:
+        #             decode_content = content.decode('unicode_escape')
+        #         except:
+        #             decode_content = content
+
+        stylesheet = tinycss.make_parser().parse_stylesheet(content)
 
         for item in stylesheet.rules: 
             if isinstance(item,tinycss.css21.ImportRule):
                 uri = item.uri
                 http_url = self.gen_http_url(url,uri,None)
-                if http_url:  
-                    yield scrapy.Request(http_url,self.style_parse)	
+
+                if http_url:
+                    record = self.get_record(http_url)
+                    should_update = self.should_update(record)
+                    request = scrapy.Request(http_url,self.style_parse)
+                    if should_update:
+                        yield request
+                    
+
             elif hasattr(item,'declarations'):
                 for decl in getattr(item,'declarations'):
                     for decl_val in getattr(decl,'value'):
@@ -2657,9 +2879,12 @@ class MohSpider(scrapy.Spider):
                             uri = getattr(decl_val,'value')
                             image_url = self.gen_http_url(url,uri,None)
                             if image_url:
-                                yield scrapy.Request(image_url,self.assets_parse)
+                                record = self.get_record(image_url)
+                                should_update = self.should_update(record)
+                                request = scrapy.Request(image_url,self.assets_parse)
+                                if should_update:
+                                    yield request 
 
-   
     def gen_http_url(self,source_url,dest_url,base):
         '''
             generate absolute url 
@@ -2703,7 +2928,8 @@ class MohSpider(scrapy.Spider):
         
 
 if __name__ == '__main__':
-    iq_time_sub("أرسلت بواسطة: أدارة الموقع | التاريخ: 2017-10-05 | الوقـت: 10:56:19 صباحا  | قراءة : 13")
-    
+    spider = MohSpider(domain='kr',debug=True)
+    record = spider.get_record('http://download.mohw.go.kr/react/modules/download.jsp?BOARD_ID=1365&CONT_SEQ=289977&FILE_SEQ=138058&FILE_NAME=[ENG][8.19]Preparation%20for%20a%20healthy%202nd%20semester!%20Get%20vaccination%20shots,%20and%20follow%20sanitation%20recommendations.docx')
+    print spider.should_update(record)
         
             
