@@ -241,8 +241,9 @@ class FilePipeline(object):
            
         elif item.get('rtype') == 'attachment':
             
-            modified_name = hashlib.md5(url).hexdigest()
-            mine_dir,_ = self.map_url_to_dirs(url)
+            # modified_name = hashlib.md5(url).hexdigest()
+            # mine_dir,_ = self.map_url_to_dirs(url)
+            mine_dir,modified_name = self.map_url_to_dirs(url)
             mine_output_path = os.path.join(mine_dir,modified_name)
 
             # not update exist attachment
