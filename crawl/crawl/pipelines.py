@@ -244,6 +244,7 @@ class FilePipeline(object):
             # modified_name = hashlib.md5(url).hexdigest()
             # mine_dir,_ = self.map_url_to_dirs(url)
             mine_dir,modified_name = self.map_url_to_dirs(url)
+
             mine_output_path = os.path.join(mine_dir,modified_name)
 
             # not update exist attachment
@@ -310,7 +311,7 @@ class FilePipeline(object):
         output_dir_from_url = os.path.join(base_dir,root)
         output_name = file
         if parse_result.query:
-            output_name = output_name + '?' + parse_result.query
+            output_name = output_name + '%3f' + parse_result.query
         return output_dir_from_url,output_name
 
     def mkdirs_from_url(self,url):
