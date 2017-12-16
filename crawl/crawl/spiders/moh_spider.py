@@ -5,7 +5,7 @@ from scrapy import signals
 from scrapy.conf import settings
 from urlparse import urlparse, urljoin
 import os
-import sys
+import urllib
 import tinycss
 import re
 import time
@@ -2573,7 +2573,7 @@ class MohSpider(scrapy.Spider):
 
     def save_record(self,url,r):
         record = self.get_record(url)
-        
+
         url = urllib.unquote(url)
         key = hashlib.md5(url).hexdigest()
         should_update = self.should_update(record)
