@@ -5,6 +5,22 @@ showWordCloud();
 $('#search').click(function () {
     search();
 });
+$('#trans').click(function () {
+    var inputs = $('.search-input');
+    var keyWord = "";
+    for (var i = 0; i < inputs.length; i++)
+        if (inputs[i].value != "")
+            keyWord += inputs[i].value + " ";
+    console.log(keyWord);
+    if (keyWord == "")
+        $('#trans-res').html("请输入关键字！");
+    else {
+        $('#trans-res').html("");
+        keyWordTrans(keyWord);
+    }
+});
+
+
 
 //展示地图
 function map(searchRes) {
@@ -35,13 +51,17 @@ function map(searchRes) {
             data: convertToMapData(searchRes),
             symbol: 'pin',
             symbolSize: function(val) {
-                return val[2] / 5;
+                var result = val[2] / 8;
+                return result > 100 ? 100 : result;
             },
             label: {
                 emphasis: {
                     show: true,
                     formatter: function (obj) {
-                        console.log(obj);
+                        //console.log(obj);
+                        var name = obj.data.name;
+                        var value = obj.data.value[2];
+                        return name + "\n结果数量: " + value;
                     },
                     position: 'right'
                 }
@@ -227,17 +247,31 @@ function showWordCloud() {
 
 //整合请求信息
 function createRequestData(size, from, should) {
-    var sort = document.getElementsByName('sort')[0].checked ? 'all' : 'date';
-    var type = document.getElementById('attachment').checked ? 'all' : 'html';
+    var sort = $("#sort option:selected").val();
+    var type = $("#attachment option:selected").val();
+    var nation = [];
+    var language = [];
+
+    if ($('#nation').val() == "")
+        nation.push("all");
+    else
+        nation = ((String)($('#nation').val())).split(" ");
+
+    if ($('#language').val() == "")
+        language.push("all");
+    else
+        language = ((String)($('#language').val())).split(" ");
+
     var requestData = {
         "should": should,
         "size": size,
         "from": from,
         "sort": sort,
-        "filters": [{
-            "name": "type",
-            "value": [type]
-        }]
+        "filters": [
+            {"name": "type", "value": [type]},
+            {"name": "nation", "value": nation},
+            {"name": "language", "value": language}
+            ]
     };
     return JSON.stringify(requestData);
 }
@@ -412,10 +446,25 @@ function textToArr(text) {
     }
 }
 
+function toSearchWordsArr() {
+    var inputs = $('.search-input');
+    //console.log(inputs);
+    var result = [];
+
+    for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].value != "")
+            result.push(((String)(inputs[i].value)).split("&"));
+    }
+
+    return result;
+}
+
 //对关键字进行翻译，然后进行搜索
 function search() {
     console.log("reach");
-    var wordsArr = textToArr($('#search-key').val());
+    //var wordsArr = textToArr($('#search-key').val());
+    var wordsArr = toSearchWordsArr();
+    console.log(wordsArr);
     var result = [];
 
     var appid = '2015063000000001';
@@ -465,7 +514,7 @@ function search() {
                                                     i--;
                                                 }
                                             }
-                                            console.log(result)
+                                            console.log(result);
                                             searchRes(createRequestData(20, 0, result));
                                         }
                                     }
