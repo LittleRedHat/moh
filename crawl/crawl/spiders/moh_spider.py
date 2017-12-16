@@ -156,7 +156,6 @@ def sc_time_sub(text):
 
 
 configure = {
-    "output_dir": '/var/www/html',
    
     ##############################################
     # 亚洲
@@ -2389,7 +2388,10 @@ configure = {
         'allowed_domains':['health.gov.ws'],
         'site_url':'http://www.health.gov.ws',
         'start_urls':['http://www.health.gov.ws','http://www.health.gov.ws/publications0/legislations','http://www.health.gov.ws/publications0/findings-and-reports'],
-        'rules':[r'(.*)/component/content/article(.*)',r'(.*)/health-warning-alerts/(.*)'],
+        'rules':[
+            r'(.*)/component/content/article(.*)',
+            r'(.*)/health-warning-alerts/(.*)'
+        ],
         'publish':[
             {
                 'rule':'//*[@id="sp-component"]//*[@class="article-info"]//time[@datetime]/@datetime',
@@ -2420,7 +2422,7 @@ class MohSpider(scrapy.Spider):
        params = configure[domain]
        self.allowed_domains = params['allowed_domains']
        self.site_url = params['site_url']
-       self.output_dir = configure['output_dir']
+       self.output_dir = settings['DATA_OUTPUT']
        if debug_url:
            self.start_urls = [debug_url]
        else:
@@ -2558,21 +2560,18 @@ class MohSpider(scrapy.Spider):
         key = 'moh:'+self.nation+':'+md5
         should_update = self.should_update(record)
         if should_update:
-            r.hmset(key,saved_record)
+            r.hmset(key,dict(record.items()+saved_record.items()))
 
     def parse(self, response):
         '''
         parse html to extract useful link and assets
 
         '''
-        
-
-
-        now = datetime.datetime.now()
-        history_save_interval = timedelta(minutes = 5)
-        if self.now + history_save_interval < now:
-            self.now = now
-            self.save_history()
+        # now = datetime.datetime.now()
+        # history_save_interval = timedelta(minutes = 5)
+        # if self.now + history_save_interval < now:
+        #     self.now = now
+        #     self.save_history()
 
         record = self.get_record(response.url)
         
