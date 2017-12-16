@@ -42,7 +42,7 @@ class ElasticsearchPipeline(object):
             last_update = datetime.date.today()
             url = item['url']
             record = {'last_update':last_update.strftime('%Y-%m-%d')}
-            spider.saved_record(url,record)
+            spider.save_record(url,record)
 
         elif item.get('rtype') == 'attachment':
             doc = dict(item)
@@ -56,7 +56,7 @@ class ElasticsearchPipeline(object):
             last_update = datetime.date.today()
             url = item['url']
             record = {'last_update':last_update.strftime('%Y-%m-%d')}
-            spider.saved_record(url,record)
+            spider.save_record(url,record)
 
         return item
 
@@ -142,7 +142,7 @@ class FilePipeline(object):
 
             last_update = datetime.date.today()
             record = {'last_update':last_update.strftime('%Y-%m-%d')}
-            spider.saved_record(url,record)
+            spider.save_record(url,record)
             return
 
         next_item = ResourceItem()
@@ -331,7 +331,7 @@ class FilePipeline(object):
         output_dir_from_url = os.path.join(base_dir,root)
         output_name = file
         if parse_result.query:
-            output_name = output_name + '%3f' + parse_result.query
+            output_name = output_name + '_' + parse_result.query
         return output_dir_from_url,output_name
 
     def mkdirs_from_url(self,url):
