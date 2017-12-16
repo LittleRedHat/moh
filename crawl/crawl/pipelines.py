@@ -41,7 +41,7 @@ class ElasticsearchPipeline(object):
             self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,timeout='60s')
             last_update = datetime.date.today()
             url = item['url']
-            record = {'last_update':last_update.strftime('%Y-%m-%d')}
+            record = {'last_update':last_update.strftime('%Y-%m-%d'),'url':url,'type':'html','content_type':item['content_type']}
             spider.save_record(url,record)
 
         elif item.get('rtype') == 'attachment':
@@ -55,7 +55,7 @@ class ElasticsearchPipeline(object):
             self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,pipeline='attachment',timeout='60s')
             last_update = datetime.date.today()
             url = item['url']
-            record = {'last_update':last_update.strftime('%Y-%m-%d')}
+            record = {'last_update':last_update.strftime('%Y-%m-%d'),'url':url,'type':'attachment','content_type':item['content_type']}
             spider.save_record(url,record)
 
         return item
@@ -141,7 +141,7 @@ class FilePipeline(object):
             self.output_content(url,content)
 
             last_update = datetime.date.today()
-            record = {'last_update':last_update.strftime('%Y-%m-%d')}
+            record = {'last_update':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'asset'}
             spider.save_record(url,record)
             return
 
@@ -156,6 +156,7 @@ class FilePipeline(object):
         next_item['location']=item.get('location') or ''
         next_item['language'] = item.get('language') or ''
         next_item['publish'] = item.get('publish') or '1970-01-01T00:00:00Z'
+        next_item['content_type'] = item.get('content_type') or '&&&&&'
         #print item.get('publish')
         next_item['nation'] = item.get('nation') or ''
         next_item['keywords']=item.get('keywords') or ''
