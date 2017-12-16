@@ -19,6 +19,7 @@ sys.setdefaultencoding('utf8')
 from elasticsearch import Elasticsearch
 import base64
 import html2text
+import datetime
 
 from crawl.items import ResourceItem
 from crawl.spiders.moh_spider import configure
@@ -38,6 +39,11 @@ class ElasticsearchPipeline(object):
             # doc['content']=base64.b64encode(doc['content'])
             # doc['content']="this is a test"
             self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,timeout='60s')
+            last_update = datetime.date.today()
+            url = item['url']
+            record = {'last_update':last_update.strftime('%Y-%m-%d')}
+            spider.saved_record(url,record)
+
         elif item.get('rtype') == 'attachment':
             doc = dict(item)
             doc['data']=base64.b64encode(doc['content'])
@@ -47,6 +53,11 @@ class ElasticsearchPipeline(object):
             # doc['data']=doc['content']
             # doc['content']="this is a test"
             self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,pipeline='attachment',timeout='60s')
+            last_update = datetime.date.today()
+            url = item['url']
+            record = {'last_update':last_update.strftime('%Y-%m-%d')}
+            spider.saved_record(url,record)
+
         return item
 
 def h2t(html):
@@ -128,6 +139,10 @@ class FilePipeline(object):
             mine_dir,output_name= self.map_url_to_dirs(url)
             mine_output_path = os.path.join(mine_dir,output_name)
             self.output_content(url,content)
+
+            last_update = datetime.date.today()
+            record = {'last_update':last_update.strftime('%Y-%m-%d')}
+            spider.saved_record(url,record)
             return
 
         next_item = ResourceItem()
@@ -212,7 +227,6 @@ class FilePipeline(object):
                         relpath = os.path.relpath(your_output_path,mine_dir)
                         item['src']=relpath
                         
-                
                 styles = soup.find_all('link')
                 for item in styles:
                     href = item.get('href')

@@ -24,8 +24,7 @@ from textrank4zh import TextRank4Keyword
 import html2text
 import codecs
 import hashlib
-# import mimetypes
-# mimetypes.init()
+from crawl.cache import r
 
 
 def ae_time_sub(text):
@@ -2410,16 +2409,7 @@ ALLOWED_FILE_DOWNLOAD = [
     'application/pdf',
 ]
 
-
-
-class Recorder(object):
-    def __init__(self):
-        pass
     
-
-
-
-
 class MohSpider(scrapy.Spider):
 
     name = 'moh'
@@ -2441,7 +2431,7 @@ class MohSpider(scrapy.Spider):
        self.language = params.get('language') or ''
        self.nation = domain
        self.debug = debug
-       self.history = self.load_history()
+    #    self.history = self.load_history()
        self.html_update = int(html_update)
        self.attachment_update = int(attachment_update)
        self.asset_update = int(asset_update)
@@ -2480,7 +2470,8 @@ class MohSpider(scrapy.Spider):
         return spider
 
     def spider_closed(self,spider):
-        self.save_history()
+        # self.save_history()
+        pass
        
 
     def save_history(self):
@@ -2510,14 +2501,6 @@ class MohSpider(scrapy.Spider):
     def should_update(self,record):
         if not record:
             return True
-        
-    
-        last_update = record.get('last_update')
-        if not last_update:
-            return True
-        last_update_date = datetime.datetime.strptime(last_update,'%Y-%m-%d').date()
-        now = datetime.date.today()
-        
         if record.get('type') == 'attachment':
             delta = timedelta(days = self.attachment_update)
             content_type = record.get('content_type') or '&&&&&'
@@ -2525,8 +2508,6 @@ class MohSpider(scrapy.Spider):
             if not self.content_allowed(content_type):
                 if self.debug:
                     pass
-                    # print '*'*40
-                    # print record.get('url') + ' is rejected'
                 return False
 
            
@@ -2536,15 +2517,11 @@ class MohSpider(scrapy.Spider):
             if not self.content_allowed(content_type):
                 if self.debug:
                     pass
-                    # print '*'*40
-                    # print record.get('url') + ' is rejected because content type'
                 return False
 
             if not self.url_in_rule(record.get('url')):
                 if self.debug:
                     pass
-                    # print '*'*40
-                    # print record.get('url') + ' is rejected because rule'
                 return False
 
 
@@ -2552,33 +2529,36 @@ class MohSpider(scrapy.Spider):
             delta = timedelta(days = self.asset_update)
 
         else:
-            # print '*'*40
-            # print record.get('url') + ' is rejected'
             return False
-        # print last_update_date + delta >= now
+        
+
+
+        last_update = record.get('last_update')
+        if not last_update:
+            return True
+        last_update_date = datetime.datetime.strptime(last_update,'%Y-%m-%d').date()
+        now = datetime.date.today()
+
         if last_update_date + delta > now:
             return False
         else:
             return True
 
         
-
     def get_record(self,url):
         url = urllib.unquote(url)
-        key = hashlib.md5(url).hexdigest()
-        record = {}
-        if self.history and self.history.get(key):
-            record = self.history.get(key)
-        return record
-
-    def save_record(self,url,r):
+        md5 = hashlib.md5(url).hexdigest()
+        key = 'moh:'+self.nation +':'+md5
+        return r.hgetall(key)
+        
+    def save_record(self,url,saved_record):
         record = self.get_record(url)
-
         url = urllib.unquote(url)
-        key = hashlib.md5(url).hexdigest()
+        md5 = hashlib.md5(url).hexdigest()
+        key = 'moh:'+self.nation+':'+md5
         should_update = self.should_update(record)
         if should_update:
-            self.history[key] = r
+            r.hmset(key,saved_record)
 
     def parse(self, response):
         '''
@@ -2589,7 +2569,7 @@ class MohSpider(scrapy.Spider):
 
 
         now = datetime.datetime.now()
-        history_save_interval = timedelta(minutes = 1)
+        history_save_interval = timedelta(minutes = 5)
         if self.now + history_save_interval < now:
             self.now = now
             self.save_history()
@@ -2615,8 +2595,6 @@ class MohSpider(scrapy.Spider):
                 self.save_record(response.url,saved_record)
                 return
 
-
-            
             resource = ResourceItem()
             resource['url'] = response.url
             resource['rtype'] = 'html'
@@ -2653,8 +2631,8 @@ class MohSpider(scrapy.Spider):
             if not self.debug and should_update:
                 yield resource
 
-            last_update = datetime.date.today()
-            saved_record = {'content_type':content_type,'last_update':last_update.strftime('%Y-%m-%d'),'nation':resource['nation'],'url':resource['url'],'type':resource['rtype'],'publish':resource['publish']}
+            # last_update = datetime.date.today()
+            saved_record = {'content_type':content_type,'url':resource['url'],'type':resource['rtype']}
             
             print '*'*40
             print '(url,language,publish,title)',resource['url'],resource['language'],resource['publish'],resource['title']
@@ -2703,8 +2681,7 @@ class MohSpider(scrapy.Spider):
                 http_url = self.gen_http_url(response.url, stylesheet,base)
                 if http_url:
                     request = scrapy.Request(http_url, callback=self.style_parse)
-                    link_key = hashlib.md5(http_url).hexdigest()
-                    _record = self.history.get(link_key)
+                    _record = self.get_record(http_url)
                     should_update = self.should_update(_record)
                     if should_update:
                         yield request
@@ -2756,16 +2733,13 @@ class MohSpider(scrapy.Spider):
             print '*'*40
             print '(url,type)',resource['url'],resource['rtype']
             
-            last_update = datetime.date.today()
-            saved_record = {'content_type':content_type,'last_update':last_update.strftime('%Y-%m-%d'),'url':resource['url'],'type':resource['rtype']}
+            # last_update = datetime.date.today()
+            saved_record = {'content_type':content_type,'url':resource['url'],'type':resource['rtype']}
         else:
+            last_update = datetime.date.today()
             saved_record = {'url':response.url,'content_type':content_type}
         
         self.save_record(response.url,saved_record)
-
-
-
-   
 
     def assets_parse(self, response):
         '''
@@ -2782,12 +2756,9 @@ class MohSpider(scrapy.Spider):
         print '*'*40
         print '(url,type)',resource['url'],resource['rtype']
             
-        last_update = datetime.date.today()
-        self.save_record(response.url,{'last_update':last_update.strftime('%Y-%m-%d'),'url':resource['url'],'type':resource['rtype']})
-        
-
-        
-
+        # last_update = datetime.date.today()
+        self.save_record(response.url,{'url':resource['url'],'type':resource['rtype']})
+           
     def language_inference(self,response):
         '''
             html language inference from lang attribute
@@ -2830,8 +2801,6 @@ class MohSpider(scrapy.Spider):
         '''
             css parser to extract import css and image
         '''
-        # print '*'*40
-        # print ('css','url'),response.url
         url = response.url
         content = response.text
         resource = ResourceItem()
@@ -2842,23 +2811,14 @@ class MohSpider(scrapy.Spider):
 
         if not self.debug:
             yield resource
+
         print '*'*40
         print '(url,type)',resource['url'],resource['rtype']
             
 
-        last_update = datetime.date.today()
-        self.save_record(response.url,{'last_update':last_update.strftime('%Y-%m-%d'),'url':resource['url'],'type':resource['rtype']})
+        #   last_update = datetime.date.today()
+        self.save_record(response.url,{'url':resource['url'],'type':resource['rtype']})
         
-        # try:
-        #     decode_content = content.decode('utf-8')
-        # except:
-        #     try:
-        #         decode_content = content.decode('str_escape')
-        #     except:
-        #         try:
-        #             decode_content = content.decode('unicode_escape')
-        #         except:
-        #             decode_content = content
 
         stylesheet = tinycss.make_parser().parse_stylesheet(content)
 
@@ -2874,7 +2834,6 @@ class MohSpider(scrapy.Spider):
                     if should_update:
                         yield request
                     
-
             elif hasattr(item,'declarations'):
                 for decl in getattr(item,'declarations'):
                     for decl_val in getattr(decl,'value'):
@@ -2905,8 +2864,6 @@ class MohSpider(scrapy.Spider):
         else:
             return urljoin(source_url,dest_url).encode('utf-8')
 
-
-
     def h2t(self,response):
         try:
             html = response.text
@@ -2931,8 +2888,9 @@ class MohSpider(scrapy.Spider):
         
 
 if __name__ == '__main__':
-    spider = MohSpider(domain='kr',debug=True)
-    record = spider.get_record('http://download.mohw.go.kr/react/modules/download.jsp?BOARD_ID=1365&CONT_SEQ=289977&FILE_SEQ=138058&FILE_NAME=[ENG][8.19]Preparation%20for%20a%20healthy%202nd%20semester!%20Get%20vaccination%20shots,%20and%20follow%20sanitation%20recommendations.docx')
-    print spider.should_update(record)
+    # spider = MohSpider(domain='kr',debug=True)
+    # record = spider.get_record('http://download.mohw.go.kr/react/modules/download.jsp?BOARD_ID=1365&CONT_SEQ=289977&FILE_SEQ=138058&FILE_NAME=[ENG][8.19]Preparation%20for%20a%20healthy%202nd%20semester!%20Get%20vaccination%20shots,%20and%20follow%20sanitation%20recommendations.docx')
+    # print spider.should_update(record)
+    print r.hgetall('')
         
             

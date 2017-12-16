@@ -104,4 +104,4 @@ LOG_LEVEL='ERROR'
 
 HISTORY_DIR = os.path.join(base_dir,'history')
 
-ES_HOSTS = ['10.48.41.24:9200']
+ES_HOSTS = ['127.0.0.1:9200']
