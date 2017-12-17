@@ -254,7 +254,7 @@ class FilePipeline(object):
                 next_item['content'] = str(soup)
             
             except Exception,e:
-                print e
+                traceback.print_exc()
                 #self.output_content(url,item['content'],modified_name)
 
             return next_item 
@@ -318,7 +318,7 @@ class FilePipeline(object):
                 with open(os.path.join(output_dir_from_url,output_name),'wb') as fp:
                     fp.write(content)
             except:
-                print output_dir_from_url,output_name
+                traceback.print_exc()
     
 
     def map_url_to_dirs(self,url):
@@ -332,7 +332,7 @@ class FilePipeline(object):
         output_dir_from_url = os.path.join(base_dir,root)
         output_name = file
         if parse_result.query:
-            output_name = output_name + '_' + parse_result.query
+            output_name = output_name + '_' + hashlib.md5(parse_result.query).hexdigest()
         return output_dir_from_url,output_name
 
     def mkdirs_from_url(self,url):

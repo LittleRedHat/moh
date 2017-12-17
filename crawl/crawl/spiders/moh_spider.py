@@ -2231,79 +2231,51 @@ configure = {
         'rules':[]
     },
 
-    # 澳大利亚 TODO
+    # 澳大利亚 需要过滤的文件过多
     'au':{
         'allowed_domains':['health.gov.au'],
         'site_url':'http://www.health.gov.au',
         'start_urls':[
-            'http://www.health.gov.au/internet/main/publishing.nsf/Content/health-publicat.htm',
-            'http://www.health.gov.au/internet/main/publishing.nsf/Content/Research+&+Statistics-1',
-            'http://www.health.gov.au/internet/main/publishing.nsf/Content/CurrentIssues'
+            'http://www.health.gov.au'
         ],
         'rules':[
             r'(.*)/internet/main/publishing\.nsf/Content/(.*)',
         ],
         'excludes':[
-                    r'(.*)/internet/main/publishing\.nsf/Content/health-overview\.htm(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/health-central\.htm(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Annual\+Reports-3(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Budget-1(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Listing\+of\+Tenders\+and\+Grants-1(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/health-eta2\.htm(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/reporting-fraud-misconduct-compliance(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/foi-about(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/public-interest-disclosure(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/health-contracts-index\.htm(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/stakeholder-engagement(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/social-media-channels(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Career\+Opportunities-1(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/health-pubs-calendar-index\.htm(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/health-history\.htm(.*)',
+            ## Ministers
+            r'(.*)/internet/main/publishing\.nsf/Content/CurrentIssues(.*)',
+            ## For Consumers
+            r'(.*)/internet/main/publishing\.nsf/Content/Aboriginal\+and\+Torres\+Strait\+Islander\+Health-1lp(.*),
+            r'(.*)/internet/main/publishing\.nsf/Content/health-ethics-index\.htm(.*),
+            r'(.*)/internet/main/publishing\.nsf/Content/health-care-homes(.*),
+            r'(.*)/internet/main/publishing\.nsf/Content/Healthcare\+systems-1(.*),
+            r'(.*)/internet/main/publishing\.nsf/Content/health-medicarebenefits-index\.htm(.*),
+            r'(.*)/internet/main/publishing\.nsf/Content/Mental\+Health\+and\+Wellbeing-1(.*),
+            r'(.*)/internet/main/publishing\.nsf/Content/national-mens-and-womens-health-1(.*),
+            r'(.*)/internet/main/publishing\.nsf/Content/National-Rural-Health-Commissioner(.*),
+            r'(.*)/internet/main/publishing\.nsf/Content/norfolk-is(.*),
+            r'(.*)/internet/main/publishing\.nsf/Content/palliative-care-and-end-of-life-care(.*),
+            r'(.*)/internet/main/publishing\.nsf/Content/consumer-pharmacy(.*),
+            r'(.*)/internet/main/publishing\.nsf/Content/primarycare(.*),
+            r'(.*)/internet/main/publishing\.nsf/Content/,
+            r'(.*)/internet/main/publishing\.nsf/Content/,
+            r'(.*)/internet/main/publishing\.nsf/Content/,
+            r'(.*)/internet/main/publishing\.nsf/Content/,
+            r'(.*)/internet/main/publishing\.nsf/Content/,
+            r'(.*)/internet/main/publishing\.nsf/Content/,
+            r'(.*)/internet/main/publishing\.nsf/Content/,
+            r'(.*)/internet/main/publishing\.nsf/Content/,
+            r'(.*)/internet/main/publishing\.nsf/Content/,
 
-                    r'(.*)/internet/main/publishing\.nsf/Content/Australian\+Health\+Ministers%27\+Conference-1(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Council\+of\+Australian\+Governments(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Departmental\+media\+releases\+and\+speeches-1(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Health\+Warnings-1(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/health-mediarel-subscribe-index\.htm(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Ministers-1(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/government-responses(.*)',
 
-                    r'(.*)/internet/main/publishing\.nsf/Content/Agreements-1(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/eHealth(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/programs-initiatives-menu(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/campaign_certification_statements-lp(.*)',
 
-                    r'(.*)/internet/main/publishing\.nsf/Content/Aboriginal\+and\+Torres\+Strait\+Islander\+Health-1lp(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Conditions\+and\+Diseases-[1-2](.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Education\+and\+Prevention-[1-2](.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Gene\+Technology-[1-2](.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/health-compliance(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/health-ethics-index.htm(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/health-care-homes(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Health\+products\+and\+medicines-[1-2](.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/health-thesaurus.htm(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Healthcare\+systems-[1-2](.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/health-medicarebenefits-index\.htm(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Mental\+Health\+and\+Wellbeing-[1-2](.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/national-mens-and-womens-health-[1-2](.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/norfolk-is(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Palliative\+Care-[1-2](.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/consumer-pharmacy(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/primarycare(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/regulation-and-red-tape-reduction(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Rural\+Health-[1-2](.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Services-[1-2](.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/healthiermedicare(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/Health\+Warnings-[1-2](.*)',
 
-                    r'(.*)/internet/main/publishing\.nsf/Content/Health\+Workforce-2(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/health-care-homes-professional(.*)',
-                    r'(.*)/internet/main/publishing\.nsf/Content/strongmedicare(.*)'
+                   
         ]
         
     },
 
-    # 巴布亚新几内亚 文件过大下载
+    # 巴布亚新几内亚 通过
     'pg':{
         'allowed_domains':['health.gov.pg'],
         'site_url':'http://www.health.gov.pg',
@@ -2551,7 +2523,7 @@ class MohSpider(scrapy.Spider):
         # should_update = self.should_update(record)
         # if should_update:
             # print dict(record.items()+saved_record.items())
-        r.hmset(key,saved_record.items())
+        r.hmset(key,saved_record)
 
     def parse(self, response):
         '''
