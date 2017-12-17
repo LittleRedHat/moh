@@ -115,7 +115,7 @@ def ni_time_sub(text):
         day = groups[1]
         year = groups[3]
         return year+'-'+month+'-'+day    
-# spanish_month=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre']
+spanish_month=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre']
 fr_month = ['jan','fév','mars','avr','mai','juin','juillet','aoû','sept','oct','nov','déc']
 
 def ma_time_sub(text):
@@ -152,8 +152,62 @@ def sc_time_sub(text):
         day = groups[0]
         return day+' '+month+' '+year
 
+def au_time_sub(text): 
+    p = r'(.*?)([0-9]{1,2}) (\w+) ([0-9]{4})'
+    m = re.match(p,text)
+    groups = m.groups()
+    if len(groups) >=3:
+        year = groups[3]
+        month = groups[2]
+        day = groups[1]
+        return year+'-'+month+'-'+day
 
+def ar_time_sub(text):
+    p = r'(.*?)([0-9]{1,2}) de (\w+) de ([0-9]{4}) ([0-9]{1,2}):([0-9]{1,2})'
+    m = re.match(p,text)
+    groups = m.groups()
+    br2en = ['ene','feb','mar','abr','may','jun','jul','agos','sep','oct','nov', 'dic']
+    if len(groups) >=6:
+        month = groups[2]
+        for key,en in enumerate(br2en):
+            if en.lower() in month.lower():
+                month = str(key + 1)
+                break
+        year = groups[3]
+        day = groups[1]
+        hour= groups[4]
+        minute = groups[5]
+        return year+'-'+month+'-'+day+' '+hour+":"+minute
 
+def ar_time_sub2(text):
+    p = r'(.*?)([0-9]{1,2}) de (\w+) de ([0-9]{4})'
+    m = re.match(p,text)
+    groups = m.groups()
+    br2en = ['ene','feb','mar','abr','may','jun','jul','agos','sep','oct','nov', 'dic']
+    if len(groups) >=4:
+        month = groups[2]
+        for key,en in enumerate(br2en):
+            if en.lower() in month.lower():
+                month = str(key + 1)
+                break
+        year = groups[3]
+        day = groups[1]
+        return year+'-'+month+'-'+day
+
+def pe_time_sub(text):
+    p = r'(.*?)([0-9]{1,2}) de (\w+) del ([0-9]{4})'
+    m = re.match(p,text)
+    groups = m.groups()
+    br2en = ['ene','feb','mar','abr','may','jun','jul','agos','sep','oct','nov', 'dic']
+    if len(groups) >=4:
+        month = groups[2]
+        for key,en in enumerate(br2en):
+            if en.lower() in month.lower():
+                month = str(key + 1)
+                break
+        year = groups[3]
+        day = groups[1]
+        return year+'-'+month+'-'+day
 
 configure = {
    
@@ -2051,17 +2105,32 @@ configure = {
         'publish':[]
     },
 
-     # 秘鲁 网站暂时下线
+     # 秘鲁 
     'pe':{
         'allowed_domains':['minsa.gob.pe'],
         'site_url':'http://www.minsa.gob.pe',
-        'start_urls':['http://www.minsa.gob.pe/portalweb/02estadistica/estadistica_1.asp?sub5=2','http://www.minsa.gob.pe/portalweb/index_est03.asp?box=4','http://www.minsa.gob.pe/portalweb/index_pro03.asp?box=1'],
-        'rules':[r'(.*)/portalweb/02estadistica/(.*)',r'(.*)/estadisticas/estadisticas(.*)',r'(.*)/portalweb/07profesionales(.*)'],
+        'start_urls':[
+            'http://www.minsa.gob.pe',
+            'http://www.minsa.gob.pe/index.asp\?op=5',
+            'http://www.minsa.gob.pe/portalweb/02estadistica/estadistica_1.asp?sub5=2',
+            'http://www.minsa.gob.pe/portalweb/index_est03.asp?box=4',
+            'http://www.minsa.gob.pe/portalweb/index_pro03.asp?box=1',
+
+        ],
+        'rules':[
+            r'(.*)/portalweb/02estadistica/(.*)',
+            r'(.*)/estadisticas/estadisticas(.*)',
+            r'(.*)/portalweb/07profesionales(.*)',
+            r'(.*)/index\.asp\?op=5(.*)',
+            r'(.*)/index\.asp\?op=51(.*)',
+
+        ],
         'publish':[
             {
-                'rule':'',
-                'format':''
-            }
+                'rule':'//div[contains(@class,"fecha")]/text()',
+                'format':'%Y-%m-%d',
+                'extra':pe_time_sub,
+            },
         ]
     },
     
@@ -2159,13 +2228,40 @@ configure = {
         'exludes':[]   
     },
 
-    # 阿根廷 再说
+    # 阿根廷 新旧页面一起出现 需要翻墙
     'ar':{
-        'allowed_domains':['msal.gob.ar'],
-        'site_url':'http://www.msal.gov.ar',
-        'start_urls':[],
+        'allowed_domains':['argentina.gob.ar','msal.gob.ar'],
+        'site_url':'http://www.msal.gob.ar',
+        'start_urls':[
+            'https://www.argentina.gob.ar/salud',
+            'http://www.msal.gob.ar/prensa'
+        ],
         'rules':[
-          
+            r'(.*)/salud/noticias(.*)',
+            r'(.*)/prensa/index\.php(.*)',
+            r'(.*)/noticias(.*)',
+
+            r'(.*)/index\.php\?option=com_ryc_contenidos(.*)',
+            r'(.*)index\.php/component/ryc_contenidos(.*)',
+
+            r'(.*)index\.php\?option=com_bes_contenidos(.*)',
+            r'(.*)index\.php/component/bes_contenidos(.*)',
+
+            r'(.*)/salud/epidemiologiaysituacion(.*)',
+            r'(.*)/salud/direccionesprogramasplanes(.*)',
+            r'(.*)/salud(.*)', 
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="page"]/p[1]/span/text()',
+                'format':'%Y-%m-%d %H:%M',
+                'extra':ar_time_sub,
+            },
+            {
+                'rule':'//*[@id="block-system-main"]//time[contains(@class,"text-muted")]/text()',
+                'format':'%Y-%m-%d',
+                'extra':ar_time_sub2,
+            }
         ]
     },
 
@@ -2214,7 +2310,7 @@ configure = {
         ],
         'publish':[
             {
-                'rule':'//article//*[@class="date-display-single"]/@content',
+                'rule':'//article//*[contains(@class,"date-display-single")]/@content',
                 'format':'%Y-%m-%dT%H:%M:%S+13:00'
             },
             # {
@@ -2245,32 +2341,53 @@ configure = {
             ## Ministers
             r'(.*)/internet/main/publishing\.nsf/Content/CurrentIssues(.*)',
             ## For Consumers
-            r'(.*)/internet/main/publishing\.nsf/Content/Aboriginal\+and\+Torres\+Strait\+Islander\+Health-1lp(.*),
-            r'(.*)/internet/main/publishing\.nsf/Content/health-ethics-index\.htm(.*),
-            r'(.*)/internet/main/publishing\.nsf/Content/health-care-homes(.*),
-            r'(.*)/internet/main/publishing\.nsf/Content/Healthcare\+systems-1(.*),
-            r'(.*)/internet/main/publishing\.nsf/Content/health-medicarebenefits-index\.htm(.*),
-            r'(.*)/internet/main/publishing\.nsf/Content/Mental\+Health\+and\+Wellbeing-1(.*),
-            r'(.*)/internet/main/publishing\.nsf/Content/national-mens-and-womens-health-1(.*),
-            r'(.*)/internet/main/publishing\.nsf/Content/National-Rural-Health-Commissioner(.*),
-            r'(.*)/internet/main/publishing\.nsf/Content/norfolk-is(.*),
-            r'(.*)/internet/main/publishing\.nsf/Content/palliative-care-and-end-of-life-care(.*),
-            r'(.*)/internet/main/publishing\.nsf/Content/consumer-pharmacy(.*),
-            r'(.*)/internet/main/publishing\.nsf/Content/primarycare(.*),
-            r'(.*)/internet/main/publishing\.nsf/Content/,
-            r'(.*)/internet/main/publishing\.nsf/Content/,
-            r'(.*)/internet/main/publishing\.nsf/Content/,
-            r'(.*)/internet/main/publishing\.nsf/Content/,
-            r'(.*)/internet/main/publishing\.nsf/Content/,
-            r'(.*)/internet/main/publishing\.nsf/Content/,
-            r'(.*)/internet/main/publishing\.nsf/Content/,
-            r'(.*)/internet/main/publishing\.nsf/Content/,
-            r'(.*)/internet/main/publishing\.nsf/Content/,
-
-
-
-
-                   
+            r'(.*)/internet/main/publishing\.nsf/Content/Aboriginal\+and\+Torres\+Strait\+Islander\+Health-1lp(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/health-ethics-index\.htm(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/health-care-homes(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/Healthcare\+systems-1(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/health-medicarebenefits-index\.htm(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/Mental\+Health\+and\+Wellbeing-1(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/national-mens-and-womens-health-1(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/National-Rural-Health-Commissioner(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/norfolk-is(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/palliative-care-and-end-of-life-care(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/consumer-pharmacy(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/primarycare(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/regulation-and-red-tape-reduction(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/Rural\+Health-1(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/Services-1(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/healthiermedicare(.*)',
+            ## For Health Professionals
+            r'(.*)/internet/main/publishing\.nsf/Content/health-compliance(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/Health\+products\+and\+medicines-2(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/Health\+Workforce-2(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/health-care-homes-professional(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/national-mens-and-womens-health-2(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/Healthcare\+systems-2(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/Rural\+Health-1(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/Services-2(.*)', 
+            r'(.*)/internet/main/publishing\.nsf/Content/strongmedicare(.*)',
+            ## About us
+            r'(.*)/internet/main/publishing\.nsf/Content/health-overview\.htm(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/health-central\.htm(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/Budget-1(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/Listing\+of\+Tenders\+and\+Grants-1(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/health-eta2\.htm(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/reporting-fraud-misconduct-compliance(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/foi-about(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/public-interest-disclosure(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/health-contracts-index\.htm(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/stakeholder-engagement(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/social-media-channels(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/Career\+Opportunities-1(.*)',
+            r'(.*)/internet/main/publishing\.nsf/Content/health-history\.htm(.*)',        
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="read"]//*[contains(@class,"publish-date")]/text()',
+                'format':'%Y-%B-%d',
+                'extra':au_time_sub,
+            },
         ]
         
     },
@@ -2366,7 +2483,7 @@ configure = {
         ],
         'publish':[
             {
-                'rule':'//*[@id="sp-component"]//*[@class="article-info"]//time[@datetime]/@datetime',
+                'rule':'//*[@id="sp-component"]//*[contains(@class,"article-info")]//time[@datetime]/@datetime',
                 'format':'%Y-%m-%dT%H:%M:%S+14:00'
             }
         ]
