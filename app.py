@@ -19,6 +19,7 @@ migrate = Migrate(db)
 
 manager = Manager(app)
 manager.add_command('db',MigrateCommand)
+ES_HOST = ['127.0.0.1:9200']
 
 ###############################################
 # 用户表
@@ -66,10 +67,13 @@ def db_drop():
 ###############################################
 @app.route('/moh/es/init')
 def es_init():
-    es = Searcher(["127.0.0.1:9200"])
+    es = Searcher(ES_HOST)
     mapping = {
         "properties":{
             "nation":{
+                "type":"keyword"
+            },
+            "content_type":{
                 "type":"keyword"
             },
             "type":{
@@ -93,7 +97,10 @@ def es_init():
             }
         }
     }
+    es.es_init()
     return jsonify(es.es_mapping('crawler','articles',mapping))
+
+
 
 ###############################################
 # 文档/附件多语言搜索
@@ -246,7 +253,7 @@ def search():
         'from':qfrom,
         'size':qsize
     }
-    es = Searcher(["10.48.41.24:9200"])
+    es = Searcher(ES_HOST)
     cursor = es.es_search("crawler","articles",dsl)
     results = cursor['hits']['hits']
     total = cursor['hits']['total']

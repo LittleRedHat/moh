@@ -2074,7 +2074,7 @@ configure = {
 
 
     },
-    ## 尼加瓜拉 通过
+    ## 尼加瓜拉 通过 内容多需要精细化过滤
     'ni':{
         'allowed_domains':['minsa.gob.ni'],
         'site_url':'http://www.minsa.gob.ni',

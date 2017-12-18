@@ -29,7 +29,7 @@ class Searcher(object):
             "processors": [
                 {
                     "attachment": {
-                        "field": "content",
+                        "field": "data",
                         "indexed_chars": -1
                     }
                 }

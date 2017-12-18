@@ -32,32 +32,44 @@ class ElasticsearchPipeline(object):
             return
 
         if item.get('rtype') == 'html':
-            doc = dict(item)
-            doc['content'] = h2t(doc['content'])
-            doc['type'] = doc['rtype']
-            del doc['rtype']
-            # doc['content']=base64.b64encode(doc['content'])
-            # doc['content']="this is a test"
-            self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,timeout='60s')
-            last_update = datetime.date.today()
-            url = item['url']
-            record = {'last_update':last_update.strftime('%Y-%m-%d'),'url':url,'type':'html','content_type':item['content_type']}
-            spider.save_record(url,record)
+            try:
+                doc = dict(item)
+                doc['content'] = h2t(doc['content'])
+                doc['type'] = doc['rtype']
+                del doc['rtype']
+                # doc['content']=base64.b64encode(doc['content'])
+                # doc['content']="this is a test"
+                self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,timeout='60s')
+                last_update = datetime.date.today()
+                url = item['url']
+                record = {'last_update':last_update.strftime('%Y-%m-%d'),'url':url,'type':'html','content_type':item['content_type']}
+                spider.save_record(url,record)
+            except:
+                last_update = datetime.date.today()
+                record = {'last_update':last_update.strftime('%Y-%m-%d'),'url':item['url'],'content_type':item['content_type'],'type':'html','error':True}
+                spider.save_record(item['url'],record)
+                traceback.print_exc()
+
 
         elif item.get('rtype') == 'attachment':
-            doc = dict(item)
-            doc['data']=base64.b64encode(doc['content'])
-            doc['type'] = doc['rtype']
-            del doc['rtype']
-            del doc['content']
-            # doc['data']=doc['content']
-            # doc['content']="this is a test"
-            self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,pipeline='attachment',timeout='60s')
-            last_update = datetime.date.today()
-            url = item['url']
-            record = {'last_update':last_update.strftime('%Y-%m-%d'),'url':url,'type':'attachment','content_type':item['content_type']}
-            spider.save_record(url,record)
-
+            try:
+                doc = dict(item)
+                doc['data']=base64.b64encode(doc['content'])
+                doc['type'] = doc['rtype']
+                del doc['rtype']
+                del doc['content']
+                # doc['data']=doc['content']
+                # doc['content']="this is a test"
+                self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,pipeline='attachment',timeout='60s')
+                last_update = datetime.date.today()
+                url = item['url']
+                record = {'last_update':last_update.strftime('%Y-%m-%d'),'url':url,'type':'attachment','content_type':item['content_type']}
+                spider.save_record(url,record)
+            except:
+                last_update = datetime.date.today()
+                record = {'error':True,'last_update':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'attachment','content_type':item['content_type']}
+                spider.save_record(url,record)
+                traceback.print_exc()
         return item
 
 def h2t(html):
@@ -66,56 +78,7 @@ def h2t(html):
         return h.handle(html)
     except:
         return html
-
-
-
-
-
-# class MongoPipeline(object):
-    
-#     def __init__(self):
-#         connection = pymongo.MongoClient(
-#             settings["MONGO_HOST"],
-#             settings["MONGO_PORT"]
-#         )
-#         self.db =connection[settings['MONGO_DB']]
-
-#     def update_or_insert(self,collections,article):
-#         origin = collections.find_one({'url':article['url']})
-#         if not origin:
-#             article['last_md5'] = article['md5'] 
-#             collections.insert_one(article)
-
-#         elif origin['md5'] != article['md5']:
-#             article['last_md5'] = origin['md5']
-#             collections.update({'_id':origin.get('_id')},article)
-        
-                
-        
-    
-#     def process_item(self,item,spider):
-#         if not item:
-#             return DropItem()
-
-#         if item.get('type') == 'html':
-            
-#             article = dict(item)
-#             # article['content'] = bson.binary.Binary(article['content']) 
-#             article = {k: v.decode('unicode_escape') for k,v in article.iteritems()}
-
-#             collections = self.db['articles']
-#             self.update_or_insert(collections,article)
-            
-#         elif item['type'] == 'attachment':
-#             attachment = dict(item)
-#             attachment['content'] = bson.binary.Binary(attachment['content']) 
-#             # print type(attachment['content'])
-#             # attachment = {k: v.decode('unicode_escape') for k,v in attachment.iteritems()}
-#             collections = self.db['attachments']
-#             self.update_or_insert(collections,attachment)
-            
-#         return item
-    
+ 
 class FilePipeline(object):
     def __init__(self):
         self.output_dir = settings['DATA_OUTPUT']
@@ -128,22 +91,26 @@ class FilePipeline(object):
             return
         ## asset handler
         if item.get('rtype') == 'asset':
-            url = item['url']
-            url = urllib.unquote(url)
-            content = item.get('content')
-
-            parse_result = urlparse(url)
-
-            # url =  parse_result.netloc + parse_result.path
-            # not update already exist resource 
-            mine_dir,output_name= self.map_url_to_dirs(url)
-            mine_output_path = os.path.join(mine_dir,output_name)
-            self.output_content(url,content)
-
-            last_update = datetime.date.today()
-            record = {'last_update':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'asset'}
-            spider.save_record(url,record)
-            return
+            try:
+                url = item['url']
+                url = urllib.unquote(url)
+                content = item.get('content')
+                parse_result = urlparse(url)
+                # url =  parse_result.netloc + parse_result.path
+                # not update already exist resource 
+                mine_dir,output_name= self.map_url_to_dirs(url)
+                mine_output_path = os.path.join(mine_dir,output_name)
+                self.output_content(url,content)
+                last_update = datetime.date.today()
+                record = {'last_update':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'asset'}
+                spider.save_record(url,record)
+                return
+            except:
+                last_update = datetime.date.today()
+                record = {'error':True,'last_update':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'asset'}
+                spider.save_record(url,record)
+                traceback.print_exc()
+                return
 
         next_item = ResourceItem()
         url = item['url']
@@ -189,7 +156,6 @@ class FilePipeline(object):
             if item.get('nation') and configure.get(item.get('nation')):
                 c = configure.get(item.get('nation'))
                 domain = c.get('allowed_domains')
-
             try:
                 soup = BeautifulSoup(decode_content,'lxml')
                 # modify hrefs
@@ -215,7 +181,6 @@ class FilePipeline(object):
                         # if href.startswith('http'):
                         #     print "modify href",href,url,http_url,relpath
                         item['href']=relpath
-
                 # modify css js image
                 javascripts = soup.find_all('script')
                 for item in javascripts:
@@ -254,31 +219,38 @@ class FilePipeline(object):
                 next_item['content'] = str(soup)
             
             except Exception,e:
+
+                last_update = datetime.date.today()
+                record = {'error':True,'last_update':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'html','content_type':item['content_type']}
+                spider.save_record(url,record)
                 traceback.print_exc()
+                return
                 #self.output_content(url,item['content'],modified_name)
 
             return next_item 
            
         elif item.get('rtype') == 'attachment':
-            
-            key = hashlib.md5(url).hexdigest()
-            # mine_dir,_ = self.map_url_to_dirs(url)
-            mine_dir,modified_name = self.map_url_to_dirs(url)
-            modified_name = key+'_'+modified_name 
+            try:
+                key = hashlib.md5(url).hexdigest()
+                # mine_dir,_ = self.map_url_to_dirs(url)
+                mine_dir,modified_name = self.map_url_to_dirs(url)
+                modified_name = key+'_'+modified_name 
 
-            mine_output_path = os.path.join(mine_dir,modified_name)
-
-            # not update exist attachment
-            if os.path.exists(mine_output_path):
+                mine_output_path = os.path.join(mine_dir,modified_name)
+                # not update exist attachment
+                if os.path.exists(mine_output_path):
+                    return
+                md5 = hashlib.md5(content).hexdigest()
+                next_item['md5']=md5
+                next_item['local_url'] = mine_output_path
+                self.output_content(url,content,modified_name)
+                return next_item
+            except:
+                last_update = datetime.date.today()
+                record = {'error':True,'last_update':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'attachment','content_type':item['content_type']}
+                spider.save_record(url,record)
+                traceback.print_exc()
                 return
-
-            md5 = hashlib.md5(content).hexdigest()
-
-            next_item['md5']=md5
-            next_item['local_url'] = mine_output_path
-
-            self.output_content(url,content,modified_name)
-            return next_item
             
         
        
@@ -314,13 +286,9 @@ class FilePipeline(object):
             output_dir_from_url,output_name= self.mkdirs_from_url(url)
             if modified_name:
                 output_name = modified_name
-            try:
-                with open(os.path.join(output_dir_from_url,output_name),'wb') as fp:
-                    fp.write(content)
-            except:
-                traceback.print_exc()
+            with open(os.path.join(output_dir_from_url,output_name),'wb') as fp:
+                fp.write(content)
     
-
     def map_url_to_dirs(self,url):
         
         parse_result = urlparse(url)
@@ -342,7 +310,6 @@ class FilePipeline(object):
         if not os.path.exists(output_dir_from_url) or not os.path.isdir(output_dir_from_url):
             os.makedirs(output_dir_from_url)
         return output_dir_from_url,output_name
-
 
 def url_in_domain(url,domain):
     try:
