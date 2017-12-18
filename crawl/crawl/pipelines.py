@@ -333,6 +333,7 @@ class FilePipeline(object):
         output_name = file
         if parse_result.query:
             output_name = output_name + '_' + hashlib.md5(parse_result.query).hexdigest()
+        output_name = output_name[:settings['MAX_FILE_NAME']]
         return output_dir_from_url,output_name
 
     def mkdirs_from_url(self,url):

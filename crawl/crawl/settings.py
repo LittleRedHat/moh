@@ -33,7 +33,8 @@ CONCURRENT_REQUESTS = 32
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+COOKIES_ENABLED = True
+COOKIES_DEBUG = True
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -46,9 +47,9 @@ CONCURRENT_REQUESTS = 32
 
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
-#    'crawl.middlewares.CrawlSpiderMiddleware': 543,
-#}
+SPIDER_MIDDLEWARES = {
+   'scrapy.downloadermiddlewares.cookies.CookiesMiddleware': 543,
+}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
@@ -105,3 +106,4 @@ LOG_LEVEL='ERROR'
 HISTORY_DIR = os.path.join(base_dir,'history')
 
 ES_HOSTS = ['127.0.0.1:9200']
+MAX_FILE_NAME = 250

@@ -117,6 +117,8 @@ def ni_time_sub(text):
         return year+'-'+month+'-'+day    
 spanish_month=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre']
 fr_month = ['jan','fév','mars','avr','mai','juin','juillet','aoû','sept','oct','nov','déc']
+en_month = ['jan','feb','mar','apr','may','jun','jul','aug','sept','oct','nov','dec']
+id_month = ['jan','feb','mar','apr','mun','jun','jul','aug','sept','okt','nov','des']
 
 def ma_time_sub(text):
     p = r'([0-9]{1,2}) (.*?) ([0-9]{2})'
@@ -209,30 +211,71 @@ def pe_time_sub(text):
         day = groups[1]
         return year+'-'+month+'-'+day
 
+
+def id_time_sub(text):
+    p = r'(.*?)([0-9]{1,2}) (\w+) ([0-9]{4})'
+    m = re.match(p,text)
+    groups = m.groups()
+    if len(groups) >=4:
+        month = groups[2]
+        for key,en in enumerate(id_month):
+            if en.lower() in month.lower():
+                month = str(key + 1)
+                break
+        year = groups[3]
+        day = groups[1]
+        return year+'-'+month+'-'+day
+
 configure = {
    
     ##############################################
     # 亚洲
     ###############################################
 
-    ## 中国 无规则也爬不下来，谜
+    ## 中国 待看
     "cn": {
         'allowed_domains':['moh.gov.cn'],
         'site_url':'http://www.moh.gov.cn',
         'start_urls':[
+                        'http://www.moh.gov.cn/zhuz/index.shtml',
+                        'http://www.moh.gov.cn/zwgk/index.shtml',
+
                         'http://www.moh.gov.cn/zhuz/mtbd/list.shtml',
-                        'http://www.moh.gov.cn/zhuz/xwfb/list.shtml'
+                        'http://www.moh.gov.cn/zhuz/xwfb/list.shtml',
+
+                        'http://www.moh.gov.cn/zwgk/yqbb3/ejlist.shtml',
+                        'http://www.moh.gov.cn/zwgk/spaq/spaq_ejlist.shtml',
+                        'http://www.moh.gov.cn/zwgk/ylwsfw/spaq_ejlist.shtml',
+                        'http://www.moh.gov.cn/zwgk/jdjd/ejlist.shtml',
+                        'http://www.moh.gov.cn/zwgk/tjxx1/ejflist.shtml',
+
+
+
                     ],
         'rules':[
-                    r'(.*)/zhuz/mtbd/[0-9]{6}/(.*)',
-                    r'(.*)/zhuz/xwfb/[0-9]{6}/(.*)',
-                    r'(.*)/zhuz/mtbd/list(.*)',
-                    r'(.*)/zhuz/xwfb/list(.*)'
+                    r'(.*)/zhuz/mtbd/(.*)',
+                    r'(.*)/zhuz/xwfb/(.*)',
+                    r'(.*)zwgk/yqbb3/(.*)',
+                    r'(.*)/jkj/(.*)',
+                    r'(.*)/zwgk/spaq(.*)',
+                    r'(.*)/sps/(.*)',
+                    r'(.*)/zwgk/ylwsfw(.*)',
+                    r'(.*)/zwgk/lcl/(.*)',
+                    r'(.*)/zwgk/jdjd(.*)',
+                    r'(.*)/zwgk/tjxx1(.*)'
+                    r'(.*)/mohwsbwstjxxzx(.*)',
+                    r'(.*)/zwgk/(.*)',
+
                 ],
-        'language':'zh',
-        'publish':[{'rule':"//div[@class='list']/div[@class='source']/span/text()",'format':'''发布时间：
-            	%Y-%m-%d
-            '''}]
+        'language':'zh-cn',
+        
+
+        'publish':[
+            {
+                'rule':"//div[@class='list']/div[@class='source']/span/text()",
+                'format':'发布时间： %Y-%m-%d'
+            }
+        ]
     },
 
     # 蒙古 网址打开后不是蒙古卫生部
@@ -245,29 +288,43 @@ configure = {
     "kr": {
         'allowed_domains': ['mohw.go.kr'],
         'site_url': 'http://www.mohw.go.kr',
-        'start_urls': ['http://www.mohw.go.kr/eng/sg/ssg0111ls.jsp?PAR_MENU_ID=1001&MENU_ID=100111&page=1'],
+        'start_urls': [
+            'http://www.mohw.go.kr',
+            'http://www.mohw.go.kr/eng/sg/ssg0111ls.jsp?PAR_MENU_ID=1001&MENU_ID=100111&page=1'
+        ],
         'rules': [r'(.*)ssg0111vw\.jsp(.*)', r'(.*)ssg0111ls\.jsp(.*)'],
-        'publish':[{"rule":"//table[@class='view']/tbody/tr[2]/td[1]/text()","format":"%Y-%m-%d"}],
+        
+        'publish':[
+            {
+                "rule":'//*[@id="contents"]//table[contains(@class,"view")]/tbody/tr[2]/td[1]',
+                "format":"%Y-%m-%d"
+            }
+        ],
     },
 
-    # 日本 日期解析问题，未使用公历，格式，x-path不统一
+    # 日本 切换到英文版网站
     'jp':{
         'allowed_domains':['mhlw.go.jp'],
         'site_url':'http://www.mhlw.go.jp',
-        'start_urls':['http://www.mhlw.go.jp/stf/new-info/index.html'],
-        'rules':[r'(.*)stf/shingi2/(.*)', r'(.*)toukei/(.*)'],
+        'start_urls':[
+            'http://www.mhlw.go.jp/english/index.html',
+            'http://www.mhlw.go.jp/english/new-info/index.html',
+
+        ],
+        'rules':[
+            r'(.*)english/topics(.*)',
+            r'(.*)english/policy(.*)',
+            r'(.*)/english/database(.*)',
+            r'(.*)/english/wp(.*)',
+
+        ],
         'publish':[
-                    {'rule':"//div[@id='content']/div[@class='float-right']/table[@class='border t-margin']/tbody/tr/td/p[1]",
-                    'format':'平成%y年%m月%d日（木）'},
-                    {'rule':"//div[@id='content']/div[@class='float-right']/table[@class='border t-margin']/tbody/tr/td/p[1]",
-                    'format':'平成%y年%m月%d日（水）'},
-                    {'rule':"//div[@id='content']/div[@class='float-right']/table[@class='border t-margin']/tbody/tr/td/p[1]",
-                    'format':'平成%y年%m月%d日（月）'},
-                    {'rule':"//div[@id='content']/div[@class='float-right']/table[@class='border t-margin']/tbody/tr/td/p[1]",
-                    'format':'平成%y年%m月%d日（金）'},
-                    {'rule':"//div[@id='content']/div[@class='float-right']/table[@class='border t-margin']/tbody/tr/td/p[1]",
-                    'format':'平成%y年%m月%d日（火）'}
-                    ]
+            {
+                'rule':'//*[@id="main-content"]/div[1]/p[1]/text()',
+                'format':'Updated on %d %B %Y',
+            }
+                   
+        ]
     },
 
     # 朝鲜 没有网址
@@ -276,9 +333,24 @@ configure = {
     'vn':{
         'allowed_domains':['moh.gov.vn'],
         'site_url':'http://moh.gov.vn',
-        'start_urls':['http://moh.gov.vn/News/Pages/TinHoatDongV2.aspx', 'http://emoh.moh.gov.vn/publish/home'],
-        'rules':[r'(.*)/news/Pages/TinHoatDongV2\.aspx\?ItemID=(.*)', r'(.*)/publish/home\?documentId=(.*)'],
-        'publish':[{'rule':"//p[@class='n-data']/text()",'format':'%d/%m/%Y'}]
+        'start_urls':[
+            'http://moh.gov.vn',
+            'http://moh.gov.vn/News/Pages/TinHoatDongV2.aspx',
+            'http://emoh.moh.gov.vn/publish/home',
+            'http://moh.gov.vn/province/Pages/ThongKeYTe.aspx',
+        ],
+        'rules':[
+            r'(.*)/news/Pages/(.*)',
+            r'(.*)/News/Pages/(.*)',
+            r'(.*)/publish/home(.*)',
+            r'(.*)/province/Pages(.*)',
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="toPrint"]/p[contains(@class,"n-date")]/text()',
+                'format':'%d/%m/%Y %H:%M'
+            }
+        ]
     },
 
     # 老挝
@@ -286,10 +358,14 @@ configure = {
         'allowed_domains':['moh.gov.la'],
         'site_url':'https://www.moh.gov.la',
         'start_urls':[
+            'https://www.moh.gov.la',
             'https://www.moh.gov.la/index.php/lo-la/2017-10-27-02-54-12/2017-10-27-03-08-18',
             'https://www.moh.gov.la/index.php/lo-la/2017-11-02-08-34-25/2017-11-25-10-36-28'    
         ],
-        'rules':[r'(.*)/images//pdf/Reporting/(.*)', r'(.*)/index.php/lo-la/(.*)'],
+        'rules':[
+            r'(.*)/images/pdf/Reporting/(.*)',
+            r'(.*)/index.php/lo-la/(.*)'
+        ],
         'publish':[]
     },
 
@@ -299,18 +375,27 @@ configure = {
         'site_url':'http://moh.gov.kh'
     },
 
-    # 缅甸
+    # 缅甸 news 和 publication 都是通过js加载
     'mm':{
         'allowed_domains':['mohs.gov.mm'],
-        'site_url':'http://mohs.gov.mm/',
+        'site_url':'http://mohs.gov.mm',
         'start_urls':[
+            'http://mohs.gov.mm',
             'http://mohs.gov.mm/Main/content/new/list?pagenumber=1&pagesize=9',
-            'http://mohs.gov.mm/Main/content/annouancement/list?pagenumber=1&pagesize=9'
+            'http://mohs.gov.mm/Main/content/annouancement/list?pagenumber=1&pagesize=9',
+            'http://mohs.gov.mm/Main/content/publication/list?pagenumber=1&pagesize=9',
+
         ],
-        'rules':[r'(.*)/Main/content/new/(.*)',r'(.*)/Main/content/annouancement/(.*)'],
+        'rules':[
+            r'(.*)/Main/content/new/(.*)',
+            r'(.*)/Main/content/annouancement/(.*)',
+            r'(.*)/Main/content/publication(.*)',
+        ],
         'publish':[
-                    {'rule':"//div[@class='single-post-info']/span[@class='last-modified pull-right']/text()",
-                        'format':'Last modified on %A, %d %b %y'}
+                    {
+                        'rule':"//div[contains(@class,'single-post-info')]/span[contains(@class,'last-modified pull-right')]/text()",
+                        'format':'Last modified on %A, %d %b %y'
+                    }
                 ]
     },
     
@@ -319,52 +404,114 @@ configure = {
     'th':{
         'allowed_domains':['moph.go.th'],
         'site_url':'https://www.moph.go.th',
-        'start_urls':['https://ops.moph.go.th/public/index.php/news/public_relations'],
-        'rules':[r'(.*)/public/index.php/news/read/(.*)'],
-        'publish':[{'rule':"//div[@class='row category'][3]/div[@class='f-item']/text()",'format':'%d %m %Y'}]
+        'start_urls':[
+            'https://ops.moph.go.th/public/index.php/news/public_relations',
+            'https://ops.moph.go.th/public/index.php/policy_plan',
+            'https://ops.moph.go.th/public/index.php/downloads',
+
+        ],
+        'rules':[
+            r'(.*)/public/index\.php/news/read/(.*)',
+            r'(.*)/public/index\.php/news/public_relations(.*)',
+            r'(.*)/public/index\.php/downloads(.*)',
+
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="mainview"]/div/div[2]/div[2]/div/div/div[2]/div[3]/div[2]/text()',
+                'format':'%d %b %Y'
+            }
+        ]
     },
 
-    # 菲律宾
+    # 菲律宾 press用js加载 翻墙
     'ph':{
         'allowed_domains':['doh.gov.ph'],
         'site_url':'http://www.doh.gov.ph',
-        'start_urls':['http://www.doh.gov.ph/news-clips'],
-        'rules':[r'(.*)/sites/default/files/news_clips/(.*)']
+        'start_urls':[
+            'http://www.doh.gov.ph/news-clips',
+            'http://www.doh.gov.ph/press-releases',
+            'http://www.doh.gov.ph/national-objectives-health',
+
+        ],
+        'rules':[
+            r'(.*)/sites/default/files/news_clips/(.*)',
+            r'(.*)/node(.*)',
+
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="content"]//article/div[2]/div/div/p[1]/em/text()',
+                'format':'Press Release/ %B %d, %Y'
+            }
+        ]
     },
 
     # 马来西亚
     'my':{
         'allowed_domains':['moh.gov.my'],
         'site_url':'http://www.moh.gov.my',
-        'start_urls':['http://www.moh.gov.my/'],
-        'rules':[r'(.*)/index\.php/database_stores/store_view_page/(.*)'],
-        'publish':[{'rule':"//table[@class='dataTableDetail']/tbody/tr[2]/td/text()",'format':'%d-%m-%Y'}]
+        'start_urls':['http://www.moh.gov.my/index.php'],
+        'rules':[
+            r'(.*)/index\.php/database_stores/store_view_page/(.*)',
+            r'(.*)index\.php/pages/view(.*)',
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="container_content"]//*[contains(@class,"dataTableDetail")]/tbody/tr[3]/td/text()',
+                'format':'%d-%m-%Y'
+            }
+        ]
     },
 
     # 印度尼西亚 日期中信息变化，无法解析
     'id':{
+
         'allowed_domains':['depkes.go.id'],
         'site_url':'http://www.depkes.go.id',
         'start_urls':['http://www.depkes.go.id/folder/view/01/structure-info-terkini.html'],
-        'rules':[r'(.*)/article/view/[0-9]{11}/(.*)']
+        'rules':[
+            r'(.*)/article/view/[0-9]{11}/(.*)',
+            r'(.*)/folder/view/01(.*)',
+        ],
+        'language':'en-id',
+        'publish':[
+            {
+                'rule':'//*[@id="vbMainLayer"]/div[7]/ul/li/text()[1]',
+                'format':'%Y-%m-%d',
+                'extra':id_time_sub
+            }
+        ]
+
     },
 
 
-    # 新加坡 日期解析问题
+    # 新加坡 item通过js添加
     'sg':{
         'allowed_domains':['moh.gov.sg'],
         'site_url':'https://www.moh.gov.sg',
         'start_urls':[
                         'https://www.moh.gov.sg/content/moh_web/home.html',
                         'https://www.moh.gov.sg/content/moh_web/home/diseases_and_conditions.html',
-                        'https://www.moh.gov.sg/content/moh_web/home/pressRoom.html'
+                        'https://www.moh.gov.sg/content/moh_web/home/medical-directory.html',
+                        'https://www.moh.gov.sg/content/moh_web/home/pressRoom.html',
+                        'https://www.moh.gov.sg/content/moh_web/home/Publications.html',
+                        'https://www.moh.gov.sg/content/moh_web/home/legislation.html',
                     ],
-        'rules': [r'(.*)/content/moh_web/home/pressRoom/(.*)', r'(.*)/content/moh_web/home/diseases_and_conditions/(.*)'],
+        'rules': [
+            r'(.*)/content/moh_web/home/pressRoom/(.*)',
+            r'(.*)/content/moh_web/home/diseases_and_conditions/(.*)',
+            r'(.*)content/moh_web/home/Publications(.*)',
+            r'(.*)/content/moh_web/home/statistics(.*)',
+            r'(.*)/content/moh_web/home/legislation(.*)',
+
+        ],
         'publish':[
-                    {'rule':"//div[@class='lastModify entryMeta parbase']/div[@class='entry-meta']/p[@class='dates-edit']/text()",'format':'''
-            Last updated on %d %b %Y
-          '''}
-                ]
+            {
+                'rule':'//*[@id="content"]/div[2]/div/div[4]/div/div/p',
+                'format':'Last updated on %d %b %Y',
+            },
+        ]
     },
 
     # 文莱 日期解析问题，格式复杂
@@ -1257,6 +1404,9 @@ configure = {
             	              	%d.%m.%Y        	'''}]
     },
 
+
+
+
     ###############################################
     # 非洲
     ###############################################
@@ -1709,6 +1859,7 @@ configure = {
             r'(.*)/index\.php/[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}-[0-9]{1,2}-[0-9]{1,2}-[0-9]{1,2}'
         ],
     },
+
     ###############################################
     # 北美洲
     ###############################################
@@ -1894,28 +2045,28 @@ configure = {
 
 
     },
-    ## 巴哈马 TODO
+    ## 巴哈马 没有卫生部网站
     'bs':{
-        'allowed_domains':['gov.bs'],
-        'site_url':'http://www.bahamas.gov.bs',
-        'start_urls':[
-            'http://www.bahamas.gov.bs/health'
-        ],
-        'rules':[
+        # 'allowed_domains':['gov.bs'],
+        # 'site_url':'http://www.bahamas.gov.bs',
+        # 'start_urls':[
+        #     'http://www.bahamas.gov.bs/health'
+        # ],
+        # 'rules':[
 
-        ],
+        # ],
 
     },
 
-    ## 伯利兹
+    ## 伯利兹 通过
     'bz':{
-        'allowed_domains':['enum.hu'],
-        'site_url':'http://www.eum.hu',
+        'allowed_domains':['belize.gov.bz'],
+        'site_url':'http://www.belize.gov.bz',
         'start_urls':[
             'http://www.belize.gov.bz/index.php/ministry-of-health'
         ],
         'rules':[
-            
+  
         ],
         'publish':[
 
@@ -1928,7 +2079,7 @@ configure = {
         'allowed_domains':['minsa.gob.ni'],
         'site_url':'http://www.minsa.gob.ni',
         'start_urls':[
-            'http://www.minsa.gob.ni',
+            'http://www.minsa.gob.ni/index.php',
 
         ],
         'rules':[
@@ -1993,6 +2144,7 @@ configure = {
     },
     ## 海地 没有网站
 
+
     ## 安提瓜和巴布达 通过
     'ag':{
         'allowed_domains':['mbs.gov.ag'],
@@ -2005,8 +2157,10 @@ configure = {
             r'(.*)/information(.*)',  
         ],
     },
+
     ## 多米尼克 网站开发中
     'dm':{
+
     },
     ## 多米尼加 打不开
     'do':{
@@ -2042,23 +2196,24 @@ configure = {
             r'(.*)/index\.php(.*)'
         ]
     },
-    ## 圣文森特和格林纳丁斯 未通过
+    ## 圣文森特和格林纳丁斯 通过
     'vc':{
         'allowed_domains':['moh.gov.vc'],
         'site_url':'http://moh.gov.vc',
         'start_urls':[
-            'http://moh.gov.vc/health',
+            'http://moh.gov.vc/health/index.php',
         ],
         'rules':[
             r'(.*)/health/index\.php(.*)',
 
         ]
     },
+
     ###############################################
     # 南美洲
     ###############################################
 
-    ## 哥伦比亚 通过
+    ## 哥伦比亚 打不开
     'co':{
         'allowed_domains':['minsalud.gov.co'],
         'site_url':'https://www.minsalud.gov.co',
@@ -2105,7 +2260,7 @@ configure = {
         'publish':[]
     },
 
-     # 秘鲁 
+     # 秘鲁 通过
     'pe':{
         'allowed_domains':['minsa.gob.pe'],
         'site_url':'http://www.minsa.gob.pe',
@@ -2139,17 +2294,17 @@ configure = {
         'allowed_domains':['sns.gov.bo'],
         'site_url':'http://www.sns.gov.bo',
         'start_urls':[],
-        'rules':[]
-          
-        
+        'rules':[]    
     },
-    ## 巴拉圭 (样式有问题)
+    ## 巴拉圭 (样式有问题,内容过多需要精细化处理)
     'py':{
         'allowed_domains':['mspbs.gov.py'],
         'site_url':'https://www.mspbs.gov.py',
         'start_urls':[
             'https://www.mspbs.gov.py',
-            'https://www.mspbs.gov.py/portal','https://www.mspbs.gov.py/dgtic','https://www.mspbs.gov.py/dnerhs',
+            'https://www.mspbs.gov.py/portal',
+            'https://www.mspbs.gov.py/dgtic',
+            'https://www.mspbs.gov.py/dnerhs',
             'http://www.mspbs.gov.py/rrhh','https://www.mspbs.gov.py/dnvs','https://www.mspbs.gov.py/planificacion',
             'http://www.mspbs.gov.py/dggies','https://www.mspbs.gov.py/dgrrii','https://www.mspbs.gov.py/drcps',
         ],
@@ -2157,16 +2312,9 @@ configure = {
             r'(.*)/portal/(.*)',r'(.*)/digies(.*)',r'(.*)/dgtic(.*)',r'(.*)/dnerhs(.*)',r'(.*)/rrhh(.*)',
             r'(.*)/dnvs(.*)',r'(.*)/planificacion(.*)',r'(.*)/dggies(.*)',r'(.*)/dgrrii(.*)',r'(.*)/drcps(.*)',  
         ],
-        'publish':[
-            # {
-            #     'rule':'normalize-space(//*[contains(@class,"news-bar")]//*[contains(@class,"time-clock")])',
-            #     'format':'%d %b, %Y'
-            # }
-
-        ]
     },
 
-    # 巴西 通过(样式会乱)
+    # 巴西 (部分样式乱,内容过多需要精细化处理)
     'br':{
         'allowed_domains':['saude.gov.br'],
         'site_url':'http://portalms.saude.gov.br',
@@ -2306,7 +2454,9 @@ configure = {
         'start_urls':['http://www.health.govt.nz','http://www.health.govt.nz/nz-health-statistics','http://www.health.govt.nz/publications'],
         'rules':[
             r'(.*?)/nz-health-statistics(.*)',
-            r'(.*?)/publication(.*)',
+            r'(.*?)/publications(/{0,1})\?page=([0-9]{1,2})',
+
+            r'(.*)/publication/(.*)',
         ],
         'publish':[
             {
@@ -2380,7 +2530,10 @@ configure = {
             r'(.*)/internet/main/publishing\.nsf/Content/stakeholder-engagement(.*)',
             r'(.*)/internet/main/publishing\.nsf/Content/social-media-channels(.*)',
             r'(.*)/internet/main/publishing\.nsf/Content/Career\+Opportunities-1(.*)',
-            r'(.*)/internet/main/publishing\.nsf/Content/health-history\.htm(.*)',        
+            r'(.*)/internet/main/publishing\.nsf/Content/health-history\.htm(.*)',
+
+            ## 过滤掉分类查询的
+            #       
         ],
         'publish':[
             {
