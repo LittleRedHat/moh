@@ -2759,9 +2759,9 @@ class MohSpider(scrapy.Spider):
     def start_requests(self):
         for url in self.start_urls:
             if self.nation in ['rw']:
-                yield scrapy.Request(url,errback=self.errback_httpbin,cookies={'_accessKey2':'CD2we/sGT5LdZuwhvlgz3y4zkhvdvTTh'})
+                yield scrapy.Request(url,callback=self.parse,errback=self.errback_httpbin,cookies={'_accessKey2':'CD2we/sGT5LdZuwhvlgz3y4zkhvdvTTh'})
             else:
-                yield scrapy.Request(url,errback=self.errback_httpbin)
+                yield scrapy.Request(url,callback=self.parse,errback=self.errback_httpbin)
 
 
     def should_update(self,record):
