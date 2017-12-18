@@ -68,7 +68,7 @@ class ElasticsearchPipeline(object):
             except:
                 last_update = datetime.date.today()
                 record = {'error':True,'last_error':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'attachment','content_type':item['content_type']}
-                spider.save_record(url,record)
+                spider.save_record(item['url'],record)
                 traceback.print_exc()
         return item
 
@@ -108,7 +108,7 @@ class FilePipeline(object):
             except:
                 last_update = datetime.date.today()
                 record = {'error':True,'last_error':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'asset'}
-                spider.save_record(url,record)
+                spider.save_record(item['url'],record)
                 traceback.print_exc()
                 return
         next_item = ResourceItem()
@@ -221,7 +221,7 @@ class FilePipeline(object):
 
                 last_update = datetime.date.today()
                 record = {'error':True,'last_error':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'html','content_type':item['content_type']}
-                spider.save_record(url,record)
+                spider.save_record(item['url'],record)
                 traceback.print_exc()
                 return
                 #self.output_content(url,item['content'],modified_name)
@@ -247,7 +247,7 @@ class FilePipeline(object):
             except:
                 last_update = datetime.date.today()
                 record = {'error':True,'last_error':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'attachment','content_type':item['content_type']}
-                spider.save_record(url,record)
+                spider.save_record(item['url'],record)
                 traceback.print_exc()
                 return
        

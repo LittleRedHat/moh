@@ -464,7 +464,7 @@ configure = {
         ]
     },
 
-    # 印度尼西亚 日期中信息变化，无法解析
+    # 印度尼西亚 
     'id':{
 
         'allowed_domains':['depkes.go.id'],
@@ -518,21 +518,40 @@ configure = {
     'bn':{
         'allowed_domains':['moh.gov.bn'],
         'site_url':'http://www.moh.gov.bn',
-        'start_urls':['http://www.moh.gov.bn/SitePages/Latest%20News.aspx'],
-        'rules':[r'(.*)/Lists/Latest%20news/NewDispForm\.aspx\?ID=(.*)'],
-        'publish':[
-                    {'rule':"//td[@class='ms-formbody']/div[@class]/p[last()]/text()",'format':'%d %B %Y'},
-                    {'rule':"//td[@class='ms-formbody']/div[@class]/p[last()-1]/text()",'format':'%d %B %Y'}
-                ]
+        'start_urls':[
+            'http://www.moh.gov.bn/SitePages/Latest%20News.aspx',
+            'http://www.moh.gov.bn/SitePages/healthlineonline.aspx',
+
+        ],
+        'rules':[
+            r'(.*)/Lists/Latest%20news/NewDispForm\.aspx\?ID=(.*)',
+        ],
+        # 'publish':[
+        #             {'rule':"//td[@class='ms-formbody']/div[@class]/p[last()]/text()",'format':'%d %B %Y'},
+        #             {'rule':"//td[@class='ms-formbody']/div[@class]/p[last()-1]/text()",'format':'%d %B %Y'}
+        #         ]
     },
 
     # 东帝汶
     'tl':{
         'allowed_domains':['moh.gov.tl'],
         'site_url':'http://www.moh.gov.tl',
-        'start_urls':['http://www.moh.gov.tl/?q=blog/1'],
-        'rules':[r'(.*)/\?q=node/(.*)',r'(.*)/\?q=blog/1&page(.*)'],
-        'publish':[{'rule':"//header/p[@class='submitted']/span/text()",'format':'%a, %d/%m/%Y - %H:%M'}]
+        'start_urls':[
+            'http://www.moh.gov.tl/?q=blog/1',
+            'http://www.moh.gov.tl/?q=report'
+        ],
+        'rules':[
+            r'(.*)/\?q=node/(.*)',
+            r'(.*)/\?q=blog/1&page(.*)',
+            r'(.*)/\?q=report&page(.*)'
+        ],
+        'publish':[
+            {
+                
+                'rule':"//article//p[contains(@class,'submitted')]/span/text()",
+                'format':'%a, %d/%m/%Y - %H:%M'
+            }
+        ]
     },
 
     # 尼泊尔 网页打不开
@@ -545,9 +564,15 @@ configure = {
     'bt':{
         'allowed_domains':['health.gov.bt'],
         'site_url':'http://www.health.gov.bt',
-        'start_urls':['http://www.health.gov.bt/category/news/'],
-        'rules':[r'(.*)'],
-        'publish':[{'rule':"//time[@class='entry-date published updated']/text()",'format':'%B %d, %Y'}],
+        'start_urls':['http://www.health.gov.bt/category/news/','http://www.health.gov.bt/publications/'],
+        'rules':[
+           r'(.*)'
+        ],
+        'publish':[
+            {
+                'rule':"//time[contains(@class,'entry-date published updated')]/text()",'format':'%B %d, %Y'
+            }
+        ],
         'excludes':[
                     r'(.*)/health-calendar/(.*)',
                     r'(.*)/scheduled-training/(.*)',
@@ -570,7 +595,12 @@ configure = {
     'in':{
         'allowed_domains':['mofpi.nic.in'],
         'site_url':'http://www.mofpi.nic.in',
-        'start_urls':['http://www.mofpi.nic.in/press-release'],
+        'start_urls':[
+            'http://www.mofpi.nic.in/press-release',
+            'http://www.mofpi.nic.in/documents/reports/annual-report',
+            'http://www.mofpi.nic.in/documents/reports/technical-reports',
+            'http://www.mofpi.nic.in/documents/reports/nsso-reports',
+        ],
         'rules':[r'(.*)/sites/default/files/(.*)']
     },
 
@@ -595,7 +625,10 @@ configure = {
     'lk':{
         'allowed_domains':['health.gov.lk'],
         'site_url':'http://www.health.gov.lk',
-        'start_urls':['http://www.health.gov.lk/moh_final/english/others.php?pid=110'],
+        'start_urls':[
+            'http://www.health.gov.lk/moh_final/english/others.php?pid=110',
+            'http://www.health.gov.lk/moh_final/english/others.php?pid=127'
+        ],
         'rules':[r'(.*)/moh_final/english/public/elfinder/files/publications/AHB/(.*)']
     },
 
@@ -605,18 +638,28 @@ configure = {
         'site_url':'http://www.health.gov.mv',
         'start_urls':['http://www.health.gov.mv/News'],
         'rules':[r'(.*)/News/(.*)'],
-        'publish':[{'rule':"//div[@class='box news-box news-article']/div/time/sup/text()",'format':'%A, %B %d, %Y'}]
+        'publish':[
+            {
+                'rule':'//*[@id="content"]//time[contains(@itemprop,"datePublished")]/@datetime',
+                'format':'%Y-%m-%d'
+            }
+        ]
     },
+
 
     # 伊朗
     'ir':{
         'allowed_domains':['behdasht.gov.ir'],
         'site_url':'http://www.behdasht.gov.ir',
         'start_urls':['http://www.behdasht.gov.ir/index.jsp?siteid=1&fkeyid=&siteid=1&pageid=1508'],
-        'rules':[r'(.*)/news/(.*)']
+        'language':'ar',
+        'rules':[
+            r'(.*)/news/(.*)',
+            r'(.*)/page/%DA%A9%D9%84\+%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1\?page=(.*)',
+
+        ]
     },
 
-    
 
     # 阿富汗
     'af':{
@@ -627,7 +670,7 @@ configure = {
         'publish':[{'rule':"//div[@class='postDate']/text()",'format':'%b %d, %Y'}]
     },
 
-    # 沙特阿拉伯
+    # 沙特阿拉伯 js加载
     'sa':{
         'allowed_domains':['moh.gov.sa'],
         'site_url':'http://www.moh.gov.sa',
@@ -640,7 +683,7 @@ configure = {
     'ye':{
         'allowed_domains':['mophp-ye.org'],
         'site_url':'http://www.mophp-ye.org',
-        'start_urls':['http://www.mophp-ye.org/english/news.html'],
+        'start_urls':['http://www.mophp-ye.org/english/news.html','http://www.mophp-ye.org/arabic/reports_statistical.html'],
         'rules':[r'(.*)/english/news\.html(.*)'],
         'publish':[{'rule':"//div[@id='content']/h4/text()",'format':'%B, %Y'}]
     },
@@ -649,8 +692,19 @@ configure = {
     'om':{
         'allowed_domains':['moh.gov.om'],
         'site_url':'http://www.moh.gov.om',
-        'start_urls':['https://www.moh.gov.om/en_US/ebola'],
-        'rules':[r'(.*)/documents/(.*)']
+        'start_urls':[
+            'https://www.moh.gov.om/en_US/ebola',
+            'https://www.moh.gov.om/en_US/-50',
+            'https://www.moh.gov.om/en/web/statistics/annual-reports',
+            
+        ],
+        'rules':[
+            r'(.*)/documents/(.*)',
+            r'(.*)/en/web/statistics/annual-reports(.*)',
+            r'(.*)/en_US/web/statistics/annual-reports(.*)',
+            r'(.*)/en_US/web/statistics(.*)',
+            r'(.*)/en/web/statistics(.*)',
+        ]
     },
 
     # 阿联酋  时间解析问题
@@ -663,7 +717,7 @@ configure = {
                         'http://www.mohap.gov.ae/en/MediaCenter/Pages/news.aspx',
                         'http://www.mohap.gov.ae/en/MediaCenter/Pages/events.aspx',
                         'http://www.mohap.gov.ae/en/OpenData/Pages/default.aspx',
-                        'http://www.mohap.gov.ae/en/OpenData/Pages/health-statistics.aspx'
+                        'http://www.mohap.gov.ae/en/OpenData/Pages/health-statistics.aspx',
                     ],
         'rules':[
                     r'(.*)/en/AwarenessCenter/Pages/post\.aspx(.*)',
@@ -671,7 +725,7 @@ configure = {
                     r'(.*)/en/MediaCenter/Pages/news\.aspx(.*)',
                     r'(.*)/en/OpenData/Pages/default\.aspx(.*)',
                     r'(.*)/en/OpenData/Pages/health-statistics\.aspx(.*)',
-                    r'(.*)/en/MediaCenter/Pages/EventDetail.aspx(.*)'
+                    r'(.*)/en/MediaCenter/Pages/EventDetail.aspx(.*)',
                 ],
         'publish':[
                     {"rule":"//div[@class='newsdetailstitle']/p[@class='metadate']/span[2]/text()","format":"%d %b %Y"},
@@ -691,10 +745,18 @@ configure = {
                         'https://www.moph.gov.qa/events/events',
                         'https://www.moph.gov.qa/health-strategies/national-health-strategy'
                     ],
-        'rules':[r'(.*)/news(.*)',r'(.*)/events(.*)',r'(.*)/health-strategies(.*)'],
+        'rules':[
+                r'(.*)/news(.*)',
+                r'(.*)/events(.*)',
+                r'(.*)/health-strategies(.*)'
+        ],
         'publish':[
-            {"rule":"//header/div[@class='newsDetailsListContainer']/dl[@class='newsDetailsList']/dd[@class='pubDate']/abbr/text()","format":"%d %B %Y"}
-            ]
+            {
+                "rule":"//header/div[@class='newsDetailsListContainer']/dl[@class='newsDetailsList']/dd[@class='pubDate']/abbr/text()",
+                "format":"%d %B %Y"
+            },
+
+        ]
 
 
     },
@@ -705,7 +767,12 @@ configure = {
         'site_url':'https://www.moh.gov.bh',
         'start_urls':['https://www.moh.gov.bh/News'],
         'rules':[r'(.*)/News/Details/(.*)'],
-        'publish':[{'rule':"//div[@id='renderbody']/div[@class='pull-right']/text()",'format':'%d/%m/%Y %H:%M:%S'}]
+        'publish':[
+            {
+                'rule':"//div[@id='renderbody']/div[@class='pull-right']/text()",
+                'format':'%d/%m/%Y %H:%M:%S'
+            }
+        ]
     },
 
     # 科威特 网页打不开
@@ -1864,7 +1931,7 @@ configure = {
     # 北美洲
     ###############################################
 
-    ## 美国
+    ## 美国 通过
     'us':{
         'allowed_domains':['hhs.gov'],
         'site_url':'https://www.hhs.gov',
@@ -1892,7 +1959,7 @@ configure = {
             }
         ]
     },
-    ## 加拿大
+    ## 加拿大 数量大
     'ca':{
         'allowed_domains':['canada.ca','healthycanadians.gc.ca'],
         'site_url':'',
@@ -1916,7 +1983,7 @@ configure = {
 
         ]
     },
-    ## 墨西哥
+    ## 墨西哥（没有下全,附件太多应该过滤掉)
     'mx':{
         'allowed_domains':['gob.mx'],
         'site_url':'https://www.gob.mx',
@@ -1965,7 +2032,7 @@ configure = {
         'rules':[],
 
     },
-    ## 危地马拉
+    ## 危地马拉 通过(没有下全)
     'gt':{
         'allowed_domains':['gob.gt'],
         'site_url':'http://www.mspas.gob.gt',
@@ -2021,7 +2088,7 @@ configure = {
 
         ]
     },
-    ## 特立尼达和多巴哥 时间解析过于不鲁棒
+    ## 特立尼达和多巴哥 时间解析过于不鲁棒 通过
     'tt':{
         'allowed_domains':['health.gov.tt'],
         'site_url':'http://www.health.gov.tt',
