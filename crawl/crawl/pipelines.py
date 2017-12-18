@@ -42,11 +42,11 @@ class ElasticsearchPipeline(object):
                 self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,timeout='60s')
                 last_update = datetime.date.today()
                 url = item['url']
-                record = {'last_update':last_update.strftime('%Y-%m-%d'),'url':url,'type':'html','content_type':item['content_type']}
+                record = {'error':False,'last_update':last_update.strftime('%Y-%m-%d'),'url':url,'type':'html','content_type':item['content_type']}
                 spider.save_record(url,record)
             except:
                 last_update = datetime.date.today()
-                record = {'last_update':last_update.strftime('%Y-%m-%d'),'url':item['url'],'content_type':item['content_type'],'type':'html','error':True}
+                record = {'last_error':last_update.strftime('%Y-%m-%d'),'url':item['url'],'content_type':item['content_type'],'type':'html','error':True}
                 spider.save_record(item['url'],record)
                 traceback.print_exc()
 
@@ -63,11 +63,11 @@ class ElasticsearchPipeline(object):
                 self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,pipeline='attachment',timeout='60s')
                 last_update = datetime.date.today()
                 url = item['url']
-                record = {'last_update':last_update.strftime('%Y-%m-%d'),'url':url,'type':'attachment','content_type':item['content_type']}
+                record = {'error':False,'last_update':last_update.strftime('%Y-%m-%d'),'url':url,'type':'attachment','content_type':item['content_type']}
                 spider.save_record(url,record)
             except:
                 last_update = datetime.date.today()
-                record = {'error':True,'last_update':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'attachment','content_type':item['content_type']}
+                record = {'error':True,'last_error':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'attachment','content_type':item['content_type']}
                 spider.save_record(url,record)
                 traceback.print_exc()
         return item
@@ -102,16 +102,15 @@ class FilePipeline(object):
                 mine_output_path = os.path.join(mine_dir,output_name)
                 self.output_content(url,content)
                 last_update = datetime.date.today()
-                record = {'last_update':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'asset'}
+                record = {'error':False,'last_update':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'asset'}
                 spider.save_record(url,record)
                 return
             except:
                 last_update = datetime.date.today()
-                record = {'error':True,'last_update':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'asset'}
+                record = {'error':True,'last_error':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'asset'}
                 spider.save_record(url,record)
                 traceback.print_exc()
                 return
-
         next_item = ResourceItem()
         url = item['url']
         url = urllib.unquote(url)
@@ -221,7 +220,7 @@ class FilePipeline(object):
             except Exception,e:
 
                 last_update = datetime.date.today()
-                record = {'error':True,'last_update':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'html','content_type':item['content_type']}
+                record = {'error':True,'last_error':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'html','content_type':item['content_type']}
                 spider.save_record(url,record)
                 traceback.print_exc()
                 return
@@ -247,12 +246,10 @@ class FilePipeline(object):
                 return next_item
             except:
                 last_update = datetime.date.today()
-                record = {'error':True,'last_update':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'attachment','content_type':item['content_type']}
+                record = {'error':True,'last_error':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'attachment','content_type':item['content_type']}
                 spider.save_record(url,record)
                 traceback.print_exc()
                 return
-            
-        
        
     def isAbsolutePath(self,url):
         if not url:

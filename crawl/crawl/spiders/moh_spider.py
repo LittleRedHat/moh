@@ -2482,7 +2482,7 @@ configure = {
         'allowed_domains':['health.gov.au'],
         'site_url':'http://www.health.gov.au',
         'start_urls':[
-            'http://www.health.gov.au'
+            'http://www.health.gscov.au'
         ],
         'rules':[
             r'(.*)/internet/main/publishing\.nsf/Content/(.*)',
@@ -2533,7 +2533,7 @@ configure = {
             r'(.*)/internet/main/publishing\.nsf/Content/health-history\.htm(.*)',
 
             ## 过滤掉分类查询的
-            #       
+             
         ],
         'publish':[
             {
@@ -2711,12 +2711,30 @@ class MohSpider(scrapy.Spider):
     def from_crawler(cls, crawler, *args, **kwargs):
         spider = super(MohSpider, cls).from_crawler(crawler, *args, **kwargs)
         crawler.signals.connect(spider.spider_closed, signal=signals.spider_closed)
+        # crawler.signals.connect(spider.spider_error,  signal=signals.spider_error)
+        # crawler.signals.connect(spider.request_dropped,  signal=signals.request_dropped)
+        
         return spider
 
     def spider_closed(self,spider):
         # self.save_history()
         pass
-       
+    
+    # def spider_error(self,response,spider):
+    #     print 'error for spider'
+    #     url = response.url
+    #     last_update = datetime.date.today()
+    #     record = {'error':True,'last_error':last_update.strftime('%Y-%m-%d'),'url':url}
+    #     spider.save_record(url,record)
+
+    # def request_dropped(self,request,spider):
+    #     print 'error for request'
+    #     url = request.url
+    #     last_update = datetime.date.today()
+    #     record = {'error':True,'last_error':last_update.strftime('%Y-%m-%d'),'url':url}
+    #     spider.save_record(url,record)
+
+
 
     def save_history(self):
         if self.debug:
@@ -2726,7 +2744,11 @@ class MohSpider(scrapy.Spider):
         if self.history:
             json.dump(self.history,codecs.open(history_file,'w','utf-8'))
 
-
+    def errback_httpbin(self, failure):
+        url = failure.request.url
+        last_update = datetime.date.today()
+        record = {'error':True,'last_error':last_update.strftime('%Y-%m-%d'),'url':url}
+        self.save_record(url,record)
 
     def content_allowed(self,content_type):
         for item in ALLOWED_FILE_DOWNLOAD:
@@ -2737,14 +2759,17 @@ class MohSpider(scrapy.Spider):
     def start_requests(self):
         for url in self.start_urls:
             if self.nation in ['rw']:
-                yield scrapy.Request(url,cookies={'_accessKey2':'CD2we/sGT5LdZuwhvlgz3y4zkhvdvTTh'})
+                yield scrapy.Request(url,errback=self.errback_httpbin,cookies={'_accessKey2':'CD2we/sGT5LdZuwhvlgz3y4zkhvdvTTh'})
             else:
-                yield scrapy.Request(url)
+                yield scrapy.Request(url,errback=self.errback_httpbin)
 
 
     def should_update(self,record):
         if not record:
             return True
+        if record.get('error'):
+            return True
+
 
         if record.get('type') == 'attachment':
             delta = timedelta(days = self.attachment_update)
@@ -2893,7 +2918,7 @@ class MohSpider(scrapy.Spider):
                 http_url = self.gen_http_url(response.url,link_text,base)
                
                 if http_url:
-                    request = scrapy.Request(http_url,callback=self.parse,meta={'title':link_title})
+                    request = scrapy.Request(http_url,callback=self.parse,meta={'title':link_title},errback=self.errback_httpbin)
                     _record = self.get_record(http_url)
                     should_update = self.should_update(_record)
                     # print '*'*40
@@ -2915,7 +2940,7 @@ class MohSpider(scrapy.Spider):
             for stylesheet in stylesheets:
                 http_url = self.gen_http_url(response.url, stylesheet,base)
                 if http_url:
-                    request = scrapy.Request(http_url, callback=self.style_parse)
+                    request = scrapy.Request(http_url, callback=self.style_parse,errback=self.errback_httpbin)
                     _record = self.get_record(http_url)
                     should_update = self.should_update(_record)
                     if should_update:
@@ -2925,7 +2950,7 @@ class MohSpider(scrapy.Spider):
             for javascript in javascripts:
                 http_url = self.gen_http_url(response.url,javascript,base)
                 if http_url:
-                    request = scrapy.Request(http_url, callback=self.assets_parse)
+                    request = scrapy.Request(http_url, callback=self.assets_parse,errback=self.errback_httpbin)
                     
                     _record = self.get_record(http_url)
 
@@ -2941,7 +2966,7 @@ class MohSpider(scrapy.Spider):
             for img in images:
                 img_http_url = self.gen_http_url(response.url,img,base)
                 if img_http_url:
-                    request = scrapy.Request(img_http_url, callback=self.assets_parse)
+                    request = scrapy.Request(img_http_url, callback=self.assets_parse,errback=self.errback_httpbin)
 
                     _record = self.get_record(img_http_url)
                     should_update = self.should_update(_record)
@@ -3068,7 +3093,7 @@ class MohSpider(scrapy.Spider):
                 if http_url:
                     record = self.get_record(http_url)
                     should_update = self.should_update(record)
-                    request = scrapy.Request(http_url,self.style_parse)
+                    request = scrapy.Request(http_url,self.style_parse,errback=self.errback_httpbin)
                     if should_update:
                         yield request
                     
@@ -3081,7 +3106,7 @@ class MohSpider(scrapy.Spider):
                             if image_url:
                                 record = self.get_record(image_url)
                                 should_update = self.should_update(record)
-                                request = scrapy.Request(image_url,self.assets_parse)
+                                request = scrapy.Request(image_url,self.assets_parse,errback=self.errback_httpbin)
                                 if should_update:
                                     yield request 
 
