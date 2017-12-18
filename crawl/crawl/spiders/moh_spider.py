@@ -284,7 +284,7 @@ configure = {
         'site_url':'http://www.moh.mn'
     },
 
-    # 韩国
+    # 韩国 通过
     "kr": {
         'allowed_domains': ['mohw.go.kr'],
         'site_url': 'http://www.mohw.go.kr',
@@ -302,7 +302,7 @@ configure = {
         ],
     },
 
-    # 日本 切换到英文版网站
+    # 日本 通过 切换到英文版网站
     'jp':{
         'allowed_domains':['mhlw.go.jp'],
         'site_url':'http://www.mhlw.go.jp',
@@ -678,7 +678,7 @@ configure = {
         'rules':[r'(.*)/Ministry/MediaCenter/News/Pages/(.*)'],
         'publish':[{'rule':"//span[@id='ctl00_PlaceHolderMain_ctl04_lblDate']/text()",'format':'%y'}]
     },
-
+##### 2017-12-18 11:57
     # 也门
     'ye':{
         'allowed_domains':['mophp-ye.org'],
@@ -2970,37 +2970,7 @@ class MohSpider(scrapy.Spider):
                 base = base[0]
             else:
                 base = None
-            links = response.xpath('//a[@href]')
-            for link in links:
-                link_text = link.xpath('@href').extract()
-                if len(link_text):
-                    link_text = link_text[0]
-                else:
-                    link_text = None
-                link_title = link.xpath('normalize-space(string(.))').extract()
-                if len(link_title):
-                    link_title = link_title[0]
-                else:
-                    link_title = ''
-                http_url = self.gen_http_url(response.url,link_text,base)
-               
-                if http_url:
-                    request = scrapy.Request(http_url,callback=self.parse,meta={'title':link_title},errback=self.errback_httpbin)
-                    _record = self.get_record(http_url)
-                    should_update = self.should_update(_record)
-                    # print '*'*40
-                    # print http_url,should_update
-                    # print '*'*40
-                    if should_update:
-                        # print http_url
-                        yield request
-                    
-                    # if self.debug:
-                    #     print 'yield http url %s from %s'%(http_url,response.url)
-                    # if http_url == 'http://www.mz.gov.pl/wp-content/uploads/2015/07/Wczesne-wykrywanie-dane-krajowe.ppt':
-                    #     print 'yield http url %s from %s'%(http_url,response.url)
-                    #     print 'link title is ',link_title
-                    #     return
+           
             stylesheets = response.xpath(
                 '//link[@type="text/css"]/@href').extract()
             
@@ -3040,6 +3010,39 @@ class MohSpider(scrapy.Spider):
                     if should_update:
                         yield request
 
+
+            links = response.xpath('//a[@href]')
+            for link in links:
+                link_text = link.xpath('@href').extract()
+                if len(link_text):
+                    link_text = link_text[0]
+                else:
+                    link_text = None
+                link_title = link.xpath('normalize-space(string(.))').extract()
+                if len(link_title):
+                    link_title = link_title[0]
+                else:
+                    link_title = ''
+                http_url = self.gen_http_url(response.url,link_text,base)
+               
+                if http_url:
+                    request = scrapy.Request(http_url,callback=self.parse,meta={'title':link_title},errback=self.errback_httpbin)
+                    _record = self.get_record(http_url)
+                    should_update = self.should_update(_record)
+                    # print '*'*40
+                    # print http_url,should_update
+                    # print '*'*40
+                    if should_update:
+                        # print http_url
+                        yield request
+                    
+                    # if self.debug:
+                    #     print 'yield http url %s from %s'%(http_url,response.url)
+                    # if http_url == 'http://www.mz.gov.pl/wp-content/uploads/2015/07/Wczesne-wykrywanie-dane-krajowe.ppt':
+                    #     print 'yield http url %s from %s'%(http_url,response.url)
+                    #     print 'link title is ',link_title
+                    #     return
+                    
         elif content_type and self.content_allowed(content_type):  
             resource = ResourceItem()
             resource['url'] = response.url
