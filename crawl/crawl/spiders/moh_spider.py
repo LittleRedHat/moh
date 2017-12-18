@@ -2831,6 +2831,47 @@ class MohSpider(scrapy.Spider):
                 yield scrapy.Request(url,callback=self.parse,errback=self.errback_httpbin)
 
 
+    def should_crawl(self,record):
+        if not record:
+            return True
+        if record.get('error'):
+            return True
+
+        if record.get('type') == 'attachment':
+            delta = timedelta(days = self.attachment_update)
+            content_type = record.get('content_type') or '&&&&&'
+            if not self.content_allowed(content_type):
+                return False
+
+        ## 对于网页都应该爬取，但是不一定要重新索引
+        elif record.get('type') == 'html':
+
+            delta = timedelta(days = 0)
+            content_type = record.get('content_type') or '&&&&&'
+            if not self.content_allowed(content_type):
+                return False
+            if not self.url_in_rule(record.get('url')):
+                return False
+            
+        elif record.get('type') == 'asset':
+            delta = timedelta(days = self.asset_update)
+
+        else:
+            return False
+            # content_type = record.get('content_type') or '&&&&&'
+            # if not self.content_allowed(content_type):
+            #     return False
+        
+        last_update = record.get('last_update')
+        if not last_update:
+            return True
+        last_update_date = datetime.datetime.strptime(last_update,'%Y-%m-%d').date()
+        now = datetime.date.today()
+
+        if last_update_date + delta > now:
+            return False
+        else:
+            return True
     def should_update(self,record):
         if not record:
             return True
@@ -2991,8 +3032,8 @@ class MohSpider(scrapy.Spider):
                     
                     _record = self.get_record(http_url)
 
-                    should_update = self.should_update(_record)
-                    if should_update and self.url_in_rule(http_url):
+                    should_crawl = self.should_crawl(_record)
+                    if should_crawl and self.url_in_rule(http_url):
                         
                         yield request
 
@@ -3004,10 +3045,9 @@ class MohSpider(scrapy.Spider):
                 img_http_url = self.gen_http_url(response.url,img,base)
                 if img_http_url:
                     request = scrapy.Request(img_http_url, callback=self.assets_parse,errback=self.errback_httpbin)
-
                     _record = self.get_record(img_http_url)
-                    should_update = self.should_update(_record)
-                    if should_update:
+                    should_crawl = self.should_crawl(_record)
+                    if should_crawl:
                         yield request
 
 
@@ -3024,15 +3064,15 @@ class MohSpider(scrapy.Spider):
                 else:
                     link_title = ''
                 http_url = self.gen_http_url(response.url,link_text,base)
-               
+
                 if http_url:
                     request = scrapy.Request(http_url,callback=self.parse,meta={'title':link_title},errback=self.errback_httpbin)
                     _record = self.get_record(http_url)
-                    should_update = self.should_update(_record)
+                    should_crawl = self.should_crawl(_record)
                     # print '*'*40
                     # print http_url,should_update
                     # print '*'*40
-                    if should_update:
+                    if should_crawl:
                         # print http_url
                         yield request
                     
@@ -3042,7 +3082,7 @@ class MohSpider(scrapy.Spider):
                     #     print 'yield http url %s from %s'%(http_url,response.url)
                     #     print 'link title is ',link_title
                     #     return
-                    
+
         elif content_type and self.content_allowed(content_type):  
             resource = ResourceItem()
             resource['url'] = response.url
@@ -3084,7 +3124,10 @@ class MohSpider(scrapy.Spider):
         resource['rtype'] = 'asset'
         resource['location'] = self.site_url
 
-        if not self.debug:
+        record = self.get_record(response.url)
+        should_update = self.should_update(record)
+        
+        if not self.debug and should_update:
             yield resource
         print '*'*40
         print '(url,type)',resource['url'],resource['rtype']
@@ -3142,7 +3185,10 @@ class MohSpider(scrapy.Spider):
         resource['rtype'] = 'asset'
         resource['location'] = self.site_url
 
-        if not self.debug:
+
+        record = self.get_record(url)
+        should_update = self.should_update(record)
+        if not self.debug and should_update:
             yield resource
 
         print '*'*40
@@ -3162,9 +3208,9 @@ class MohSpider(scrapy.Spider):
 
                 if http_url:
                     record = self.get_record(http_url)
-                    should_update = self.should_update(record)
+                    should_crawl = self.should_crawl(record)
                     request = scrapy.Request(http_url,self.style_parse,errback=self.errback_httpbin)
-                    if should_update:
+                    if should_crawl:
                         yield request
                     
             elif hasattr(item,'declarations'):
@@ -3175,9 +3221,9 @@ class MohSpider(scrapy.Spider):
                             image_url = self.gen_http_url(url,uri,None)
                             if image_url:
                                 record = self.get_record(image_url)
-                                should_update = self.should_update(record)
+                                should_crawl = self.should_crawl(record)
                                 request = scrapy.Request(image_url,self.assets_parse,errback=self.errback_httpbin)
-                                if should_update:
+                                if should_crawl:
                                     yield request 
 
     def gen_http_url(self,source_url,dest_url,base):
