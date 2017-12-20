@@ -213,10 +213,10 @@ def pe_time_sub(text):
 
 
 def id_time_sub(text):
-    p = r'(.*?)([0-9]{1,2}) (\w+) ([0-9]{4})'
+    p = r'(.*?)([0-9]{1,2}) (\w+) ([0-9]{4}) (.*)'
     m = re.match(p,text)
     groups = m.groups()
-    if len(groups) >=4:
+    if len(groups) >=5:
         month = groups[2]
         for key,en in enumerate(id_month):
             if en.lower() in month.lower():
@@ -225,6 +225,21 @@ def id_time_sub(text):
         year = groups[3]
         day = groups[1]
         return year+'-'+month+'-'+day
+
+
+def bh_time_sub(text):
+    p = r'(.*?)([0-9]{1,2})/([0-9]{1,2})/([0-9]{4}) ([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})(.*?)'
+    m = re.match(p,text)
+    groups = m.groups()
+    if len(groups) >=6:
+        month = groups[2]
+        year = groups[3]
+        day = groups[1]
+        hour = groups[4]
+        minute = groups[5]
+        second = groups[6]
+        return year+'-'+month+'-'+day+' '+hour+':'+minute+':'+second
+
 
 configure = {
    
@@ -284,7 +299,7 @@ configure = {
         'site_url':'http://www.moh.mn'
     },
 
-    # 韩国 通过
+    # 韩国 通过 asia
     "kr": {
         'allowed_domains': ['mohw.go.kr'],
         'site_url': 'http://www.mohw.go.kr',
@@ -302,7 +317,7 @@ configure = {
         ],
     },
 
-    # 日本 通过 切换到英文版网站
+    # 日本 通过 切换到英文版网站 asia
     'jp':{
         'allowed_domains':['mhlw.go.jp'],
         'site_url':'http://www.mhlw.go.jp',
@@ -329,10 +344,11 @@ configure = {
 
     # 朝鲜 没有网址
 
-    # 越南
+    # 越南 通过 需要翻墙 asia
     'vn':{
         'allowed_domains':['moh.gov.vn'],
         'site_url':'http://moh.gov.vn',
+        'language':'vi',
         'start_urls':[
             'http://moh.gov.vn',
             'http://moh.gov.vn/News/Pages/TinHoatDongV2.aspx',
@@ -353,7 +369,7 @@ configure = {
         ]
     },
 
-    # 老挝
+    # 老挝 通过 asia
     'la':{
         'allowed_domains':['moh.gov.la'],
         'site_url':'https://www.moh.gov.la',
@@ -366,6 +382,7 @@ configure = {
             r'(.*)/images/pdf/Reporting/(.*)',
             r'(.*)/index.php/lo-la/(.*)'
         ],
+        'language':'lo',
         'publish':[]
     },
 
@@ -375,7 +392,7 @@ configure = {
         'site_url':'http://moh.gov.kh'
     },
 
-    # 缅甸 news 和 publication 都是通过js加载
+    # 缅甸 news 和 publication 都是通过js加载 编码问题
     'mm':{
         'allowed_domains':['mohs.gov.mm'],
         'site_url':'http://mohs.gov.mm',
@@ -399,8 +416,8 @@ configure = {
                 ]
     },
     
-
-    # 泰国
+###### 从这里开始是用新的索引跑的
+    # 泰国 需要翻墙 asia 通过
     'th':{
         'allowed_domains':['moph.go.th'],
         'site_url':'https://www.moph.go.th',
@@ -424,7 +441,7 @@ configure = {
         ]
     },
 
-    # 菲律宾 press用js加载 翻墙
+    # 菲律宾 press用js加载 翻墙 通过 en
     'ph':{
         'allowed_domains':['doh.gov.ph'],
         'site_url':'http://www.doh.gov.ph',
@@ -447,7 +464,7 @@ configure = {
         ]
     },
 
-    # 马来西亚
+    # 马来西亚 通过 en
     'my':{
         'allowed_domains':['moh.gov.my'],
         'site_url':'http://www.moh.gov.my',
@@ -464,7 +481,7 @@ configure = {
         ]
     },
 
-    # 印度尼西亚 
+    # 印度尼西亚 通过 en
     'id':{
 
         'allowed_domains':['depkes.go.id'],
@@ -476,8 +493,9 @@ configure = {
         ],
         'language':'en-id',
         'publish':[
+            
             {
-                'rule':'//*[@id="vbMainLayer"]/div[7]/ul/li/text()[1]',
+                'rule':'//*[@id="vbMainLayer"]/div[7]/ul/li/span/text()',
                 'format':'%Y-%m-%d',
                 'extra':id_time_sub
             }
@@ -486,7 +504,7 @@ configure = {
     },
 
 
-    # 新加坡 item通过js添加
+    # 新加坡 item通过js添加 en 网页打不开 通过
     'sg':{
         'allowed_domains':['moh.gov.sg'],
         'site_url':'https://www.moh.gov.sg',
@@ -514,7 +532,7 @@ configure = {
         ]
     },
 
-    # 文莱 日期解析问题，格式复杂
+    # 文莱 en 有问题
     'bn':{
         'allowed_domains':['moh.gov.bn'],
         'site_url':'http://www.moh.gov.bn',
@@ -532,7 +550,7 @@ configure = {
         #         ]
     },
 
-    # 东帝汶
+    # 东帝汶 en
     'tl':{
         'allowed_domains':['moh.gov.tl'],
         'site_url':'http://www.moh.gov.tl',
@@ -560,7 +578,7 @@ configure = {
         'site_url':'http://moh.gov.np'
     },
     
-    # 不丹
+    # 不丹 en
     'bt':{
         'allowed_domains':['health.gov.bt'],
         'site_url':'http://www.health.gov.bt',
@@ -591,7 +609,7 @@ configure = {
                 ]
     },
 
-    # 印度
+    # 印度 en
     'in':{
         'allowed_domains':['mofpi.nic.in'],
         'site_url':'http://www.mofpi.nic.in',
@@ -604,40 +622,64 @@ configure = {
         'rules':[r'(.*)/sites/default/files/(.*)']
     },
 
-    # 巴基斯坦
+    # 巴基斯坦 en
     'pk':{
         'allowed_domains':['nhsrc.gov.pk'],
         'site_url':'http://www.nhsrc.gov.pk',
-        'start_urls':['http://www.nhsrc.gov.pk'],
-        'rules':[r'(.*)/news_details(.*)'],
-        'publish':[{'rule':"//div[@id='right-header-datetime']/text()",'format':"%Y-%m-%d"}]
+        'start_urls':[
+            'http://www.nhsrc.gov.pk',
+            'http://www.nhsrc.gov.pk/press_releases.html',
+
+        ],
+        'rules':[
+            r'(.*)/press_release(.*)'
+            r'(.*)/news_details(.*)'
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="right-header-datetime"]/text()',
+                'format':'%B %d, %Y'
+            }
+        ]
     },
 
-    # 孟加拉国
+    # 孟加拉国 en
     'bd':{
         'allowed_domains':['mohfw.gov.bd'],
         'site_url':'http://www.mohfw.gov.bd',
-        'start_urls':['http://www.mohfw.gov.bd/index.php?option=com_content&view=frontpage&Itemid=1&lang=en'],
-        'rules':[r'(.*)/index.php\?option=com_content&view=article&id=(.*)']
+        'start_urls':[
+            'http://www.mohfw.gov.bd/index.php?option=com_content&view=frontpage&Itemid=1&lang=en'
+        ],
+        'rules':[
+            r'(.*)/index.php\?option=com_content&view=article&id=(.*)',
+        ]
     },
 
-    # 斯里兰卡
+    # 斯里兰卡 en
     'lk':{
         'allowed_domains':['health.gov.lk'],
         'site_url':'http://www.health.gov.lk',
         'start_urls':[
             'http://www.health.gov.lk/moh_final/english/others.php?pid=110',
-            'http://www.health.gov.lk/moh_final/english/others.php?pid=127'
+            'http://www.health.gov.lk/moh_final/english/others.php?pid=127',
+            'http://www.health.gov.lk/moh_final/english/heath_alert.php',
+            'http://www.health.gov.lk/moh_final/english/gazzete_notification.php?spid=53',
+            'http://www.health.gov.lk/moh_final/english/general_notice.php?spid=33'
         ],
-        'rules':[r'(.*)/moh_final/english/public/elfinder/files/publications/AHB/(.*)']
+        'rules':[
+            r'(.*)/moh_final/english/public/elfinder/files/publications/AHB/(.*)',
+            r'(.*)/moh_final/english/others\.php\?pid=(.*)'
+        ]
     },
 
-    # 马尔代夫
+    # 马尔代夫 en
     'mv':{
         'allowed_domains':['health.gov.mv'],
         'site_url':'http://www.health.gov.mv',
         'start_urls':['http://www.health.gov.mv/News'],
-        'rules':[r'(.*)/News/(.*)'],
+        'rules':[
+            r'(.*)/News/(.*)'
+        ],
         'publish':[
             {
                 'rule':'//*[@id="content"]//time[contains(@itemprop,"datePublished")]/@datetime',
@@ -647,11 +689,12 @@ configure = {
     },
 
 
-    # 伊朗
+    # 伊朗 ar
     'ir':{
         'allowed_domains':['behdasht.gov.ir'],
         'site_url':'http://www.behdasht.gov.ir',
-        'start_urls':['http://www.behdasht.gov.ir/index.jsp?siteid=1&fkeyid=&siteid=1&pageid=1508'],
+        'start_urls':[
+            'http://www.behdasht.gov.ir/index.jsp?siteid=1&fkeyid=&siteid=1&pageid=1508'],
         'language':'ar',
         'rules':[
             r'(.*)/news/(.*)',
@@ -665,30 +708,69 @@ configure = {
     'af':{
         'allowed_domains':['moph.gov.af'],
         'site_url':'http://www.moph.gov.af/fa',
-        'start_urls':['http://moph.gov.af/fa/news'],
-        'rules':[r'(.*)/fa/news/(.*)'],
-        'publish':[{'rule':"//div[@class='postDate']/text()",'format':'%b %d, %Y'}]
+        'start_urls':[
+            'http://moph.gov.af/fa/news',
+            'http://moph.gov.af/fa/page/access-to-information/104408',
+            'http://moph.gov.af/fa/page/access-to-information/monthly-report',
+            'http://moph.gov.af/fa/page/585',
+
+
+
+        ],
+        'rules':[
+            r'(.*)/fa/news/(.*)',
+            r'(.*)/fa/Documents\?DID=(.*)'
+        ],
+        'language':'ar',
+        'publish':[{'rule':"//div[contains(@class,'postDate')]/text()",'format':'%b %d, %Y'}]
     },
 
-    # 沙特阿拉伯 js加载
+    # 沙特阿拉伯 js加载 en/ar
     'sa':{
         'allowed_domains':['moh.gov.sa'],
         'site_url':'http://www.moh.gov.sa',
-        'start_urls':['https://www.moh.gov.sa/Ministry/MediaCenter/News/Pages/default.aspx'],
-        'rules':[r'(.*)/Ministry/MediaCenter/News/Pages/(.*)'],
-        'publish':[{'rule':"//span[@id='ctl00_PlaceHolderMain_ctl04_lblDate']/text()",'format':'%y'}]
+        'start_urls':[
+            'https://www.moh.gov.sa/en/Ministry/MediaCenter/News/Pages/default.aspx',
+            'https://www.moh.gov.sa/en/Ministry/MediaCenter/Ads/Pages/default.aspx',
+            'https://www.moh.gov.sa/en/Ministry/MediaCenter/Publications/Pages/default.aspx',
+
+
+        ],
+        'rules':[
+            r'(.*)/en/Ministry/MediaCenter/News/Pages/(.*)',
+            r'(.*)/en/Ministry/MediaCenter/Publications/Pages/(.*)',
+            r'(.*)/en/Ministry/MediaCenter/Ads/Pages(.*)',
+        ],
+        'language':'ar',
+        'publish':[
+            {
+                'rule':'//*[@id="ctl00_PlaceHolderMain_ctl05_lblDate"]/text()',
+                'format':'%d %B %Y'
+            }
+        ]
     },
-##### 2017-12-18 11:57
-    # 也门
+    # 也门 en
     'ye':{
         'allowed_domains':['mophp-ye.org'],
         'site_url':'http://www.mophp-ye.org',
-        'start_urls':['http://www.mophp-ye.org/english/news.html','http://www.mophp-ye.org/arabic/reports_statistical.html'],
-        'rules':[r'(.*)/english/news\.html(.*)'],
-        'publish':[{'rule':"//div[@id='content']/h4/text()",'format':'%B, %Y'}]
+        'start_urls':[
+            'http://www.mophp-ye.org/english/news.html',
+            'http://www.mophp-ye.org/arabic/reports_statistical.html',
+            'http://www.mophp-ye.org/english/magazine.html',
+            'http://www.mophp-ye.org/english/data.html',
+        ],
+        'rules':[
+            r'(.*)/english/news\.html(.*)'
+        ],
+        'publish':[
+            {
+                'rule':"//div[@id='content']/h4/text()",
+                'format':'%B, %Y'
+            }
+        ]
     },
 
-    # 阿曼
+    # 阿曼 en
     'om':{
         'allowed_domains':['moh.gov.om'],
         'site_url':'http://www.moh.gov.om',
@@ -707,7 +789,7 @@ configure = {
         ]
     },
 
-    # 阿联酋  时间解析问题
+    # 阿联酋  时间解析问题 ar
     'ae':{
         'allowed_domains':['mohap.gov.ae'],
         'site_url':'http://www.mohap.gov.ae',
@@ -725,8 +807,9 @@ configure = {
                     r'(.*)/en/MediaCenter/Pages/news\.aspx(.*)',
                     r'(.*)/en/OpenData/Pages/default\.aspx(.*)',
                     r'(.*)/en/OpenData/Pages/health-statistics\.aspx(.*)',
-                    r'(.*)/en/MediaCenter/Pages/EventDetail.aspx(.*)',
+                    r'(.*)/en/MediaCenter/Pages/EventDetail\.aspx(.*)',
                 ],
+        'language':'ar',
         'publish':[
                     {"rule":"//div[@class='newsdetailstitle']/p[@class='metadate']/span[2]/text()","format":"%d %b %Y"},
                     {"rule":"//div[@class='contentblock']/p[@class='metadata']/span[1]/text()","format":"%d %A, %B, %Y","extra":ae_time_sub},
@@ -736,7 +819,7 @@ configure = {
     },
 
 
-    # 卡塔尔
+    # 卡塔尔 en
     'qa':{
         'allowed_domains':['moph.gov.qa'],
         'site_url':'https://www.moph.gov.qa',
@@ -761,16 +844,33 @@ configure = {
 
     },
 
-    # 巴林
+    # 巴林 ar
     'bh':{
         'allowed_domains':['moh.gov.bh'],
         'site_url':'https://www.moh.gov.bh',
-        'start_urls':['https://www.moh.gov.bh/News'],
-        'rules':[r'(.*)/News/Details/(.*)'],
+        'start_urls':[
+            'https://www.moh.gov.bh/News',
+            'https://www.moh.gov.bh/HealthInfo/Publications',
+            'https://www.moh.gov.bh/HealthInfo/RecallsAndSafetyAlerts',
+            'https://www.moh.gov.bh/HealthInfo/DiseasesAndConditions',
+            'https://www.moh.gov.bh/HealthInfo/RecallsAndSafetyAlerts',
+            'https://www.moh.gov.bh/Blog',
+
+
+        ],
+        'rules':[
+            r'(.*)/News/Details/(.*)',
+            r'(.*)/Blog/Article/Details/(.*)',
+            r'(.*)HealthInfo/Publication(.*)',
+            r'(.*)/HealthInfo/(SwineFlu|Alzheimer|SickleCell|HeartAttack)(.*)'
+        ],
+        'language':'ar',
         'publish':[
             {
-                'rule':"//div[@id='renderbody']/div[@class='pull-right']/text()",
-                'format':'%d/%m/%Y %H:%M:%S'
+                'rule':'//*[@id="renderbody"]/div[2]/text()',
+                'format':'%Y-%m-%d %H:%M:%S',
+                'extra':bh_time_sub
+
             }
         ]
     },
@@ -781,12 +881,16 @@ configure = {
         'site_url':'http://www.moh.gov.kw'
     },
 
-    # 土耳其
+    # 土耳其 
     'tr':{
         'allowed_domains':['saglik.gov.tr'],
         'site_url':'http://www.saglik.gov.tr',
-        'start_urls':['http://www.saglik.gov.tr/EN,15463/news.html'],
+        'start_urls':[
+            'http://www.saglik.gov.tr/EN,15463/news.html',
+            'http://www.saglik.gov.tr/EN,15462/documents.html',
+        ],
         'rules':[r'(.*)/EN,15(.*)'],
+        'language':'tr',
         'publish':[{'rule':"//section[@class='date']/text()",'format':'UPDATED : %d/%m/%Y'}],
         'excludes':[
                     r'(.*)/minister\.html',
@@ -809,11 +913,22 @@ configure = {
                 ]
     },
 
-    # 叙利亚
+    # 叙利亚 en/ar
     'sy':{
         'allowed_domains':['moh.gov.sy'],
         'site_url':'http://www.moh.gov.sy',
-        'start_urls':['http://www.moh.gov.sy/Default.aspx?tabid=259&language=en-US'],
+        'start_urls':[
+            'http://www.moh.gov.sy/Default.aspx?tabid=259&language=en-US',
+            'http://www.moh.gov.sy/Default.aspx?tabid=248&language=en-US',
+            'http://www.moh.gov.sy/Default.aspx?tabid=249&language=en-US',
+            'http://www.moh.gov.sy/Default.aspx?tabid=250&language=en-US',
+            'http://www.moh.gov.sy/Default.aspx?tabid=251&language=en-US',
+            'http://www.moh.gov.sy/Default.aspx?tabid=252&language=en-US',
+            'http://www.moh.gov.sy/Default.aspx?tabid=253&language=en-US',
+            'http://www.moh.gov.sy/Default.aspx?tabid=254&language=en-US',
+            'http://www.moh.gov.sy/Default.aspx?tabid=350&language=ar-YE',
+
+        ],
         'rules':[
                     r'(.*)/Default\.aspx\?tabid=259&language=en-US',
                     r'(.*)/Default\.aspx\?tabid=260&language=en-US',
@@ -824,14 +939,15 @@ configure = {
     },
 
 
-    # 伊拉克
+    # 伊拉克 ar
     'iq':{
         'allowed_domains':['moh.gov.iq'],
         'site_url':'https://www.moh.gov.iq',
         'start_urls':['https://moh.gov.iq'],
         'rules':[r'(.*)/index\.php\?name=News(.*)'],
-        'language':'ar_IQ',
-        'publish':[{'rule':"//table[@class='shadow_table']/tbody/center/table[@dir='rtl']/span[@dir='rtl']/p[2]/text()",
+        'language':'ar',
+        'publish':[
+            {'rule':"//table[@class='shadow_table']/tbody/center/table[@dir='rtl']/span[@dir='rtl']/p[2]/text()",
                     "format":'%Y-%m-%d %H:%M:%S',"extra":iq_time_sub}]
 
     },
@@ -844,7 +960,7 @@ configure = {
         'rules':[r'(.*)']
     },
 
-    # 巴勒斯坦 404
+    # 巴勒斯坦 en
     'ps':{
         'allowed_domains':['pna.org'],
         'site_url':'http://www.pna.org/moh',
@@ -853,16 +969,24 @@ configure = {
     },
 
 
-    # 以色列
+    # 以色列 en
     "il": {
         'allowed_domains': ['health.gov.il'],
         'site_url': 'http://www.health.gov.il',
-        'start_urls': ['https://www.health.gov.il/English/News_and_Events/Spokespersons_Messages/Pages/default.aspx'],
-        'rules': [
-                    r'(.*)English/News_and_Events/Spokespersons_Messages/Pages/default\.aspx(.*)', 
-                    r'(.*)English/News_and_Events/Spokespersons_Messages/Pages/(.*)'
+        'start_urls': [
+            'https://www.health.gov.il/English/News_and_Events/Spokespersons_Messages/Pages/default.aspx'
+        ],
+        'rules':[
+                    r'(.*)English/News_and_Events/(.*)', 
+                    r'(.*)English/News_and_Events/(.*)'
                 ],
-        'publish':[{"rule":"//table[@class='ContentLayoutNoLeftSideMainTable']/td[@class='ContentLayoutNoLeftLeftSid']/div[@class='HealthMMdDivLayout']/div[@class='HealthPRDate']/text()","format":"%d/%m/%Y %H:%M"}]
+        'publish':[
+        
+            {
+                "rule":'//*[@id="ctl00_PlaceHolderMain_PRDate"]/div/text()',
+                "format":"%d/%m/%Y %H:%M"
+            }
+        ]
     },
 
     # 黎巴嫩
@@ -2363,7 +2487,7 @@ configure = {
         'start_urls':[],
         'rules':[]    
     },
-    ## 巴拉圭 (样式有问题,内容过多需要精细化处理)
+    ## 巴拉圭 (样式有问题,内容过多需要精细化处理) es digges多
     'py':{
         'allowed_domains':['mspbs.gov.py'],
         'site_url':'https://www.mspbs.gov.py',
@@ -2375,13 +2499,14 @@ configure = {
             'http://www.mspbs.gov.py/rrhh','https://www.mspbs.gov.py/dnvs','https://www.mspbs.gov.py/planificacion',
             'http://www.mspbs.gov.py/dggies','https://www.mspbs.gov.py/dgrrii','https://www.mspbs.gov.py/drcps',
         ],
+        'language':'es',
         'rules':[
             r'(.*)/portal/(.*)',r'(.*)/digies(.*)',r'(.*)/dgtic(.*)',r'(.*)/dnerhs(.*)',r'(.*)/rrhh(.*)',
             r'(.*)/dnvs(.*)',r'(.*)/planificacion(.*)',r'(.*)/dggies(.*)',r'(.*)/dgrrii(.*)',r'(.*)/drcps(.*)',  
         ],
     },
 
-    # 巴西 (部分样式乱,内容过多需要精细化处理)
+    # 巴西 (部分样式乱,内容过多需要精细化处理) es 博客多
     'br':{
         'allowed_domains':['saude.gov.br'],
         'site_url':'http://portalms.saude.gov.br',
@@ -2391,6 +2516,7 @@ configure = {
             'http://www.blog.saude.gov.br',
             'http://www.blog.saude.gov.br/promocao-da-saude'
         ],
+        'language':'es',
         'rules':[
             r'(.*)/noticias(.*)',
             r'(.*)index\.php/servicos(.*)',
@@ -2421,7 +2547,7 @@ configure = {
         
     },
 
-    # 智利 scrapy all thing 通过
+    # 智利 scrapy all thing 通过 首页文件多 es
     'cl':{
         'allowed_domains':['deis.cl'],
         'site_url':'http://www.deis.cl',
@@ -2440,10 +2566,11 @@ configure = {
         'rules':[
             r'(.*)'
         ],
+        'language':'es',
         'exludes':[]   
     },
 
-    # 阿根廷 新旧页面一起出现 需要翻墙
+    # 阿根廷 新旧页面一起出现 需要翻墙 es 通过
     'ar':{
         'allowed_domains':['argentina.gob.ar','msal.gob.ar'],
         'site_url':'http://www.msal.gob.ar',
@@ -2466,6 +2593,7 @@ configure = {
             r'(.*)/salud/direccionesprogramasplanes(.*)',
             r'(.*)/salud(.*)', 
         ],
+        'language':'es',
         'publish':[
             {
                 'rule':'//*[@id="page"]/p[1]/span/text()',
@@ -2480,7 +2608,7 @@ configure = {
         ]
     },
 
-    # 乌拉圭 通过
+    # 乌拉圭 通过 es
     'uy':{
         'allowed_domains':['msp.gub.uy'],
         'site_url':'http://www.msp.gub.uy',
@@ -2514,7 +2642,7 @@ configure = {
     # 大洋洲
     ###############################################
 
-    # 新西兰 通过
+    # 新西兰 通过 过大 en
     'nz':{
         'allowed_domains':['health.govt.nz'],
         'site_url':'http://www.health.govt.nz',
@@ -2524,6 +2652,12 @@ configure = {
             r'(.*?)/publications(/{0,1})\?page=([0-9]{1,2})',
 
             r'(.*)/publication/(.*)',
+            r'(.*)/publication\?page=(.*)'
+        ],
+        'excludes':[
+            r'(.*)/publication(.*)#find-by-region(.*)',
+            
+
         ],
         'publish':[
             {
@@ -2536,7 +2670,7 @@ configure = {
             # },
         ]
     },
-    # 斐济群岛 通过
+    # 斐济群岛 通过 en
     'fj':{
         'allowed_domains':['health.gov.fj'],
         'site_url':['http://www.health.gov.fj'],
@@ -2544,12 +2678,12 @@ configure = {
         'rules':[]
     },
 
-    # 澳大利亚 需要过滤的文件过多
+    # 澳大利亚 需要过滤的文件过多 en
     'au':{
         'allowed_domains':['health.gov.au'],
         'site_url':'http://www.health.gov.au',
         'start_urls':[
-            'http://www.health.gscov.au'
+            'http://www.health.gov.au'
         ],
         'rules':[
             r'(.*)/internet/main/publishing\.nsf/Content/(.*)',
@@ -2612,7 +2746,7 @@ configure = {
         
     },
 
-    # 巴布亚新几内亚 通过
+    # 巴布亚新几内亚 通过 en
     'pg':{
         'allowed_domains':['health.gov.pg'],
         'site_url':'http://www.health.gov.pg',
@@ -2660,7 +2794,7 @@ configure = {
 
     },
 
-    # 基里巴斯 通过
+    # 基里巴斯 通过 en
     'ki':{
         'allowed_domains':['health.gov.ki'],
         'site_url':'http://health.gov.ki',
@@ -2684,7 +2818,7 @@ configure = {
 
     },
 
-    # 汤加 通过
+    # 汤加 通过 en
     'to':{
         'allowed_domains':['health.gov.to'],
         'site_url':'http://health.gov.to',
@@ -2692,7 +2826,7 @@ configure = {
         'rules':[r'(.*)/drupal/sites/default/file(.*)'],
     },
 
-    # 萨摩亚 通过
+    # 萨摩亚 通过 en
     'ws':{
         'allowed_domains':['health.gov.ws'],
         'site_url':'http://www.health.gov.ws',
@@ -2725,7 +2859,7 @@ class MohSpider(scrapy.Spider):
 
     name = 'moh'
 
-    def __init__(self, domain=None, debug=None, debug_url=None,html_update = 0,attachment_update = 30,asset_update = 10,*args, **kwargs):
+    def __init__(self, domain=None, debug=None, debug_url=None,html_update=5,attachment_update = 300,asset_update =100,*args, **kwargs):
 
        super(MohSpider, self).__init__()
        params = configure[domain]
@@ -2823,18 +2957,19 @@ class MohSpider(scrapy.Spider):
                 return True
         return False
 
-    def start_requests(self):
-        for url in self.start_urls:
-            if self.nation in ['rw']:
-                yield scrapy.Request(url,callback=self.parse,errback=self.errback_httpbin,cookies={'_accessKey2':'CD2we/sGT5LdZuwhvlgz3y4zkhvdvTTh'})
-            else:
-                yield scrapy.Request(url,callback=self.parse,errback=self.errback_httpbin)
+    # def start_requests(self):
+    #     for url in self.start_urls:
+    #         if self.nation in ['rw']:
+    #             yield scrapy.Request(url,callback=self.parse,errback=self.errback_httpbin,cookies={'_accessKey2':'CD2we/sGT5LdZuwhvlgz3y4zkhvdvTTh'})
+    #         else:
+    #             yield scrapy.Request(url,callback=self.parse,errback=self.errback_httpbin)
 
 
     def should_crawl(self,record):
         if not record:
             return True
-        if record.get('error'):
+        error = record.get('error') or 'False'
+        if record.get('error') == 'True':
             return True
 
         if record.get('type') == 'attachment':
@@ -2868,15 +3003,18 @@ class MohSpider(scrapy.Spider):
         last_update_date = datetime.datetime.strptime(last_update,'%Y-%m-%d').date()
         now = datetime.date.today()
 
-        if last_update_date + delta > now:
+        if now - last_update_date < delta:
             return False
         else:
             return True
     def should_update(self,record):
         if not record:
             return True
-        if record.get('error'):
+        # print 'record is not null'
+        error = record.get('error') or 'False'
+        if record.get('error') == 'True':
             return True
+        # print "not error"
 
 
         if record.get('type') == 'attachment':
@@ -2893,6 +3031,7 @@ class MohSpider(scrapy.Spider):
                 return False
         elif record.get('type') == 'asset':
             delta = timedelta(days = self.asset_update)
+            # print "type is asset"
 
         else:
             return False
@@ -2903,13 +3042,16 @@ class MohSpider(scrapy.Spider):
         last_update = record.get('last_update')
         if not last_update:
             return True
+        # print "last_update is not null"
         last_update_date = datetime.datetime.strptime(last_update,'%Y-%m-%d').date()
         now = datetime.date.today()
+        # print last_update_date,now,delta,last_update_date + delta
 
-        if last_update_date + delta > now:
+        if now - last_update_date < delta:
             return False
         else:
             return True
+        
 
         
     def get_record(self,url):
@@ -3013,7 +3155,8 @@ class MohSpider(scrapy.Spider):
                 base = None
            
             stylesheets = response.xpath(
-                '//link[@type="text/css"]/@href').extract()
+                '//link[(@type="text/css") or (rel="stylesheet")]/@href').extract()
+            
             
             for stylesheet in stylesheets:
                 http_url = self.gen_http_url(response.url, stylesheet,base)
@@ -3126,7 +3269,7 @@ class MohSpider(scrapy.Spider):
 
         record = self.get_record(response.url)
         should_update = self.should_update(record)
-        
+
         if not self.debug and should_update:
             yield resource
         print '*'*40
@@ -3267,12 +3410,11 @@ class MohSpider(scrapy.Spider):
         
 
 if __name__ == '__main__':
-    spider = MohSpider(domain='us',debug=True)
-    # record = spider.get_record('http://download.mohw.go.kr/react/modules/download.jsp?BOARD_ID=1365&CONT_SEQ=289977&FILE_SEQ=138058&FILE_NAME=[ENG][8.19]Preparation%20for%20a%20healthy%202nd%20semester!%20Get%20vaccination%20shots,%20and%20follow%20sanitation%20recommendations.docx')
-    # print spider.should_update(record)
+    spider = MohSpider(domain='vn')
+    record = spider.get_record('http://emoh.moh.gov.vn/publish/resources/base/css/app.css')
+    print record
+    print spider.should_update(record)
     
-    spider.save_record('http://download.mohw.go.kr/react/modules/download.jsp',{'aa':1})
-
-    spider.save_record('http://download.mohw.go.kr/react/modules/download.jsp',{'bb':1})
+    
         
             

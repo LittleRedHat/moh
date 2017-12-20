@@ -48,7 +48,9 @@ COOKIES_DEBUG = True
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 SPIDER_MIDDLEWARES = {
-   'scrapy.downloadermiddlewares.cookies.CookiesMiddleware': 543,
+#    'scrapy.downloadermiddlewares.cookies.CookiesMiddleware': 543,
+    #  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware':100,
+    #  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware':200,
 }
 
 # Enable or disable downloader middlewares

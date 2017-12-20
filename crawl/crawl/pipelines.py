@@ -24,13 +24,39 @@ import datetime
 from crawl.items import ResourceItem
 from crawl.spiders.moh_spider import configure
 
+def language2index(language):
+    if not language:
+        return 'moh-en'
+    brief = language.split('-')
+    if len(brief):
+        brief = brief[0].lower()
+    else:
+        brief = 'en'
+
+    index_map = {
+        'moh-en':['en','nl','pt','it','no','sv','fi','da','el','pl','is'],
+        'moh-es':['es','sh','sk','sl','uk'],
+        'moh-fr':['fr'],
+        'moh-asia':['zh','ko','tr','ja','sq','th','vi','lo','he'],
+        'moh-ru':['ru','ro','sr'],
+        'moh-de':['de'],
+        'moh-ar':['ar']
+    }
+
+    for index,value in index_map.items():
+        if brief in value:
+            return index
+    return 'moh-en'
+
+
+
+
 class ElasticsearchPipeline(object):
     def __init__(self):
         self.es = Elasticsearch(hosts=settings['ES_HOSTS'])
     def process_item(self,item,spider):
         if not item or isinstance(item,DropItem):
             return
-
         if item.get('rtype') == 'html':
             try:
                 doc = dict(item)
@@ -39,16 +65,19 @@ class ElasticsearchPipeline(object):
                 del doc['rtype']
                 # doc['content']=base64.b64encode(doc['content'])
                 # doc['content']="this is a test"
-                self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,timeout='60s')
+                index = language2index(item.get('language'))
+                self.es.index(index=index,doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,timeout='60s')
                 last_update = datetime.date.today()
                 url = item['url']
                 record = {'error':False,'last_update':last_update.strftime('%Y-%m-%d'),'url':url,'type':'html','content_type':item['content_type']}
                 spider.save_record(url,record)
+
             except:
+                traceback.print_exc()
                 last_update = datetime.date.today()
                 record = {'last_error':last_update.strftime('%Y-%m-%d'),'url':item['url'],'content_type':item['content_type'],'type':'html','error':True}
                 spider.save_record(item['url'],record)
-                traceback.print_exc()
+                
 
 
         elif item.get('rtype') == 'attachment':
@@ -60,16 +89,17 @@ class ElasticsearchPipeline(object):
                 del doc['content']
                 # doc['data']=doc['content']
                 # doc['content']="this is a test"
-                self.es.index(index='crawler',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,pipeline='attachment',timeout='60s')
+                self.es.index(index='moh-attachment',doc_type='articles',id=hashlib.md5(doc['url']).hexdigest(),body=doc,pipeline='attachment',timeout='60s')
                 last_update = datetime.date.today()
                 url = item['url']
                 record = {'error':False,'last_update':last_update.strftime('%Y-%m-%d'),'url':url,'type':'attachment','content_type':item['content_type']}
                 spider.save_record(url,record)
             except:
+                traceback.print_exc()
                 last_update = datetime.date.today()
                 record = {'error':True,'last_error':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'attachment','content_type':item['content_type']}
                 spider.save_record(item['url'],record)
-                traceback.print_exc()
+                
         return item
 
 def h2t(html):
@@ -106,10 +136,11 @@ class FilePipeline(object):
                 spider.save_record(url,record)
                 return
             except:
+                traceback.print_exc()
                 last_update = datetime.date.today()
                 record = {'error':True,'last_error':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'asset'}
                 spider.save_record(item['url'],record)
-                traceback.print_exc()
+                
                 return
         next_item = ResourceItem()
         url = item['url']
@@ -218,11 +249,11 @@ class FilePipeline(object):
                 next_item['content'] = str(soup)
             
             except Exception,e:
-
+                traceback.print_exc()
                 last_update = datetime.date.today()
                 record = {'error':True,'last_error':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'html','content_type':item['content_type']}
                 spider.save_record(item['url'],record)
-                traceback.print_exc()
+                
                 return
                 #self.output_content(url,item['content'],modified_name)
 
@@ -245,10 +276,11 @@ class FilePipeline(object):
                 self.output_content(url,content,modified_name)
                 return next_item
             except:
+                traceback.print_exc()
                 last_update = datetime.date.today()
                 record = {'error':True,'last_error':last_update.strftime('%Y-%m-%d'),'url':item['url'],'type':'attachment','content_type':item['content_type']}
                 spider.save_record(item['url'],record)
-                traceback.print_exc()
+                
                 return
        
     def isAbsolutePath(self,url):
