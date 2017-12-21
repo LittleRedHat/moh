@@ -71,7 +71,6 @@ class ElasticsearchPipeline(object):
                 url = item['url']
                 record = {'error':False,'last_update':last_update.strftime('%Y-%m-%d'),'url':url,'type':'html','content_type':item['content_type']}
                 spider.save_record(url,record)
-
             except:
                 traceback.print_exc()
                 last_update = datetime.date.today()
@@ -245,8 +244,11 @@ class FilePipeline(object):
                         your_output_path = os.path.join(dir,path_name)
                         relpath = os.path.relpath(your_output_path,mine_dir)
                         item['src']=relpath
-                self.output_content(url,str(soup),modified_name)
-                next_item['content'] = str(soup)
+
+                # print type(str(soup))
+                encoding = item.get('encoding') or 'utf-8'
+                self.output_content(url,unicode(soup).encode(encoding,'ignore'),modified_name)
+                next_item['content'] = unicode(soup)
             
             except Exception,e:
                 traceback.print_exc()
@@ -316,6 +318,7 @@ class FilePipeline(object):
             if modified_name:
                 output_name = modified_name
             with open(os.path.join(output_dir_from_url,output_name),'wb') as fp:
+
                 fp.write(content)
     
     def map_url_to_dirs(self,url):
@@ -330,7 +333,10 @@ class FilePipeline(object):
         output_name = file
         if parse_result.query:
             output_name = output_name + '_' + hashlib.md5(parse_result.query).hexdigest()
-        output_name = output_name[:settings['MAX_FILE_NAME']]
+        
+        output_name = output_name[:(settings['MAX_FILE_NAME'] - len(output_dir_from_url))]
+
+
         return output_dir_from_url,output_name
 
     def mkdirs_from_url(self,url):

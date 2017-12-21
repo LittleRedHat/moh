@@ -550,7 +550,7 @@ configure = {
         #         ]
     },
 
-    # 东帝汶 en
+    # 东帝汶 en 通过
     'tl':{
         'allowed_domains':['moh.gov.tl'],
         'site_url':'http://www.moh.gov.tl',
@@ -578,7 +578,7 @@ configure = {
         'site_url':'http://moh.gov.np'
     },
     
-    # 不丹 en
+    # 不丹 en 通过 文件过多
     'bt':{
         'allowed_domains':['health.gov.bt'],
         'site_url':'http://www.health.gov.bt',
@@ -609,7 +609,7 @@ configure = {
                 ]
     },
 
-    # 印度 en
+    # 印度 en 通过 样式有点问题
     'in':{
         'allowed_domains':['mofpi.nic.in'],
         'site_url':'http://www.mofpi.nic.in',
@@ -622,7 +622,7 @@ configure = {
         'rules':[r'(.*)/sites/default/files/(.*)']
     },
 
-    # 巴基斯坦 en
+    # 巴基斯坦 en 通过
     'pk':{
         'allowed_domains':['nhsrc.gov.pk'],
         'site_url':'http://www.nhsrc.gov.pk',
@@ -643,7 +643,7 @@ configure = {
         ]
     },
 
-    # 孟加拉国 en
+    # 孟加拉国 en 通过
     'bd':{
         'allowed_domains':['mohfw.gov.bd'],
         'site_url':'http://www.mohfw.gov.bd',
@@ -655,7 +655,7 @@ configure = {
         ]
     },
 
-    # 斯里兰卡 en
+    # 斯里兰卡 en 通过
     'lk':{
         'allowed_domains':['health.gov.lk'],
         'site_url':'http://www.health.gov.lk',
@@ -672,7 +672,7 @@ configure = {
         ]
     },
 
-    # 马尔代夫 en
+    # 马尔代夫 en 通过
     'mv':{
         'allowed_domains':['health.gov.mv'],
         'site_url':'http://www.health.gov.mv',
@@ -689,7 +689,7 @@ configure = {
     },
 
 
-    # 伊朗 ar
+    # 伊朗 ar 新闻太多 编码问题 通过
     'ir':{
         'allowed_domains':['behdasht.gov.ir'],
         'site_url':'http://www.behdasht.gov.ir',
@@ -704,7 +704,7 @@ configure = {
     },
 
 
-    # 阿富汗
+    # 阿富汗 ar
     'af':{
         'allowed_domains':['moph.gov.af'],
         'site_url':'http://www.moph.gov.af/fa',
@@ -749,7 +749,7 @@ configure = {
             }
         ]
     },
-    # 也门 en
+    # 也门 en 通过
     'ye':{
         'allowed_domains':['mophp-ye.org'],
         'site_url':'http://www.mophp-ye.org',
@@ -770,7 +770,7 @@ configure = {
         ]
     },
 
-    # 阿曼 en
+    # 阿曼 en 通过
     'om':{
         'allowed_domains':['moh.gov.om'],
         'site_url':'http://www.moh.gov.om',
@@ -819,7 +819,7 @@ configure = {
     },
 
 
-    # 卡塔尔 en
+    # 卡塔尔 en 通过 news多
     'qa':{
         'allowed_domains':['moph.gov.qa'],
         'site_url':'https://www.moph.gov.qa',
@@ -881,7 +881,7 @@ configure = {
         'site_url':'http://www.moh.gov.kw'
     },
 
-    # 土耳其 
+    # 土耳其 asia
     'tr':{
         'allowed_domains':['saglik.gov.tr'],
         'site_url':'http://www.saglik.gov.tr',
@@ -962,7 +962,7 @@ configure = {
 
     # 巴勒斯坦 en
     'ps':{
-        'allowed_domains':['pna.org'],
+        'allowed_domains':['pna.org','mohiraq.org'],
         'site_url':'http://www.pna.org/moh',
         'start_urls':['http://www.mohiraq.org/news.htm'],
         'rules':[r'(.*)/news/news(.*)']
@@ -1704,7 +1704,8 @@ configure = {
         ]
 
     },
-    ## 利比里亚
+
+    ## 利比里亚 通过
     'lr':{
         'allowed_domains':['moh.gov.lr'],
         'site_url':'http://moh.gov.lr',
@@ -1727,7 +1728,9 @@ configure = {
             r'(.*)/audios(.*)'
         ]
     },
-    ## 加纳
+
+    
+    ## 加纳 通过
     'gh':{
         'allowed_domains':['moh.gov.gh'],
         'site_url':'http://www.moh.gov.gh',
@@ -1750,7 +1753,7 @@ configure = {
     'ng':{
 
     },
-    ## 喀麦隆
+    ## 喀麦隆 通过
     'cm':{
         'allowed_domains':['minsante.cm'],
         'site_url':'http://www.minsante.cm',
@@ -1780,7 +1783,7 @@ configure = {
     'et':{
 
     },
-    ## 索马里
+    ## 索马里 通过
     'so':{
         'allowed_domains':['moh.gov.so'],
         'site_url':'http://moh.gov.so',
@@ -1806,7 +1809,7 @@ configure = {
 
 
     },
-    ## 坦桑尼亚
+    ## 坦桑尼亚 痛过
     'tz':{
         'allowed_domains':['moh.go.tz'],
         'site_url':'http://www.moh.go.tz',
@@ -1839,7 +1842,7 @@ configure = {
         
 
     },
-    ## 肯尼亚
+    ## 肯尼亚 通过
     'ke':{
         'allowed_domains':['health.go.ke'],
         'site_url':'http://www.health.go.ke',
@@ -1862,7 +1865,7 @@ configure = {
             }
         ]
     },
-    ## 乌干达
+    ## 乌干达 通过
     'ug':{
         'allowed_domains':['health.go.ug'],
         'site_url':'http://health.go.ug',
@@ -1899,7 +1902,7 @@ configure = {
     'zm':{
 
     },
-    ## 马拉维
+    ## 马拉维 en 通过 有些需要登录
     'mw':{
         'allowed_domains':['health.gov.mw'],
         'site_url':'http://www.hiv.health.gov.mw',
@@ -1931,7 +1934,7 @@ configure = {
             r'(.*)'
         ],
     },
-    ## 毛里求斯
+    ## 毛里求斯 通过 en
     'mu':{
         'allowed_domains':['health.govmu.org'],
         'site_url':'http://health.govmu.org',
@@ -1953,7 +1956,7 @@ configure = {
             }
         ]
     },
-    ## 塞舌尔
+    ## 塞舌尔 en 通过 样式乱
     'sc':{
         'allowed_domains':['health.gov.sc'],
         'site_url':'http://www.health.gov.sc',
@@ -1988,7 +1991,7 @@ configure = {
         ]
 
     },
-    ## 纳米比亚
+    ## 纳米比亚 通过 en
     'na':{
         'allowed_domains':['mhss.gov.na'],
         'site_url':'http://www.mhss.gov.na',
@@ -2011,7 +2014,7 @@ configure = {
         ]
 
     },
-    ## 伯兹瓦纳 
+    ## 伯兹瓦纳 通过 en
     'bw':{
         'allowed_domains':['gov.bw'],
         'site_url':'http://www.gov.bw',
@@ -2028,7 +2031,7 @@ configure = {
     'sz':{
 
     },
-    ## 莱索托
+    ## 莱索托 通过
     'ls':{
         'allowed_domains':['health.gov.ls'],
         'site_url':'http://www.health.gov.ls',
@@ -2055,7 +2058,7 @@ configure = {
     # 北美洲
     ###############################################
 
-    ## 美国 通过
+    ## 美国 通过 en
     'us':{
         'allowed_domains':['hhs.gov'],
         'site_url':'https://www.hhs.gov',
@@ -2083,7 +2086,7 @@ configure = {
             }
         ]
     },
-    ## 加拿大 数量大
+    ## 加拿大 数量大 通过
     'ca':{
         'allowed_domains':['canada.ca','healthycanadians.gc.ca'],
         'site_url':'',
@@ -2156,7 +2159,7 @@ configure = {
         'rules':[],
 
     },
-    ## 危地马拉 通过(没有下全)
+    ## 危地马拉 (没有下全)
     'gt':{
         'allowed_domains':['gob.gt'],
         'site_url':'http://www.mspas.gob.gt',
@@ -2189,7 +2192,7 @@ configure = {
         'start_urls':[''],
         'rules':[],
     },
-    ## 牙买加 通过
+    ## 牙买加 通过 en
     'jm':{
         'allowed_domains':['moh.gov.jm'],
         'site_url':'http://moh.gov.jm',
@@ -2212,7 +2215,7 @@ configure = {
 
         ]
     },
-    ## 特立尼达和多巴哥 时间解析过于不鲁棒 通过
+    ## 特立尼达和多巴哥 时间解析过于不鲁棒 通过 en
     'tt':{
         'allowed_domains':['health.gov.tt'],
         'site_url':'http://www.health.gov.tt',
@@ -2249,7 +2252,7 @@ configure = {
 
     },
 
-    ## 伯利兹 通过
+    ## 伯利兹 通过 en
     'bz':{
         'allowed_domains':['belize.gov.bz'],
         'site_url':'http://www.belize.gov.bz',
@@ -2265,7 +2268,7 @@ configure = {
 
 
     },
-    ## 尼加瓜拉 通过 内容多需要精细化过滤
+    ## 尼加瓜拉 通过 内容多需要精细化过滤 es
     'ni':{
         'allowed_domains':['minsa.gob.ni'],
         'site_url':'http://www.minsa.gob.ni',
@@ -2273,6 +2276,7 @@ configure = {
             'http://www.minsa.gob.ni/index.php',
 
         ],
+        'language':'es',
         'rules':[
             r'(.*)index\.php/(.*)noticias(.*)',
             r'(.*)index\.php/enlaces(.*)',
@@ -2291,7 +2295,7 @@ configure = {
     },
     ## 哥斯达黎加 没有网站
 
-    ## 巴拿马 通过
+    ## 巴拿马 通过 es 文件多
     'pa':{
         'allowed_domains':['minsa.gob.pa'],
         'site_url':'http://www.minsa.gob.pa',
@@ -2305,6 +2309,7 @@ configure = {
             'http://www.minsa.gob.pa/programas',
             'http://www.minsa.gob.pa/centro-de-prensa',
         ],
+        'language':'es',
         'rules':[
             r'(.*)/noticias-breves(.*)',
             r'(.*)/destacados(.*)',
@@ -2336,7 +2341,7 @@ configure = {
     ## 海地 没有网站
 
 
-    ## 安提瓜和巴布达 通过
+    ## 安提瓜和巴布达 通过 en
     'ag':{
         'allowed_domains':['mbs.gov.ag'],
         'site_url':'http://mbs.gov.ag',
@@ -2365,7 +2370,7 @@ configure = {
     'kn':{
 
     },
-    ## 巴巴多斯 通过
+    ## 巴巴多斯 通过 en
     'bb':{
         'allowed_domains':['health.gov.bb'],
         'site_url':'http://health.gov.bb',
@@ -2376,7 +2381,7 @@ configure = {
             r'(.*)/ministry_health(.*)',
         ],
     },
-    ## 格林纳达 通过
+    ## 格林纳达 通过 en
     'gd':{
         'allowed_domains':['health.gov.gd'],
         'site_url':'http://health.gov.gd',
@@ -2387,7 +2392,7 @@ configure = {
             r'(.*)/index\.php(.*)'
         ]
     },
-    ## 圣文森特和格林纳丁斯 通过
+    ## 圣文森特和格林纳丁斯 通过 en
     'vc':{
         'allowed_domains':['moh.gov.vc'],
         'site_url':'http://moh.gov.vc',
@@ -2404,7 +2409,7 @@ configure = {
     # 南美洲
     ###############################################
 
-    ## 哥伦比亚 打不开
+    ## 哥伦比亚 通过 es 样式有点乱v
     'co':{
         'allowed_domains':['minsalud.gov.co'],
         'site_url':'https://www.minsalud.gov.co',
@@ -2442,7 +2447,7 @@ configure = {
         'rules':[]
     },
 
-    # 苏里南 通过
+    # 苏里南 通过 en
     'sr':{
         'allowed_domains':['www.gov.sr'],
         'site_url':'http://www.gov.sr',
@@ -2451,7 +2456,7 @@ configure = {
         'publish':[]
     },
 
-     # 秘鲁 通过
+     # 秘鲁 通过 es
     'pe':{
         'allowed_domains':['minsa.gob.pe'],
         'site_url':'http://www.minsa.gob.pe',
@@ -2463,6 +2468,7 @@ configure = {
             'http://www.minsa.gob.pe/portalweb/index_pro03.asp?box=1',
 
         ],
+        'language':'es',
         'rules':[
             r'(.*)/portalweb/02estadistica/(.*)',
             r'(.*)/estadisticas/estadisticas(.*)',
@@ -2570,7 +2576,7 @@ configure = {
         'exludes':[]   
     },
 
-    # 阿根廷 新旧页面一起出现 需要翻墙 es 通过
+    # 阿根廷 新旧页面一起出现 需要翻墙 es 通过 notics过多
     'ar':{
         'allowed_domains':['argentina.gob.ar','msal.gob.ar'],
         'site_url':'http://www.msal.gob.ar',
@@ -2678,7 +2684,7 @@ configure = {
         'rules':[]
     },
 
-    # 澳大利亚 需要过滤的文件过多 en
+    # 澳大利亚 需要过滤的文件过多 en 通过
     'au':{
         'allowed_domains':['health.gov.au'],
         'site_url':'http://www.health.gov.au',
@@ -3110,6 +3116,8 @@ class MohSpider(scrapy.Spider):
             resource['publish'] = self.publish_time_inference(response)
             resource['nation'] = self.nation
             resource['content_type'] = content_type
+            if hasattr(response, 'encoding'):
+                resource['encoding'] = response.encoding
 
             text = self.h2t(response)
             resource['content'] = response.text
@@ -3155,7 +3163,7 @@ class MohSpider(scrapy.Spider):
                 base = None
            
             stylesheets = response.xpath(
-                '//link[(@type="text/css") or (rel="stylesheet")]/@href').extract()
+                '//link[(@type="text/css") or (@rel="stylesheet")]/@href').extract()
             
             
             for stylesheet in stylesheets:
@@ -3234,6 +3242,8 @@ class MohSpider(scrapy.Spider):
             resource['location'] = self.site_url
             resource['nation'] =  self.nation
             resource['content_type'] = content_type
+            if hasattr(response,'encoding'):
+                resource['encoding'] = response.encoding
             if response.meta.get('title'):
                 resource['title'] = response.meta.get('title')
             else:
@@ -3266,6 +3276,7 @@ class MohSpider(scrapy.Spider):
         resource['content'] = response.body
         resource['rtype'] = 'asset'
         resource['location'] = self.site_url
+        # resource['encoding'] = response.get('encoding')
 
         record = self.get_record(response.url)
         should_update = self.should_update(record)
@@ -3327,6 +3338,7 @@ class MohSpider(scrapy.Spider):
         resource['content'] = content
         resource['rtype'] = 'asset'
         resource['location'] = self.site_url
+        # resource['encoding'] = response.get('encoding')
 
 
         record = self.get_record(url)

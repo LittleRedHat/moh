@@ -21,6 +21,7 @@ class ResourceItem(scrapy.Item):
      nation = Field()
      keywords = Field()
      content_type = Field()
+     encoding = Field()
 
      def __repr__(self):
          return repr({"url": self['url'],"rtype":self['rtype']})

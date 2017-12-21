@@ -10,7 +10,7 @@ class Searcher(object):
     
 
     def es_setting(self,index,setting):
-        return self.es.indices.put_setting(index=index,body=setting)
+        return self.es.indices.put_settings(index=index,body=setting)
         
         
 
@@ -25,14 +25,31 @@ class Searcher(object):
         # create ingest pipeline
 
         pipeline_params = {
-            "description": "attachent extractor pipeline",
+            "description": "attachment extractor pipeline",
             "processors": [
                 {
                     "attachment": {
                         "field": "data",
                         "indexed_chars": -1
                     }
-                }
+                },
+                {
+                    "remove": {
+                        "field": "data"
+                    }
+                },
+                # {
+                #     "set":{
+                #         "field":"publish",
+                #         "value":"{{attachment.date}}"
+                #     }
+                # },
+                # {
+                #     "set":{
+                #         "field":"language",
+                #         "value":"{{attachment.language}}"
+                #     }
+                # },
             ]
         }
         return self.es.ingest.put_pipeline(id='attachment',body=pipeline_params)

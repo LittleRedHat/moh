@@ -1,6 +1,12 @@
 /**
  * Created by 10975 on 2017/11/1.
  */
+ if(!window.sessionStorage.getItem('user')){
+     window.location = '../login.html'
+ }
+
+
+var server_base = 'http://47.97.96.152'
 showWordCloud();
 $('#search').click(function () {
     search();
@@ -19,7 +25,6 @@ $('#trans').click(function () {
         keyWordTrans(keyWord);
     }
 });
-
 
 
 //展示地图
@@ -111,6 +116,27 @@ function convertToMapData(searchRes) {
     return country;
 }
 
+
+var unicode2utf8 = function(unicode) {
+    return unicode.replace(/%u([0-9a-fA-F]+)/g, function(match, hex) {
+      var utf8CharCodes = [];
+      c = parseInt(hex, 16);
+      if (c < 128) {
+        utf8CharCodes.push(c);
+      } else if (c < 2048) {
+        utf8CharCodes.push((c >> 6) | 192, (c & 63) | 128);
+      } else if (c < 65536) {
+        utf8CharCodes.push((c >> 12) | 224, ((c >> 6) & 63) | 128, (c & 63) | 128);
+      } else {
+        utf8CharCodes.push((c >> 18) | 240, ((c >> 12) & 63) | 128, ((c >> 6) & 63) | 128, (c & 63) | 128);
+      }
+      for (var i=utf8CharCodes.length-1;i>=0;i--) {
+        utf8CharCodes[i] = '%' + utf8CharCodes[i].toString(16);
+      }
+      return utf8CharCodes.join('');
+    });
+};
+
 //翻译关键字
 function keyWordTrans(keyWord) {
     var languageName = {
@@ -145,7 +171,7 @@ function keyWordTrans(keyWord) {
     var appid = '2015063000000001';
     var key = '12345678';
     var salt = (new Date).getTime();
-    var query = keyWord;
+    var query = unicode2utf8(keyWord);
     // 多个query可以用\n连接  如 query='apple\norange\nbanana\npear'
     var from = 'auto';
     var to = ['en', 'jp', 'kor', 'fra', 'spa', 'th', 'ara', 'ru', 'pt', 'de', 'it', 'el', 'nl',
@@ -157,9 +183,10 @@ function keyWordTrans(keyWord) {
     for (x in to) {
         trans(x);
     }
-    (x);
+    
 
     function trans(x) {
+        console.log(x)
         $.ajax({
             async: false,
             url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
@@ -227,7 +254,7 @@ function wordCloud(data) {
 
 //词云图显示
 function showWordCloud() {
-    var url = 'http://10.48.41.24:9000/moh/history';
+    var url = server_base+'/api/moh/history';
 
     $.ajax({
         async: true,
@@ -278,7 +305,7 @@ function createRequestData(size, from, should) {
 
 //递交搜索请求，得到结果后分页显示
 function searchRes(searchDataJson) {
-    var url = 'http://10.48.41.24:9000/moh/es/search';
+    var url = server_base+'/api/moh/es/search';
     //var num = 20;
     console.log(searchData);
     var searchData = JSON.parse(searchDataJson);
@@ -318,7 +345,7 @@ function searchRes(searchDataJson) {
 
                         for (var i = 0; i < data.length; i++) {
                             str += '<tr class="row">';
-                            str += '<th><a href="http://10.48.41.24/' + data[i]['local_url'] +
+                            str += '<th><a href="'+server_base+'/'+ data[i]['local_url'] +
                                 '">' + data[i]['title'] + '</a></th>';
                             str += '<th id="trans' + i + '"></th>';
                             str += '<th><a href="' + data[i]['url'] + '">原地址</a></th>';
@@ -354,6 +381,7 @@ function searchRes(searchDataJson) {
                                     sign: sign
                                 },
                                 success: function(data) {
+                                    console.log(data)
                                     $("#trans" + i).html(data.trans_result[0].dst);
                                 }
                             });
