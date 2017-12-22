@@ -287,7 +287,7 @@ function createRequestData(size, from, should) {
     if ($('#language').val() == "")
         language.push("all");
     else
-        language = ((String)($('#language').val())).split(" ");
+        language = getLanguage($('#language').val());
 
     var requestData = {
         "should": should,
@@ -363,11 +363,12 @@ function searchRes(searchDataJson) {
                             var appid = '2015063000000001';
                             var key = '12345678';
                             var salt = (new Date).getTime();
-                            var query = data[i]['title'];
+                            var query = data[i]['title'].replace(/\r|\t|\n/g, "");
                             var from = 'auto';
                             var to = 'zh';
                             var str1 = appid + query + salt + key;
                             var sign = MD5(str1);
+                            //console.log(query);
                             $.ajax({
                                 url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
                                 type: 'get',
@@ -381,7 +382,7 @@ function searchRes(searchDataJson) {
                                     sign: sign
                                 },
                                 success: function(data) {
-                                    console.log(data)
+                                    //console.log(data)
                                     $("#trans" + i).html(data.trans_result[0].dst);
                                 }
                             });
@@ -489,19 +490,21 @@ function toSearchWordsArr() {
 
 //对关键字进行翻译，然后进行搜索
 function search() {
-    console.log("reach");
+    //console.log("reach");
     //var wordsArr = textToArr($('#search-key').val());
     var wordsArr = toSearchWordsArr();
-    console.log(wordsArr);
+    //console.log(wordsArr);
     var result = [];
+
+    var languageStr = $('#language').val();
+    var to = getLanguage(languageStr);
+
+    console.log(to);
 
     var appid = '2015063000000001';
     var key = '12345678';
     var salt = (new Date).getTime();
     var from = 'auto';
-    var to = ['en', 'jp', 'kor', 'fra', 'spa', 'th', 'ara', 'ru', 'pt', 'de', 'it', 'el', 'nl',
-        'pl', 'bul', 'est', 'dan', 'fin', 'cs', 'rom', 'slo', 'swe', 'hu', 'cht', 'vie'
-    ];
     var str, sign;
     var request = 0;
     var response = 0;
@@ -535,14 +538,14 @@ function search() {
                                         response++;
                                         tmp.push(data.trans_result[0].dst);
                                         if (response == request) {
-                                            result.push(tmp);
+                                            //result.push(tmp);
                                             for (var i = 0; i < result.length; i++) {
                                                 if (result[i].length == 0) {
                                                     remove(result, i);
                                                     i--;
                                                 }
                                             }
-                                            console.log(result);
+                                            //console.log(result);
                                             searchRes(createRequestData(20, 0, result));
                                         }
                                     }
@@ -553,13 +556,31 @@ function search() {
                     result.push(tmp);
                 })(k);
             }
-            result.push(wordsArr[i]);
+            //result.push(wordsArr[i]);
         })(i);
     }
 
     //setTimeout()
 
     //return result;
+}
+
+function getLanguage(languageStr) {
+    var to_all = ['zh', 'en', 'jp', 'kor', 'fra', 'spa', 'th', 'ara', 'ru', 'pt', 'de', 'it', 'el', 'nl',
+        'pl', 'bul', 'est', 'dan', 'fin', 'cs', 'rom', 'slo', 'swe', 'hu', 'cht', 'vie'];
+    var to;
+    if (languageStr == "")
+        to = to_all;
+    else {
+        to = languageStr.split(" ");
+        for (var i = 0; i < to.length; i++) {
+            if (to[i] == "" || $.inArray(to[i], to_all) < 0) {
+                remove(to, i);
+                i--;
+            }
+        }
+    }
+    return to;
 }
 
 function remove(arr, i) {
