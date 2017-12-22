@@ -416,7 +416,6 @@ configure = {
                 ]
     },
     
-###### 从这里开始是用新的索引跑的
     # 泰国 需要翻墙 asia 通过
     'th':{
         'allowed_domains':['moph.go.th'],
@@ -704,7 +703,7 @@ configure = {
     },
 
 
-    # 阿富汗 ar
+    # 阿富汗 ar ...
     'af':{
         'allowed_domains':['moph.gov.af'],
         'site_url':'http://www.moph.gov.af/fa',
@@ -725,7 +724,7 @@ configure = {
         'publish':[{'rule':"//div[contains(@class,'postDate')]/text()",'format':'%b %d, %Y'}]
     },
 
-    # 沙特阿拉伯 js加载 en/ar
+    # 沙特阿拉伯 js加载 en/ar ...
     'sa':{
         'allowed_domains':['moh.gov.sa'],
         'site_url':'http://www.moh.gov.sa',
@@ -789,7 +788,7 @@ configure = {
         ]
     },
 
-    # 阿联酋  时间解析问题 ar
+    # 阿联酋  时间解析问题 ar 通过
     'ae':{
         'allowed_domains':['mohap.gov.ae'],
         'site_url':'http://www.mohap.gov.ae',
@@ -844,7 +843,7 @@ configure = {
 
     },
 
-    # 巴林 ar
+    # 巴林 ar 通过
     'bh':{
         'allowed_domains':['moh.gov.bh'],
         'site_url':'https://www.moh.gov.bh',
@@ -881,7 +880,7 @@ configure = {
         'site_url':'http://www.moh.gov.kw'
     },
 
-    # 土耳其 asia
+    # 土耳其 asia 通过
     'tr':{
         'allowed_domains':['saglik.gov.tr'],
         'site_url':'http://www.saglik.gov.tr',
@@ -913,7 +912,7 @@ configure = {
                 ]
     },
 
-    # 叙利亚 en/ar
+    # 叙利亚 en/ar 通过
     'sy':{
         'allowed_domains':['moh.gov.sy'],
         'site_url':'http://www.moh.gov.sy',
@@ -939,7 +938,7 @@ configure = {
     },
 
 
-    # 伊拉克 ar
+    # 伊拉克 ar 下的不知道是什么了
     'iq':{
         'allowed_domains':['moh.gov.iq'],
         'site_url':'https://www.moh.gov.iq',
@@ -960,7 +959,7 @@ configure = {
         'rules':[r'(.*)']
     },
 
-    # 巴勒斯坦 en
+    # 巴勒斯坦 en 通过
     'ps':{
         'allowed_domains':['pna.org','mohiraq.org'],
         'site_url':'http://www.pna.org/moh',
@@ -969,10 +968,10 @@ configure = {
     },
 
 
-    # 以色列 en
+    # 以色列 en cookie 问题
     "il": {
         'allowed_domains': ['health.gov.il'],
-        'site_url': 'http://www.health.gov.il',
+        'site_url': 'https://www.health.gov.il',
         'start_urls': [
             'https://www.health.gov.il/English/News_and_Events/Spokespersons_Messages/Pages/default.aspx'
         ],
@@ -989,36 +988,46 @@ configure = {
         ]
     },
 
-    # 黎巴嫩
+    # 黎巴嫩 en 通过
     'lb':{
         'allowed_domains':['cas.gov.lb'],
         'site_url':'http://www.cas.gov.lb',
         'start_urls':['http://www.cas.gov.lb/'],
         'rules':[
                     r'(.*)/demographic-and-social-en(.*)',
-                    r'(.*)/national-accounts-en',
-                    r'(.*)/housing-characteristics-en',
-                    r'(.*)/economic-statistics-en',
-                    r'(.*)/census-of-building-cbde-en',
-                    r'(.*)/index.php/mdg-en',
-                    r'(.*)/gender-statistics-en'
+                    r'(.*)/national-accounts-en(.*)',
+                    r'(.*)/housing-characteristics-en(.*)',
+                    r'(.*)/economic-statistics-en(.*)',
+                    r'(.*)/census-of-building-cbde-en(.*)',
+                    r'(.*)/index.php/mdg-en(.*)',
+                    r'(.*)/gender-statistics-en(.*)'
                 ],
         'excludes':[r'(.*)/images/(.*)']
     },
 
-    # 塞浦路斯 时间解析有问题
+    # 塞浦路斯 时间解析有问题 en
     'cy':{
         'allowed_domains':['moh.gov.cy'],
         'site_url':'http://www.moh.gov.cy',
-        'start_urls':['https://www.moh.gov.cy/moh/moh.nsf/dmlannouncements_en/dmlannouncements_en?OpenDocument&Start=1&Count=1000&Collapse=1'],
+        'start_urls':[
+            'https://www.moh.gov.cy/moh/moh.nsf/dmlannouncements_en/dmlannouncements_en?OpenDocument&Start=1&Count=1000&Collapse=1',
+            'https://www.moh.gov.cy/moh/moh.nsf/news_archivemain_en/news_archive_en?OpenDocument&Start=1&Count=1000&Expand=2',
+            'https://www.moh.gov.cy/moh/moh.nsf/page09_en/page09_en?OpenDocument',
+
+        ],
         'rules':[r'(.*)/Moh/MOH\.nsf/All/(.*)',r'(.*)/moh/moh\.nsf/All/(.*)'],
         'publish':[
-                    {'rule':"//form/div[@id='footer']/div[@class='lastupdate']/text()",'format':'Last Modified at: %d/%m/%Y %I:%M:%S PM'},
-                    {'rule':"//form/div[@id='footer']/div[@class='lastupdate']/text()",'format':'Last Modified at: %d/%m/%Y %I:%M:%S AM'}
+                    {
+                        'rule':"//form/div[@id='footer']/div[@class='lastupdate']/text()",
+                        'format':'Last Modified at: %d/%m/%Y %I:%M:%S PM'
+                    },
+                    {
+                        'rule':"//form/div[@id='footer']/div[@class='lastupdate']/text()",'format':'Last Modified at: %d/%m/%Y %I:%M:%S AM'
+                    }
                 ]
     },
 
-    # 格鲁吉亚
+    # 格鲁吉亚 通过
     'ge':{
         'allowed_domains':['moh.gov.ge'],
         'site_url':'http://www.moh.gov.ge',
@@ -1027,7 +1036,7 @@ configure = {
         'publish':[{'rule':"//section[@class='newsInner']/article/section[1]/span/text()",'format':'%d %B, %Y'}]
     },
 
-    # 亚美尼亚
+    # 亚美尼亚 通过
     'am':{
         'allowed_domains':['pharm.am'],
         'site_url':'http://www.pharm.am',
@@ -1053,7 +1062,7 @@ configure = {
         'publish':[]
     },
 
-    # 乌兹别克斯坦 日期中月份不是英语，无法解析
+    # 乌兹别克斯坦 日期中月份不是英语，无法解析 通过
     'uz':{
         'allowed_domains':['minzdrav.uz'],
         'site_url':'http://www.minzdrav.uz',
@@ -1062,7 +1071,7 @@ configure = {
         'publish':[{'rule':"//div[@class='NewsIn']/div[@class='ScrollPane']/span/text()",'format':'%d %B %Y'}]
     },
 
-    # 土库曼斯坦
+    # 土库曼斯坦 通过 ru
     'tm':{
         'allowed_domains':['saglykhm.gov.tm'],
         'site_url':'http://www.saglykhm.gov.tm',
@@ -1072,7 +1081,7 @@ configure = {
         'excludes':[r'(.*)\.jpg']
     },
 
-    # 吉尔吉斯斯坦 日期中月份为特殊字符，无法解析
+    # 吉尔吉斯斯坦 日期中月份为特殊字符，无法解析 ru 通过
     'kg':{
         'allowed_domains':['med.kg'],
         'site_url':'http://www.med.kg',
@@ -1602,7 +1611,7 @@ configure = {
     # 非洲
     ###############################################
 
-    ## 埃及
+    ## 埃及 ar
     'eg':{
         'allowed_domains':['mohp.gov.eg'],
         'site_url':'http://www.mohp.gov.eg',
@@ -1627,7 +1636,7 @@ configure = {
     ## 阿尔及利亚 打不开
     'dz':{
     },
-    ## 摩洛哥
+    ## 摩洛哥 fr
     'ma':{
         'allowed_domains':['gov.ma'],
         'site_url':'http://www.sante.gov.ma',
@@ -1653,7 +1662,7 @@ configure = {
             }
         ]
     },
-    ## 突尼斯
+    ## 突尼斯 fr 通过
     'tn':{
         'allowed_domains':['santetunisie.rns.tn'],
         'site_url':'http://www.santetunisie.rns.tn',
@@ -1677,22 +1686,22 @@ configure = {
     'ml':{
 
     },
-    ## 塞内加尔
+    ## 塞内加尔 fr 通过
     'sn':{
         'allowed_domains':['sante.gouv.sn'],
         'language':'fr-fr',
         'site_url':'http://www.sante.gouv.sn',
         'start_urls':[
             'http://www.sante.gouv.sn/index.php',
-            'http://www.sante.gouv.sn/index.php',
         ],
+        'language':'fr',
         'rules':[
             r'(.*)page-reader-les-actualites-get\.php(.*)',
             r'(.*)/page-reader-content-details\.php(.*)',
             r'(.*)page-reader-categories-article-presse(.*)'
         ],
     },
-    ## 冈比亚
+    ## 冈比亚 en 通过
     'gm':{
         'allowed_domains':['moh.gov.gm'],
         'site_url':'http://moh.gov.gm',
@@ -2110,30 +2119,38 @@ configure = {
 
         ]
     },
-    ## 墨西哥（没有下全,附件太多应该过滤掉)
+    ## 墨西哥（没有下全,附件太多应该过滤掉) 通过
     'mx':{
         'allowed_domains':['gob.mx'],
         'site_url':'https://www.gob.mx',
         'start_urls':[
-            'https://www.gob.mx/salud/en',
+            # 'https://www.gob.mx/salud/en',
+            # 'https://www.gob.mx/salud/en/archivo/articulos',
+            # 'https://www.gob.mx/salud/en/archivo/prensa',
+            # 'https://www.gob.mx/salud/en/archivo/documentos',
+            # 'https://www.gob.mx/temas/archivo/galerias/influenza',
+            'https://www.gob.mx/salud/archivo/prensa?idiom=en',
             'https://www.gob.mx/salud/en/archivo/articulos',
-            'https://www.gob.mx/salud/en/archivo/prensa',
-            'https://www.gob.mx/salud/en/archivo/documentos',
-            'https://www.gob.mx/temas/archivo/galerias/influenza',
+
 
 
         ],
         'rules':[
-            r'(.*)/salud/archivo/articulos(.*)',
-            r'(.*)/salud/en/archivo/prensa(.*)',
-            r'(.*)/salud/en/prensa(.*)',
-            r'(.*)salud/en/articulos(.*)',
-            r'(.*)/salud/en/archivo/documentos(.*)',
-            r'(.*)/salud/acciones-y-programas/personal-de-la-salud(.*)',
-            r'(.*)/senasica(.*)',
-            r'(.*)/salud/acciones-y-programas(.*)',
-            r'(.*)/temas/archivo/galerias/influenza(.*)',
-            r'(.*)/salud/censia/galerias(.*)'
+            # r'(.*)/salud/archivo/articulos(.*)',
+            # r'(.*)/salud/en/archivo/prensa(.*)',
+            # r'(.*)/salud/en/prensa(.*)',
+            # r'(.*)salud/en/articulos(.*)',
+            # r'(.*)/salud/en/archivo/documentos(.*)',
+            # r'(.*)/salud/acciones-y-programas/personal-de-la-salud(.*)',
+            # r'(.*)/senasica(.*)',
+            # r'(.*)/salud/acciones-y-programas(.*)',
+            # r'(.*)/temas/archivo/galerias/influenza(.*)',
+            # r'(.*)/salud/censia/galerias(.*)'
+            r'(.*)/salud/archivo/prensa\?idiom=en(.*)',
+            r'(.*)/salud/en/prensa/(.*)',
+            r'(.*)salud/en/archivo/articulos\?idiom=en(.*)',
+            r'(.*)/salud/en/articulos/(.*)',
+
 
         ],
         'publish':[
@@ -2512,7 +2529,7 @@ configure = {
         ],
     },
 
-    # 巴西 (部分样式乱,内容过多需要精细化处理) es 博客多
+    # 巴西 (部分样式乱,内容过多需要精细化处理) es 博客多 通过
     'br':{
         'allowed_domains':['saude.gov.br'],
         'site_url':'http://portalms.saude.gov.br',
@@ -3171,8 +3188,8 @@ class MohSpider(scrapy.Spider):
                 if http_url:
                     request = scrapy.Request(http_url, callback=self.style_parse,errback=self.errback_httpbin)
                     _record = self.get_record(http_url)
-                    should_update = self.should_update(_record)
-                    if should_update:
+                    should_crawl = self.should_crawl(_record)
+                    if should_crawl:
                         yield request
 
             javascripts = response.xpath('//script[@src]/@src').extract()
@@ -3184,7 +3201,7 @@ class MohSpider(scrapy.Spider):
                     _record = self.get_record(http_url)
 
                     should_crawl = self.should_crawl(_record)
-                    if should_crawl and self.url_in_rule(http_url):
+                    if should_crawl:
                         
                         yield request
 
@@ -3220,20 +3237,9 @@ class MohSpider(scrapy.Spider):
                     request = scrapy.Request(http_url,callback=self.parse,meta={'title':link_title},errback=self.errback_httpbin)
                     _record = self.get_record(http_url)
                     should_crawl = self.should_crawl(_record)
-                    # print '*'*40
-                    # print http_url,should_update
-                    # print '*'*40
                     if should_crawl:
-                        # print http_url
                         yield request
                     
-                    # if self.debug:
-                    #     print 'yield http url %s from %s'%(http_url,response.url)
-                    # if http_url == 'http://www.mz.gov.pl/wp-content/uploads/2015/07/Wczesne-wykrywanie-dane-krajowe.ppt':
-                    #     print 'yield http url %s from %s'%(http_url,response.url)
-                    #     print 'link title is ',link_title
-                    #     return
-
         elif content_type and self.content_allowed(content_type):  
             resource = ResourceItem()
             resource['url'] = response.url

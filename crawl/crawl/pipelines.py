@@ -327,6 +327,7 @@ class FilePipeline(object):
         base_dir = parse_result.netloc
         path = parse_result.path
         root,file = os.path.split(path)
+        root = root.strip('/')
         if root != '' and root.startswith('/'):
             root = root[1:]
         output_dir_from_url = os.path.join(base_dir,root)
