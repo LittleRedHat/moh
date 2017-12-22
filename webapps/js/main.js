@@ -282,12 +282,12 @@ function createRequestData(size, from, should) {
     if ($('#nation').val() == "")
         nation.push("all");
     else
-        nation = ((String)($('#nation').val())).split(" ");
+        nation = getNation($('#nation').val());
 
     if ($('#language').val() == "")
         language.push("all");
     else
-        language = getLanguage($('#language').val());
+        language = getLanguage($('#language').val(), false);
 
     var requestData = {
         "should": should,
@@ -307,7 +307,7 @@ function createRequestData(size, from, should) {
 function searchRes(searchDataJson) {
     var url = server_base+'/api/moh/es/search';
     //var num = 20;
-    console.log(searchData);
+    //console.log(searchData);
     var searchData = JSON.parse(searchDataJson);
 
     $.ajax({
@@ -497,9 +497,9 @@ function search() {
     var result = [];
 
     var languageStr = $('#language').val();
-    var to = getLanguage(languageStr);
+    var to = getLanguage(languageStr, true);
 
-    console.log(to);
+    //console.log(to);
 
     var appid = '2015063000000001';
     var key = '12345678';
@@ -565,22 +565,60 @@ function search() {
     //return result;
 }
 
-function getLanguage(languageStr) {
+function getLanguage(languageStr, forTran) {
     var to_all = ['zh', 'en', 'jp', 'kor', 'fra', 'spa', 'th', 'ara', 'ru', 'pt', 'de', 'it', 'el', 'nl',
         'pl', 'bul', 'est', 'dan', 'fin', 'cs', 'rom', 'slo', 'swe', 'hu', 'cht', 'vie'];
-    var to;
+    var to = [];
     if (languageStr == "")
         to = to_all;
     else {
         to = languageStr.split(" ");
+        //console.log(to);
+
         for (var i = 0; i < to.length; i++) {
-            if (to[i] == "" || $.inArray(to[i], to_all) < 0) {
+            if ($.inArray(to[i], to_all) < 0) {
                 remove(to, i);
                 i--;
             }
         }
     }
+    if (to.length == 0) {
+        if (forTran)
+            to = to_all;
+        else
+            to.push("all");
+    }
+
     return to;
+}
+
+function getNation(nationStr) {
+    /*$.ajaxSettings.async = false;
+    $.getJSON("../data/world.json", function(data) {
+        worldJson = data;
+    });*/
+    var all_nations = [];
+    var nations;
+
+    $.ajaxSettings.async = false;
+    $.getJSON("../data/capitalTable.json", function (data) {
+        var nationsArr = data;
+        for (var nation in nationsArr)
+            all_nations.push(nation);
+        //console.log(all_nations);
+    });
+
+    nations = nationStr.split(" ");
+    for (var i = 0; i < nations.length; i++) {
+        if ($.inArray(nations[i], all_nations) < 0) {
+            remove(nations, i);
+            i--;
+        }
+    }
+
+    if (nations.length == 0)
+        nations.push("all");
+    return nations;
 }
 
 function remove(arr, i) {
