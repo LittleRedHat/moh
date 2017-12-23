@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>全球中医药行业搜索系统</title>
@@ -14,82 +15,116 @@
     <script src="../css/bootstrap/js/bootstrap.min.js"></script>
     <script src="../js/examples.js"></script>
 </head>
+
 <body>
-<div class="bs-header" id="content">
-    <div class="container">
-        <h1 id="s1">全球中医药行业搜索系统</h1>
+    <div class="bs-header" id="content">
+        <div class="container">
+            <h1 id="s1">全球中医药行业搜索系统</h1>
+        </div>
     </div>
-</div>
-<div class="container">
-    <hr>
-    <div class="row">
-        <div class="row search-row">
+    <div class="container">
+        <hr>
+        <div class="row">
+            <div class="row search-row">
 
-            <div class="col-md-8">
-                <input type="text" class="form-control input-lg search-input" placeholder="请输入第一组关键字...">
+                <div class="col-md-8">
+                    <input type="text" class="form-control input-lg search-input" placeholder="请输入第一组关键字...">
+                </div>
             </div>
-        </div>
-        <div class="row search-row">
+            <div class="row search-row">
 
-            <div class="col-md-8">
-                <input type="text" class="form-control input-lg search-input" placeholder="请输入第二组关键字...">
+                <div class="col-md-8">
+                    <input type="text" class="form-control input-lg search-input" placeholder="请输入第二组关键字...">
+                </div>
             </div>
-        </div>
-        <div class="row search-row">
+            <div class="row search-row">
 
-            <div class="col-md-8">
-                <input type="text" class="form-control input-lg search-input" placeholder="请输入第三组关键字...">
+                <div class="col-md-8">
+                    <input type="text" class="form-control input-lg search-input" placeholder="请输入第三组关键字...">
+                </div>
             </div>
-        </div>
 
-        <div class="row search-row">
-            <div class="col-md-3">
-                <label>选择是否显示附件</label>
-                <select class="form-control" id="attachment">
+            <div class="row search-row">
+                <div class="col-md-3">
+                    <label>选择是否显示附件</label>
+                    <select class="form-control" id="attachment">
                     <option value="html">不显示附件检索内容</option>
                     <option value="all">显示附件检索内容</option>
                 </select>
-            </div>
-            <div class="col-md-3">
-                <label>选择结果排序方式</label>
-                <select class="form-control" id="sort">
+                </div>
+                <div class="col-md-3">
+                    <label>选择结果排序方式</label>
+                    <select class="form-control" id="sort">
                     <option value="score">按权重排序</option>
                     <option value="date">按时间排序</option>
                 </select>
+                </div>
+                <div class="col-md-3">
+                    <label>选择国家</label>
+                    <input id="nation" type="text" class="form-control" placeholder="请输入国家名的英文缩写...">
+                </div>
+                <div class="col-md-3">
+                    <label>
+                        选择语言
+                        <span class="glyphicon glyphicon-question-sign" aria-hidden="true"
+                            data-mtpis="语言缩写列表 中文:zh,英语:en,日语:jp,韩语:kor,法语:fra,西班牙语:spa,泰语:th,阿拉伯语:ara,
+                            俄语:ru,葡萄牙语:pt,德语:de,意大利语:it,希腊语:el,荷兰语:nl,波兰语:pl,保加利亚语:bul,爱沙尼亚语:est
+                            丹麦语:dan,芬兰语:fin,捷克语:cs,罗马尼亚语:rom,斯洛文尼亚语:slo,瑞典语:swe,匈牙利语:hu,繁体中文:cht,
+                            越南语:vie" style="cursor: pointer"></span>
+                    </label>
+                    <a id="show_lan_list_btn" class="language_click">显示语言缩写列表</a>
+                    <input id="language" type="text" class="form-control" placeholder="请输入语言名的英文缩写...">
+                    <div id="language_list">
+                        <span class="language_click" onclick="choose_lan('zh')">中文</span>
+                        <span class="language_click" onclick="choose_lan('en')">英语</span>
+                        <span class="language_click" onclick="choose_lan('jp')">日语</span>
+                        <span class="language_click" onclick="choose_lan('kor')">韩语</span>
+                        <span class="language_click" onclick="choose_lan('fra')">法语</span>
+                        <span class="language_click" onclick="choose_lan('spa')">西班牙语</span>
+                        <span class="language_click" onclick="choose_lan('th')">泰语</span>
+                        <span class="language_click" onclick="choose_lan('ara')">阿拉伯语</span>
+                        <span class="language_click" onclick="choose_lan('ru')">俄语</span>
+                        <span class="language_click" onclick="choose_lan('pt')">葡萄牙语</span>
+                        <span class="language_click" onclick="choose_lan('de')">德语</span>
+                        <span class="language_click" onclick="choose_lan('it')">意大利语</span>
+                        <span class="language_click" onclick="choose_lan('el')">希腊语</span>
+                        <span class="language_click" onclick="choose_lan('nl')">荷兰语</span>
+                        <span class="language_click" onclick="choose_lan('pl')">波兰语</span>
+                        <span class="language_click" onclick="choose_lan('bul')">保加利亚语</span>
+                        <span class="language_click" onclick="choose_lan('est')">爱沙尼亚语</span>
+                        <span class="language_click" onclick="choose_lan('dan')">丹麦语</span>
+                        <span class="language_click" onclick="choose_lan('fin')">芬兰语</span>
+                        <span class="language_click" onclick="choose_lan('cs')">捷克语</span>
+                        <span class="language_click" onclick="choose_lan('rom')">罗马尼亚语</span>
+                        <span class="language_click" onclick="choose_lan('slo')">斯洛文尼亚语</span>
+                        <span class="language_click" onclick="choose_lan('swe')">瑞典语</span>
+                        <span class="language_click" onclick="choose_lan('hu')">匈牙利语</span>
+                        <span class="language_click" onclick="choose_lan('cht')">繁体中文</span>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3">
-                <label>选择国家</label>
-                <input id="nation" type="text" class="form-control" placeholder="请输入国家名的英文缩写...">
+            <div class="row search-row">
+                <div class="col-md-3">
+                    <label>每页展示数量</label>
+                    <input id="size" type="number" class="form-control" value="20">
+                </div>
             </div>
-            <div class="col-md-3">
-                <label>
-                    选择语言
-                    <span class="glyphicon glyphicon-question-sign" aria-hidden="true"
-                          data-mtpis="语言缩写列表 中文:zh,英语:en,日语:jp,韩语:kor,法语:fra,西班牙语:spa,泰语:th,阿拉伯语:ara,
-                          俄语:ru,葡萄牙语:pt,德语:de,意大利语:it,希腊语:el,荷兰语:nl,波兰语:pl,保加利亚语:bul,爱沙尼亚语:est
-                          丹麦语:dan,芬兰语:fin,捷克语:cs,罗马尼亚语:rom,斯洛文尼亚语:slo,瑞典语:swe,匈牙利语:hu,繁体中文:cht,
-                          越南语:vie" style="cursor: pointer"></span>
-                </label>
-                <input id="language" type="text" class="form-control" placeholder="请输入语言名的英文缩写...">
-            </div>
-        </div>
 
-        <div class="row search-row">
-            <div class="col-md-1">
-                <button type="button" class="btn btn-success btn-lg btn-block" id="trans">翻译</button>
-            </div>
-            <div class="col-md-1">
-                <button type="button" class="btn btn-success btn-lg btn-block" id="search">搜索</button>
-            </div>
-            <div class="col-md-2">
-            <span class="glyphicon glyphicon-question-sign" aria-hidden="true"
-                  data-mtpis="搜索使用提示：若要求搜索结果中同时包含多个关键字，则将多个关键字输入统一搜索框，不同关键字用&隔开；
+            <div class="row search-row">
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-success btn-lg btn-block" id="trans">翻译</button>
+                </div>
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-success btn-lg btn-block" id="search">搜索</button>
+                </div>
+                <div class="col-md-2">
+                    <span class="glyphicon glyphicon-question-sign" aria-hidden="true" data-mtpis="搜索使用提示：若要求搜索结果中同时包含多个关键字，则将多个关键字输入统一搜索框，不同关键字用&隔开；
                   若要求搜索结果中包含几组关键字中的一组，则将其输入不同的搜索框，最多支持三组。
                   国家，语言的筛选支持多个，输入不同的名称缩写即可，各缩写名之间用空格隔开。" style="cursor: pointer"></span>
+                </div>
             </div>
-        </div>
 
-        <!--
+            <!--
         <div class="col-md-8">
 
         </div>
@@ -102,26 +137,26 @@
             <div class="row"></div>
         </div>
         -->
-        <!--
+            <!--
         <div class="col-md-2">
             <span class="glyphicon glyphicon-question-sign" aria-hidden="true"
                   data-mtpis="搜索使用提示：若要求搜索结果中同时包含多个关键字，则将多个关键字用“&”连接，如：“中医&中药”；
                   若要求几个关键词出现其中之一，则将关键字用“|”连接，如：“中医|中药”, 暂无法同时使用&和|。" style="cursor: pointer"></span>
         </div>
         -->
-    </div>
-    <div class="row">
+        </div>
+        <div class="row">
             <p id="trans-res"></p>
-    </div>
-    <hr>
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-3"></div>
-        <div class="col-md-3"></div>
-    </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+        </div>
 
-    <div class="row">
-        <!--
+        <div class="row">
+            <!--
         <div class="col-md-2">
             <form>
                 <div class="checkbox">
@@ -145,40 +180,41 @@
             </form>
         </div>
         -->
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <div id="wordCloud"></div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12" role="main">
-            <hr>
-            <div class="bs-example table-responsive">
-                <table class="table table-striped " style="word-break:break-all;">
-                    <thead>
-                    <tr class="row">
-                        <th class="col-md-4">标题</th>
-                        <th class="col-md-3">翻译</th>
-                        <th class="col-md-3">网址来源</th>
-                        <th class="col-md-1">国家</th>
-                        <th class="col-md-1">语言</th>
-                    </tr>
-                    </thead>
-                    <tbody class="row" id="data_table">
-                    </tbody>
-
-                </table>
-                <div id="laypage"></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div id="wordCloud"></div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12" role="main">
+                <hr>
+                <div class="bs-example table-responsive">
+                    <table class="table table-striped " style="word-break:break-all;">
+                        <thead>
+                            <tr class="row">
+                                <th class="col-md-4">标题</th>
+                                <th class="col-md-3">翻译</th>
+                                <th class="col-md-3">网址来源</th>
+                                <th class="col-md-1">国家</th>
+                                <th class="col-md-1">语言</th>
+                            </tr>
+                        </thead>
+                        <tbody class="row" id="data_table">
+                        </tbody>
+
+                    </table>
+                    <div id="laypage"></div>
+                </div>
+            </div>
+        </div>
+        <div id="map"></div>
     </div>
-    <div id="map"></div>
-</div>
-<script type="text/javascript" src="../js/mTips.js" charset="UTF-8"></script>
-<script type="text/javascript" src="../js/echarts.js"></script>
-<script type="text/javascript" src="../js/echarts-wordcloud.min.js"></script>
-<script type="text/javascript" src="../js/laypage.js"></script>
-<script type="text/javascript" src="../js/md5.js"></script>
-<script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/mTips.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../js/echarts.js"></script>
+    <script type="text/javascript" src="../js/echarts-wordcloud.min.js"></script>
+    <script type="text/javascript" src="../js/laypage.js"></script>
+    <script type="text/javascript" src="../js/md5.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
 </body>
+
 </html>
