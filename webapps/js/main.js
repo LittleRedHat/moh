@@ -1,12 +1,26 @@
 /**
  * Created by 10975 on 2017/11/1.
  */
- if(!window.sessionStorage.getItem('user')){
+if(!window.sessionStorage.getItem('user')){
      window.location = '../login.html'
- }
+}
 
 
-var server_base = 'http://47.97.96.152'
+var server_base = 'http://47.97.96.152';
+
+var nations_table;
+var languages_table;
+$.getJSON("../data/nations_list.json", function (data) {
+    nations_table = data;
+    //console.log(nations_table);
+    //console.log(nations_table["cn"]);
+});
+$.getJSON("../data/language_list.json", function (data) {
+    languages_table = data;
+    //console.log(languages_table);
+    //console.log(languages_table["en"], languages_table["a"] ? "a" : "b");
+});
+
 showWordCloud();
 $('#search').click(function () {
     search();
@@ -25,7 +39,24 @@ $('#trans').click(function () {
         keyWordTrans(keyWord);
     }
 });
+$('#show_lan_list_btn').click(function () {
+    var display = $('#language_list').css("display");
 
+    //console.log(display);
+    if (display == "none") {
+        $('#language_list').css("display", "block");
+        $('#show_lan_list_btn').text("隐藏语言缩写列表");
+    }
+    else{
+        $('#language_list').css("display", "none");
+        $('#show_lan_list_btn').text("显示语言缩写列表");
+    }
+});
+
+function choose_lan(str) {
+    //console.log(str);
+    $('#language').val($('#language').val() + str + " " );
+}
 
 //展示地图
 function map(searchRes) {
@@ -273,21 +304,22 @@ function showWordCloud() {
 }
 
 //整合请求信息
-function createRequestData(size, from, should) {
+function createRequestData(from, should) {
     var sort = $("#sort option:selected").val();
     var type = $("#attachment option:selected").val();
     var nation = [];
     var language = [];
+    var size = $('#size').val();
 
     if ($('#nation').val() == "")
         nation.push("all");
     else
-        nation = ((String)($('#nation').val())).split(" ");
+        nation = getNation($('#nation').val());
 
     if ($('#language').val() == "")
         language.push("all");
     else
-        language = getLanguage($('#language').val());
+        language = getLanguage($('#language').val(), false);
 
     var requestData = {
         "should": should,
@@ -300,6 +332,7 @@ function createRequestData(size, from, should) {
             {"name": "language", "value": language}
             ]
     };
+    console.log(requestData);
     return JSON.stringify(requestData);
 }
 
@@ -307,7 +340,7 @@ function createRequestData(size, from, should) {
 function searchRes(searchDataJson) {
     var url = server_base+'/api/moh/es/search';
     //var num = 20;
-    console.log(searchData);
+    //console.log(searchData);
     var searchData = JSON.parse(searchDataJson);
 
     $.ajax({
@@ -350,8 +383,10 @@ function searchRes(searchDataJson) {
                                 '">' + title + '</a></th>';
                             str += '<th id="trans' + i + '"></th>';
                             str += '<th><a href="' + data[i]['url'] + '">原地址</a></th>';
-                            str += '<th>' + data[i]['nation'] + '</th>';
-                            str += '<th>' + data[i]['language'] + '</th>';
+                            str += '<th>' + (nations_table[data[i]['nation']] ?
+                                nations_table[data[i]['nation']] : data[i]['nation']) + '</th>';
+                            str += '<th>' + (languages_table[data[i]['language']] ?
+                                languages_table[data[i]['language']] : data[i]['language']) + '</th>';
                             str += '</tr>';
                         }
                         $('#data_table').html(str);
@@ -498,9 +533,9 @@ function search() {
     var result = [];
 
     var languageStr = $('#language').val();
-    var to = getLanguage(languageStr);
+    var to = getLanguage(languageStr, true);
 
-    console.log(to);
+    //console.log(to);
 
     var appid = '2015063000000001';
     var key = '12345678';
@@ -547,7 +582,7 @@ function search() {
                                                 }
                                             }
                                             //console.log(result);
-                                            searchRes(createRequestData(20, 0, result));
+                                            searchRes(createRequestData(0, result));
                                         }
                                     }
                                 });
@@ -566,22 +601,60 @@ function search() {
     //return result;
 }
 
-function getLanguage(languageStr) {
+function getLanguage(languageStr, forTran) {
     var to_all = ['zh', 'en', 'jp', 'kor', 'fra', 'spa', 'th', 'ara', 'ru', 'pt', 'de', 'it', 'el', 'nl',
         'pl', 'bul', 'est', 'dan', 'fin', 'cs', 'rom', 'slo', 'swe', 'hu', 'cht', 'vie'];
-    var to;
+    var to = [];
     if (languageStr == "")
         to = to_all;
     else {
         to = languageStr.split(" ");
+        //console.log(to);
+
         for (var i = 0; i < to.length; i++) {
-            if (to[i] == "" || $.inArray(to[i], to_all) < 0) {
+            if ($.inArray(to[i], to_all) < 0) {
                 remove(to, i);
                 i--;
             }
         }
     }
+    if (to.length == 0) {
+        if (forTran)
+            to = to_all;
+        else
+            to.push("all");
+    }
+
     return to;
+}
+
+function getNation(nationStr) {
+    /*$.ajaxSettings.async = false;
+    $.getJSON("../data/world.json", function(data) {
+        worldJson = data;
+    });*/
+    var all_nations = [];
+    var nations;
+
+    $.ajaxSettings.async = false;
+    $.getJSON("../data/capitalTable.json", function (data) {
+        var nationsArr = data;
+        for (var nation in nationsArr)
+            all_nations.push(nation);
+        //console.log(all_nations);
+    });
+
+    nations = nationStr.split(" ");
+    for (var i = 0; i < nations.length; i++) {
+        if ($.inArray(nations[i], all_nations) < 0) {
+            remove(nations, i);
+            i--;
+        }
+    }
+
+    if (nations.length == 0)
+        nations.push("all");
+    return nations;
 }
 
 function remove(arr, i) {

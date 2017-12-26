@@ -20,3 +20,12 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.language_click {
+    cursor: pointer;
+}
+span.language_click:hover {
+    color: #2aabd2;
+}
+div#language_list {
+    display: none;
+}
