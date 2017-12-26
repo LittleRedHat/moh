@@ -35,10 +35,10 @@ def language2index(language):
 
     index_map = {
         'moh-en':['en','nl','pt','it','no','sv','fi','da','el','pl','is'],
-        'moh-es':['es','sh','sk','sl','uk'],
+        'moh-es':['es','sh','sk','sl','uk','bs','ro'],
         'moh-fr':['fr'],
         'moh-asia':['zh','ko','tr','ja','sq','th','vi','lo','he'],
-        'moh-ru':['ru','ro','sr'],
+        'moh-ru':['ru','sr','bg','rs'],
         'moh-de':['de'],
         'moh-ar':['ar']
     }

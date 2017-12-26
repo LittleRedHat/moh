@@ -344,9 +344,10 @@ function searchRes(searchDataJson) {
                         var str = '';
 
                         for (var i = 0; i < data.length; i++) {
+                            var title = (data[i]['type'] == 'html'?data[i]['title']:data[i]['attachment']['title'])
                             str += '<tr class="row">';
                             str += '<th><a href="'+server_base+'/'+ data[i]['local_url'] +
-                                '">' + data[i]['title'] + '</a></th>';
+                                '">' + title + '</a></th>';
                             str += '<th id="trans' + i + '"></th>';
                             str += '<th><a href="' + data[i]['url'] + '">原地址</a></th>';
                             str += '<th>' + data[i]['nation'] + '</th>';

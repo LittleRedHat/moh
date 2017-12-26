@@ -241,6 +241,86 @@ def bh_time_sub(text):
         return year+'-'+month+'-'+day+' '+hour+':'+minute+':'+second
 
 
+def ch_time_sub(text):
+    p = r'(.*?)([0-9]{1,2})\.([0-9]{1,2})\.([0-9]{4})'
+    m = re.match(p,text)
+    groups = m.groups()
+    if len(groups) >=4:
+        month = groups[2]
+        year = groups[3]
+        day = groups[1]
+        return year+'-'+month+'-'+day
+
+
+def rs_time_sub(text):
+    p = r'(.*?)([0-9]{1,2})\.([0-9]{1,2})\.([0-9]{4})'
+    m = re.match(p,text)
+    groups = m.groups()
+    if len(groups) >=4:
+        month = groups[2]
+        year = groups[3]
+        day = groups[1]
+        return year+'-'+month+'-'+day
+
+def ba_time_sub(text):
+    p = r'([0-9]{1,2}) (\w+?) ([0-9]{4})'
+    m = re.match(p,text)
+    groups = m.groups()
+    if len(groups) >=3:
+        month = groups[1]
+        for key,en in enumerate(en_month):
+            if en.lower() in month.lower():
+                month = str(key + 1)
+                break
+        year = groups[2]
+        day = groups[0]
+        
+        return year+'-'+month+'-'+day
+
+def me_time_sub(text):
+    p = r'([0-9]{1,2})\.([0-9]{1,2})\.([0-9]{4}) ([0-9]{1,2}):([0-9]{1,2})(.*?)'
+    m = re.match(p,text)
+    groups = m.groups()
+    if len(groups) >=5:
+        month = groups[1]
+        year = groups[2]
+        day = groups[0]
+        hour = groups[3]
+        minute = groups[4]
+        return year+'-'+month+'-'+day+' '+hour+':'+minute
+
+ro_month = ['ianuarie', 'februarie', 'martie', 'aprilie', 'mai', 'iunie', 'iulie', 'august', 'septembrie', 'octombrie', 'noiembrie', 'decembrie']
+def ro_time_sub(text):
+    p = r'([0-9]{1,2}) (\w+?) ([0-9]{4})'
+    m = re.match(p,text)
+    groups = m.groups()
+    if len(groups) >=3:
+        month = groups[1]
+        for key,en in enumerate(ro_month):
+            if en.lower() in month.lower():
+                month = str(key + 1)
+                break
+        year = groups[2]
+        day = groups[0]
+        
+        return year+'-'+month+'-'+day
+def es_time_sub(text):
+    p = r'([0-9]{1,2}) de (\w+?) de ([0-9]{4})'
+    m = re.match(p,text)
+    groups = m.groups()
+    if len(groups) >=3:
+        month = groups[1]
+        for key,en in enumerate(spanish_month):
+            if en.lower() in month.lower():
+                month = str(key + 1)
+                break
+        year = groups[2]
+        day = groups[0]
+        
+        return year+'-'+month+'-'+day
+
+
+
 configure = {
    
     ##############################################
@@ -315,6 +395,15 @@ configure = {
                 "format":"%Y-%m-%d"
             }
         ],
+
+        'listRules':[
+            {
+                'rule':'',
+
+
+            }
+        ],
+
     },
 
     # 日本 通过 切换到英文版网站 asia
@@ -1104,24 +1193,24 @@ configure = {
     # 欧洲
     ###############################################
 
-    # 挪威
+    # 挪威 en 内容很多 通过
     'no':{
         'allowed_domains':['regjeringen.no'],
         'site_url':'https://www.regjeringen.no/en/dep/hod/id421',
         'start_urls':[
-                        'https://www.regjeringen.no/en/whatsnew/finn-aktuelt/id2000005/?documentType=aktuelt/nyheter',
-                        'https://www.regjeringen.no/en/find-document/id2000006/'
+                        'https://www.regjeringen.no/en/find-document/reports-and-plans/id438817',
+                        'https://www.regjeringen.no/en/whatsnew/news-and-press-releases/id2006120',
                     ],
         'rules':[
                     r'(.*)/en/aktuelt/(.*)',
-                    r'(.*)/en/whatsnew/finn-aktuelt/(.*)',
-                    r'(.*)/en/find-document/id2000006/(.*)',
-                    r'(.*)/en/dokumenter/(.*)'
+                    r'(.*)/en/dokumenter(.*)',
+                    r'(.*)/en/find-document/reports-and-plans/(.*)',
+                    r'(.*)/en/whatsnew/news-and-press-releases/(.*)',
                 ],
-        'publish':[{'rule':"//span[@class='date']/text()",'format':'Date: %Y-%m-%d'}]
+        'publish':[{'rule':'//*[@id="mainContent"]//span[@class="date"]/text()','format':'Date: %Y-%m-%d'}]
     },
 
-    # 瑞典
+    # 瑞典 en 通过
     'se':{
         'allowed_domains':['government.se'],
         'site_url':'http://www.government.se/government-of-sweden/ministry-of-health-and-social-affairs',
@@ -1130,14 +1219,22 @@ configure = {
         'publish':[{'rule':"//span[@class='published']/time/text()",'format':'%d %B %Y'}]
     },
 
-    # 芬兰
+    # 芬兰 en  通过
     'fi':{
         'allowed_domains':['stm.fi'],
         'site_url':'http://stm.fi/en/frontpage',
-        'start_urls':['http://stm.fi/en/frontpage'],
+        'start_urls':[
+            'http://stm.fi/en/frontpage',
+            'http://stm.fi/en/publications',
+            'http://stm.fi/en/news',
+            'http://stm.fi/en/statistics',
+            'http://stm.fi/en/press-releases',
+        ],
         'rules':[
                     r'(.*)/en/article/-/asset_publisher/(.*)',
-                    r'(.*)/en/artikkeli/-/asset_publisher/(.*)'
+                    r'(.*)/en/artikkeli/-/asset_publisher/(.*)',
+                    r'(.*)/en/statistics/(.*)',
+                    r'(.*)/julkaisu\?pubid=(.*)',
                 ],
         'publish':[
             {'rule':"//div[@class='meta clearfix']/div[@class='published row-fluid']/span[@class='date'][1]/text()",'format':'%d.%m.%Y'},
@@ -1145,22 +1242,31 @@ configure = {
             ]
     },
 
-    # 丹麦
+    # 丹麦 en 通过
     'dk':{
         'allowed_domains':['stm.dk'],
         'site_url':'http://www.stm.dk/_a_1644.html',
-        'start_urls':['http://www.stm.dk/_a_1644.html'],
+        'start_urls':[
+            'http://www.stm.dk/_a_1644.html',
+            
+        ],
         'rules':[
                     r'(.*)'
                 ]
     },
 
-    # 俄罗斯
+    # 俄罗斯 ru 通过
     'ru':{
         'allowed_domains':['rosminzdrav.ru'],
         'site_url':'http://www.rosminzdrav.ru',
-        'start_urls':['https://www.rosminzdrav.ru/news','https://www.rosminzdrav.ru/regional_news'],
-        'rules':[r'(.*)/news(.*)',r'(.*)/regional_news(.*)'],
+        'start_urls':[
+            'https://www.rosminzdrav.ru/news',
+            'https://www.rosminzdrav.ru/regional_news'
+        ],
+        'rules':[
+            r'(.*)/news(.*)',
+            r'(.*)/regional_news(.*)'
+        ],
         'publish':[
                 {'rule':"//p[@class='timestamps']/time[1]/text()",
                 'format':'Материал опубликован %d %B %Y в %H:%M. '}
@@ -1169,15 +1275,20 @@ configure = {
                     r'(.*)\.jpg(.*)',
                     r'(.*)comments.atom',
                     r'(.*)system/attachments/attaches/(.*)'
-                    ]
+        ],
+        'language':'ru',
     },
 
-    # 爱沙尼亚
+    # 爱沙尼亚 较多 en 通过
     'ee':{
         'allowed_domains':['valitsus.ee'],
         'site_url':'https://www.valitsus.ee/en',
         'start_urls':['https://www.valitsus.ee/en/news'],
-        'rules':[r'(.*)/en/news(.*)'],
+        'rules':[
+            r'(.*)/en/news/(.*)',
+            r'(.*)/en/news\?(.*)page=([0-9]{1,3})'
+
+        ],
         'publish':[{'rule':"//footer[@class='submitted']/span[1]/text()",'format':'%d. %B %Y - %H:%M'}],
         'excludes':[r'\.jpg(.*)']
     },
@@ -1189,27 +1300,34 @@ configure = {
         'start_urls':[]
     },
 
-    # 立陶宛
+    # 立陶宛 en 通过
     'lt':{
         'allowed_domains':['sam.lrv.lt'],
         'site_url':'http://sam.lrv.lt/en',
         'start_urls':['http://sam.lrv.lt/en/news'],
-        'rules':[r'(.*)/news(.*)'],
+        'rules':[
+            r'(.*)/en/news/(.*)',
+            r'(.*)/en/news\?years=([0-9]{4})(.*)'
+        ],
         'publish':[{'rule':"//div[@class='row startDate_wrap']/div/div[2]/p/text()",'format':'%Y %m %d'}]
     },
 
-    # 白俄罗斯
+    # 白俄罗斯 en 通过
     'by':{
         'allowed_domains':['minzdrav.gov.by'],
         'site_url':'http://www.minzdrav.gov.by/en',
-        'start_urls':['http://www.minzdrav.gov.by/en/static/programmes-of-ministry-of-heal/'],
+        'start_urls':[
+            'http://www.minzdrav.gov.by/en/static/programmes-of-ministry-of-heal/',
+            'http://minzdrav.gov.by/en/static/stat_data',
+        ],
         'rules':[
                     r'(.*)/en/static/programmes-of-ministry-of-heal/scientic_progr/(.*)',
                     r'(.*)/en/static/programmes-of-ministry-of-heal/state_progr(.*)'
+                    r'(.*)/en/static/stat_data/(.*)'
                 ]
     },
 
-    # 乌克兰
+    # 乌克兰 en 通过
     'ua':{
         'allowed_domains':['health.gov.ua'],
         'site_url':'http://www.health.gov.ua/www.nsf/all/index_e?opendocument',
@@ -1221,7 +1339,7 @@ configure = {
                 ]
     },
 
-    # 波兰
+    # 波兰 en 通过
     'pl':{
         'allowed_domains':['mz.gov.pl'],
         'site_url':'http://www.mz.gov.pl/en',
@@ -1244,7 +1362,7 @@ configure = {
         ]
     },
     
-    # 德国
+    # 德国 en 通过
     'de':{
         'allowed_domains':['bundesgesundheitsministerium.de'],
         'site_url':'http://www.bundesgesundheitsministerium.de/en/en.html',
@@ -1261,7 +1379,7 @@ configure = {
                     ]
     },
 
-    # 捷克
+    # 捷克 en 通过
     'cz':{
         'allowed_domains':['mzcr.cz'],
         'site_url':'http://www.mzcr.cz/En',
@@ -1289,7 +1407,7 @@ configure = {
         'publish':[{'rule':"//div[@id='right-column-content']/div[@class='box-ostrance']/p[1]/text()",'format':'Published: %d.%m.%Y'}]
     },
 
-    # 斯洛伐克
+    # 斯洛伐克 en 通过
     'sk':{
         'allowed_domains':['uvzsr.sk'],
         'site_url':'http://www.uvzsr.sk',
@@ -1298,7 +1416,7 @@ configure = {
         'publish':[]
     },
     
-    # 奥地利
+    # 奥地利 en 通过
     'at':{
         'allowed_domains':['bmgf.gv.at'],
         'site_url':'http://www.bmgf.gv.at/cms/home/thema.html?channel=CH1013',
@@ -1316,7 +1434,7 @@ configure = {
         ]
     },
 
-    # 瑞士 时间解析有问题
+    # 瑞士 de 通过
     'ch':{
         'allowed_domains':['bag.admin.ch'],
         'site_url':'https://www.bag.admin.ch/bag/de/home.html',
@@ -1330,10 +1448,17 @@ configure = {
                     r'(.*)/bag/de/home/aktuell/medienmitteilungen\.msg-id(.*)',
                     r'(.*)/bag/de/home/aktuell/veranstaltungen/(.*)'
                 ],
-        'publish':[{'rule':"//div[@class='clearfix']/p[@class='pull-left']/small/span[@class='text-dimmed']/text()",'format':'Letzte Änderung %d.%m.%Y'}]
+        'publish':[
+            {
+                'rule':'//*[@id="content"]/div/div[1]/div[8]/p[1]/small/span/text()',
+                'format':'%Y-%m-%d',
+                'extra':ch_time_sub,
+            }
+        ],
+        'language':'de'
     },
 
-    # 列支敦士登 感觉规则没问题，加上规则爬不下来东西
+    # 列支敦士登 js加载 无法爬取
     'li':{
         'allowed_domains':['llv.li'],
         'site_url':'https://www.llv.li/#/1908/amt-fur-gesundheit',
@@ -1341,7 +1466,7 @@ configure = {
         'rules':[r'(.*)/[0-9]{2,5}/(.*)',r'(.*)/files/dss/(.*)']
     },
 
-    # 英国
+    # 英国 通过
     'uk':{
         'allowed_domains':['gov.uk'],
         'site_url':'https://www.gov.uk/government/organisations/department-of-health',
@@ -1362,26 +1487,37 @@ configure = {
         'start_urls':[]
     },
 
-    # 荷兰 时间解析有问题
+    # 荷兰 en
     'nl':{
         'allowed_domains':['government.nl'],
         'site_url':'https://www.government.nl/ministries/ministry-of-health-welfare-and-sport',
         'start_urls':['https://www.government.nl/ministries/ministry-of-health-welfare-and-sport/news'],
-        'rules':[r'(.*)/ministries/ministry-of-health-welfare-and-sport/news(.*)'],
-        'publish':[{'rule':"//div[@id='main']/div[@class='wrapper']/div[@id='content']/p[@class='article-meta']/text()",'format':'News item | %d-%m-%Y | %H:%M'}]
+        'rules':[
+            r'(.*)/ministries/ministry-of-health-welfare-and-sport/news(.*)'
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="content"]//p[contains(@class,"article-meta")]/text()',
+                'format':'News item | %d-%m-%Y | %H:%M'
+            }
+        ]
     },
 
-    # 比利时 时间解析有问题
+    # 比利时 en
     'be':{
         'allowed_domains':['belgium.be'],
         'site_url':'https://www.belgium.be/en/health',
         'start_urls':['https://www.belgium.be/en/news'],
         'rules':[r'(.*)/en/news(.*)'],
-        'publish':[{'rule':"//section[@id='content']/div[@id='block-system-main']/div/div[@class='submitted']/text()",'format':'''
-      date: %d %B %Y    '''}]
+        'publish':[
+            {
+                'rule':"//div[@id='block-system-main']/div/div[@class='submitted']/text()",
+                'format':'date: %d %B %Y'
+            },
+        ]
     },
 
-    # 卢森堡
+    # 卢森堡 通过
     'lu':{
         'allowed_domains':['sante.public.lu'],
         'site_url':'http://www.sante.public.lu/fr/politique-sante/ministere-sante/index.html',
@@ -1390,18 +1526,25 @@ configure = {
         'publish':[{'rule':"//time[@class='article-published']/text()",'format':'%d-%m-%Y'}]
     },
 
-    # 法国 空吃内存，没输出，注释掉规则和日期也是一样
+    # 法国
     'fr':{
         'allowed_domains':['solidarites-sante.gouv.fr'],
         'site_url':'http://solidarites-sante.gouv.fr',
-        'start_urls':['http://solidarites-sante.gouv.fr/actualites/'],
+        'start_urls':[
+            'http://solidarites-sante.gouv.fr/actualites'
+        ],
         'rules':[
-                    r'(.*)'
+                    r'(.*)/actualites(.*)'
                 ],
-        'publish':[{'rule':"//div[@class='main-article__horodatage']/span[@class='main-article__date date--publication']",'format':'%d.%m.%y'}]
+        'publish':[
+            {
+                'rule':'//*[@id="content"]//*[contains(@class,"main-article__date date--publication")]/text()',
+                'format':'%d.%m.%y'
+            }
+        ]
     },
 
-    # 摩纳哥
+    # 摩纳哥 通过
     'mc':{
         'allowed_domains':['en.gouv.mc'],
         'site_url':'http://en.gouv.mc/Government-Institutions/The-Government/Ministry-of-Health-and-Social-Affairs',
@@ -1410,19 +1553,22 @@ configure = {
         'publish':[{'rule':"//div[@class='info']/span[@class='date']/text()",'format':'%d %B %Y'}]
     },
 
-    # 西班牙 时间解析有问题,月份不是英语
+    # 西班牙 en 可是网页语法明明是西班牙语
     'es':{
         'allowed_domains':['msc.es'],
         'site_url':'http://www.msc.es/en/home.htm',
         'start_urls':['http://www.msc.es/en/gabinete/notasPrensa.do'],
         'rules':[r'(.*)/en/gabinete/notasPrensa\.do(.*)'],
         'publish':[
-                    {'rule':"//section[@class='col-sm-8 col-md-9 informacion']/div[2]/p[1]/strong/text()",'format':'%d de %B de %Y.'},
-                    {'rule':"//section[@class='col-sm-8 col-md-9 informacion']/div[2]/p[1]/strong/text()",'format':'%d de %B de %Y'}
-                    ]
+            {
+                'rule':"//section[@class='col-sm-8 col-md-9 informacion']/div[2]/p[1]/strong/text()",
+                'format':'%Y-%m-%d',
+                'extra':es_time_sub,
+            },
+        ]
     },
 
-    # 葡萄牙
+    # 葡萄牙 通过
     'pt':{
         'allowed_domains':['sns.gov.pt'],
         'site_url':'https://www.sns.gov.pt/',
@@ -1434,7 +1580,7 @@ configure = {
         'publish':[{'rule':"//div[@class='post-info-bar']/div[@class='post-info cf col-md-2 col-xs-12']/span/text()",'format':'%d/%m/%Y'}]
     },
 
-    # 安道尔
+    # 安道尔 en 通过
     'ad':{
         'allowed_domains':['salutibenestar.ad'],
         'site_url':'http://www.salutibenestar.ad/index2.htm',
@@ -1454,13 +1600,22 @@ configure = {
         'site_url':'http://www.sanita.segreteria.sm'
     },
 
-    # 马耳他
+    # 马耳他 en 通过
     'mt':{
         'allowed_domains':['gov.mt'],
         'site_url':'https://deputyprimeminister.gov.mt/en/Pages/health.aspx',
         'start_urls':['https://deputyprimeminister.gov.mt/en/news/Pages/News.aspx'],
         'rules':[r'(.*)/en/Government/Press%20Releases/Pages/[0-9]{4}/(.*)',r'(.*)/en/news/Pages/News(.*)'],
-        'publish':[{'rule':"//div[@class='content']/div[@class='header']/div[@class='info']/text()",'format':'%b %d, %Y'}]
+        'publish':[
+            {
+                'rule':"//div[@class='content']/div[@class='header']/div[@class='info']/text()",
+                'format':'%b %d, %Y'
+            },
+            {
+                'rule':'//*[@id="ctl00_MSO_ContentDiv"]//*[contains(@class,"info")]/text()[3]',
+                'format':'%b %d, %Y'
+            }
+        ]
     },
 
     # 匈牙利 网页打不开
@@ -1472,7 +1627,7 @@ configure = {
 
     },
 
-    # 塞尔维亚 时间解析不对
+    # 塞尔维亚 ru 通过
     'rs':{
         'allowed_domains':['zdravlje.gov.rs'],
         'site_url':'http://www.zdravlje.gov.rs/index.php',
@@ -1499,10 +1654,17 @@ configure = {
                     r'(.*)/showpage\.php\?id=363',
                     r'(.*)/showpage\.php\?id=338',
                 ],
-        'publish':[{'rule':"//div[@id='content']/div[@id='content_head']/text()",'format':'Са подацима од: %d.%m.%Y. '}]
+        'language':'rs',
+        'publish':[
+            {
+                'rule':"//div[@id='content']/div[@id='content_head']/text()",
+                'format':"%Y-%m-%d",
+                'extra':rs_time_sub,
+            }
+        ],
     },
 
-     # 保加利亚
+     # 保加利亚 ru 通过
     'bg':{
         'allowed_domains':['mh.government.bg'],
         'site_url':'http://www.mh.government.bg',
@@ -1516,10 +1678,16 @@ configure = {
                     r'(.*)/bg/evropeyski-programi/tekushti-programi-i-proekti(.*)',
                     r'(.*)/bg/politiki(.*)'
                 ],
-        'publish':[{"rule":"//div[@id='top']/ul[@class='newsdate']/time[@datetime]/@datetime","format":"%Y-%m-%dT%H:%M:%S+03:00"}]
+        'language':'bg',
+        'publish':[
+            {
+                "rule":"//div[@id='top']/ul[@class='newsdate']/time[@datetime]/@datetime",
+                "format":"%Y-%m-%dT%H:%M:%S+03:00"
+            },
+        ]
     },
 
-    # 斯洛文尼亚
+    # 斯洛文尼亚 es 通过
     'si':{
         'allowed_domains':['mz.gov.si',],
         'site_url':'http://www.mz.gov.si',
@@ -1530,13 +1698,21 @@ configure = {
                         'http://www.mz.gov.si/si/medijsko_sredisce/poslanska_vprasanja',
                         'http://www.mz.gov.si/si/pogoste_vsebine_za_javnost/izdaja_zdravil_prek_medmrezja'
                     ],
-        'rules':[r'(.*)/si/medijsko_sredisce(.*)',r'(.*)/si/pogoste_vsebine_za_javnost(.*)'],
-        'publish':[{"rule":"//div[@id='mainContainer']/div[@class='newsdate']/text()","format":"%d. %m. %Y"}]
+        'rules':[
+            r'(.*)/si/medijsko_sredisce(.*)',
+            r'(.*)/si/pogoste_vsebine_za_javnost(.*)'
+        ],
+        'publish':[
+            {
+                "rule":"//div[@id='mainContainer']//div[@class='newsdate']/text()",
+                "format":"%d. %m. %Y"
+            }
+        ]
     },
 
     # 梵蒂冈 没有网址
 
-    # 克罗地亚
+    # 克罗地亚 en 通过
     'hr':{
         'allowed_domains':['zdravstvo.gov.hr'],
         'site_url':'https://zdravstvo.gov.hr/',
@@ -1547,39 +1723,71 @@ configure = {
                         'https://zdravstvo.gov.hr/najcesca-pitanja-i-odgovori/1479',
                         'https://zdravstvo.gov.hr/strategije-planovi-i-izvjesca/2396'
                     ],
-        'rules':[r'(.*)/vijesti/8(.*)',r'(.*)/vijesti(.*)',r'(.*)/pristup-informacijama(.*)'],
-        'publish':[{"rule":"//div[@class='article_left']/li[@class='time_info']/text()","format":"Objavljeno: %d.%m.%Y."}]
+        'rules':[
+            r'(.*)/vijesti/8(.*)',
+            r'(.*)/vijesti(.*)',
+            r'(.*)/pristup-informacijama(.*)'
+        ],
+        'publish':[
+            {
+                "rule":"//div[@class='article_info']//*[@class='time_info']/text()",
+                "format":"Objavljeno: %d.%m.%Y."
+            }
+        ]
 
     },
 
-    # 波斯尼亚和黑塞哥维那 月份非英语，有的解析无法解析
+    # 波斯尼亚和黑塞哥维那 es 通过 文件多
     'ba':{
         'allowed_domains':['fmoh.gov.ba'],
         'site_url':'http://www.fmoh.gov.ba',
-        'start_urls':['http://www.fmoh.gov.ba/index.php/novosti-iz-ministarstva'],
-        'rules':[r'(.*)/index\.php/novosti-iz-ministarstva(.*)'],
-        'publish':[{'rule':"//header/p[@class='meta']/time/text()",'format':'%d %B %Y'}]
+        'start_urls':[
+            'http://www.fmoh.gov.ba/index.php/novosti-iz-ministarstva'
+        ],
+        'rules':[
+            r'(.*)/index\.php/novosti-iz-ministarstva(.*)'
+        ],
+        'publish':[
+            {
+                'rule':'//*[@id="system"]//header/p[contains(@class,"meta")]/time/@datetime',
+                
+                'format':'%Y-%m-%d',
+                
+            }
+        ]
     },
 
-    # 黑山
+    # 黑山 en 通过
     'me':{
         'allowed_domains':['mzd.gov.me'],
         'site_url':'http://www.mzd.gov.me/en/ministry',
         'start_urls':['http://www.mzd.gov.me/en/news'],
         'rules':[r'(.*)/en/news(.*)'],
-        'publish':[{'rule':"//div[@class='detalji-hold']/div[@class='detalji']/text()",'format':'%d.%m.%Y %H:%M |'}]
+        'publish':[
+            {
+                'rule':"//*[@id='aspnetForm']//div[contains(@class,'detalji-hold')]/div[contains(@class,'detalji')]/text()[2]",
+                'format':'%Y-%m-%d %H:%M',
+                'extra':me_time_sub,
+            }
+        ]
     },
 
-    # 罗马尼亚 日期中月份非英语，无法解析
+    # 罗马尼亚 es 通过
     'ro':{
         'allowed_domains':['ms.ro'],
         'site_url':'http://www.ms.ro',
         'start_urls':['http://www.ms.ro/comunicate/'],
         'rules':[r'(.*)/[0-9]{4}/[0-9]{2}/[0-9]{2}/(.*)',r'(.*)/comunicate/(.*)'],
-        'publish':[{'rule':"//span[@class='post-meta-infos']/time[@class='date-container minor-meta updated']/text()",'format':'%d %B %Y'}]
+        'publish':[
+            {
+                'rule':'//*[@id="main"]//article//time[contains(@class,"date-container")]/text()',
+                'format':'%Y-%m-%d',
+                'extra':ro_time_sub,
+            }
+        ]
     },
 
-    # 希腊
+    # 希腊 en
     'gr':{
         'allowed_domains':['efpolis.gr'],
         'site_url':'"http://www.efpolis.gr',
@@ -1594,14 +1802,19 @@ configure = {
         'start_urls':[]
     },
 
-    # 马其顿
+    # 马其顿 ru
     'mk':{
         'allowed_domains':['vlada.mk'],
         'site_url':'http://vlada.mk/?q=node/353&language=en-gb',
         'start_urls':['http://vlada.mk/media-centar'],
         'rules':[r'(.*)/node/[0-9]{5}',r'(.*)/media-centar(.*)'],
-        'publish':[{'rule':"//div[@class='meta post-info']/div[@class='meta submitted']/text()",'format':'''
-            	              	%d.%m.%Y        	'''}]
+        'publish':[
+            {
+                'rule':"//div[@class='meta post-info']/div[@class='meta submitted']/text()",
+                'format':'%d.%m.%Y        	'
+            },
+        ],
+        'language':'ru'
     },
 
 
@@ -1636,7 +1849,7 @@ configure = {
     ## 阿尔及利亚 打不开
     'dz':{
     },
-    ## 摩洛哥 fr
+    ## 摩洛哥 fr 通过
     'ma':{
         'allowed_domains':['gov.ma'],
         'site_url':'http://www.sante.gov.ma',

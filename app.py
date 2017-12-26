@@ -509,7 +509,12 @@ def search():
                     },
                     "order": "desc"
                 }
-            }
+            },
+            {
+                "_score": {
+                    "order": "desc"
+                }
+            },
         ]
     elif qsort == 'score':
         sort_dsl = [
@@ -521,7 +526,7 @@ def search():
         ]
     elif qsort == 'all':
         sort_dsl = [
-             {
+            {
                 "_score": {
                     "order": "desc"
                 }
