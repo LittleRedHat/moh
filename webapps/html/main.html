@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>全球中医药行业搜索系统</title>
@@ -15,7 +14,6 @@
     <script src="../css/bootstrap/js/bootstrap.min.js"></script>
     <script src="../js/examples.js"></script>
 </head>
-
 <body>
     <div class="bs-header" id="content">
         <div class="container">
@@ -61,6 +59,7 @@
                 </div>
                 <div class="col-md-3">
                     <label>选择国家</label>
+                    <a id="show_nation_list_btn" class="nation_click">显示国家列表</a>
                     <input id="nation" type="text" class="form-control" placeholder="请输入国家名的英文缩写...">
                 </div>
                 <div class="col-md-3">
@@ -72,7 +71,7 @@
                             丹麦语:dan,芬兰语:fin,捷克语:cs,罗马尼亚语:rom,斯洛文尼亚语:slo,瑞典语:swe,匈牙利语:hu,繁体中文:cht,
                             越南语:vie" style="cursor: pointer"></span>
                     </label>
-                    <a id="show_lan_list_btn" class="language_click">显示语言缩写列表</a>
+                    <a id="show_lan_list_btn" class="nation_click">显示语言列表</a>
                     <input id="language" type="text" class="form-control" placeholder="请输入语言名的英文缩写...">
                     <div id="language_list">
                         <span class="language_click" onclick="choose_lan('zh')">中文</span>
@@ -104,6 +103,218 @@
                 </div>
             </div>
             <div class="row search-row">
+                <div id="nation_list">
+                    <h4>亚洲</h4>
+                    <p>
+                        <span class="nation_click" onclick="choose_nation('cn')">中国</span>
+                        <span class="nation_click" onclick="choose_nation('mn')">蒙古</span>
+                        <span class="nation_click" onclick="choose_nation('jp')">日本</span>
+                        <span class="nation_click" onclick="choose_nation('kr')">韩国</span>
+                        <span class="nation_click" onclick="choose_nation('vn')">越南</span>
+                        <span class="nation_click" onclick="choose_nation('la')">老挝</span>
+                        <span class="nation_click" onclick="choose_nation('kh')">柬埔寨</span>
+                        <span class="nation_click" onclick="choose_nation('mm')">缅甸</span>
+                        <span class="nation_click" onclick="choose_nation('th')">泰国</span>
+                        <span class="nation_click" onclick="choose_nation('ph')">菲律宾</span>
+                        <span class="nation_click" onclick="choose_nation('my')">马来西亚</span>
+                        <span class="nation_click" onclick="choose_nation('id')">印度尼西亚</span>
+                        <span class="nation_click" onclick="choose_nation('sg')">新加坡</span>
+                        <span class="nation_click" onclick="choose_nation('bn')">文莱</span>
+                        <span class="nation_click" onclick="choose_nation('tl')">东帝汶</span>
+                        <span class="nation_click" onclick="choose_nation('np')">尼泊尔</span>
+                        <span class="nation_click" onclick="choose_nation('bt')">不丹</span>
+                        <span class="nation_click" onclick="choose_nation('in')">印度</span>
+                        <span class="nation_click" onclick="choose_nation('pk')">巴基斯坦</span>
+                        <span class="nation_click" onclick="choose_nation('bd')">孟加拉国</span>
+                        <span class="nation_click" onclick="choose_nation('lk')">斯里兰卡</span>
+                        <span class="nation_click" onclick="choose_nation('mv')">马尔代夫</span>
+                        <span class="nation_click" onclick="choose_nation('ir')">伊朗</span>
+                        <span class="nation_click" onclick="choose_nation('af')">阿富汗</span>
+                        <span class="nation_click" onclick="choose_nation('sa')">沙特阿拉伯</span>
+                        <span class="nation_click" onclick="choose_nation('ye')">也门</span>
+                        <span class="nation_click" onclick="choose_nation('om')">阿曼</span>
+                        <span class="nation_click" onclick="choose_nation('ae')">阿拉伯联合酋长国</span>
+                        <span class="nation_click" onclick="choose_nation('qa')">卡塔尔</span>
+                        <span class="nation_click" onclick="choose_nation('bh')">巴林</span>
+                        <span class="nation_click" onclick="choose_nation('kw')">科威特</span>
+                        <span class="nation_click" onclick="choose_nation('tr')">土耳其</span>
+                        <span class="nation_click" onclick="choose_nation('sy')">叙利亚</span>
+                        <span class="nation_click" onclick="choose_nation('iq')">伊拉克</span>
+                        <span class="nation_click" onclick="choose_nation('jo')">约旦</span>
+                        <span class="nation_click" onclick="choose_nation('ps')">巴勒斯坦</span>
+                        <span class="nation_click" onclick="choose_nation('il')">以色列</span>
+                        <span class="nation_click" onclick="choose_nation('lb')">黎巴嫩</span>
+                        <span class="nation_click" onclick="choose_nation('cy')">塞浦路斯</span>
+                        <span class="nation_click" onclick="choose_nation('ge')">格鲁吉亚</span>
+                        <span class="nation_click" onclick="choose_nation('am')">亚美尼亚</span>
+                        <span class="nation_click" onclick="choose_nation('az')">阿塞拜疆</span>
+                        <span class="nation_click" onclick="choose_nation('kz')">哈萨克斯坦</span>
+                        <span class="nation_click" onclick="choose_nation('uz')">乌兹别克斯坦</span>
+                        <span class="nation_click" onclick="choose_nation('tm')">土库曼斯坦</span>
+                        <span class="nation_click" onclick="choose_nation('kg')">吉尔吉斯斯坦</span>
+                        <span class="nation_click" onclick="choose_nation('tj')">塔吉克斯坦</span>
+                    </p>
+                    <h4>欧洲</h4>
+                    <p>
+                        <span class="nation_click" onclick="choose_nation('no')">挪威</span>
+                        <span class="nation_click" onclick="choose_nation('se')">瑞典</span>
+                        <span class="nation_click" onclick="choose_nation('fi')">芬兰</span>
+                        <span class="nation_click" onclick="choose_nation('dk')">丹麦</span>
+                        <span class="nation_click" onclick="choose_nation('is')">冰岛</span>
+                        <span class="nation_click" onclick="choose_nation('ru')">俄罗斯</span>
+                        <span class="nation_click" onclick="choose_nation('ee')">爱沙尼亚</span>
+                        <span class="nation_click" onclick="choose_nation('lv')">拉脱维亚</span>
+                        <span class="nation_click" onclick="choose_nation('lt')">立陶宛</span>
+                        <span class="nation_click" onclick="choose_nation('by')">白俄罗斯</span>
+                        <span class="nation_click" onclick="choose_nation('ua')">乌克兰</span>
+                        <span class="nation_click" onclick="choose_nation('md')">波尔多瓦</span>
+                        <span class="nation_click" onclick="choose_nation('pl')">波兰</span>
+                        <span class="nation_click" onclick="choose_nation('de')">德国</span>
+                        <span class="nation_click" onclick="choose_nation('ca')">捷克</span>
+                        <span class="nation_click" onclick="choose_nation('sk')">斯洛伐克</span>
+                        <span class="nation_click" onclick="choose_nation('at')">奥地利</span>
+                        <span class="nation_click" onclick="choose_nation('ch')">瑞士</span>
+                        <span class="nation_click" onclick="choose_nation('uk')">英国</span>
+                        <span class="nation_click" onclick="choose_nation('ie')">爱尔兰</span>
+                        <span class="nation_click" onclick="choose_nation('nl')">荷兰</span>
+                        <span class="nation_click" onclick="choose_nation('be')">比利时</span>
+                        <span class="nation_click" onclick="choose_nation('lu')">卢森堡</span>
+                        <span class="nation_click" onclick="choose_nation('fr')">法国</span>
+                        <span class="nation_click" onclick="choose_nation('mc')">摩纳哥</span>
+                        <span class="nation_click" onclick="choose_nation('es')">西班牙</span>
+                        <span class="nation_click" onclick="choose_nation('pt')">葡萄牙</span>
+                        <span class="nation_click" onclick="choose_nation('ad')">安道尔</span>
+                        <span class="nation_click" onclick="choose_nation('it')">意大利</span>
+                        <span class="nation_click" onclick="choose_nation('sm')">圣马力诺</span>
+                        <span class="nation_click" onclick="choose_nation('mt')">马耳他</span>
+                        <span class="nation_click" onclick="choose_nation('hu')">匈牙利</span>
+                        <span class="nation_click" onclick="choose_nation('rs')">塞尔维亚</span>
+                        <span class="nation_click" onclick="choose_nation('bg')">保加利亚</span>
+                        <span class="nation_click" onclick="choose_nation('si')">斯洛文尼亚</span>
+                        <span class="nation_click" onclick="choose_nation('hr')">克罗地亚</span>
+                        <span class="nation_click" onclick="choose_nation('ba')">波斯尼亚和黑塞哥维那</span>
+                        <span class="nation_click" onclick="choose_nation('me')">黑山</span>
+                        <span class="nation_click" onclick="choose_nation('ro')">罗马尼亚</span>
+                        <span class="nation_click" onclick="choose_nation('gr')">希腊</span>
+                        <span class="nation_click" onclick="choose_nation('al')">阿尔巴尼亚</span>
+                        <span class="nation_click" onclick="choose_nation('mk')">马其顿</span>
+                    </p>
+                    <h4>非洲</h4>
+                    <p>
+                        <span class="nation_click" onclick="choose_nation('eg')">埃及</span>
+                        <span class="nation_click" onclick="choose_nation('ly')">利比亚</span>
+                        <span class="nation_click" onclick="choose_nation('dz')">阿尔及利亚</span>
+                        <span class="nation_click" onclick="choose_nation('ma')">摩洛哥</span>
+                        <span class="nation_click" onclick="choose_nation('tn')">突尼斯</span>
+                        <span class="nation_click" onclick="choose_nation('mr')">毛里塔尼亚</span>
+                        <span class="nation_click" onclick="choose_nation('ml')">马里</span>
+                        <span class="nation_click" onclick="choose_nation('sn')">塞内加尔</span>
+                        <span class="nation_click" onclick="choose_nation('gm')">冈比亚</span>
+                        <span class="nation_click" onclick="choose_nation('bf')">布基纳法索</span>
+                        <span class="nation_click" onclick="choose_nation('gn')">几内亚</span>
+                        <span class="nation_click" onclick="choose_nation('gw')">几内亚比绍</span>
+                        <span class="nation_click" onclick="choose_nation('sl')">塞拉利昂</span>
+                        <span class="nation_click" onclick="choose_nation('cv')">佛得角</span>
+                        <span class="nation_click" onclick="choose_nation('lr')">利比里亚</span>
+                        <span class="nation_click" onclick="choose_nation('ci')">科特迪瓦</span>
+                        <span class="nation_click" onclick="choose_nation('gh')">加纳</span>
+                        <span class="nation_click" onclick="choose_nation('tg')">多哥</span>
+                        <span class="nation_click" onclick="choose_nation('bj')">贝宁</span>
+                        <span class="nation_click" onclick="choose_nation('ng')">尼日利亚</span>
+                        <span class="nation_click" onclick="choose_nation('cm')">喀麦隆</span>
+                        <span class="nation_click" onclick="choose_nation('gp')">赤道几内亚</span>
+                        <span class="nation_click" onclick="choose_nation('st')">圣多美和普林西比</span>
+                        <span class="nation_click" onclick="choose_nation('td')">乍得</span>
+                        <span class="nation_click" onclick="choose_nation('ne')">尼日尔</span>
+                        <span class="nation_click" onclick="choose_nation('sd')">苏丹</span>
+                        <span class="nation_click" onclick="choose_nation('cf')">中非</span>
+                        <span class="nation_click" onclick="choose_nation('ga')">加蓬</span>
+                        <span class="nation_click" onclick="choose_nation('cg')">刚果</span>
+                        <span class="nation_click" onclick="choose_nation('ao')">安哥拉</span>
+                        <span class="nation_click" onclick="choose_nation('cd')">刚果民主共和国</span>
+                        <span class="nation_click" onclick="choose_nation('et')">埃塞俄比亚</span>
+                        <span class="nation_click" onclick="choose_nation('so')">索马里</span>
+                        <span class="nation_click" onclick="choose_nation('er')">厄立特里亚</span>
+                        <span class="nation_click" onclick="choose_nation('dj')">吉布提</span>
+                        <span class="nation_click" onclick="choose_nation('tz')">坦桑尼亚</span>
+                        <span class="nation_click" onclick="choose_nation('ke')">肯尼亚</span>
+                        <span class="nation_click" onclick="choose_nation('ug')">乌干达</span>
+                        <span class="nation_click" onclick="choose_nation('rw')">卢旺达</span>
+                        <span class="nation_click" onclick="choose_nation('bi')">布隆迪</span>
+                        <span class="nation_click" onclick="choose_nation('zm')">赞比亚</span>
+                        <span class="nation_click" onclick="choose_nation('mw')">马拉维</span>
+                        <span class="nation_click" onclick="choose_nation('km')">科摩罗</span>
+                        <span class="nation_click" onclick="choose_nation('mz')">莫桑比克</span>
+                        <span class="nation_click" onclick="choose_nation('mg')">马达加斯加</span>
+                        <span class="nation_click" onclick="choose_nation('mu')">毛里求斯</span>
+                        <span class="nation_click" onclick="choose_nation('sc')">塞舌尔</span>
+                        <span class="nation_click" onclick="choose_nation('na')">纳米比亚</span>
+                        <span class="nation_click" onclick="choose_nation('bw')">博兹瓦纳</span>
+                        <span class="nation_click" onclick="choose_nation('zw')">津巴布韦</span>
+                        <span class="nation_click" onclick="choose_nation('sz')">斯威士兰</span>
+                        <span class="nation_click" onclick="choose_nation('ls')">莱索托</span>
+                        <span class="nation_click" onclick="choose_nation('za')">南非</span>
+                    </p>
+                    <h4>北美洲</h4>
+                    <p>
+                        <span class="nation_click" onclick="choose_nation('us')">美国</span>
+                        <span class="nation_click" onclick="choose_nation('ca')">加拿大</span>
+                        <span class="nation_click" onclick="choose_nation('mx')">墨西哥</span>
+                        <span class="nation_click" onclick="choose_nation('hn')">洪都拉斯</span>
+                        <span class="nation_click" onclick="choose_nation('gt')">危地马拉</span>
+                        <span class="nation_click" onclick="choose_nation('sv')">萨尔瓦多</span>
+                        <span class="nation_click" onclick="choose_nation('jm')">牙买加</span>
+                        <span class="nation_click" onclick="choose_nation('tt')">特立尼达和多巴哥</span>
+                        <span class="nation_click" onclick="choose_nation('bs')">巴哈马</span>
+                        <span class="nation_click" onclick="choose_nation('bz')">伯利兹</span>
+                        <span class="nation_click" onclick="choose_nation('ni')">尼加拉瓜</span>
+                        <span class="nation_click" onclick="choose_nation('pa')">巴拿马</span>
+                        <span class="nation_click" onclick="choose_nation('cu')">古巴</span>
+                        <span class="nation_click" onclick="choose_nation('ht')">海地</span>
+                        <span class="nation_click" onclick="choose_nation('ag')">安提瓜和巴布达</span>
+                        <span class="nation_click" onclick="choose_nation('dm')">多米尼克</span>
+                        <span class="nation_click" onclick="choose_nation('do')">多米尼加</span>
+                        <span class="nation_click" onclick="choose_nation('lc')">圣卢西亚</span>
+                        <span class="nation_click" onclick="choose_nation('kn')">圣基茨和尼维斯</span>
+                        <span class="nation_click" onclick="choose_nation('bb')">巴巴多斯</span>
+                        <span class="nation_click" onclick="choose_nation('gd')">格林纳达</span>
+                        <span class="nation_click" onclick="choose_nation('vc')">圣文森特和格林纳丁斯</span>
+                    </p>
+                    <h4>南美洲</h4>
+                    <p>
+                        <span class="nation_click" onclick="choose_nation('co')">哥伦比亚</span>
+                        <span class="nation_click" onclick="choose_nation('ec')">厄瓜多尔</span>
+                        <span class="nation_click" onclick="choose_nation('ve')">委内瑞拉</span>
+                        <span class="nation_click" onclick="choose_nation('gy')">圭亚那</span>
+                        <span class="nation_click" onclick="choose_nation('sr')">苏里南</span>
+                        <span class="nation_click" onclick="choose_nation('pe')">秘鲁</span>
+                        <span class="nation_click" onclick="choose_nation('bo')">玻利维亚</span>
+                        <span class="nation_click" onclick="choose_nation('py')">巴拉圭</span>
+                        <span class="nation_click" onclick="choose_nation('br')">巴西</span>
+                        <span class="nation_click" onclick="choose_nation('cl')">智利</span>
+                        <span class="nation_click" onclick="choose_nation('ar')">阿根廷</span>
+                        <span class="nation_click" onclick="choose_nation('uy')">乌拉圭</span>
+                    </p>
+                    <h4>大洋洲</h4>
+                    <p>
+                        <span class="nation_click" onclick="choose_nation('nz')">新西兰</span>
+                        <span class="nation_click" onclick="choose_nation('fj')">斐济群岛</span>
+                        <span class="nation_click" onclick="choose_nation('au')">澳大利亚</span>
+                        <span class="nation_click" onclick="choose_nation('pg')">巴布亚新几内亚</span>
+                        <span class="nation_click" onclick="choose_nation('sb')">所罗门群岛</span>
+                        <span class="nation_click" onclick="choose_nation('vu')">瓦努阿图</span>
+                        <span class="nation_click" onclick="choose_nation('pw')">帕罗</span>
+                        <span class="nation_click" onclick="choose_nation('fm')">密克罗尼西亚联邦</span>
+                        <span class="nation_click" onclick="choose_nation('mh')">马绍尔群岛</span>
+                        <span class="nation_click" onclick="choose_nation('ki')">基里巴斯</span>
+                        <span class="nation_click" onclick="choose_nation('nr')">瑙鲁</span>
+                        <span class="nation_click" onclick="choose_nation('tv')">图瓦卢</span>
+                        <span class="nation_click" onclick="choose_nation('to')">汤加</span>
+                        <span class="nation_click" onclick="choose_nation('ws')">萨摩亚</span>
+                    </p>
+                </div>
+            </div>
+            <div class="row search-row">
                 <div class="col-md-3">
                     <label>每页展示数量</label>
                     <input id="size" type="number" class="form-control" value="20">
@@ -123,27 +334,6 @@
                   国家，语言的筛选支持多个，输入不同的名称缩写即可，各缩写名之间用空格隔开。" style="cursor: pointer"></span>
                 </div>
             </div>
-
-            <!--
-        <div class="col-md-8">
-
-        </div>
-        <div class="col-md-2">
-            <div class="row"></div>
-            <div class="row">
-                <button type="button" class="btn btn-success btn-lg" onclick="keyWordTrans($('#search-key').val())">翻译</button>
-                <button type="button" class="btn btn-success btn-lg" id="search">搜索</button>
-            </div>
-            <div class="row"></div>
-        </div>
-        -->
-            <!--
-        <div class="col-md-2">
-            <span class="glyphicon glyphicon-question-sign" aria-hidden="true"
-                  data-mtpis="搜索使用提示：若要求搜索结果中同时包含多个关键字，则将多个关键字用“&”连接，如：“中医&中药”；
-                  若要求几个关键词出现其中之一，则将关键字用“|”连接，如：“中医|中药”, 暂无法同时使用&和|。" style="cursor: pointer"></span>
-        </div>
-        -->
         </div>
         <div class="row">
             <p id="trans-res"></p>
@@ -156,30 +346,6 @@
         </div>
 
         <div class="row">
-            <!--
-        <div class="col-md-2">
-            <form>
-                <div class="checkbox">
-                    <label>
-                        <input class="options" type="checkbox" value="" id="attachment">
-                        显示附件检索内容
-                    </label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input class="options" type="radio" value="" name="sort" checked>
-                        按权重排序
-                    </label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input class="options" type="radio" value="" name="sort">
-                        按时间排序
-                    </label>
-                </div>
-            </form>
-        </div>
-        -->
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <div id="wordCloud"></div>
@@ -216,5 +382,4 @@
     <script type="text/javascript" src="../js/md5.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
 </body>
-
 </html>

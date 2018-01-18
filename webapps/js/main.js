@@ -45,17 +45,34 @@ $('#show_lan_list_btn').click(function () {
     //console.log(display);
     if (display == "none") {
         $('#language_list').css("display", "block");
-        $('#show_lan_list_btn').text("隐藏语言缩写列表");
+        $('#show_lan_list_btn').text("隐藏语言列表");
     }
     else{
         $('#language_list').css("display", "none");
-        $('#show_lan_list_btn').text("显示语言缩写列表");
+        $('#show_lan_list_btn').text("显示语言列表");
+    }
+});
+$('#show_nation_list_btn').click(function () {
+    var display = $('#nation_list').css("display");
+
+    //console.log(display);
+    if (display == "none") {
+        $('#nation_list').css("display", "block");
+        $('#show_nation_list_btn').text("隐藏国家列表");
+    }
+    else{
+        $('#nation_list').css("display", "none");
+        $('#show_nation_list_btn').text("显示国家列表");
     }
 });
 
 function choose_lan(str) {
     //console.log(str);
     $('#language').val($('#language').val() + str + " " );
+}
+
+function choose_nation(str) {
+    $('#nation').val($('#nation').val() + str + " ");
 }
 
 //展示地图
@@ -390,8 +407,7 @@ function searchRes(searchDataJson) {
                             str += '<th><a href="' + data[i]['url'] + '">原地址</a></th>';
                             str += '<th>' + (nations_table[data[i]['nation']] ?
                                 nations_table[data[i]['nation']] : data[i]['nation']) + '</th>';
-                            str += '<th>' + (languages_table[data[i]['language'].toLowerCase()] ?
-                                languages_table[data[i]['language'].toLowerCase()] : data[i]['language'].toLowerCase()) + '</th>';
+                            str += '<th>' + transLan(data[i]['language'].toLowerCase()) + '</th>';
                             str += '</tr>';
                         }
                         $('#data_table').html(str);
@@ -666,4 +682,10 @@ function remove(arr, i) {
     for (var j = i; j < arr.length - 1; j++)
         arr[j] = arr[j + 1];
     arr.pop();
+}
+
+function transLan(lanStr) {
+    var lan = lanStr.substring(0, 2);
+    //console.log(lanStr + " " + lan);
+    return languages_table[lan] ? languages_table[lan] : lan;
 }

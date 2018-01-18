@@ -29,3 +29,13 @@ span.language_click:hover {
 div#language_list {
     display: none;
 }
+
+.nation_click {
+    cursor: pointer;
+}
+span.nation_click:hover {
+    color: #2aabd2;
+}
+div#nation_list {
+    display: none;
+}
