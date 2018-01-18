@@ -407,7 +407,13 @@ function searchRes(searchDataJson) {
                             str += '<th><a href="' + data[i]['url'] + '">原地址</a></th>';
                             str += '<th>' + (nations_table[data[i]['nation']] ?
                                 nations_table[data[i]['nation']] : data[i]['nation']) + '</th>';
-                            str += '<th>' + transLan(data[i]['language'].toLowerCase()) + '</th>';
+
+                            var language = data[i]['language'].split('-')
+                            if(language.length >0){
+                                language = language[0].toLowerCase()
+                            }
+
+                            str += '<th>' + transLan(language) + '</th>';
                             str += '</tr>';
                         }
                         $('#data_table').html(str);
