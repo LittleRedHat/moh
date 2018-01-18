@@ -58,3 +58,80 @@ a = {
 
 }
 
+
+
+dsl = {
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "content": "cancer treatment in asia"
+          }
+        },
+        {
+          "match": {
+            "content": "medical"
+          }
+        }
+      ],
+      "must_not": [],
+      "should": [],
+      "filter": [
+        {
+          "range": {
+            "publish": {
+              "gte": "2013-01-01",
+              "lte": "now",
+              "format": "yyyy-mm-dd"
+            }
+          }
+        },
+        {
+          "term": {
+            "valid": 1
+          }
+        }
+      ]
+    }
+  },
+  "_source": {
+    "include": [
+      "location",
+      "nation",
+      "publish",
+      "type",
+      "url",
+      "local_url",
+      "attachment",
+      "title",
+      "language",
+      "keywords",
+      "valid"
+    ],
+    "exclude": [
+      "attachment.content",
+      "content"
+    ]
+  },
+  "aggs":{
+      "bestDocs":{
+          "sampler":{
+              "shard_size":3000,
+          },
+          "aggs":{
+              "group_by_nation": {
+                "terms": {
+                    "field": "nation"
+                },
+              }
+              
+          }
+      }
+
+  },
+  "from": 0,
+  "size": 10,
+  "sort": [],
+  
+}

@@ -434,6 +434,17 @@ def search():
     qsize = content.get("size") or 20
     qfilters = content.get("filters") or []
     qsort = content.get("sort") or "all"
+    by = content.get("by") or 'content'
+
+
+
+    ##############################################
+    # 查询条件预览
+    ##############################################
+
+
+
+
     ###############################################
     # 多语言查询支持
     ###############################################
@@ -441,14 +452,24 @@ def search():
     for item in qshoulds:
         musts = []
         for sentence in item:
-            obj = {
-                "multi_match": {
-                    "query": sentence,
-                    "minimum_should_match": "75%",
-                    "fields": ["content", "attachment.content"]
+            if by == 'content':
+                obj = {
+                    "multi_match": {
+                        "query": sentence,
+                        "minimum_should_match": "75%",
+                        "fields": ["content", "attachment.content"]
+                    }
                 }
-            }
+            else:
+                obj = {
+                    "multi_match": {
+                        "query": sentence,
+                        "minimum_should_match": "75%",
+                        "fields": ["title", "attachment.title"]
+                    }
+                }
             musts.append(obj)
+
         must_dsl = {
             "bool": {
                 "must": musts
@@ -466,7 +487,7 @@ def search():
         values = item.get('value') or []
         if 'all' in values or len(values) == 0:
             continue
-        if not name in ['nation', 'language', 'type']:
+        if not name in ['nation', 'language', 'type','publish']:
             continue
         if name == 'language':
             filter_dsl = {
@@ -480,6 +501,31 @@ def search():
                         {
                             "terms": {
                                 "attachment.language": values
+                            }
+                        }
+                    ]
+                }
+            }
+        elif name == 'publish':
+            filter_dsl = {
+                "bool": {
+                    "should": [
+                        {
+                            "range": {
+                                "publish":{
+                                    "gte":values[0],
+                                    "lte":values[1],
+                                    "format":"yyyy-mm-dd"
+                                }
+                            }
+                        },
+                        {
+                            "range": {
+                                "attachment.date":{
+                                    "gte":values[0],
+                                    "lte":values[1],
+                                    "format":"yyyy-mm-dd"
+                                }
                             }
                         }
                     ]

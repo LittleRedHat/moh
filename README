@@ -24,3 +24,53 @@ domain对应国家的缩写，debug选项打开调试模式（此时不会将爬
 ## TODO
 css 内部字体下载
 过滤掉视频等不需要文件下载
+
+ ## api 修改
+
+添加title搜索和日期过滤 
+
+示例如下
+{
+  "should": [
+    [
+      "cancer"
+    ]
+  ],
+  "by": "title",
+  "size": "20",
+  "from": 0,
+  "sort": "score",
+  "filters": [
+    {
+      "name": "type",
+      "value": [
+        "html"
+      ]
+    },
+    {
+      "name": "publish",
+      "value": [
+        "2014-01-01",
+        "2017-01-01"
+      ]
+    },
+    {
+      "name": "nation",
+      "value": [
+        "all"
+      ]
+    },
+    {
+      "name": "language",
+      "value": [
+        "all"
+      ]
+    }
+  ]
+}
+by -> title 或者 content
+日期过滤 -> 时间格式为 'yyyy-mm-dd'
+{
+    name:"date",
+    "value":[开始时间,截止时间]
+}
