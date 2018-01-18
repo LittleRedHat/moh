@@ -141,8 +141,13 @@ function convertToMapData(searchRes) {
     $.getJSON("../data/capitalTable.json", function(data) {
         countryTable = data;
     });
-    for (x in searchRes)
+    for (x in searchRes){
+        if(searchRes[x].key == 'int'){
+            continue
+        }
         country[countryTable[searchRes[x].key]].value[2] = searchRes[x].doc_count;
+    }
+       
     //console.log(country);
     return country;
 }
@@ -385,8 +390,8 @@ function searchRes(searchDataJson) {
                             str += '<th><a href="' + data[i]['url'] + '">原地址</a></th>';
                             str += '<th>' + (nations_table[data[i]['nation']] ?
                                 nations_table[data[i]['nation']] : data[i]['nation']) + '</th>';
-                            str += '<th>' + (languages_table[data[i]['language']] ?
-                                languages_table[data[i]['language']] : data[i]['language']) + '</th>';
+                            str += '<th>' + (languages_table[data[i]['language'].toLowerCase()] ?
+                                languages_table[data[i]['language'].toLowerCase()] : data[i]['language'].toLowerCase()) + '</th>';
                             str += '</tr>';
                         }
                         $('#data_table').html(str);

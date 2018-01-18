@@ -9,6 +9,19 @@ from datetime import datetime
 import json
 from datetime import timedelta
 
+
+from elasticsearch import Elasticsearch
+# from bs4 import BeautifulSoup
+from lxml import etree
+from crawl.crawl.spiders.c import *
+import re
+import codecs
+from textrank4zh import TextRank4Keyword
+import html2text
+from summa import keywords
+import os
+import urllib
+
 app = Flask(__name__)
 CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
@@ -20,12 +33,11 @@ migrate = Migrate(db)
 manager = Manager(app)
 manager.add_command('db', MigrateCommand)
 ES_HOST = ['127.0.0.1:9200']
-
+ES_INDEX = ["moh-en", "moh-asia", "moh-attachment","moh-fr", "moh-es", "moh-ru", "moh-de","moh-ar"]
+HTML_DIR = '/data/var/www/html'
 ###############################################
 # 用户表
 ###############################################
-
-
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(255), unique=True, nullable=False)
@@ -33,11 +45,10 @@ class User(db.Model):
 
     def __repr__(self):
         return '<User %r>' % self.username
+
 ###############################################
 # 搜索记录表
 ###############################################
-
-
 class Record(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     keyword = db.Column(db.String(4096))
@@ -59,8 +70,6 @@ class Record(db.Model):
 ###############################################
 # mysql 初始化
 ###############################################
-
-
 @app.route('/moh/db/init')
 def db_init():
     db.create_all()
@@ -75,8 +84,6 @@ def db_drop():
 ###############################################
 # elasticsearch 初始化
 ###############################################
-
-
 @app.route('/moh/es/init')
 def es_init():
     es = Searcher(ES_HOST)
@@ -411,7 +418,7 @@ def delete_by_nation():
         }
     }
     es = Searcher(ES_HOST)
-    return jsonify(es.delete_by_query(index=["moh-en", "moh-asia", "moh-attachment","moh-fr", "moh-es", "moh-ru", "moh-de"],doc_type="articles",query=dsl))
+    return jsonify(es.delete_by_query(index=ES_INDEX,doc_type="articles",query=dsl))
 
 
 
@@ -419,9 +426,6 @@ def delete_by_nation():
 ###############################################
 # 文档/附件多语言搜索
 ###############################################
-
-
-
 @app.route('/moh/es/search', methods=['POST'])
 def search():
     content = request.json
@@ -488,7 +492,8 @@ def search():
                 }
             }
         filter_must.append(filter_dsl)
-
+    ###
+    filter_must.append({"term":{"valid":1}})
     filter_dsl = {
         "bool": {
             "must": filter_must
@@ -576,8 +581,7 @@ def search():
         'size': qsize
     }
     es = Searcher(ES_HOST)
-    cursor = es.es_search(index=["moh-en", "moh-asia", "moh-attachment",
-                                 "moh-fr", "moh-es", "moh-ru", "moh-de"], doc_type="articles", query=dsl)
+    cursor = es.es_search(index=ES_INDEX, doc_type="articles", query=dsl)
     results = cursor['hits']['hits']
     total = cursor['hits']['total']
     nation_buckets = cursor['aggregations']['group_by_nation']['buckets']
@@ -608,11 +612,184 @@ def search():
     db.session.commit()
     return jsonify({'records': jresult, 'total': total, 'nation_distribution': nation_buckets})
 
+
+
+def h2t(html):
+    try:
+        h = html2text.HTML2Text()
+        h.ignore_links = True
+        h.skip_internal_links = True
+        h.bypass_tables = False
+        h.ignore_images = True
+        return h.handle(html)
+    except:
+        pass
+
+def text2keywords(text,language,keywords_num=5):
+    try:
+        # 中文网页关键词提取,用textrank4zh
+        if 'zh' in language:
+            tr4w = TextRank4Keyword()
+            tr4w.analyze(text=text, lower=True, window=2)
+            return tr4w.get_keywords(keywords_num=keywords_num, word_min_len=1)
+        # 其他网页关键词提取，用summa textrank
+        else:
+            k = keywords.keywords(text,scores=True)
+            return k[0:keywords_num]
+    except Exception,e:
+        pass
+
+
+def index_transfer(domain,dfrom=0,dsize=1000):
+
+    es = Elasticsearch(hosts=ES_HOST)
+    config = configure[domain]
+    dsl = {
+        "query":{
+            'bool':{
+                "must":[
+                    {
+                        "term":{"nation":domain},
+                        
+                    },
+                    {
+                        "term":{"type":"html"}
+                    }
+                ]
+            },
+        },
+        "from":dfrom,
+        "size":dsize,
+        "_source": {
+            "include": ["url", "local_url","language"],
+            "exclude": ["attachment.content", "content"]
+        }
+    }
+    results = es.search(index=ES_INDEX,doc_type="articles",body=dsl)['hits']['hits']
+    for item in results:
+        obj = item['_source']
+        _id = item['_id']
+        _index = item['_index']
+        _type = item['_type']
+        url = obj['url']
+        # try:
+        #     url = urllib.quote(url)
+        # except:
+        #     pass
+        language = obj['language']
+        
+        for listRule in config['listRules']:
+            rule = listRule['rule']
+            if re.match(rule,url):
+                body = {"doc":{'valid':0}}
+                es.update(index=_index,doc_type=_type,id=_id,body=body)
+                break
+            else:
+                detailRules = listRule['detailRules']
+                for detailRule in detailRules:
+                    rule = detailRule['rule']
+                    if re.match(rule,url):
+                        print url,rule
+                        try:
+                            local_url = obj['local_url']
+                            with codecs.open(os.path.join(HTML_DIR,local_url),'r',"utf-8") as f:
+                                html_doc = f.read()
+                            selector = etree.HTML(html_doc)
+
+                            content = selector.xpath(detailRule['content'])
+                            body ={"doc":{'valid':1}}
+
+                            if len(content):
+                                # content = etree.tostring(content[0].xpath('normalize-space(string(.))')
+                                content = etree.tostring(content[0])
+                                content = h2t(content)
+                                body['doc']['content'] = content
+                            else:
+                                content = ''
+
+                            title = selector.xpath(detailRule['title'])
+                            if len(title):
+                                title = title[0].xpath('normalize-space(string(.))')
+                                body['doc']['title'] = title
+                            else:
+                                title = ''
+
+                            ## extract keywords
+                            # h = h2t(content)
+                            keywords = text2keywords(content,language)
+                            if keywords:
+                                keywords = json.dumps(keywords)
+                                body['doc']['keywords'] = keywords
+
+                            
+                                
+                            es.update(index=_index,doc_type=_type,id=_id,body=body)
+
+                        except Exception,e:
+                            print e
+
+                        break
+
+###############################################
+# elasticsearch 迁移错误重置
+###############################################
+@app.route('/moh/es/transfer_reset',methods=['POST','GET'])
+def transfer_reset():
+    domain = request.values.get('domain')
+    es = Elasticsearch(hosts=ES_HOST)
+    config = configure[domain]
+    dsl = {
+        "query":{
+            'bool':{
+                "must":[
+                    {
+                        "term":{"nation":domain},
+                        
+                    },
+                    {
+                        "term":{"type":"html"}
+                    }
+                ]
+            },
+        },
+        "from":0,
+        "size":100000,
+        "_source": {
+            "include": ["url", "local_url","language","valid"],
+            "exclude": ["attachment.content", "content"]
+        }
+    }
+    results = es.search(index=ES_INDEX,doc_type="articles",body=dsl)['hits']['hits']
+    print len(results)
+    for item in results:
+        obj = item['_source']
+        _id = item['_id']
+        _index = item['_index']
+        _type = item['_type']
+        valid = obj.get('valid')
+        if valid:
+            body = {"doc":{'valid':0}}
+            es.update(index=_index,doc_type=_type,id=_id,body=body)
+    return jsonify({'code':200})
+
+
+
+###############################################
+# elasticsearch 迁移
+###############################################
+@app.route('/moh/es/transfer',methods=['POST','GET'])
+def transfer():
+    domain = request.values.get('domain')
+    dsize = request.values.get('size') or 5000
+    dfrom = request.values.get('from') or 0
+    
+    index_transfer(domain=domain,dfrom=dfrom,dsize=dsize)
+    return jsonify({'code':200})
+
+
 ###############################################
 # 用户登录
 ###############################################
-
-
 @app.route('/moh/user/login', methods=['POST'])
 def login():
     username = request.values.get('username')
