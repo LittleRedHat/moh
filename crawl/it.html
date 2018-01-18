@@ -1,0 +1,785 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="IT" xml:lang="IT"><head><title>Sanità animale, Rapporto sui controlli ufficiali effettuati nel 2016 nel settore dell'alimentazione animale</title><meta content="text/html;charset=utf-8" http-equiv="content-type" /><meta content="width=device-width" name="viewport" /><meta content="La relazione riporta per il secondo anno i controlli ufficiali nella filiera dei mangimi eseguiti dai Servizi veterinari delle AA.SS.LL. coordinati dai Servizi veterinari regionali e dalle Autorit&agrave; competenti dei PIF e degli UVAC" name="DC.description" /><meta content="La relazione riporta per il secondo anno i controlli ufficiali nella filiera dei mangimi eseguiti dai Servizi veterinari delle AA.SS.LL. coordinati dai Servizi veterinari regionali e dalle Autorit&agrave; competenti dei PIF e degli UVAC" name="description" /><meta content="Ministero della Salute" name="author" /><link href="http://www.salute.gov.it/imgs/C_17_notizie_3245_paragrafi_paragrafo_0_immagine.jpg" rel="image_src" /><meta content="http://www.salute.gov.it/imgs/C_17_notizie_3245_paragrafi_paragrafo_0_immagine.jpg" name="og:image" /><link href="img/favicon.ico" rel="shortcut icon" /><link type="text/css" href="../css/style.css" rel="stylesheet" /><!--[if IE 6]>
+				<link rel="stylesheet" type="text/css"  href="../css/ie6.css" />
+				<![endif]--><!--[if IE 7]>
+				<link rel="stylesheet" type="text/css" href="../css/ie7.css" />
+				<![endif]--><!--[if IE 8]>
+				<link rel="stylesheet" type="text/css" href="../css/ie8.css" />
+				<![endif]--><!-- JAVASCRIPT -->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script src="../js/jquery.flexslider.js" type="text/javascript"></script>
+<script src="../js/global.js" type="text/javascript"></script>
+<script src="../js/sharedCount.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$(window).load(function() {
+		$('#tab-header-slider').flexslider({
+		animation: "slide",
+		slideshow: true,
+		controlNav: false,
+		directionNav: false,
+		slideshowSpeed: 20000
+	  });
+	  $('#documentazione .flexslider').flexslider({
+		animation: "slide",
+		animationLoop: false,
+		slideshow: false,
+		itemWidth: 150,
+		itemMargin: 0,
+		controlNav: false,
+		directionNav: true 
+	  });
+	});
+</script>
+
+<!-- png fix for ie -->
+<!--[if lte IE 7]>
+	<script type="text/javascript" src="../js/jquery.pngFix.pack.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){ 
+				$(document).pngFix(); 
+			});
+	</script>
+<![endif]-->
+
+<!--[if lte IE 8]>
+		<script type="text/javascript" src="../js/selectivizr-min.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+	$(window).load(function() {
+	  $('#tab-notizie-slider').flexslider({
+		animation: "slide",
+		slideshow: true,
+		controlNav: true,
+		directionNav: false 
+	  });
+	  $('#tab-salute-slider-1').flexslider({
+		animation: "slide",
+		animationLoop: false,
+		slideshow: false,
+		itemWidth: 300,
+		itemMargin: 20,
+		controlNav: false,
+		directionNav: true 
+	  });
+
+	  $('#tab-multimediafoto-slider-1').flexslider({
+		animation: "slide",
+		animationLoop: false,
+		slideshow: false,
+		itemWidth: 600,
+		itemMargin: 0,
+		controlNav: true,
+		directionNav: true,
+		prevText: "Foto precedente",
+		nextText: "Foto successiva", 
+		minItems: 1,
+		maxItems: 1
+	  });
+
+	  $('#dossier-slider-1').flexslider({
+		animation: "slide",
+		animationLoop: false,
+		animationSpeed: 0,
+		slideshow: false,
+		controlNav: true,
+		directionNav: true,
+		keyboard: true,
+		prevText: "Slide precedente",
+		nextText: "Slide successiva", 
+		minItems: 1,
+		maxItems: 1
+	  });
+	});
+</script>
+
+<script type="text/javascript">
+<!-- //
+	$(document).ready(function() {
+		/* MOD_MAT 20150616 Modificato posizionamento boxCondivisione*/
+		var bodyWidth = 1259; //Larghezza body da CSS
+		var extraPadding = 8;  // px extra per allineare il box al body
+		var w = $(window).width();
+		var left = ((w-bodyWidth)/2)-27; //((larghezza browser - larghezza sito) diviso due) meno la larghezza box condivisione
+		if (left < 0){
+			//left = 680;			
+			left = 0;			
+		} else{
+			left +=extraPadding; 
+		}
+		
+		$('#boxCondivisione').animate({ 'left' : left + 'px' }, 'fast');
+
+		$(window).resize(function(){
+			// sharing
+			var w = $(window).width();
+			var left = ((w-bodyWidth)/2)-27; //((larghezza browser - larghezza sito) diviso due) meno la larghezza box condivisione
+			if (left < 0){
+				//left = 680;
+				left = 0;
+			} else{
+				left +=extraPadding; 
+			}
+			
+			$('#boxCondivisione').animate({ 'left' : left + 'px' }, 'fast');					
+		}); 
+
+		$(window).scroll(function () { 
+			var t = $(window).scrollTop(); //ci dice di quanto abbiamo scrollato la pagina
+			var foglia = $("div#foglia").height(); //ci dice altezza del div testo
+			var sblocca = foglia-(t-200); //div foglia meno scroll
+			var s = 561 - t;
+			if (s < 0) {
+				s = 10;
+			}
+			if ((t-200) > foglia) {
+				s = sblocca;
+			}
+			$('#boxCondivisione').css({ 'top' : s + 'px' });
+		}); 					
+	});
+// -->
+</script>
+
+<!-- inizio codice analytcs -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38402058-1', 'auto');
+  ga('set', 'anonymizeIp', true);ga('send', 'pageview');
+
+</script>
+<!-- fine codice analytcs --></head><body class="homepage"><div id="skip" class="nav screen-reader"><ul><li><a title="Menu principale" href="#navigation" tabindex="0">Menu principale</a></li><li><a title="Menu di servizio" href="#service-menu" tabindex="0">Menu di servizio</a></li><li><a title="Contenuto della pagina" href="#page-content" tabindex="0">Contenuto della pagina</a><ul><li><a title="Ministro e Ministero" href="#ministro-e-ministero" tabindex="0">Ministro e Ministero</a></li><li><a title="News e media" href="#news-e-media" tabindex="0">News e media</a></li><li><a title="La nostra salute" href="#la-nostra-salute" tabindex="0">La nostra salute</a></li><li><a title="Temi e professioni" href="#temi-e-professioni" tabindex="0">Temi e professioni</a></li></ul></li><li><a title="Ricerca" href="#search-bar" tabindex="0">Ricerca</a></li><li><a title="Strumenti accessibilit&agrave;" href="#accessibility" tabindex="0">Strumenti accessibilit&agrave;</a></li></ul></div>
+
+<div class="section row-fluid">
+	<div class="row-fluid row-search-container">
+		<div class="span3" id="search-container">
+			<form method="get" action="http://cerca.ministerosalute.it/search" id="search-bar">
+				<fieldset class="row-fluid">
+					<legend class="hidden">Form di ricerca nel sito, campo con id f_cerca obbligatorio</legend>
+					<label for="f_cerca" class="hidden">Cerca nel sito</label>
+					<input id="f_cerca"	tabindex="2" name="q" type="text" title="Cerca nel sito" class="placeholder-text"/>
+					<input type="hidden" name="client" value="defaultPORT_front-end" />
+					<input type="hidden" name="proxystylesheet" value="defaultPORT_front-end" />
+					<input type="hidden" name="site" value="default_collection" />
+					<input type="hidden" name="output" value="xml_no_dtd" />
+					<input type="hidden" name="filter" value="p" />
+					<button tabindex="3" type="submit">Cerca</button>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+	
+<div id="header" class="header container-fluid"><div>
+
+<div class="row-fluid row-menu">
+	<!-- Logo -->
+	<div class="hgroup">
+		<h1 class="logo"><a tabindex="1" class="evidenziaElementi" href="http://www.salute.gov.it/portale/home.html" title="Homepage Ministero della Salute">Ministero della Salute</a></h1>
+	</div>
+	<!-- Menu di servizio -->
+	<div class="section">
+		<div class="nav" id="service-menu">
+			<!-- Navigazione di servizio -->
+			<ul>
+				<li><a tabindex="4" class="evidenziaElementi" href="http://www.salute.gov.it/portale/p5_0.jsp?lingua=italiano&amp;id=58" title="Contatti">Contatti</a></li>
+				<li><a tabindex="4" class="evidenziaElementi" href="http://www.salute.gov.it/portale/ministro/p4_8.jsp?lingua=italiano&amp;label=servizionline" title="Moduli e Servizi">Moduli e Servizi</a></li>
+				<li><a tabindex="4" class="evidenziaElementi" href="http://www.salute.gov.it/portale/p5_1.jsp" title="FAQ">FAQ</a></li>
+				<li><a tabindex="4" class="evidenziaElementi" href="http://www.salute.gov.it/portale/news/p3_2_5.jsp?lingua=italiano&amp;menu=app&amp;id=54" title="App">App</a></li>
+				<li><a tabindex="4" class="evidenziaElementi" href="https://www.facebook.com/MinisteroSalute" title="Facebook" onclick="window.open(this.href);return false"><img src="/portale/img/icona-facebook.jpg" alt="Facebook" class="no_border_margin"/></a></li>
+				<li><a tabindex="4" class="evidenziaElementi" href="https://twitter.com/ministerosalute" title="Twitter" onclick="window.open(this.href);return false" ><img src="/portale/img/icona-twitter.png" alt="Twitter" class="no_border_margin"/></a></li>
+				<li><a tabindex="4" class="evidenziaElementi" href="https://www.youtube.com/user/MinisteroSalute" title="YouTube" onclick="window.open(this.href);return false" ><img src="/portale/img/icona_YT.jpg" alt="YouTube" class="no_border_margin"/></a></li>
+				<li><a tabindex="4" class="evidenziaElementi" href="/portale/p5_0.jsp?lingua=italiano&amp;id=31" title="RSS" ><img src="/portale/img/icona_RSS.jpg" alt="RSS" class="no_border_margin"/></a></li>
+			</ul>
+		</div> <!-- nav -->					
+	</div> <!-- section -->
+</div>
+
+	
+
+
+<div id="idOnMO" class="row-fluid row-banner"><div class="figure banner-image" id="io-non-fumero-mai">
+	<ul id="header_rotator">
+		<li id="header_rotator_0" class="rotator rotator_display">
+			<a tabindex="5" class="evidenziaElementi" href="/portale/news/p3_2_6_1_1.jsp?lingua=italiano&menu=campagne&p=dacampagne&id=119" title="Collegamento alla Campagna contro il tabagismo 2018 'Chi non fuma sta una favola'">
+				<img src="/portale/img/1_banner-image_FUMO_2018.jpg" alt="Collegamento alla Campagna contro il tabagismo 2018 'Chi non fuma sta una favola'" />
+			</a>
+		</li>
+		<li id="header_rotator_1" class="rotator rotator_none">
+			<a tabindex="5" class="evidenziaElementi" href="/portale/news/p3_2_6_1_1.jsp?lingua=italiano&menu=campagne&p=dacampagne&id=117" title="Collegamento alla Campagna di comunicazione 'Con l'HIV non si scherza, proteggi te stesso e gli altri'">
+				<img src="/portale/img/1_banner-image_AIDS_2017.jpg" alt="Collegamento alla Campagna di comunicazione 'Con l'HIV non si scherza, proteggi te stesso e gli altri'" />
+			</a>
+		</li>
+		<li id="header_rotator_2" class="rotator rotator_none"> <!-- rotator rotator_display_none -->
+			<a tabindex="5" class="evidenziaElementi" href="/portale/news/p3_2_6_1_1.jsp?lingua=italiano&amp;menu=campagne&amp;p=dacampagne&amp;id=116" title="Collegamento alla Campagna di comunicazione 'Salute, sport e movimento fisico'">
+				<img src="/portale/img/1_banner-image_MovimentoSalute2017.jpg" alt="Collegamento alla Campagna di comunicazione 'Salute, sport e movimento fisico'" />
+			</a>
+		</li>
+	</ul>
+</div>
+
+<div class="row-fluid row-banner pag_ban">
+	<div class="pagination_banner">
+		<ul>
+			<li>
+				<a onclick="header_rotator.controllo_slide_show();" href="Javascript:void(3);" title="Arresta lo slider dei banner della testata" id="link_immagine_pausa">
+					<img id="immagine_pausa" alt="Arresta lo slider dei banner della testata" class="bar_navigation_img" src="/portale/img/pausa.png" />
+				</a>
+			</li>
+			<li style="margin-top:0.3em;">
+				<a onclick="header_rotator.switch_media(0);" href="Javascript:void(0);">
+					<img id="header_rotator_img_0" class="bar_navigation_img" alt="Banner 1" src="/portale/img/selectednews.png" />
+				</a>
+			</li>
+			<li style="margin-top:0.3em;">
+			<a onclick="header_rotator.switch_media(1);" href="Javascript:void(1);">
+				<img id="header_rotator_img_1" alt="Banner 2" class="bar_navigation_img" src="/portale/img/notselectednews.png"/>
+				</a>
+			</li>
+			<li style="margin-top:0.3em;">
+				<a onclick="header_rotator.switch_media(2);" href="Javascript:void(2);">
+					<img id="header_rotator_img_2" alt="Banner 3" class="bar_navigation_img" src="/portale/img/notselectednews.png"/>
+				</a> 
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- figure -->
+<!-- TEST COOKIE POLICY -->
+<script src="http://www.salute.gov.it/portale/js/js.cookie.js" type="text/javascript"></script>
+<!-- TEST COOKIE POLICY BEGIN -->
+<script type="text/javascript">
+<!-- //
+	var privacy_displayed = false;
+
+	var scrollPrivacyHandler = function() {
+		if (privacy_displayed) {
+			setPrivacy();
+		}
+	};
+
+	function setPrivacy () {
+		$.cookie("pr_cy", 1, { expires: 365, path: '/', domain: '.salute.gov.it' });
+		$('#cookiepolicy').remove();
+		$(window).off("scroll", scrollPrivacyHandler);
+	}
+
+	function findParentId (el, var_id) {
+		if (el.id == var_id) {
+			return el;
+		}
+
+		while (el.parentNode) {
+			el = el.parentNode;
+			if (el.id == var_id) {
+				return el;
+			}
+		}
+		return null;
+	}
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		console.log('Browser mobile');
+		$(document).on('ready', function() {
+			if ($.cookie("pr_cy") != 1) {
+				$('<div id="cookiepolicy" style="background-color:#EE8704;font-size:48px;color:#000000;"><div style="width:1259px;height:250px;margin-left:auto;margin-right: auto;"><div style="width: 60%;float: left;padding-right: 24px;">Il portale utilizza cookie tecnici, analytics e di terze parti. Per avere maggiori informazioni su tutti i cookie utilizzati, su come disabilitarli o negare il consenso all&#39 utilizzo consulta la policy sulla  <a href="/portale/p5_0.jsp?id=51">Privacy</a><br />Proseguendo nella navigazione presti il consenso all&#39;uso di tutti i cookie.</div><div style="width: 35%;float: right;">Acconsenti all&#39;utilizzo di cookie di terze parti?<br /><br /><a href="javascript:void(0);" onclick="setPrivacy();" class="button-large3"><b>Ho capito</b></a></div></div></div>').appendTo("body");
+			}
+		});
+	} else {
+		console.log('Browser desktop');
+		$(document).on('ready', function() {
+			if ($.cookie("pr_cy") != 1) {
+				$('<div id="cookiepolicy"><div style="width:1259px;margin-left:auto;margin-right: auto;"><div style="width: 60%;float: left;padding-right: 24px;">Il portale utilizza cookie tecnici, analytics e di terze parti per il corretto funzionamento delle pagine web e per fornire le funzionalit&agrave; di condivisione sui social network e la visualizzazione di media.<br />Per avere maggiori informazioni su tutti i cookie utilizzati, su come disabilitarli o negare il consenso all&#39;utilizzo consulta la policy sulla <a href="/portale/p5_0.jsp?id=51">Privacy</a><br />Proseguendo nella navigazione presti il consenso all&#39;uso di tutti i cookie.</div><div style="width: 35%;float: right;">Acconsenti all&#39;utilizzo di cookie di terze parti?<br /><br /><a href="javascript:void(0);" onclick="setPrivacy();" class="button-small"><b>Acconsento</b></a>&nbsp;&nbsp;<a href="/portale/p5_0.jsp?id=51" class="button-small"><b>Maggiori informazioni</b></a></div></div></div>').appendTo("body");
+			}
+		});
+	}
+// -->
+</script>
+<!-- TEST COOKIE POLICY END --><div class="navigation" id="navigation"><ul class="menu level-1"><li id="menu-salute"><a title="Guida per i cittadini all'assistenza e alla prevenzione" class="menu-item-salute" href="/portale/salute/p1_2.html" tabindex="10">La nostra salute</a></li><li id="temi"><a title="Le informazioni per operatori e stakeholder" class="menu-item-temi dropdown-toggle" href="/portale/temi/p2_2.html" tabindex="10">
+						Temi e professioni
+					</a></li><li class="active" id="news"><a title="L'attivit&agrave; di informazione e comunicazione del Ministero" class="menu-item-news dropdown-toggle" href="p3_2.html" tabindex="10">News e media</a><ul style="display:none;" id="idOnMOLevel2" class="level-2 twocols "><li class="active back-link"><a tabindex="11" title="Notizie" href="p3_2_1.jsp?lingua=italiano&amp;menu=notizie&amp;dataa=2017/12/31&amp;datada=2017/01/01">Notizie</a><ul class="level-3 onecol"><li class="final-link active"><a tabindex="12" title="Notizie dal Ministero" href="p3_2_1_1.jsp?lingua=italiano&amp;menu=notizie&amp;p=dalministero&amp;dataa=2018/12/31&amp;datada=2017/01/01">Notizie dal Ministero</a></li><li class="final-link"><a tabindex="12" title="NASnotizie" href="p3_2_1_2.jsp?lingua=italiano&amp;menu=notizie&amp;p=nas&amp;dataa=2018/12/31&amp;datada=2016/01/01">NASnotizie</a></li><li class="final-link"><a tabindex="12" title="Avvisi di sicurezza" href="p3_2_1_3.jsp?lingua=italiano&amp;menu=notizie&amp;p=avvisi">Avvisi di sicurezza</a></li></ul></li></ul></li><li id="ministro"><a title="Gli uffici e i servizi del Ministero" class="menu-item-ministro dropdown-toggle" href="/portale/ministro/p4_2.html" tabindex="10">Ministro e Ministero</a></li></ul></div></div><div class="aside row-fluid row-breadcrumbs"><div class="section breadcrumbs span8_ale"><div id="seiin"><p>Sei in:</p></div><div id="crumb"><ul><li>&nbsp;<a title="Home" href="http://www.salute.gov.it/portale/home.html" tabindex="20">Home</a>&nbsp;&gt;&nbsp;</li><li><a title="News e media" href="http://www.salute.gov.it/portale/news/p3_2.html" tabindex="20">News e media</a>&nbsp;&gt;&nbsp;</li><li><a title="Notizie" href="p3_2_1.jsp?lingua=italiano&amp;menu=notizie&amp;dataa=2018/12/31&amp;datada=2017/01/01" tabindex="20">Notizie</a>&nbsp;&gt;&nbsp;</li><li><a href="p3_2_1_1.jsp?lingua=italiano&amp;menu=notizie&amp;p=dalministero&amp;dataa=2018/12/31&amp;datada=2017/01/01" tabindex="20">Notizie dal Ministero</a>&nbsp;&gt;&nbsp;</li><li>Sanità animale, Rapporto sui controlli ufficiali effettuati nel 2016 nel settore dell'alimentazione animale&nbsp;</li></ul></div></div><!--
+<div class="span3" id="accessibility">
+	<p>Carattere:</p>
+	<ul class="dimensione-carattere">
+		<li><a tabindex="45" href="#" title="piccolo" class="decreaseFont icon">pi&ugrave; piccolo</a></li>
+		<li><a tabindex="45" href="#" title="normale" class="resetFont icon">normale</a></li>
+		<li><a tabindex="45" href="#" title="grande" class="increaseFont icon">pi&ugrave; grande</a></li>
+	</ul>
+	<p>Contrasto:</p>
+	<ul class="contrasto">
+		<li><a tabindex="45" href="#" title="normale" class="resetFont icon" rel="css/style.css">normale</a></li>
+		<li><a tabindex="45" href="#" title="alto" class="alto icon" rel="css/style-contrast.css">alto</a></li>
+	</ul>
+</div>
+--></div></div></div><!-- ERROR_ContentNotFound --><div id="page-content" class="container-fluid"><div class="section row-fluid no-space-before" id="page-header"><div class="header"><h2 class="span11">Sanità animale, Rapporto sui controlli ufficiali effettuati nel 2016 nel settore dell'alimentazione animale</h2></div></div><div class="row-fluid"><div id="main-content" class="span8"><div style="height:auto !important;" id="foglia" class="importantAltezza container-fluid container-block section collapsible_ale"><div class="portlet tab-content"><div id="tab-1" class="portlet-content tab-pane active"><img style="height:auto;" class="img_inEvidenza float_left" alt="immagine di un allevamento" title="immagine di un allevamento" src="/imgs/C_17_notizie_3245_paragrafi_paragrafo_0_immagine.jpg" /><p style="margin:0;" /><p>L’Ufficio 7 della Direzione Generale della Sanità Animale e dei Farmaci Veterinari pubblica ogni anno il rapporto sui controlli ufficiali in alimentazione animale effettuati in Italia, in applicazione del <a href="/imgs/C_17_pubblicazioni_2269_allegato.pdf" title="apre file pdf">Piano nazionale di controllo ufficiale sull’alimentazione animale (PNAA) valevole per gli anni 2015-2016-2017</a>.</p><p>La relazione riporta per il secondo anno i controlli ufficiali nella filiera dei mangimi eseguiti dai Servizi veterinari delle AA.SS.LL. coordinati dai Servizi veterinari regionali e dalle Autorità competenti dei PIF e degli UVAC.</p><p>I controlli, sia di tipo ispettivo che analitico, sono programmati e coordinati su tutto il territorio nazionale dal Ministero della Salute, ed hanno come obiettivo fondamentale quello di garantire un elevato livello di protezione della salute umana, animale e dell’ambiente.</p><p>Nel 2016 tutte le Regioni e Province Autonome hanno rispettato i termini di presentazione delle programmazioni al Ministero della Salute. La maggior parte dei piani regionali (PRAA) sono stati approvati perché in linea con il PNAA e rispondenti a quanto da esso richiesto, sia per quanto riguarda il numero di campionamenti da effettuare sul territorio regionale, sia per le matrici da prelevare e gli analiti da ricercare.</p><p>I PRAA non rispondenti ai criteri del PNAA sono stati integrati e modificati dalle Regioni su richiesta esplicita del Ministero. Per quanto riguarda l’invio dei dati di rendicontazione tutte le Regioni e le Province Autonome hanno inviato i dati al Ministero rispettando le scadenze previste,</p><p>Leggi il <a href="/imgs/C_17_pubblicazioni_2685_allegato.pdf" title="apre file pdf">Rapporto sui controlli ufficiali nel settore dell'alimentazione animale eseguiti nell'anno 2016</a> </p></div>
+ 
+      
+
+<script type="text/javascript">
+<!-- //	
+
+
+
+
+var contextPath = "http://www.salute.gov.it/portale/resources/ranking/Vote.jsp";
+
+	
+function impostaVoto(vote) {
+	
+	settaVariabili();
+	
+	$("#sondaggio > .stars > li > a").css('background-position', 'left top');
+    document.forms["sondaggio"].vote.value = vote;
+    $("#sondaggio > .stars > li:lt("+vote+") > a").css('background-position', 'left bottom');
+    
+}
+
+function impostaImgOut() {
+	if(document.forms["sondaggio"].vote.value == 0) {
+		window.document.stelle.src  = "/portale/img/condivisioni/stelline_0.png";
+	} else {
+		window.document.stelle.src  = "/portale/img/stelline_"+document.forms["sondaggio"].vote.value+".png";
+	}
+}
+
+
+function writeCookie(nomeCookie,valoreCookie,durataCookie) {   
+	var scadenza = new Date();
+	var adesso = new Date();
+	scadenza.setTime(adesso.getTime() + (parseInt(durataCookie) * 60000));
+	if (document.cookie.length > 0) {
+		var inizio = document.cookie.indexOf(nomeCookie + '=');       
+		if (inizio != -1) {
+			inizio = inizio + nomeCookie.length + 1;   		
+			var fine = document.cookie.indexOf(';',inizio);   		
+			if (fine == -1) {
+				fine = document.cookie.length;
+			}            
+			valueInCookie = unescape(document.cookie.substring(inizio,fine));       
+			document.cookie = nomeCookie + '=' + escape(valueInCookie + valoreCookie + ',') + '; expires=' + scadenza.toGMTString() + '; path=/';
+		} else {
+			document.cookie = nomeCookie + '=' + escape(valoreCookie+',') + '; expires=' + scadenza.toGMTString() + '; path=/';   
+		}      
+
+	} else {        
+		document.cookie = nomeCookie + '=' + escape(valoreCookie+',') + '; expires=' + scadenza.toGMTString() + '; path=/';
+	}
+}
+
+function existCookie(nomeCookie,valueCookie) {    
+	if (document.cookie.length > 0) {
+		var inizio = document.cookie.indexOf(nomeCookie + '=');       
+		if (inizio != -1) {   		
+			inizio = inizio + nomeCookie.length + 1;
+			var fine = document.cookie.indexOf(';',inizio);
+			if (fine == -1) {
+				fine = document.cookie.length;
+			}
+			var valueInCookie = unescape(document.cookie.substring(inizio,fine));
+			tokens  = valueInCookie.split(',');
+			for(i=0; i != tokens.length-1; i++) {
+				if((tokens[i]) == valueCookie) {
+					return true;
+				}
+			}
+			return false;
+		}
+	} else {
+			return false;
+    }
+}
+
+function controlla(){
+	checkedVote = false;
+	     
+	if(document.forms["sondaggio"].vote.value != 0) {
+		checkedVote = true;
+		if(existCookie(document.forms["sondaggio"].nameCookie.value, document.forms["sondaggio"].valueCookie.value)) {
+			alert("Hai già espresso un voto per questo sondaggio");
+			           
+		} else {   
+
+			var client = null;
+            if (window.XMLHttpRequest) {
+            	// If IE7, Mozilla, Safari, and so on: Use native object.
+                client = new XMLHttpRequest();
+            }
+            else
+            {
+            	if (window.ActiveXObject) {
+                // ...otherwise, use the ActiveX control for IE5.x and IE6.
+                	client = new ActiveXObject('MSXML2.XMLHTTP.3.0');
+                }
+           }
+
+           
+		   try{
+
+		    	writeCookie(document.forms["sondaggio"].nameCookie.value, document.forms["sondaggio"].valueCookie.value,60);
+		    	
+		    	
+     			client.open("POST", contextPath);
+      			
+      		  	var params =  document.forms["sondaggio"].URIPage.value + '||' +
+							  document.forms["sondaggio"].URISite.value + '||' +
+							  document.forms["sondaggio"].link.value + '||' +
+      						  document.forms["sondaggio"].vote.value;
+
+				
+	     		params = params.replace("à","&agrave;");
+	     		params = params.replace("è","&egrave;");
+	     		params = params.replace("ì","&igrave;");
+	     		params = params.replace("ò","&ograve;");
+	     		params = params.replace("ù","&ugrave;");
+	     		params = params.replace("é","&eacute;"); 
+
+				
+      			client.send(params);
+
+      			
+		    }catch(e){ }
+
+		   	alert("Il tuo contributo è stato acquisito, grazie per aver votato");
+				
+		}
+	}
+
+	if (checkedVote == false) {
+		
+		alert("Inserisci un voto");
+		   
+	}
+} 
+
+function settaVariabili() {
+
+	var titolo = document.title;
+	titolo = titolo.replace("à","&agrave;");
+	titolo = titolo.replace("è","&egrave;");
+	titolo = titolo.replace("ì","&igrave;");
+	titolo = titolo.replace("ò","&ograve;");
+	titolo = titolo.replace("ù","&ugrave;");
+	titolo = titolo.replace("é","&eacute;");
+	
+	var docURL = document.URL;
+	docURL = docURL.replace("à","&agrave;");
+	docURL = docURL.replace("è","&egrave;");
+	docURL = docURL.replace("ì","&igrave;");
+	docURL = docURL.replace("ò","&ograve;");
+	docURL = docURL.replace("ù","&ugrave;");
+	docURL = docURL.replace("é","&eacute;");
+	docURL = docURL.replace("<","");
+	docURL = docURL.replace(">","");
+	docURL = docURL.replace("%3C","");
+	docURL = docURL.replace("%3E","");
+	docURL = docURL.replace("%27","");
+	docURL = docURL.replace("'","");
+	
+	var URISite = document.forms["sondaggio"].URISite.value;
+	URISite = URISite.replace("à","&agrave;");
+	URISite = URISite.replace("è","&egrave;");
+	URISite = URISite.replace("ì","&igrave;");
+	URISite = URISite.replace("ò","&ograve;");
+	URISite = URISite.replace("ù","&ugrave;");
+	URISite = URISite.replace("é","&eacute;");
+	
+	document.forms["sondaggio"].URIPage.value = titolo;
+	document.forms["sondaggio"].link.value = docURL;
+	document.forms["sondaggio"].nameCookie.value = "nsis_rank";
+	
+	document.forms["sondaggio"].valueCookie.value = docURL +"-"+ URISite;
+
+}
+// -->
+</script> 
+  
+  
+  
+
+
+
+<script type="text/javascript">
+	function ottieni_url_fb(url) 
+	{ 
+		var titolo = window.document.title;
+		u = location.href;
+		window.open(url+encodeURIComponent(u)+'&amp;t='+encodeURIComponent(titolo));
+		return false; 
+	}
+	function ottieni_url_tw(url) 
+	{ 
+		var titolo = window.document.title;
+		u = location.href;
+		window.open(url+encodeURIComponent(u)+'&amp;text='+encodeURIComponent(titolo));
+		return false; 
+	}
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$.sharedCount(location.href, function(data){
+			$("#tweets").text(data.Twitter);    
+			$("#likes").text(data.Facebook.like_count);
+			$("#plusones").text(data.GooglePlusOne);
+			//$("#sharedcount").fadeIn();
+
+		});
+	});
+</script>
+
+
+
+
+<div class="box_condivisione" id="boxCondivisione">
+	<ul>
+		<li class="bordo_elenco">
+			<img alt="Condividi" title="Condividi" src="/portale/img/condivisioni/condividi.png" class="img_CENTRALE" />
+			<div class="fumetto_share">
+				<div class="share_interno">
+					<div class="boxShare">
+						<a tabindex="55" href="http://www.facebook.com/sharer.php?u=&lt;url&gt;" title="Facebook" onclick="return ottieni_url_fb('http://www.facebook.com/sharer.php?u=')"><img src="/portale/img/condivisioni/Facebook.png" alt="Facebook" class="img_CENTRALE"/></a>
+						<p class="centrale" id="likes"></p>
+					</div>
+					
+					<div class="boxShare">
+						<a tabindex="55" href="https://twitter.com/share?url=&lt;url&gt;" title="Tweeter" onclick="return ottieni_url_tw('https://twitter.com/share?url=')"><img src="/portale/img/condivisioni/Twitter.png" alt="Tweeter" class="img_CENTRALE"/></a>
+						<p class="centrale" id="tweets"></p>
+					</div>
+
+					<div class="boxShare">
+						<a tabindex="55" href="https://plusone.google.com/_/+1/confirm?hl=it&amp;url=http://www.salute.gov.it/portale/news/p3_2_1_1_1.jsp?lingua=italiano%26menu=notizie%26p=dalministero%26id=3245" title="Google +" onclick="window.open(this.href);return false"><img src="/portale/img/condivisioni/GooglePlus.png" alt="Google +" class="img_CENTRALE"/></a>
+						<p class="centrale" id="plusones"></p>
+					</div>
+				</div>
+			</div>
+		</li>
+
+		<li class="bordo_elenco"><a tabindex="55" title="Stampa" href="javascript:print();"><img alt="Stampa" src="/portale/img/condivisioni/stampa.png" class="img_CENTRALE" /></a></li>
+
+		<li class="bordo_elenco"><a tabindex="55" title="Condividi via email" href="mailto:?subject=Consiglio&amp;body=Ti inoltro questo link dal sito www.salute.gov.it%3A%0A%0Ahttp://www.salute.gov.it/portale/news/p3_2_1_1_1.jsp?lingua=italiano%26menu=notizie%26p=dalministero%26id=3245"><img alt="Condividi via email" src="/portale/img/condivisioni/invia_email.png" class="img_CENTRALE" /></a></li>
+
+		<li>
+			<img title="Vota" alt="Vota" src="/portale/img/condivisioni/vota_stella.png" class="img_CENTRALE" />
+			<div class="fumetto_share_vota">
+				<div class="share_vota_interno">
+					<div class="float_left boxVota boxMediaVoti"><p class="centrale">Media voti</p><p class="numVoti">0</p></div><div class="float_left boxVota boxTotVoti"><p class="centrale">Totale Voti</p><p class="numVoti">0</p></div>
+					<div class="float_left boxVota">
+						<p>Vota</p>
+						<form id='sondaggio' method='post' action=''><div><input type='hidden' name='URISite' value='www.salute.gov.it' /><input type='hidden' name='URIPage' value='' /><input type='hidden' name='link' value='null' /><input type='hidden' name='nameCookie' value='' /><input type='hidden' name='valueCookie' value='' /><input type='hidden' name='vote' value='0' /></div><ul class='stars'><li><a href='javascript:impostaVoto(1); controlla();' title='1 stellina' class='star_1'>1 stellina</a></li><li><a href='javascript:impostaVoto(2); controlla();' title='2 stelline' class='star_2'>2 stelline</a></li><li><a href='javascript:impostaVoto(3); controlla();' title='3 stelline' class='star_3'>3 stelline</a></li><li><a href='javascript:impostaVoto(4); controlla();' title='4 stelline' class='star_4'>4 stelline</a></li><li><a href='javascript:impostaVoto(5); controlla();' title='5 stelline' class='star_5'>5 stelline</a></li></ul></form>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div></div><div class="meta"><div class="update row-fluid"><p>Data di pubblicazione: 
+				<strong>3&nbsp;gennaio&nbsp;2018</strong>,&nbsp;ultimo aggiornamento&nbsp;<strong>3&nbsp;gennaio&nbsp;2018</strong></p></div><div class="article-tags row-fluid"><p>Tag associati a questa pagina: </p><ul><li><a title="Animali" href="/portale/news/p3_2_0.jsp?lingua=italiano&amp;id=744" tabindex="54">Animali</a>&nbsp;&nbsp; </li><li><a title="Controlli ufficiali" href="/portale/news/p3_2_0.jsp?lingua=italiano&amp;id=754" tabindex="54">Controlli ufficiali</a>&nbsp;&nbsp; </li><li><a title="Sicurezza" href="/portale/news/p3_2_0.jsp?lingua=italiano&amp;id=800" tabindex="54">Sicurezza</a></li></ul></div></div><p /></div><div class="boxTemiNewsCollegamenti"><strong>Consulta 
+									
+					le <a title="Collegamento alle notizie dell'area tematica Sanit&agrave;&nbsp; animale" href="/portale/news/p3_2_1.jsp?lingua=italiano&amp;menu=notizie&amp;area=sanitaAnimale&amp;btnCerca=" tabindex="54">
+						notizie di Sanità  animale</a><br /><br />
+									Vai all'<a title="" href="/portale/news/p3_2_1.jsp?lingua=italiano&amp;menu=notizie&amp;p=dalministero&amp;dataa=2015/12/31&amp;datada=2015/01/01">archivio completo</a> delle notizie</strong><br /><br /><strong>Consulta l'area tematica: 
+									<a title="Collegamento all'area tematica Sanit&agrave;&nbsp; animale" href="/portale/temi/p2_4.jsp?lingua=italiano&amp;tema=Animali&amp;area=sanitaAnimale" tabindex="60">Sanità  animale</a></strong></div><div id="documentazione" class="space-before container-block section"><div class="header"><h2>Documentazione</h2></div><div id="opuscoli-e-poster" class="section"><div class="header"><h3>Opuscoli e Poster</h3></div><div id="opuscoli-e-poster-slider"><div class="flexslider"><ul class="slides"><li><div class="figure"><div class="figcaption_fra"><a title="Scarica l'opuscolo" href="/portale/documentazione/p6_2_5_1.jsp?lingua=italiano&amp;id=336"><img alt="immagine di copertina" src="/imgs/C_17_opuscoliPoster_336_foto.jpg" /><br /><br />Uso responsabile del farmaco veterinario in Apicoltura</a></div></div></li><li><div class="figure"><div class="figcaption_fra"><a title="Scarica l'opuscolo" href="/portale/documentazione/p6_2_5_1.jsp?lingua=italiano&amp;id=299"><img alt="immagine della copertina" src="/imgs/C_17_opuscoliPoster_299_foto.png" /><br /><br />Norme nazionali sulla protezione degli animali negli allevamenti. Competenze e responsabilità</a></div></div></li><li><div class="figure"><div class="figcaption_fra"><a title="Scarica l'opuscolo" href="/portale/documentazione/p6_2_5_1.jsp?lingua=italiano&amp;id=300"><img alt="immagine della copertina" src="/imgs/C_17_opuscoliPoster_300_foto.png" /><br /><br />Protezione degli animali utilizzati a fini scientifici</a></div></div></li></ul></div></div></div></div></div><div id="sidebar" class="span4 aside banners"><h3 class="screen-reader">Spalla sinistra</h3><div id="vedi-anche" class="section sidebar-links"><h4 class="lower-arrow">Vedi anche</h4><ul class="clearfix"><li><a title="Collegamento al contenuto Novel food, uso di insetti in campo alimentare " href="p3_2_1_1_1.jsp?lingua=italiano&amp;menu=notizie&amp;p=dalministero&amp;id=3257" tabindex="60">Novel food, uso di insetti in campo alimentare </a></li><li><a title="Collegamento al contenuto Notiziario epidemiologico internazionale dicembre 2017" href="p3_2_1_1_1.jsp?lingua=italiano&amp;menu=notizie&amp;p=dalministero&amp;id=3255" tabindex="60">Notiziario epidemiologico internazionale dicembre 2017</a></li><li><a title="Collegamento al contenuto INFODAY medicinali veterinari 12 - 13 dicembre 2017" href="p3_2_1_1_1.jsp?lingua=italiano&amp;menu=notizie&amp;p=dalministero&amp;id=3241" tabindex="60">INFODAY medicinali veterinari 12 - 13 dicembre 2017</a></li><li><a title="Collegamento al contenuto 11&deg; Infoday &quot;I Medicinali Veterinari&quot; " href="p3_2_2_1_1.jsp?lingua=italiano&amp;menu=eventi&amp;p=daeventi&amp;id=494" tabindex="60">11° Infoday "I Medicinali Veterinari" </a></li><li><a title="Collegamento al contenuto Etichettatura dei medicinali veterinari, nuove linee guida" href="p3_2_1_1_1.jsp?lingua=italiano&amp;menu=notizie&amp;p=dalministero&amp;id=3242" tabindex="60">Etichettatura dei medicinali veterinari, nuove linee guida</a></li><li><a title="Collegamento al contenuto Anagrafi zootecniche, nuova procedura operativa per la consultazione nella Banca Dati Nazionale" href="p3_2_1_1_1.jsp?lingua=italiano&amp;menu=notizie&amp;p=dalministero&amp;id=3244" tabindex="60">Anagrafi zootecniche, nuova procedura operativa per la consultazione nella Banca Dati Nazionale</a></li></ul></div><div id="cambia-canale" class="section sidebar-links"><h4 class="lower-arrow">Cambia canale</h4><ul class="clearfix"><li class="laNostraSaluteNuova"><em>La nostra salute</em><a class="cambiaCanaleNuovo" title="La nostra salute" href="/portale/salute/p1_5.jsp?lingua=italiano&amp;id=212&amp;area=Malattie_trasmesse_da_vettori" tabindex="60"><img class="img_SX_03" alt="freccia" src="/portale/img/arrow-white.png" />Malaria</a></li><li class="temiProfessioniNuova"><em>Temi e professioni</em><a title="Temi e professioni" href="/portale/temi/p2_6.jsp?lingua=italiano&amp;id=4901&amp;area=uvac-pif&amp;menu=moduli" class="cambiaCanaleNuovo" tabindex="60"><img class="img_SX_03" alt="freccia" src="/portale/img/arrow-white.png" />UVAC - PIF - Importazione di microorganismi e vaccini per uso veterinario non registrati</a><a title="Temi e professioni" href="/portale/temi/p2_6.jsp?lingua=italiano&amp;id=4762&amp;area=uvac-pif&amp;menu=pif" class="cambiaCanaleNuovo" tabindex="60"><img class="img_SX_03" alt="freccia" src="/portale/img/arrow-white.png" />UVAC - PIF - Che cosa sono i PIF</a><a title="Temi e professioni" href="/portale/temi/p2_6.jsp?lingua=italiano&amp;id=4895&amp;area=uvac-pif&amp;menu=pif" class="cambiaCanaleNuovo" tabindex="60"><img class="img_SX_03" alt="freccia" src="/portale/img/arrow-white.png" />UVAC - PIF - Criteri per la valutazione degli alimenti di origine animale provenienti da paesi terzi</a></li></ul></div><div class="banner sidebar-links" id="segui-il-ministero">
+	<div class="seguiMinistero">
+		<img class="no_border" alt="Segui il ministero" usemap="#SEGUI_MINISTERO" src="/portale/img/banner-segui.jpg" />
+		<map name="SEGUI_MINISTERO" id="map_segui_min">
+			<!-- Facebook -->
+			<area tabindex="80" title="Facebook (apre una nuova finestra)" alt="Facebook" shape="rect" coords="229,17,257,42" href="#" onclick="window.open('https://www.facebook.com/MinisteroSalute');return false" />
+			<!-- Twitter -->
+			<area tabindex="80" title="Twitter (apre una nuova finestra)" alt="Twitter" shape="rect" coords="267,15,295,44" href="#" onclick="window.open('https://twitter.com/ministerosalute');return false" />
+			<!-- YouTube -->
+			<area tabindex="80" title="YouTube (apre una nuova finestra)" alt="YouTube" shape="rect" coords="229,50,258,79" href="#" onclick="window.open('https://www.youtube.com/user/MinisteroSalute');return false" />
+			<!-- RSS -->
+			<area tabindex="80" title="RSS" alt="RSS" shape="rect" coords="267,51,294,79" href="/portale/p5_0.jsp?lingua=italiano&amp;id=31" />
+		</map>	
+	</div>
+</div></div></div></div>
+
+<div class="footer container-fluid" id="footer">
+	<div class="content-wrapper">
+		<div>
+			<div class="row-fluid" style="padding-top:1em;">
+				<div class="nav span4" id="nav-documentazione">
+					<h3 class="arrow-left">Documentazione</h3>
+					<ul class="menu">
+						<li><a class="evidenziaElementi" tabindex="80" href="http://www.salute.gov.it/portale/documentazione/p6_2_1.jsp?lingua=italiano" title="Biblioteca del Ministero">Biblioteca del Ministero</a></li>
+						<li><a class="evidenziaElementi" tabindex="80" href="http://www.salute.gov.it/portale/documentazione/p6_2_2.jsp?lingua=italiano&amp;dataa=2018/12/31&amp;datada=2015/01/01" title="Pubblicazioni">Pubblicazioni</a></li>
+						<li><a class="evidenziaElementi" tabindex="80" href="http://www.salute.gov.it/portale/documentazione/p6_2_4.jsp?lingua=italiano&amp;dataa=2018/12/31&amp;datada=2009/01/01" title="Bandi di gara">Bandi di gara</a></li>
+						<li><a class="evidenziaElementi" tabindex="80" href="http://www.salute.gov.it/portale/documentazione/p6_2_5.jsp?lingua=italiano&amp;dataa=2018/12/31&amp;datada=2015/01/01" title="Opuscoli e poster">Opuscoli e poster</a></li>
+						<li><a class="evidenziaElementi" tabindex="80" href="http://www.salute.gov.it/portale/documentazione/p6_2_7.jsp?lingua=italiano&amp;dataa=2018/12/31&amp;datada=2012/01/01" title="Concorsi">Concorsi</a></li>
+						<li><a class="evidenziaElementi" tabindex="80" href="http://www.salute.gov.it/portale/documentazione/p6_2_6.jsp?lingua=italiano" title="Normativa">Normativa</a></li>
+						<li><a class="evidenziaElementi" tabindex="80" href="http://www.salute.gov.it/portale/documentazione/p6_2_8.jsp?lingua=italiano" title="Dati">Dati</a></li>
+						<li><a class="evidenziaElementi" tabindex="80" href="http://www.salute.gov.it/portale/documentazione/p6_2_9.jsp?lingua=italiano&amp;dataa=2018/12/31&amp;datada=2015/01/01" title="Notifiche per pubblici proclami">Notifiche pubblici proclami</a></li>
+					</ul>
+					<h3 class="arrow-left">Trasparenza</h3>
+					<ul class="menu">
+						<li><a class="evidenziaElementi" tabindex="80" href="/portale/ministro/p4_10_0.jsp?lingua=italiano&amp;label=trasparenza21&amp;id=1116&amp;menu=trasparenza" title="Accesso civico">Accesso civico</a></li>
+						<li><a class="evidenziaElementi" tabindex="80" href="/portale/ministro/p4_10.jsp?lingua=italiano&amp;label=trasparenza" title="Amministrazione trasparente">Amministrazione trasparente</a></li>
+						<li><a class="evidenziaElementi" tabindex="80" href="/portale/ministro/p4_10_1_1.jsp?lingua=italiano&amp;label=trasparenza8&amp;id=1128&amp;menu=trasparenza" title="Responsabile del potere sostitutivo">Responsabile del potere sostitutivo</a></li>
+					</ul>
+				</div> <!-- nav -->
+				<div class="nav span8" id="nav-documentazione2" style="margin-left:0.8%;border-left:2px dotted #fff;padding-left:1.3em;">
+					<!-- Navigazione secondaria di servizio-->
+					<h3 style="padding:6px 0 0 0;">Contatti</h3>
+					<div style="color:#fff;" class="span4">
+						Ministero della Salute<br />
+						Centralino telefonico 0039-06.5994.1<br />
+						Codice Fiscale 80242250589<br />
+						- <a href="http://www.salute.gov.it/portale/ministro/p4_5_5_1.jsp?lingua=italiano&amp;label=org&amp;menu=organizzazione" title="Organigramma" class="evidenziaElementi" tabindex="90" style="font-weight:bold;color:#fff;font-size:110%;">Organigramma</a>
+					</div>
+					<div style="color:#fff;" class="span2">
+						Sede del Ministro<br />
+						Lungotevere Ripa, 1<br />
+						00153 - Roma
+					</div>
+					<div style="color:#fff;" class="span2">
+						Sede Centrale<br />
+						Viale Giorgio Ribotta, 5<br />
+						00144 - Roma
+					</div>
+					<div style="color:#fff;" class="span3">
+						- <a href="http://www.salute.gov.it/portale/ministro/p4_5_3_1.jsp?lingua=italiano&amp;label=ufficiPeriferici&amp;menu=ufficiPeriferici" title="Uffici periferici territoriali" class="evidenziaElementi" tabindex="90" style="font-weight:bold;color:#fff;font-size:110%;">Uffici periferici territoriali</a>
+					</div>
+					<div class="clear_both">
+						<br />
+					</div>
+					<!-- INIZIO MODIFICA TRASPARENZA-->
+					<!--div style="color:#fff;" class="span3">
+						<h4 style="padding:0;margin:0;font-size:14px;">Trasparenza</h4>
+						- <a href="/portale/ministro/p4_10_0.jsp?lingua=italiano&amp;label=trasparenza21&amp;id=1116&amp;menu=trasparenza" title="Accesso civico" tabindex="90" style="font-weight:bold;color:#fff;font-size:110%;">Accesso civico</a><br />
+						- <a href="/portale/ministro/p4_10.jsp?lingua=italiano&amp;label=trasparenza" title="Amministrazione trasparente" tabindex="100" style="font-weight:bold;color:#fff;font-size:110%;">Amministrazione trasparente</a>
+					</div-->
+					<!-- FINE MODIFICA TRASPARENZA-->
+					<div style="color:#fff;" class="span5">
+						<img src="/portale/img/icona_footer_telPEC.png" alt="Telefono e posta elettronica" class="no_border"/><br />
+						- <a href="/portale/ministro/p4_10_1_1.jsp?lingua=italiano&amp;label=trasparenza2&amp;id=1058&amp;menu=trasparenza" title="Telefono e posta elettronica" class="evidenziaElementi" tabindex="90" style="font-weight:bold;color:#fff;font-size:110%;">Telefono e posta elettronica</a><br />
+						- <a href="/portale/ministro/p4_10_1_1.jsp?lingua=italiano&amp;label=trasparenza2&amp;id=1262&amp;menu=trasparenza" title="PEC - Posta Elettronica Certificata" class="evidenziaElementi" tabindex="90" style="font-weight:bold;color:#fff;font-size:110%;">PEC - Posta Elettronica Certificata</a>
+					</div>
+					<div style="color:#fff;" class="span5">
+						<img src="/portale/img/icona_footer_uffici.png" alt="Uffici" class="no_border"/><br />
+						- <a href="/portale/ministro/p4_7.jsp?lingua=italiano&amp;label=urp" title="URP" class="evidenziaElementi" tabindex="90" style="font-weight:bold;color:#fff;font-size:110%;">URP</a><br />
+						- <a href="/portale/ministro/p4_7.jsp?lingua=italiano&amp;label=uffici" title="Front Office - Numero unico di prenotazione" class="evidenziaElementi" tabindex="90" style="font-weight:bold;color:#fff;font-size:110%;">Front Office - Numero unico di prenotazione</a><br />
+						- <a href="http://www.salastampa.salute.gov.it/" title="Ufficio stampa" class="evidenziaElementi" tabindex="100" style="font-weight:bold;color:#fff;font-size:110%;">Ufficio stampa</a>
+					</div>
+				</div> <!-- nav -->
+			</div>
+			<div class="row-fluid">
+				<div class="nav span12" id="nav-secondaria">
+					<!-- Navigazione secondaria di servizio-->
+					<ul class="menu">
+						<li><a class="evidenziaElementi" tabindex="100" href="http://www.salute.gov.it/portale/p5_8.html" title="Mappa del portale">Mappa</a></li>
+						<li><a class="evidenziaElementi" tabindex="100" href="http://www.salute.gov.it/portale/p5_0.jsp?lingua=italiano&amp;id=50" title="Note legali">Note legali</a></li>
+						<li><a class="evidenziaElementi" tabindex="100" href="http://www.salute.gov.it/portale/p5_0.jsp?lingua=italiano&amp;id=51" title="Privacy">Privacy</a></li>
+						<li><a class="evidenziaElementi" tabindex="100" href="http://www.salute.gov.it/portale/p5_0.jsp?lingua=italiano&amp;id=57" title="Redazione">Responsabile</a></li>
+						<li><a class="evidenziaElementi" tabindex="100" href="http://www.salute.gov.it/portale/p5_0.jsp?lingua=italiano&amp;id=49" title="Redazione">Redazione</a></li>
+						<li><a class="evidenziaElementi" tabindex="100" href="http://www.salute.gov.it/portale/p5_0.jsp?lingua=italiano&amp;id=52" title="Monitoraggio accessi">Monitoraggio accessi</a></li>
+						<li><a class="evidenziaElementi" tabindex="100" href="http://www.salute.gov.it/portale/p5_0.jsp?lingua=italiano&amp;id=53" title="Accessibilit&agrave;">Accessibilit&agrave;</a></li>
+						<li><a class="evidenziaElementi" tabindex="100" href="/portale/p5_12.html" title="I pi&ugrave; votati">I pi&ugrave; votati</a></li>
+						<li><a class="evidenziaElementi" tabindex="100" href="http://www.salute.gov.it/portale/p5_9.jsp?lingua=italiano&amp;id=47" title="Elenco siti tematici">Elenco siti tematici</a></li>
+						<li><a class="evidenziaElementi" tabindex="100" href="http://www.archeo.salute.gov.it" title="Collegamento al sito archeo del Ministero della Salute" onclick="window.open(this.href);return false">Sito archeo</a></li>
+						<!--li><a tabindex="100" href="http://www.salute.gov.it/portale/p5_11.jsp" title="English version">English version</a></li-->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="footer container-fluid centrale" id="banner-footer">
+	<a href="http://www.governo.it/" title="Collegamento al portale del Governo italiano. Apre una nuova finestra" onclick="window.open(this.href);return false"><img src="/portale/img/Governo.png" alt="Governo italiano" class="img_footer"/></a>
+	<a href="http://europa.eu/" title="Collegamento al portale dell'Uinone Europea. Apre una nuova finestra" onclick="window.open(this.href);return false"><img src="/portale/img/UnioneEuropea.png" alt="Unione europea" class="img_footer"/></a>
+	<a href="http://www.g7italy.it/it" title="Collegamento al portale g7italy. Apre una nuova finestra" onclick="window.open(this.href);return false"><img src="/portale/img/banner_footer_G7.png" alt="g7italy" class="img_footer"/></a>
+	<br />
+</div>
+
+	
+
+
+<script src="../js/tabber.js" type="text/javascript" /><!-- JAVASCRIPT, the day after -->
+
+<!-- Bootstrap JS: compiled and minified -->
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+<!--[if IE 6]>
+<script type="text/javascript" src="../js/ie6.js"></script>
+<![endif]-->
+
+<!-- Prettify -->
+<script type="text/javascript" src="../js/prettify/prettify.js"></script>
+
+<!-- Placeholder text -->
+<script type="text/javascript" src="../js/jquery.example.min.js"></script>
+
+<!-- Rounded corners -->
+<script type="text/javascript" src="../js/jquery.corner.js"></script>
+
+<!-- Transforms -->
+<script type="text/javascript" src="../js/jquery.transform.js"></script>
+
+<!-- Initialize Scripts -->
+<script type="text/javascript" src="../js/functions.js"></script>
+
+<script type="text/javascript">
+<!--
+	var header_rotator = new slideshow('header_rotator','1','true', 'header_rotator_0', 'header_rotator_1', 'header_rotator_2');
+	header_rotator.start_slide_show(86400000);
+	
+	var prova_stop = false;
+-->
+</script>
+
+<script type="text/javascript">
+<!-- //
+ var jsMn_body = false;
+ 
+  $('body').on({
+	  mousemove : function(event) {
+		
+			if (394 > event.pageY && event.pageY > 345){
+				if (!jsMn_body){
+					if ($.browser.msie){
+						if (parseInt($.browser.version, 10) == 8){
+							$('#idOnMOLevel2').show(10);
+							$('#idOnMO').css("z-index","101");
+							$('#header .aside').css("z-index","0");
+						}else{
+							$('#idOnMOLevel2').fadeTo('slow',1);
+							$('#idOnMO').css("z-index","101");
+							$('#header .aside').css("z-index","0");
+						}
+					}else{
+						$('#idOnMOLevel2').fadeTo('slow',1);
+						$('#idOnMO').css("z-index","101");
+						$('#header .aside').css("z-index","0");
+					}
+					jsMn_body = true;
+				}
+			}
+			
+			if (345 > event.pageY || event.pageY > 675){
+				if (jsMn_body){
+					if ($.browser.msie){
+						if (parseInt($.browser.version, 10) == 8){
+							$('#idOnMOLevel2').hide(10);
+							$('#idOnMO').css("z-index","0");
+							$('#header .aside').css("z-index","101");
+						}else{
+							$('#idOnMOLevel2').hide(10);
+							$('#idOnMO').css("z-index","0");
+							$('#header .aside').css("z-index","101");
+						}
+					}else{
+						$('#idOnMOLevel2').hide(10);
+						$('#idOnMO').css("z-index","0");
+						$('#header .aside').css("z-index","101");
+					}
+					jsMn_body = false;
+				}
+			}	
+	  }
+	}); 
+	// -->
+</script></body></html>

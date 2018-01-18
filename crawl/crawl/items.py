@@ -12,6 +12,7 @@ class ResourceItem(scrapy.Item):
      url = Field()
      md5 = Field() 
      content = Field()
+     saved_content = Field()
      rtype = Field()
      location = Field()
      title = Field()
@@ -22,6 +23,9 @@ class ResourceItem(scrapy.Item):
      keywords = Field()
      content_type = Field()
      encoding = Field()
+     
+     
+
 
      def __repr__(self):
          return repr({"url": self['url'],"rtype":self['rtype']})
