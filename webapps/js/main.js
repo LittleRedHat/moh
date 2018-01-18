@@ -401,10 +401,10 @@ function searchRes(searchDataJson) {
                         for (var i = 0; i < data.length; i++) {
                             var title = (data[i]['type'] == 'html'?data[i]['title']:data[i]['attachment']['title'])
                             str += '<tr class="row">';
-                            str += '<th><a href="'+server_base+'/'+ data[i]['local_url'] +
+                            str += '<th><a target="_blank" href="'+server_base+'/'+ data[i]['local_url'] +
                                 '">' + title + '</a></th>';
                             str += '<th id="trans' + i + '"></th>';
-                            str += '<th><a href="' + data[i]['url'] + '">原地址</a></th>';
+                            str += '<th><a target="_blank" href="' + data[i]['url'] + '">原地址</a></th>';
                             str += '<th>' + (nations_table[data[i]['nation']] ?
                                 nations_table[data[i]['nation']] : data[i]['nation']) + '</th>';
 
@@ -673,11 +673,12 @@ function getNation(nationStr) {
 
     nations = nationStr.split(" ");
     for (var i = 0; i < nations.length; i++) {
-        if ($.inArray(nations[i], all_nations) < 0) {
+        if ($.inArray(nations[i], all_nations) < 0 && nations[i] != "int") {
             remove(nations, i);
             i--;
         }
     }
+
 
     if (nations.length == 0)
         nations.push("all");

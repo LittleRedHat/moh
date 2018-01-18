@@ -3,3 +3,4 @@ nohup.out
 .vscode/
 venv/
 /webapps/.idea/
+.DS_Store
