@@ -345,7 +345,7 @@ function createRequestData(from, should) {
     if ($('#language').val() == "")
         language.push("all");
     else
-        language = getLanguage($('#language').val(), false);
+        language = trans_languagecode(getLanguage($('#language').val(), false));
 
     var requestData = {
         "should": should,
@@ -660,6 +660,26 @@ function getLanguage(languageStr, forTran) {
             to.push("all");
     }
 
+    return to;
+}
+function trans_languagecode(to) {
+    for (var i = 0; i < to.length; i++) {
+        switch (to[i]) {
+            case "jp": to[i] = "ja"; break;
+            case "kor": to[i] = "ko"; break;
+            case "fra": to[i] = "fr"; break;
+            case "spa": to[i] = "es"; break;
+            case "ara": to[i] = "ar"; break;
+            case "bul": to[i] = "bg"; break;
+            case "est": to[i] = "et"; break;
+            case "dan": to[i] = "da"; break;
+            case "fin": to[i] = "fi"; break;
+            case "rom": to[i] = "ro"; break;
+            case "slo": to[i] = "sl"; break;
+            case "swe": to[i] = "sv"; break;
+            default: break;
+        }
+    }
     return to;
 }
 
