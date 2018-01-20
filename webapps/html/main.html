@@ -43,19 +43,26 @@
             </div>
 
             <div class="row search-row">
-                <div class="col-md-3">
-                    <label>选择是否显示附件</label>
+                <div class="col-md-2">
+                    <label>是否显示附件</label>
                     <select class="form-control" id="attachment">
-                    <option value="html">不显示附件检索内容</option>
-                    <option value="all">显示附件检索内容</option>
-                </select>
+                        <option value="html">不显示</option>
+                        <option value="all">显示</option>
+                    </select>
                 </div>
-                <div class="col-md-3">
-                    <label>选择结果排序方式</label>
+                <div class="col-md-2">
+                    <label>结果排序方式</label>
                     <select class="form-control" id="sort">
-                    <option value="score">按权重排序</option>
-                    <option value="date">按时间排序</option>
-                </select>
+                        <option value="score">按权重</option>
+                        <option value="date">按时间</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label>标题/内容搜索</label>
+                    <select class="form-control" id="title_content">
+                        <option value="content">搜索内容</option>
+                        <option value="title">搜索标题</option>
+                    </select>
                 </div>
                 <div class="col-md-3">
                     <label>选择国家</label>
@@ -317,9 +324,17 @@
                 </div>
             </div>
             <div class="row search-row">
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <label>每页展示数量</label>
                     <input id="size" type="number" class="form-control" value="20">
+                </div>
+                <div class="col-md-2">
+                    <label>开始日期</label>
+                    <input id="date_start" class="form-control" type="date">
+                </div>
+                <div class="col-md-2">
+                    <label>结束日期</label>
+                    <input id="date_end" class="form-control" type="date">
                 </div>
             </div>
 
@@ -361,10 +376,11 @@
                         <thead>
                             <tr class="row">
                                 <th class="col-md-4">标题</th>
-                                <th class="col-md-3">翻译</th>
+                                <th class="col-md-2">翻译</th>
                                 <th class="col-md-1">网址来源</th>
                                 <th class="col-md-2">结果来源</th>
-                                <th class="col-md-2">语言</th>
+                                <th class="col-md-1">语言</th>
+                                <th class="col-md-2">发布时间</th>
                             </tr>
                         </thead>
                         <tbody class="row" id="data_table">

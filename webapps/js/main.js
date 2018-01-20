@@ -329,6 +329,10 @@ function showWordCloud() {
 function createRequestData(from, should) {
     var sort = $("#sort option:selected").val();
     var type = $("#attachment option:selected").val();
+    var title_content = $('#title_content option:selected').val();
+    var date_start = $('#date_start').val();
+    var date_end = $('#date_end').val();
+    //console.log("start:" + date_start + " end: " + date_end);
     var nation = [];
     var language = [];
     var size = $('#size').val();
@@ -348,10 +352,12 @@ function createRequestData(from, should) {
         "size": size,
         "from": from,
         "sort": sort,
+        "by": title_content,
         "filters": [
             {"name": "type", "value": [type]},
             {"name": "nation", "value": nation},
-            {"name": "language", "value": language}
+            {"name": "language", "value": language},
+            {"name": "publish", "value": [date_start, date_end]}
             ]
     };
     console.log(requestData);
@@ -364,6 +370,7 @@ function searchRes(searchDataJson) {
     //var num = 20;
     //console.log(searchData);
     var searchData = JSON.parse(searchDataJson);
+
 
     $.ajax({
         async: true,
@@ -395,13 +402,13 @@ function searchRes(searchDataJson) {
                     success: function(requestRes_2) {
                         var data = requestRes_2['records'];
                         //console.log(createRequestData(num, currentPage));
-                        //console.log(requestRes_2);
+                        console.log(requestRes_2);
                         var str = '';
 
                         for (var i = 0; i < data.length; i++) {
                             var title = (data[i]['type'] == 'html'?data[i]['title']:data[i]['attachment']['title'])
                             str += '<tr class="row">';
-                            str += '<th><a target="_blank" href="'+server_base+'/'+ data[i]['local_url'] +
+                            str += '<th><a target="_blank" href="'+ server_base +'/'+ data[i]['local_url'] +
                                 '">' + title + '</a></th>';
                             str += '<th id="trans' + i + '"></th>';
                             str += '<th><a target="_blank" href="' + data[i]['url'] + '">原地址</a></th>';
@@ -414,6 +421,7 @@ function searchRes(searchDataJson) {
                             }
 
                             str += '<th>' + transLan(language) + '</th>';
+                            str += '<th>' + data[i]['publish'] + '</th>';
                             str += '</tr>';
                         }
                         $('#data_table').html(str);
