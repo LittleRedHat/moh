@@ -31,7 +31,7 @@ $('#trans').click(function () {
     for (var i = 0; i < inputs.length; i++)
         if (inputs[i].value != "")
             keyWord += inputs[i].value + " ";
-    //console.log(keyWord);
+    console.log(keyWord);
     if (keyWord == "")
         $('#trans-res').html("请输入关键字！");
     else {
@@ -197,8 +197,8 @@ function keyWordTrans(keyWord) {
         'jp': '日文',
         'kor': '朝鲜文',
         'fra': '法文',
-        'spa': '西班牙文',
-        'th': '泰国语',
+        'spa': '拉丁文',
+        'th': '泰文',
         'ara': '阿拉伯文',
         'ru': '俄文',
         'pt': '葡萄牙文',
@@ -208,14 +208,15 @@ function keyWordTrans(keyWord) {
         'nl': '荷兰文',
         'pl': '波兰文',
         'bul': '保加利亚文',
-        'est': '爱沙尼亚文',
+        'est': '西班牙文',
         'dan': '丹麦文',
         'fin': '芬兰文',
-        'cs': '捷克语',
+        'cd': '刚果文',
         'rom': '罗马尼亚文',
         'slo': '斯洛文尼亚文',
         'swe': '瑞典文',
-        'hu': '匈牙利语',
+        'hu': '克罗地亚文',
+        'cht': '中文繁体',
         'vie': '越南文'
     };
     var result = "";
@@ -227,7 +228,7 @@ function keyWordTrans(keyWord) {
     // 多个query可以用\n连接  如 query='apple\norange\nbanana\npear'
     var from = 'auto';
     var to = ['en', 'jp', 'kor', 'fra', 'spa', 'th', 'ara', 'ru', 'pt', 'de', 'it', 'el', 'nl',
-        'pl', 'bul', 'est', 'dan', 'fin', 'cs', 'rom', 'slo', 'swe', 'hu', 'vie'
+        'pl', 'bul', 'est', 'dan', 'fin', 'cs', 'rom', 'slo', 'swe', 'hu', 'cht', 'vie'
     ];
     var str1 = appid + query + salt + key;
     var sign = MD5(str1);
@@ -238,7 +239,7 @@ function keyWordTrans(keyWord) {
     
 
     function trans(x) {
-        //console.log(x)
+        console.log(x)
         $.ajax({
             async: false,
             url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
@@ -545,9 +546,9 @@ function textToArr(text) {
     }
 }
 
-//将输入的搜索词组分割，返回包含字符串数组的数组
 function toSearchWordsArr() {
     var inputs = $('.search-input');
+    //console.log(inputs);
     var result = [];
 
     for (var i = 0; i < inputs.length; i++) {
@@ -560,11 +561,16 @@ function toSearchWordsArr() {
 
 //对关键字进行翻译，然后进行搜索
 function search() {
+    //console.log("reach");
+    //var wordsArr = textToArr($('#search-key').val());
     var wordsArr = toSearchWordsArr();
+    //console.log(wordsArr);
     var result = [];
 
     var languageStr = $('#language').val();
     var to = getLanguage(languageStr, true);
+
+    //console.log(to);
 
     var appid = '2015063000000001';
     var key = '12345678';
@@ -601,12 +607,11 @@ function search() {
                                     success: function(data) {
                                         //console.log(data);
                                         response++;
-                                        tmp.push({"q": data.trans_result[0].dst,
-                                            "language": trans_language_code_single(to[k])});
+                                        tmp.push(data.trans_result[0].dst);
                                         if (response == request) {
                                             //result.push(tmp);
                                             for (var i = 0; i < result.length; i++) {
-                                                if (result[i].length === 0) {
+                                                if (result[i].length == 0) {
                                                     remove(result, i);
                                                     i--;
                                                 }
@@ -631,10 +636,9 @@ function search() {
     //return result;
 }
 
-//根据languageStr得到要求语言种类（百度翻译语言简写码），forTran表示函数是否用于翻译
 function getLanguage(languageStr, forTran) {
     var to_all = ['zh', 'en', 'jp', 'kor', 'fra', 'spa', 'th', 'ara', 'ru', 'pt', 'de', 'it', 'el', 'nl',
-        'pl', 'bul', 'est', 'dan', 'fin', 'cs', 'rom', 'slo', 'swe', 'hu','vie'];
+        'pl', 'bul', 'est', 'dan', 'fin', 'cs', 'rom', 'slo', 'swe', 'hu', 'cht', 'vie'];
     var to = [];
     if (languageStr == "")
         to = to_all;
@@ -648,22 +652,19 @@ function getLanguage(languageStr, forTran) {
                 i--;
             }
         }
-
-        if (to.length === 0) {
-            if (forTran)
-                to = to_all;
-            else
-                to.push("all");
-        }
+    }
+    if (to.length == 0) {
+        if (forTran)
+            to = to_all;
+        else
+            to.push("all");
     }
 
     return to;
 }
-//将to的语言语言缩写码转为国际通用码
 function trans_languagecode(to) {
     for (var i = 0; i < to.length; i++) {
         switch (to[i]) {
-            case "zh": to[i] = "zh-cn"; break;
             case "jp": to[i] = "ja"; break;
             case "kor": to[i] = "ko"; break;
             case "fra": to[i] = "fr"; break;
@@ -676,34 +677,17 @@ function trans_languagecode(to) {
             case "rom": to[i] = "ro"; break;
             case "slo": to[i] = "sl"; break;
             case "swe": to[i] = "sv"; break;
-            case "vie": to[i] = "vi"; break;
             default: break;
         }
     }
     return to;
 }
 
-function trans_language_code_single(lan) {
-    switch (lan) {
-        case "zh": return "zh-cn";
-        case "jp": return "ja";
-        case "kor": return "ko";
-        case "fra": return "fr";
-        case "spa": return "es";
-        case "ara": return "ar";
-        case "bul": return "bg";
-        case "est": return "et";
-        case "dan": return "da";
-        case "fin": return "fi";
-        case "rom": return "ro";
-        case "slo": return "sl";
-        case "swe": return "sv";
-        case "vie": return "vi";
-        default: return lan;
-    }
-}
-
 function getNation(nationStr) {
+    /*$.ajaxSettings.async = false;
+    $.getJSON("../data/world.json", function(data) {
+        worldJson = data;
+    });*/
     var all_nations = [];
     var nations;
 
@@ -737,5 +721,6 @@ function remove(arr, i) {
 
 function transLan(lanStr) {
     var lan = lanStr.substring(0, 2);
+    //console.log(lanStr + " " + lan);
     return languages_table[lan] ? languages_table[lan] : lan;
 }
