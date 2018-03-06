@@ -6,6 +6,7 @@ if(!window.sessionStorage.getItem('user')){
 }
 
 
+
 var server_base = 'http://47.97.96.152';
 
 var nations_table;
