@@ -1,8 +1,8 @@
 /**
  * Created by 10975 on 2017/11/1.
  */
-if(!window.sessionStorage.getItem('user')){
-     window.location = '../login.html'
+if (!window.sessionStorage.getItem('user')) {
+    window.location = '../login.html'
 }
 
 
@@ -11,28 +11,30 @@ var server_base = 'http://47.97.96.152';
 
 var nations_table;
 var languages_table;
-$.getJSON("../data/nations_list.json", function (data) {
+$.getJSON("../data/nations_list.json", function(data) {
     nations_table = data;
     //console.log(nations_table);
     //console.log(nations_table["cn"]);
 });
-$.getJSON("../data/language_list.json", function (data) {
+$.getJSON("../data/language_list.json", function(data) {
     languages_table = data;
     //console.log(languages_table);
     //console.log(languages_table["en"], languages_table["a"] ? "a" : "b");
 });
 
+
+set_default_date();
 showWordCloud();
-$('#search').click(function () {
+$('#search').click(function() {
     search();
 });
-$('#trans').click(function () {
+$('#trans').click(function() {
     var inputs = $('.search-input');
     var keyWord = "";
     for (var i = 0; i < inputs.length; i++)
         if (inputs[i].value != "")
             keyWord += inputs[i].value + " ";
-    //console.log(keyWord);
+        //console.log(keyWord);
     if (keyWord == "")
         $('#trans-res').html("请输入关键字！");
     else {
@@ -40,36 +42,48 @@ $('#trans').click(function () {
         keyWordTrans(keyWord);
     }
 });
-$('#show_lan_list_btn').click(function () {
+$('#show_lan_list_btn').click(function() {
     var display = $('#language_list').css("display");
 
     //console.log(display);
     if (display == "none") {
         $('#language_list').css("display", "block");
         $('#show_lan_list_btn').text("隐藏语言列表");
-    }
-    else{
+    } else {
         $('#language_list').css("display", "none");
         $('#show_lan_list_btn').text("显示语言列表");
     }
 });
-$('#show_nation_list_btn').click(function () {
+$('#show_nation_list_btn').click(function() {
     var display = $('#nation_list').css("display");
 
     //console.log(display);
     if (display == "none") {
         $('#nation_list').css("display", "block");
         $('#show_nation_list_btn').text("隐藏国家列表");
-    }
-    else{
+    } else {
         $('#nation_list').css("display", "none");
         $('#show_nation_list_btn').text("显示国家列表");
     }
 });
 
+function set_default_date() {
+    var now = new Date();
+
+    var now_year = now.getFullYear();
+    var now_month = now.getMonth() + 1;
+    var now_date = now.getDate();
+
+    var today_str = now_year + "-" + (now_month < 10 ? ("0" + now_month) : now_month) +
+        "-" + (now_date < 10 ? ("0" + now_date) : now_date);
+    console.log(today_str);
+
+    $('#date_end').val(today_str);
+}
+
 function choose_lan(str) {
     //console.log(str);
-    $('#language').val($('#language').val() + str + " " );
+    $('#language').val($('#language').val() + str + " ");
 }
 
 function choose_nation(str) {
@@ -111,7 +125,7 @@ function map(searchRes) {
             label: {
                 emphasis: {
                     show: true,
-                    formatter: function (obj) {
+                    formatter: function(obj) {
                         //console.log(obj);
                         var name = obj.data.name;
                         var value = obj.data.value[2];
@@ -159,13 +173,13 @@ function convertToMapData(searchRes) {
     $.getJSON("../data/capitalTable.json", function(data) {
         countryTable = data;
     });
-    for (x in searchRes){
-        if(searchRes[x].key == 'int'){
+    for (x in searchRes) {
+        if (searchRes[x].key == 'int') {
             continue
         }
         country[countryTable[searchRes[x].key]].value[2] = searchRes[x].doc_count;
     }
-       
+
     //console.log(country);
     return country;
 }
@@ -173,21 +187,21 @@ function convertToMapData(searchRes) {
 
 var unicode2utf8 = function(unicode) {
     return unicode.replace(/%u([0-9a-fA-F]+)/g, function(match, hex) {
-      var utf8CharCodes = [];
-      c = parseInt(hex, 16);
-      if (c < 128) {
-        utf8CharCodes.push(c);
-      } else if (c < 2048) {
-        utf8CharCodes.push((c >> 6) | 192, (c & 63) | 128);
-      } else if (c < 65536) {
-        utf8CharCodes.push((c >> 12) | 224, ((c >> 6) & 63) | 128, (c & 63) | 128);
-      } else {
-        utf8CharCodes.push((c >> 18) | 240, ((c >> 12) & 63) | 128, ((c >> 6) & 63) | 128, (c & 63) | 128);
-      }
-      for (var i=utf8CharCodes.length-1;i>=0;i--) {
-        utf8CharCodes[i] = '%' + utf8CharCodes[i].toString(16);
-      }
-      return utf8CharCodes.join('');
+        var utf8CharCodes = [];
+        c = parseInt(hex, 16);
+        if (c < 128) {
+            utf8CharCodes.push(c);
+        } else if (c < 2048) {
+            utf8CharCodes.push((c >> 6) | 192, (c & 63) | 128);
+        } else if (c < 65536) {
+            utf8CharCodes.push((c >> 12) | 224, ((c >> 6) & 63) | 128, (c & 63) | 128);
+        } else {
+            utf8CharCodes.push((c >> 18) | 240, ((c >> 12) & 63) | 128, ((c >> 6) & 63) | 128, (c & 63) | 128);
+        }
+        for (var i = utf8CharCodes.length - 1; i >= 0; i--) {
+            utf8CharCodes[i] = '%' + utf8CharCodes[i].toString(16);
+        }
+        return utf8CharCodes.join('');
     });
 };
 
@@ -236,7 +250,7 @@ function keyWordTrans(keyWord) {
     for (x in to) {
         trans(x);
     }
-    
+
 
     function trans(x) {
         //console.log(x)
@@ -307,7 +321,7 @@ function wordCloud(data) {
 
 //词云图显示
 function showWordCloud() {
-    var url = server_base+'/api/moh/history';
+    var url = server_base + '/api/moh/history';
 
     $.ajax({
         async: true,
@@ -354,11 +368,11 @@ function createRequestData(from, should) {
         "sort": sort,
         "by": title_content,
         "filters": [
-            {"name": "type", "value": [type]},
-            {"name": "nation", "value": nation},
-            {"name": "language", "value": language},
-            {"name": "publish", "value": [date_start, date_end]}
-            ]
+            { "name": "type", "value": [type] },
+            { "name": "nation", "value": nation },
+            { "name": "language", "value": language },
+            { "name": "publish", "value": [date_start, date_end] }
+        ]
     };
     console.log(requestData);
     return JSON.stringify(requestData);
@@ -366,7 +380,7 @@ function createRequestData(from, should) {
 
 //递交搜索请求，得到结果后分页显示
 function searchRes(searchDataJson) {
-    var url = server_base+'/api/moh/es/search';
+    var url = server_base + '/api/moh/es/search';
     //var num = 20;
     //console.log(searchData);
     var searchData = JSON.parse(searchDataJson);
@@ -406,9 +420,9 @@ function searchRes(searchDataJson) {
                         var str = '';
 
                         for (var i = 0; i < data.length; i++) {
-                            var title = (data[i]['type'] == 'html'?data[i]['title']:data[i]['attachment']['title'])
+                            var title = (data[i]['type'] == 'html' ? data[i]['title'] : data[i]['attachment']['title'])
                             str += '<tr class="row">';
-                            str += '<th><a target="_blank" href="'+ server_base +'/'+ data[i]['local_url'] +
+                            str += '<th><a target="_blank" href="' + server_base + '/' + data[i]['local_url'] +
                                 '">' + title + '</a></th>';
                             str += '<th id="trans' + i + '"></th>';
                             str += '<th><a target="_blank" href="' + data[i]['url'] + '">原地址</a></th>';
@@ -416,7 +430,7 @@ function searchRes(searchDataJson) {
                                 nations_table[data[i]['nation']] : data[i]['nation']) + '</th>';
 
                             var language = data[i]['language'].split('-')
-                            if(language.length >0){
+                            if (language.length > 0) {
                                 language = language[0].toLowerCase()
                             }
 
@@ -602,8 +616,10 @@ function search() {
                                     success: function(data) {
                                         //console.log(data);
                                         response++;
-                                        tmp.push({"q": data.trans_result[0].dst,
-                                            "language": trans_language_code_single(to[k])});
+                                        tmp.push({
+                                            "q": data.trans_result[0].dst,
+                                            "language": trans_language_code_single(to[k])
+                                        });
                                         if (response == request) {
                                             //result.push(tmp);
                                             for (var i = 0; i < result.length; i++) {
@@ -635,7 +651,8 @@ function search() {
 //根据languageStr得到要求语言种类（百度翻译语言简写码），forTran表示函数是否用于翻译
 function getLanguage(languageStr, forTran) {
     var to_all = ['zh', 'en', 'jp', 'kor', 'fra', 'spa', 'th', 'ara', 'ru', 'pt', 'de', 'it', 'el', 'nl',
-        'pl', 'bul', 'est', 'dan', 'fin', 'cs', 'rom', 'slo', 'swe', 'hu','vie'];
+        'pl', 'bul', 'est', 'dan', 'fin', 'cs', 'rom', 'slo', 'swe', 'hu', 'vie'
+    ];
     var to = [];
     if (languageStr == "")
         to = to_all;
@@ -664,21 +681,50 @@ function getLanguage(languageStr, forTran) {
 function trans_languagecode(to) {
     for (var i = 0; i < to.length; i++) {
         switch (to[i]) {
-            case "zh": to[i] = "zh-cn"; break;
-            case "jp": to[i] = "ja"; break;
-            case "kor": to[i] = "ko"; break;
-            case "fra": to[i] = "fr"; break;
-            case "spa": to[i] = "es"; break;
-            case "ara": to[i] = "ar"; break;
-            case "bul": to[i] = "bg"; break;
-            case "est": to[i] = "et"; break;
-            case "dan": to[i] = "da"; break;
-            case "fin": to[i] = "fi"; break;
-            case "rom": to[i] = "ro"; break;
-            case "slo": to[i] = "sl"; break;
-            case "swe": to[i] = "sv"; break;
-            case "vie": to[i] = "vi"; break;
-            default: break;
+            case "zh":
+                to[i] = "zh-cn";
+                break;
+            case "jp":
+                to[i] = "ja";
+                break;
+            case "kor":
+                to[i] = "ko";
+                break;
+            case "fra":
+                to[i] = "fr";
+                break;
+            case "spa":
+                to[i] = "es";
+                break;
+            case "ara":
+                to[i] = "ar";
+                break;
+            case "bul":
+                to[i] = "bg";
+                break;
+            case "est":
+                to[i] = "et";
+                break;
+            case "dan":
+                to[i] = "da";
+                break;
+            case "fin":
+                to[i] = "fi";
+                break;
+            case "rom":
+                to[i] = "ro";
+                break;
+            case "slo":
+                to[i] = "sl";
+                break;
+            case "swe":
+                to[i] = "sv";
+                break;
+            case "vie":
+                to[i] = "vi";
+                break;
+            default:
+                break;
         }
     }
     return to;
@@ -686,21 +732,36 @@ function trans_languagecode(to) {
 
 function trans_language_code_single(lan) {
     switch (lan) {
-        case "zh": return "zh-cn";
-        case "jp": return "ja";
-        case "kor": return "ko";
-        case "fra": return "fr";
-        case "spa": return "es";
-        case "ara": return "ar";
-        case "bul": return "bg";
-        case "est": return "et";
-        case "dan": return "da";
-        case "fin": return "fi";
-        case "rom": return "ro";
-        case "slo": return "sl";
-        case "swe": return "sv";
-        case "vie": return "vi";
-        default: return lan;
+        case "zh":
+            return "zh-cn";
+        case "jp":
+            return "ja";
+        case "kor":
+            return "ko";
+        case "fra":
+            return "fr";
+        case "spa":
+            return "es";
+        case "ara":
+            return "ar";
+        case "bul":
+            return "bg";
+        case "est":
+            return "et";
+        case "dan":
+            return "da";
+        case "fin":
+            return "fi";
+        case "rom":
+            return "ro";
+        case "slo":
+            return "sl";
+        case "swe":
+            return "sv";
+        case "vie":
+            return "vi";
+        default:
+            return lan;
     }
 }
 
@@ -709,7 +770,7 @@ function getNation(nationStr) {
     var nations;
 
     $.ajaxSettings.async = false;
-    $.getJSON("../data/capitalTable.json", function (data) {
+    $.getJSON("../data/capitalTable.json", function(data) {
         var nationsArr = data;
         for (var nation in nationsArr)
             all_nations.push(nation);
