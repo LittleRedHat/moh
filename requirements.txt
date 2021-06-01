@@ -48,7 +48,7 @@ summa==0.0.7
 textrank4zh==0.3
 tinycss==0.4
 Twisted==17.9.0
-urllib3==1.22
+urllib3==1.26.5
 w3lib==1.18.0
 Werkzeug==0.12.2
 zope.interface==4.4.3
