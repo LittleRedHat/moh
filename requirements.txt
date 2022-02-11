@@ -47,7 +47,7 @@ SQLAlchemy==1.1.15
 summa==0.0.7
 textrank4zh==0.3
 tinycss==0.4
-Twisted==17.9.0
+Twisted==22.1.0
 urllib3==1.22
 w3lib==1.18.0
 Werkzeug==0.12.2
