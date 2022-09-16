@@ -26,7 +26,7 @@ itsdangerous==0.24
 jieba==0.39
 Jinja2==2.10
 lxml==4.1.1
-Mako==1.0.7
+Mako==1.2.2
 MarkupSafe==1.0
 networkx==2.0
 numpy==1.13.3
